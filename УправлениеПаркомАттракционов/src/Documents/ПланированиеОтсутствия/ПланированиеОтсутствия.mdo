@@ -1,45 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<mdclass:Document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="a2ef65b9-6750-4449-81a6-0d2c64f8dde1">
+<mdclass:Document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="1b2bc2b9-4177-4273-b661-e59451301ab5">
   <producedTypes>
-    <objectType typeId="45ccf361-6511-4520-b677-b5fa7879cd0d" valueTypeId="314e33b0-3cc9-4a3f-9fc4-73e4bc2369ea"/>
-    <refType typeId="17470d2f-a749-4004-ba50-34df3a036abb" valueTypeId="c2b17dd6-2d9e-430d-a809-f035c9520540"/>
-    <selectionType typeId="96705fe1-38c8-43c6-bc78-177f63b7d7e4" valueTypeId="7b83ab79-c50e-4c09-9c89-a689d676aae5"/>
-    <listType typeId="71012d84-cb5e-45b2-a03c-16ef104a9363" valueTypeId="f18e25ab-4cf4-4ebb-9189-86828fd302cd"/>
-    <managerType typeId="b7e3f773-00ea-4b18-a387-06f865b13b6b" valueTypeId="ae784779-2d3b-4af7-b6e2-886d668de65b"/>
+    <objectType typeId="6418a1a2-7f6b-4ff7-9869-d6cef2cc5c37" valueTypeId="52873b20-8908-4749-96c9-a47d2dc33f7b"/>
+    <refType typeId="2c3791b0-42e4-46ac-aaa8-4f012c11a6c2" valueTypeId="bf404c7d-f7bd-4247-8cba-e514de9fd51d"/>
+    <selectionType typeId="8a795e1f-3ca8-4a09-b1a7-0f1ba7db4406" valueTypeId="f226b295-0d02-4301-a344-98d67379dd2e"/>
+    <listType typeId="7583551b-ee34-48f1-80dd-0dee6e57fa98" valueTypeId="27ae1622-dec7-46f9-aef0-cbce148b0054"/>
+    <managerType typeId="755b122b-08a0-4a2d-b228-dfeb90c73820" valueTypeId="c1f3d268-cd70-41f0-83df-f1de80bf8ed0"/>
   </producedTypes>
-  <name>ПосещениеАттракциона</name>
+  <name>ПланированиеОтсутствия</name>
   <synonym>
     <key>ru</key>
-    <value>Посещение аттракциона</value>
+    <value>Планирование отсутствия</value>
   </synonym>
   <useStandardCommands>true</useStandardCommands>
-  <inputByString>Document.ПосещениеАттракциона.StandardAttribute.Number</inputByString>
+  <inputByString>Document.ПланированиеОтсутствия.StandardAttribute.Number</inputByString>
   <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
   <createOnInput>Use</createOnInput>
   <dataLockControlMode>Managed</dataLockControlMode>
   <fullTextSearch>Use</fullTextSearch>
   <listPresentation>
     <key>ru</key>
-    <value>Посещения аттракционов</value>
+    <value>Список отсутствий</value>
   </listPresentation>
   <numberType>String</numberType>
   <numberLength>9</numberLength>
   <numberAllowedLength>Variable</numberAllowedLength>
   <checkUnique>true</checkUnique>
   <autonumbering>true</autonumbering>
-  <realTimePosting>Deny</realTimePosting>
-  <registerRecords>AccumulationRegister.АктивныеПосещения</registerRecords>
-  <registerRecords>AccumulationRegister.ПосещенияАттракционов</registerRecords>
+  <registerRecords>InformationRegister.ПлановыеОтсутствия</registerRecords>
   <postInPrivilegedMode>true</postInPrivilegedMode>
   <unpostInPrivilegedMode>true</unpostInPrivilegedMode>
-  <attributes uuid="ba06a95d-26b5-47fb-815f-738772f9e346">
-    <name>Аттракцион</name>
+  <attributes uuid="e5446104-d5d3-4c95-b529-07d3ab738482">
+    <name>ДатаНачала</name>
     <synonym>
       <key>ru</key>
-      <value>Аттракцион</value>
+      <value>Дата начала</value>
     </synonym>
     <type>
-      <types>CatalogRef.Аттракционы</types>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
     </type>
     <minValue xsi:type="core:UndefinedValue"/>
     <maxValue xsi:type="core:UndefinedValue"/>
@@ -48,14 +49,17 @@
     <fullTextSearch>Use</fullTextSearch>
     <dataHistory>Use</dataHistory>
   </attributes>
-  <attributes uuid="118a25be-aea8-4688-8738-52241f92871d">
-    <name>Основание</name>
+  <attributes uuid="ea0282c8-f282-4ee7-92b1-74f07bbf36bc">
+    <name>ДатаОкончания</name>
     <synonym>
       <key>ru</key>
-      <value>Основание</value>
+      <value>Дата окончания</value>
     </synonym>
     <type>
-      <types>DocumentRef.ПродажаБилета</types>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
     </type>
     <minValue xsi:type="core:UndefinedValue"/>
     <maxValue xsi:type="core:UndefinedValue"/>
@@ -64,7 +68,23 @@
     <fullTextSearch>Use</fullTextSearch>
     <dataHistory>Use</dataHistory>
   </attributes>
-  <attributes uuid="937a5292-1eff-45a0-a547-7476370ea373">
+  <attributes uuid="59e9ad7b-56a9-43ff-8ade-9ea2f89cc370">
+    <name>Сотрудник</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сотрудник</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Пользователи</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="815a36c4-5529-4d1a-912e-47e57e0c156a">
     <name>Комментарий</name>
     <synonym>
       <key>ru</key>
@@ -81,7 +101,7 @@
     <fullTextSearch>Use</fullTextSearch>
     <dataHistory>Use</dataHistory>
   </attributes>
-  <attributes uuid="0b8e29bd-c041-46ea-a693-fb2d3f72f768">
+  <attributes uuid="67fc2f55-dc16-4773-a372-bf3ce9076706">
     <name>Ответственный</name>
     <synonym>
       <key>ru</key>
