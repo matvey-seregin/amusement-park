@@ -660,7 +660,7 @@
             <common>true</common>
           </userVisible>
           <dataPath xsi:type="form:DataPath">
-            <segments>СписокНоменклатуры.Ссылка</segments>
+            <segments>СписокНоменклатуры.Номенклатура</segments>
           </dataPath>
           <extendedTooltip>
             <name>СписокНоменклатурыСсылкаРасширеннаяПодсказка</name>
@@ -1504,14 +1504,11 @@
       <segments>СписокНоменклатуры.Номенклатура</segments>
     </notDefaultUseAlwaysAttributes>
     <notDefaultUseAlwaysAttributes xsi:type="form:DataPath">
-      <segments>СписокНоменклатуры.Ссылка</segments>
-    </notDefaultUseAlwaysAttributes>
-    <notDefaultUseAlwaysAttributes xsi:type="form:DataPath">
       <segments>СписокНоменклатуры.ЭтоГруппа</segments>
     </notDefaultUseAlwaysAttributes>
     <extInfo xsi:type="form:DynamicListExtInfo">
       <queryText>ВЫБРАТЬ
-	СправочникНоменклатура.Ссылка КАК Ссылка,
+	СправочникНоменклатура.Ссылка КАК Номенклатура,
 	СправочникНоменклатура.КоличествоПосещений,
 	ЦеныНоменклатурыСрезПоследних.Цена,
 	СправочникНоменклатура.ЭтоГруппа
@@ -1541,12 +1538,12 @@
         <field>ЭтоГруппа</field>
       </fields>
       <fields xsi:type="schema:DataCompositionSchemaDataSetField">
-        <dataPath>Код</dataPath>
-        <field>Код</field>
+        <dataPath>Ссылка</dataPath>
+        <field>Ссылка</field>
       </fields>
       <fields xsi:type="schema:DataCompositionSchemaDataSetField">
-        <dataPath>Наименование</dataPath>
-        <field>Наименование</field>
+        <dataPath>Код</dataPath>
+        <field>Код</field>
       </fields>
       <fields xsi:type="schema:DataCompositionSchemaDataSetField">
         <dataPath>ВидНоменклатуры</dataPath>
@@ -1573,8 +1570,8 @@
         <field>Родитель</field>
       </fields>
       <fields xsi:type="schema:DataCompositionSchemaDataSetField">
-        <dataPath>Ссылка</dataPath>
-        <field>Ссылка</field>
+        <dataPath>Наименование</dataPath>
+        <field>Наименование</field>
       </fields>
       <parameters>
         <name>Период</name>
