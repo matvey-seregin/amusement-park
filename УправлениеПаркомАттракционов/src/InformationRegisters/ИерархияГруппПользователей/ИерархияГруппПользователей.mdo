@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="28bb77d5-cc8e-4f91-830e-d5052224ed97">
+  <producedTypes>
+    <selectionType typeId="f4f778b7-833e-4dd8-8f42-7570c78e1eb4" valueTypeId="6d2e0a9c-5d66-4333-ae99-718a5dba2980"/>
+    <listType typeId="ca0aa2de-b46c-481c-8946-54b966efe365" valueTypeId="86ea44d8-03c8-480c-afe7-52489f071642"/>
+    <managerType typeId="b73c9de2-1254-41f2-a470-6cd8506cf4d6" valueTypeId="2ab7c68d-3318-4ac2-b325-9dfa72fed663"/>
+    <recordSetType typeId="748caa78-ee15-4980-a1cd-9f78e94aa9ab" valueTypeId="14683d5b-0e4c-4850-980f-d0ca83909118"/>
+    <recordKeyType typeId="81c9df63-85ab-43c3-a1eb-587b7b57b119" valueTypeId="b7bade43-1abd-47bf-b656-d3d617a96d98"/>
+    <recordType typeId="4deda9db-0747-4b59-ad4b-d72fd20c1b97" valueTypeId="4d2fcf66-1d85-435d-afec-21762d72853b"/>
+    <recordManagerType typeId="0af59c8e-7e84-4e22-b54c-ec275af6e6d6" valueTypeId="2d13bdd1-c403-4928-8a6a-e81345bafc90"/>
+  </producedTypes>
+  <name>ИерархияГруппПользователей</name>
+  <synonym>
+    <key>ru</key>
+    <value>Иерархия групп пользователей</value>
+  </synonym>
+  <editType>InDialog</editType>
+  <defaultRecordForm>InformationRegister.ИерархияГруппПользователей.Form.ФормаЗаписи</defaultRecordForm>
+  <defaultListForm>InformationRegister.ИерархияГруппПользователей.Form.ФормаСписка</defaultListForm>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="874868a1-e4a3-4c78-8db4-5b103c9cc541">
+    <name>УровеньРодителя</name>
+    <synonym>
+      <key>ru</key>
+      <value>Уровень родителя</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Уровень иерархии родителя, начиная с нуля</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="d397d41e-6113-4f4e-99de-5d445649a4c3">
+    <name>УровеньГруппы</name>
+    <synonym>
+      <key>ru</key>
+      <value>Уровень группы</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Уровень иерархии группы, начиная с нуля</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="2125956a-c910-4467-96f7-846441d17b02">
+    <name>ГруппаПользователей</name>
+    <synonym>
+      <key>ru</key>
+      <value>Группа пользователей</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ГруппыВнешнихПользователей</types>
+      <types>CatalogRef.ГруппыПользователей</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Группа пользователей, для которой записываются все ее родители</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="3d0c7eb6-6d5e-46b4-b4c3-140a5b5ce6cf">
+    <name>Родитель</name>
+    <synonym>
+      <key>ru</key>
+      <value>Родитель</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ГруппыВнешнихПользователей</types>
+      <types>CatalogRef.ГруппыПользователей</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Родитель группы пользователей (в том числе она сама)</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <forms uuid="da9028f5-04bb-4782-bd3a-0d17f4e1534e">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="45a74cbe-e001-4a6e-b0bf-b1e8947fb409">
+    <name>ФормаЗаписи</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма записи</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:InformationRegister>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:EventSubscription xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="cf80ff0d-9add-4fa5-bba2-00d43fce5ed8">
+  <name>ЗапретитьИспользованиеУдаляемыхОбъектовВДокументах</name>
+  <synonym>
+    <key>ru</key>
+    <value>Запретить использование удаляемых объектов в документах</value>
+  </synonym>
+  <source>
+    <types>DocumentObject</types>
+  </source>
+  <event>BeforeWrite</event>
+  <handler>CommonModule.УдалениеПомеченныхОбъектовСлужебный.ЗапретитьИспользованиеУдаляемыхОбъектовВДокументахПередЗаписью</handler>
+</mdclass:EventSubscription>

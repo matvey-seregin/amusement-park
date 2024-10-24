@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="060b2bb4-ca03-4da9-930f-7f91f6299a35">
+  <producedTypes>
+    <selectionType typeId="6ba75afd-4ab3-41e0-a417-80e1cfb14467" valueTypeId="3e58f458-bb2d-4bad-a30c-17aaf56c74ce"/>
+    <listType typeId="403044a7-67bc-4872-b098-82611d66cd6c" valueTypeId="f6065de7-5797-4bd8-807b-f9f15787ff50"/>
+    <managerType typeId="707e1fb5-591c-4ead-8290-b278046cc097" valueTypeId="cf0a14aa-6006-4ca7-a751-5643e50ffe5b"/>
+    <recordSetType typeId="5e577ace-701a-4b5c-8a02-94384590a9e4" valueTypeId="df710b10-c429-4f5e-b62c-087a205c5e97"/>
+    <recordKeyType typeId="e607cc7e-3453-415d-b7b7-66a17ac71dae" valueTypeId="65e8acf9-3d8e-4223-aa99-61392eb604ee"/>
+    <recordType typeId="6d64ffdf-c526-4900-9a2b-e3c2588f065d" valueTypeId="a10ddadd-61d2-49e1-b175-9756283df24a"/>
+    <recordManagerType typeId="303ec2e7-3636-4849-a25a-84343083dcfb" valueTypeId="431e9488-1abf-4bb7-9087-d262ee81e20e"/>
+  </producedTypes>
+  <name>НаличиеФайлов</name>
+  <synonym>
+    <key>ru</key>
+    <value>Наличие файлов</value>
+  </synonym>
+  <editType>InDialog</editType>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="394b1a1c-a7ae-41b7-a346-4bac99fa567d">
+    <name>ЕстьФайлы</name>
+    <synonym>
+      <key>ru</key>
+      <value>Есть файлы</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Признак того, что у объекта есть как минимум один файл</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <attributes uuid="9a5fa511-59e8-4a1b-a101-f276f0b7b261">
+    <name>ИдентификаторОбъекта</name>
+    <synonym>
+      <key>ru</key>
+      <value>Идентификатор объекта</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>10</length>
+      </stringQualifiers>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Идентификатор владельца файла (используется в служебных целях)</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+  </attributes>
+  <dimensions uuid="ccfe4e36-80b6-419f-8bb3-c1046203d023">
+    <name>ОбъектСФайлами</name>
+    <synonym>
+      <key>ru</key>
+      <value>Объект с файлами</value>
+    </synonym>
+    <type>
+      <types>DefinedType.ВладелецПрисоединенныхФайлов</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Объект с присоединенными файлами</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

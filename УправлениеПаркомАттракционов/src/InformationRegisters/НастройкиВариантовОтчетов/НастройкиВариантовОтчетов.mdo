@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="b6f8bc3e-f0cd-43ef-b060-d701cd446197">
+  <producedTypes>
+    <selectionType typeId="aa695162-8b80-4deb-9e74-5ec297a809e3" valueTypeId="c3699f51-293e-410d-b1e4-f561e7c7ea0c"/>
+    <listType typeId="d2880d46-b1f7-4dbf-8233-20223cb29186" valueTypeId="9751cc14-718d-47bc-8e61-4225419600a4"/>
+    <managerType typeId="17355343-ef7f-4da3-a0a7-3ca1b9ebac90" valueTypeId="ad461114-67f0-495b-87d4-1cbccf40e827"/>
+    <recordSetType typeId="7b9ad6da-c149-4b5a-b021-7f9d47e808a7" valueTypeId="785fcdbf-cce5-428f-a8df-c316e9d9caa3"/>
+    <recordKeyType typeId="0dcedb24-aff5-4851-8643-91e93b8a00d0" valueTypeId="26305260-82a0-4485-891d-f2732a252eb9"/>
+    <recordType typeId="b1a8554d-93ad-4049-b31b-6de9b18366a4" valueTypeId="d1eb8b49-f51d-42c0-bb31-2d317988b57d"/>
+    <recordManagerType typeId="03edf72f-c56b-4f28-8bbc-69c99c3511a1" valueTypeId="ff8d76d4-8c0f-4e8f-8810-94f7fb6aab12"/>
+  </producedTypes>
+  <name>НастройкиВариантовОтчетов</name>
+  <synonym>
+    <key>ru</key>
+    <value>Настройки вариантов отчетов</value>
+  </synonym>
+  <editType>InDialog</editType>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="4f10e5f9-6cfd-4fa9-9c72-d19a484a796c">
+    <name>Видимость</name>
+    <synonym>
+      <key>ru</key>
+      <value>Видимость</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Видимость варианта отчета в указанном разделе для указанного пользователя.</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="b94e805f-e1ab-4870-b855-98aa401864b2">
+    <name>БыстрыйДоступ</name>
+    <synonym>
+      <key>ru</key>
+      <value>Быстрый доступ</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Показывать указанный вариант отчета в группе быстрого доступа в указанном разделе для указанного пользователя.</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="62f9fe19-3d64-4506-a0bc-dbfe47b4df64">
+    <name>Вариант</name>
+    <synonym>
+      <key>ru</key>
+      <value>Вариант</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ВариантыОтчетов</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Отчет или вариант отчета, для которого установлена настройка</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="ff8eedeb-fc3e-4bee-852b-6da6d59ff38c">
+    <name>Пользователь</name>
+    <synonym>
+      <key>ru</key>
+      <value>Пользователь</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ВнешниеПользователи</types>
+      <types>CatalogRef.ГруппыВнешнихПользователей</types>
+      <types>CatalogRef.ГруппыПользователей</types>
+      <types>CatalogRef.Пользователи</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Пользователь, для которого установлена настройка</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="a98bd18f-ccda-41a2-a1b2-8b37cc1f6c36">
+    <name>Подсистема</name>
+    <synonym>
+      <key>ru</key>
+      <value>Подсистема</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ИдентификаторыОбъектовРасширений</types>
+      <types>CatalogRef.ИдентификаторыОбъектовМетаданных</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Раздел или группа, в которой установлена настройка</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

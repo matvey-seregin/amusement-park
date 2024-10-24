@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="de2bdd4f-93f2-4341-86d6-7082fc286a5c">
+  <producedTypes>
+    <selectionType typeId="10f3ccdc-c0ca-4d91-8a88-43e1ca2b187d" valueTypeId="e00c329d-b1b6-4697-9b61-9efe7cd567cf"/>
+    <listType typeId="a246e157-0f2d-4105-a9e7-ef9e1c4dc1a3" valueTypeId="54d5067d-7bde-475a-976f-81089f6ca9e4"/>
+    <managerType typeId="ba719209-4e03-445e-b7a3-928822282e2a" valueTypeId="eb994388-86c1-45d5-9d50-e7c07a67765f"/>
+    <recordSetType typeId="df3f38c3-b5f8-49ae-b478-e26f7f76947c" valueTypeId="8bd9c2b6-20d6-4668-9f9a-c5a6b3e23009"/>
+    <recordKeyType typeId="6420f327-a2e7-46f4-b3e5-330bc7524a91" valueTypeId="5dfc9089-477e-4eee-b531-2e2c59e8f43a"/>
+    <recordType typeId="ed70c619-875f-498c-aff5-27a25eedd84a" valueTypeId="dccdb8f8-a0b8-4435-8d1a-3c0b29c30127"/>
+    <recordManagerType typeId="0b13d8b6-652f-41d2-ab04-c25f0f9c43a9" valueTypeId="1a8f295e-3ea3-4c2c-92ef-510ec540d946"/>
+  </producedTypes>
+  <name>ИдентификаторыОбъектовВерсийРасширений</name>
+  <synonym>
+    <key>ru</key>
+    <value>Идентификаторы объектов версий расширений</value>
+  </synonym>
+  <editType>InDialog</editType>
+  <defaultRecordForm>InformationRegister.ИдентификаторыОбъектовВерсийРасширений.Form.ФормаЗаписи</defaultRecordForm>
+  <defaultListForm>InformationRegister.ИдентификаторыОбъектовВерсийРасширений.Form.ФормаСписка</defaultListForm>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <dimensions uuid="ba96ec0e-931e-45be-a782-e68ba4fedddb">
+    <name>ВерсияРасширений</name>
+    <synonym>
+      <key>ru</key>
+      <value>Версия расширений</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ВерсииРасширений</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Обобщенная версия метаданных набора расширений</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="9af5882f-3a42-4fae-83df-6aa8de577112">
+    <name>ПолноеИмяОбъекта</name>
+    <synonym>
+      <key>ru</key>
+      <value>Полное имя объекта</value>
+    </synonym>
+    <comment>Например, &quot;Обработка.ЗаполнениеКонтрагентов&quot;</comment>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>430</length>
+      </stringQualifiers>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Полное имя объекта метаданных</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="79bc5e39-3017-48bf-8e42-fa34e8b581ef">
+    <name>Идентификатор</name>
+    <synonym>
+      <key>ru</key>
+      <value>Идентификатор</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ИдентификаторыОбъектовРасширений</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Ссылка на объект метаданных в информационной базе</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <forms uuid="fe6e207f-d306-4470-8441-ffd3f3710d31">
+    <name>ФормаЗаписи</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма записи</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="7451af80-7387-4e8d-a3da-2ae0540c3fd4">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:InformationRegister>

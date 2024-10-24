@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:EventSubscription xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="e352fc19-96be-4410-a516-bc58cc234422">
+  <name>СкопироватьРеквизитыВерсииФайловВФайл</name>
+  <synonym>
+    <key>ru</key>
+    <value>Скопировать реквизиты версии файлов в файл</value>
+  </synonym>
+  <source>
+    <types>CatalogObject.ВерсииФайлов</types>
+  </source>
+  <event>OnWrite</event>
+  <handler>CommonModule.РаботаСФайламиСлужебный.ВерсииФайловПриЗаписи</handler>
+</mdclass:EventSubscription>

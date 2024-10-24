@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:EventSubscription xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="3b089d90-7ece-4b74-a4dc-e436d9d31b3b">
+  <name>ЗаписатьНаборыЗначенийДоступа</name>
+  <synonym>
+    <key>ru</key>
+    <value>Записать наборы значений доступа</value>
+  </synonym>
+  <source>
+    <types>DefinedType.ВладелецНаборовЗначенийДоступаОбъект</types>
+  </source>
+  <event>OnWrite</event>
+  <handler>CommonModule.УправлениеДоступомСлужебный.ЗаписатьНаборыЗначенийДоступаПриЗаписи</handler>
+</mdclass:EventSubscription>

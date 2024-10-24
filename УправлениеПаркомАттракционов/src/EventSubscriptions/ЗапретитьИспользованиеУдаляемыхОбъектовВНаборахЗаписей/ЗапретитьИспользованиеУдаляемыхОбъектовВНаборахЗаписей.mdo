@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:EventSubscription xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="7ce7aec1-fa24-4dd7-8754-8124e78521bf">
+  <name>ЗапретитьИспользованиеУдаляемыхОбъектовВНаборахЗаписей</name>
+  <synonym>
+    <key>ru</key>
+    <value>Запретить использование удаляемых объектов в наборах записей</value>
+  </synonym>
+  <source>
+    <types>InformationRegisterRecordSet</types>
+    <types>AccountingRegisterRecordSet</types>
+    <types>AccumulationRegisterRecordSet</types>
+  </source>
+  <event>BeforeWrite</event>
+  <handler>CommonModule.УдалениеПомеченныхОбъектовСлужебный.ЗапретитьИспользованиеУдаляемыхОбъектовВНаборахЗаписейПриЗаписи</handler>
+</mdclass:EventSubscription>

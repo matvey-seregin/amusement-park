@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:EventSubscription xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="afd8251f-548b-4bb6-8ad0-4f412bec7cb6">
+  <name>СвойстваПередУдалениемСсылочногоОбъекта</name>
+  <synonym>
+    <key>ru</key>
+    <value>Свойства перед удалением ссылочного объекта</value>
+  </synonym>
+  <source>
+    <types>BusinessProcessObject</types>
+    <types>ChartOfCalculationTypesObject</types>
+    <types>ChartOfAccountsObject</types>
+    <types>ChartOfCharacteristicTypesObject</types>
+    <types>ExchangePlanObject</types>
+    <types>CatalogObject</types>
+    <types>TaskObject</types>
+    <types>DocumentObject</types>
+  </source>
+  <event>BeforeDelete</event>
+  <handler>CommonModule.УправлениеСвойствамиСлужебный.ПередУдалениемСсылочногоОбъекта</handler>
+</mdclass:EventSubscription>

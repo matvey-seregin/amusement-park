@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="e4166141-f18f-4d27-beb5-9e30fe30f842">
+  <producedTypes>
+    <selectionType typeId="5afb384a-3a79-4e4e-bd41-011652b01b9f" valueTypeId="deb090c6-921b-467c-9969-c1b0eb144050"/>
+    <listType typeId="c2610687-9f0c-4ec6-80c0-8af8da2b95cd" valueTypeId="e5285790-7f59-4aa4-a1cf-d7c1eab99854"/>
+    <managerType typeId="b833a579-7a1e-4218-85fa-b3ae49ff5ced" valueTypeId="d6f08062-a9ed-47b1-80cb-2c5fc51bb5e2"/>
+    <recordSetType typeId="d80f895b-f68e-47ac-bca5-e0c05d47484e" valueTypeId="c5fb5ba4-6950-42ee-bf56-8e28b1d05110"/>
+    <recordKeyType typeId="d3aa8e70-860c-46a7-9353-560b49eb9553" valueTypeId="e0bc6267-a6ab-43f1-9a3e-6712f3b68bb3"/>
+    <recordType typeId="a1774910-64ee-4586-9290-0b8b7cd5a303" valueTypeId="90aca077-a815-4460-a644-db509a3c28e1"/>
+    <recordManagerType typeId="cc3d7d4b-65a5-48f6-aee3-7c110788b5ab" valueTypeId="416dfa96-1179-4c49-a9a7-a7d670c31d3c"/>
+  </producedTypes>
+  <name>КлючиДоступаГруппДоступа</name>
+  <synonym>
+    <key>ru</key>
+    <value>Ключи доступа групп доступа</value>
+  </synonym>
+  <editType>InDialog</editType>
+  <defaultRecordForm>InformationRegister.КлючиДоступаГруппДоступа.Form.ФормаЗаписи</defaultRecordForm>
+  <defaultListForm>InformationRegister.КлючиДоступаГруппДоступа.Form.ФормаСписка</defaultListForm>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <recordPresentation>
+    <key>ru</key>
+    <value>Ключ доступа группы доступа</value>
+  </recordPresentation>
+  <resources uuid="b62434ac-ef9f-4fe7-8279-357e0dd760ac">
+    <name>ПравоИзменение</name>
+    <synonym>
+      <key>ru</key>
+      <value>Право изменение</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Если признак установлен, то разрешено не только чтение, но и изменение</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="eb1c7d02-f5fc-4b37-9b32-7dd828958d76">
+    <name>ПравоДобавление</name>
+    <synonym>
+      <key>ru</key>
+      <value>Право добавление</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Если признак установлен, то разрешено не только чтение и изменение, но и добавление</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="db2f20a7-e01f-4c03-9343-a815e1b46b50">
+    <name>ГруппаДоступа</name>
+    <synonym>
+      <key>ru</key>
+      <value>Группа доступа</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ГруппыДоступа</types>
+      <types>CatalogRef.ГруппыВнешнихПользователей</types>
+      <types>CatalogRef.ГруппыПользователей</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Группа доступа, группа пользователей или группа внешних пользователей которой разрешен ключ доступа</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="cf122ec9-d781-434c-9742-300e701317d6">
+    <name>КлючДоступа</name>
+    <synonym>
+      <key>ru</key>
+      <value>Ключ доступа</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.КлючиДоступа</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Группа однотипных объектов или записей регистра с одинаковым доступом</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <forms uuid="2aa2a968-2cac-4883-9bc8-5a3ccbd2e7a9">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="7d1361af-c5d3-4312-ab5e-ba00bf3418f2">
+    <name>ФормаЗаписи</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма записи</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:InformationRegister>

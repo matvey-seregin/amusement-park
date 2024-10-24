@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:EventSubscription xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="40fa5847-28f0-41ff-bfb8-ec33c8626d33">
+  <name>ЗапретитьИспользованиеУдаляемыхОбъектовВОбъектах</name>
+  <synonym>
+    <key>ru</key>
+    <value>Запретить использование удаляемых объектов в объектах</value>
+  </synonym>
+  <source>
+    <types>BusinessProcessObject</types>
+    <types>ChartOfCalculationTypesObject</types>
+    <types>ChartOfAccountsObject</types>
+    <types>ChartOfCharacteristicTypesObject</types>
+    <types>ExchangePlanObject</types>
+    <types>CatalogObject</types>
+    <types>TaskObject</types>
+  </source>
+  <event>BeforeWrite</event>
+  <handler>CommonModule.УдалениеПомеченныхОбъектовСлужебный.ЗапретитьИспользованиеУдаляемыхОбъектовВСправочникахПриЗаписи</handler>
+</mdclass:EventSubscription>

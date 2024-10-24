@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="4dea2614-6251-45c3-9abe-34b7595c71a2">
+  <producedTypes>
+    <selectionType typeId="e01906b1-87e8-403a-8afb-2b9e3e860b4e" valueTypeId="a98196bf-551a-4c56-a2e8-0c8d2d65744b"/>
+    <listType typeId="d0ef0be1-2821-4c92-8ffd-eff1fad183b9" valueTypeId="d97cbbd8-539c-4df9-9a29-b3eb67360188"/>
+    <managerType typeId="99a14841-ebc7-4e5e-a912-4973c1c9c79f" valueTypeId="74a9103e-87d1-4189-914d-2750440a56be"/>
+    <recordSetType typeId="d8eff31d-ade6-47d1-96d7-86c9ccf42296" valueTypeId="8e329908-f57b-45c5-a895-ef18e208c2af"/>
+    <recordKeyType typeId="4b709965-9985-4b1e-b3a9-f2685fd4fe77" valueTypeId="b141f808-59c1-4245-962a-e353efb4578b"/>
+    <recordType typeId="5ebe1bb4-ac69-4ecd-aea1-e10ebaa19938" valueTypeId="7aa7fe54-e20b-4046-befb-dd66287bc5ad"/>
+    <recordManagerType typeId="31587685-73a5-41aa-a927-05c6c9277f56" valueTypeId="2dd7fd68-8141-4d69-884b-5ec57666497b"/>
+  </producedTypes>
+  <name>ХранилищеФайлов</name>
+  <synonym>
+    <key>ru</key>
+    <value>Хранилище файлов</value>
+  </synonym>
+  <editType>InDialog</editType>
+  <defaultRecordForm>InformationRegister.ХранилищеФайлов.Form.ФормаЗаписи</defaultRecordForm>
+  <defaultListForm>InformationRegister.ХранилищеФайлов.Form.ФормаСписка</defaultListForm>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="e31cfba9-0f49-485f-8d6f-797b32667642">
+    <name>ХранилищеДвоичныхДанных</name>
+    <synonym>
+      <key>ru</key>
+      <value>Хранилище двоичных данных</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ХранилищеДвоичныхДанных</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="de183413-490a-4266-95fa-ea0057adeee3">
+    <name>Файл</name>
+    <synonym>
+      <key>ru</key>
+      <value>Файл</value>
+    </synonym>
+    <type>
+      <types>DefinedType.ПрисоединенныйФайл</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Присоединенный файл, к которому относятся данные</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <forms uuid="fd81a8df-0f9f-4543-a35c-0cb1bb804b5b">
+    <name>ФормаЗаписи</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма записи</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="129f7771-7285-4842-a139-ca927d086184">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:InformationRegister>

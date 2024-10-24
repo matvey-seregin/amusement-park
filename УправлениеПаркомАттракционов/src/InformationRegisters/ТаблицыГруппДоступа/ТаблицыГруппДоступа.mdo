@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="8a0d4f7f-7a80-4e5d-8238-05fc169e0319">
+  <producedTypes>
+    <selectionType typeId="7b995b1d-1f4e-4699-9616-1226c59b2253" valueTypeId="6367f69e-74f9-47ce-9d0a-79ebd409e864"/>
+    <listType typeId="a3636a3a-5984-4504-9173-f12a3f485d79" valueTypeId="ea3fe36e-ece3-4c92-95c6-a5b5229e5bc6"/>
+    <managerType typeId="0eee9294-9644-44bb-adac-b0d0f239de81" valueTypeId="6aab3af5-4736-45f4-aae6-717ab9fcf767"/>
+    <recordSetType typeId="e1b81571-9aa6-41f2-b316-0faae28acbcf" valueTypeId="2c482cf4-5f70-4c04-bdd2-1163f9d3db46"/>
+    <recordKeyType typeId="08381ae5-3d08-4d19-85fe-dbb6f66191e2" valueTypeId="b8b3da11-bdfa-4f99-bf93-57b0093c120d"/>
+    <recordType typeId="aafec09c-670a-486a-b575-c4ae6653c84d" valueTypeId="e64431b6-5977-4ea2-9149-00c3138ce8e9"/>
+    <recordManagerType typeId="ca2aa7c1-51c7-4e39-9c8f-6f7567de5d94" valueTypeId="09fc8d2c-5dc2-45a3-a284-7a63de148a9a"/>
+  </producedTypes>
+  <name>ТаблицыГруппДоступа</name>
+  <synonym>
+    <key>ru</key>
+    <value>Таблицы групп доступа</value>
+  </synonym>
+  <defaultRecordForm>InformationRegister.ТаблицыГруппДоступа.Form.ФормаЗаписи</defaultRecordForm>
+  <defaultListForm>InformationRegister.ТаблицыГруппДоступа.Form.ФормаСписка</defaultListForm>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="8e9f9baf-8d12-46cc-915f-f6f290af5512">
+    <name>ПравоИзменение</name>
+    <synonym>
+      <key>ru</key>
+      <value>Право изменение</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Флажок, установленный истина, показывает наличие права изменения в заданной таблице в пределах заданной группы доступа</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:BooleanValue"/>
+    <indexing>Index</indexing>
+  </resources>
+  <resources uuid="a8e14d2e-911d-4096-9027-deb7a08838e0">
+    <name>ПравоДобавление</name>
+    <synonym>
+      <key>ru</key>
+      <value>Право добавление</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Флажок, установленный истина, показывает наличие права добавления в заданной таблице в пределах заданной группы доступа</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:BooleanValue"/>
+    <indexing>Index</indexing>
+  </resources>
+  <resources uuid="c51d8ae2-66fe-4052-8ee4-980855b1f90c">
+    <name>ПравоЧтениеБезОграничения</name>
+    <synonym>
+      <key>ru</key>
+      <value>Право чтение без ограничения</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Флажок, установленный истина, показывает наличие права чтения без ограничения в заданной таблице в пределах заданной группы доступа</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="27610803-846f-40bd-b817-f73708f1fdb7">
+    <name>ПравоИзменениеБезОграничения</name>
+    <synonym>
+      <key>ru</key>
+      <value>Право изменение без ограничения</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Флажок, установленный истина, показывает наличие права изменения без ограничения в заданной таблице в пределах заданной группы доступа</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="4e2a3873-0317-44be-8dbb-e4cefc0361a8">
+    <name>ПравоДобавлениеБезОграничения</name>
+    <synonym>
+      <key>ru</key>
+      <value>Право добавление без ограничения</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Флажок, установленный истина, показывает наличие права добавления без ограничения в заданной таблице в пределах заданной группы доступа</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <attributes uuid="5808331f-9ab4-4a23-a592-1f65087f3214">
+    <name>ТипТаблицы</name>
+    <synonym>
+      <key>ru</key>
+      <value>Тип таблицы</value>
+    </synonym>
+    <comment>АПК:1330 - №728.2.1 Допустимо использование универсального ссылочного типа, так как это универсальный механизм и только для RLS в формате БСП 2.х (устарел)</comment>
+    <type>
+      <types>ExchangePlanRef</types>
+      <types>BusinessProcessRef</types>
+      <types>DocumentRef</types>
+      <types>ChartOfCalculationTypesRef</types>
+      <types>TaskRef</types>
+      <types>ChartOfCharacteristicTypesRef</types>
+      <types>ChartOfAccountsRef</types>
+      <types>CatalogRef</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Вспомогательный реквизит, содержащий пустую ссылку для таблиц объектного типа.
+Реквизит используется в шаблонах ограничения доступа для ускорения работы.</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <dimensions uuid="9316738d-3d38-4068-818e-a001355b19fb">
+    <name>Таблица</name>
+    <synonym>
+      <key>ru</key>
+      <value>Таблица</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ИдентификаторыОбъектовРасширений</types>
+      <types>CatalogRef.ИдентификаторыОбъектовМетаданных</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Идентификатор объекта метаданных для которого в одной из ролей профиля заданы права доступа.</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:ReferenceValue">
+      <value>Catalog.ИдентификаторыОбъектовМетаданных.EmptyRef</value>
+    </fillValue>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="d86d766f-021a-4c11-b9e8-403af08918cc">
+    <name>ГруппаДоступа</name>
+    <synonym>
+      <key>ru</key>
+      <value>Группа доступа</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ГруппыДоступа</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Группа доступа, которой принадлежит описание доступных таблиц по пользователям и правам.</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:ReferenceValue">
+      <value>Catalog.ГруппыДоступа.EmptyRef</value>
+    </fillValue>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <forms uuid="2cedfef0-5d93-475a-b2dd-ee36e553e6e1">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="29200d04-d7da-435a-89e6-858c11a1a98c">
+    <name>ФормаЗаписи</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма записи</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:InformationRegister>

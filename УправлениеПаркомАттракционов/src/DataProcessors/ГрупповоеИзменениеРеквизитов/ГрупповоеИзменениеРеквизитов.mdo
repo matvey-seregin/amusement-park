@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:DataProcessor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="e1b94dcf-ec37-4b2d-a7af-120eeee40944">
+  <producedTypes>
+    <objectType typeId="f06540d8-044b-4f8c-99c2-22070273fd43" valueTypeId="e4b23ce6-eec6-4dfb-9dcf-82cb128cee0c"/>
+    <managerType typeId="06559a1a-2dff-4161-9fbf-77334a8e5426" valueTypeId="625e752b-9e2e-4173-9661-94c8bc893610"/>
+  </producedTypes>
+  <name>ГрупповоеИзменениеРеквизитов</name>
+  <synonym>
+    <key>ru</key>
+    <value>Групповое изменение реквизитов</value>
+  </synonym>
+  <defaultForm>DataProcessor.ГрупповоеИзменениеРеквизитов.Form.Форма</defaultForm>
+  <includeHelpInContents>true</includeHelpInContents>
+  <help>
+    <pages>
+      <lang>ru</lang>
+    </pages>
+  </help>
+  <attributes uuid="7d2a37b1-a1a0-435a-846a-95e255655044">
+    <name>ИзменятьВТранзакции</name>
+    <synonym>
+      <key>ru</key>
+      <value>Изменять в транзакции</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>При невозможности изменения элементов в транзакции, все изменения будут отменены.</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="109db64c-00dc-490e-99a5-4430d9344e99">
+    <name>ПрерыватьПриОшибке</name>
+    <synonym>
+      <key>ru</key>
+      <value>Прерывать при ошибке</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Предупреждать, если во время изменения элементов возникнут ошибки.</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="85837a55-fed5-4b7b-a622-30d728b9a677">
+    <name>ИспользуютсяДопРеквизиты</name>
+    <synonym>
+      <key>ru</key>
+      <value>Используются доп реквизиты</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>У изменяемых объектов есть дополнительные реквизиты.</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="0fd79cdb-dc7a-40ca-a3bc-2c7a7b4691bb">
+    <name>ИспользуютсяДопСведения</name>
+    <synonym>
+      <key>ru</key>
+      <value>Используются доп сведения</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>У изменяемых объектов есть дополнительные сведения.</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="6ede8b5c-7df0-44a5-9136-8109bbd8b5a9">
+    <name>ПоказыватьСлужебныеРеквизиты</name>
+    <synonym>
+      <key>ru</key>
+      <value>Показывать служебные реквизиты</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Отображать служебные реквизиты в общем списке реквизитов.</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="325bacdd-793f-47d8-b987-57e9d5f2782b">
+    <name>РежимРазработчика</name>
+    <synonym>
+      <key>ru</key>
+      <value>Режим разработчика</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Выполнять запись объектов в режиме ОбменДанными.Загрузка = Истина.</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="80395d47-70d7-4d8d-9b18-93283fba80c2">
+    <name>ТипОперации</name>
+    <synonym>
+      <key>ru</key>
+      <value>Тип операции</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>50</length>
+      </stringQualifiers>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Способ обработки выбранных элементов.</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="8b621ec9-24c9-4166-90ce-29c5ad30f78b">
+    <name>РежимВыполнения</name>
+    <synonym>
+      <key>ru</key>
+      <value>Режим выполнения</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+      </numberQualifiers>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Определяет вариант изменения реквизитов  замена значений или произвольным алгоритмом.</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="cc98670a-7b18-4973-b211-90261c5c8c10">
+    <name>ВариантЗаписиОбъекта</name>
+    <synonym>
+      <key>ru</key>
+      <value>Вариант записи объекта</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>12</length>
+      </stringQualifiers>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Объект может быть записан автоматически после выполнения алгоритма или необходимость записи определяется в коде.</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="5921c2e6-4b25-40d4-b871-9654c2ce89bb">
+    <name>АдресДвоичныхДанныхВнешнейОбработки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Адрес двоичных данных внешней обработки</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <forms uuid="da9821c3-4b16-48b7-9088-d3cf8ac536a6">
+    <name>Форма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="fb36c775-1124-4ba6-8af8-133bf66fcb54">
+    <name>ВыбранныеЭлементы</name>
+    <synonym>
+      <key>ru</key>
+      <value>Выбранные элементы</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="51f9aff4-71da-4b1b-b48b-04122a17d855">
+    <name>ВыборВидаОбъектов</name>
+    <synonym>
+      <key>ru</key>
+      <value>Выбор вида объектов</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="d5142574-a040-4dd0-a482-cdc61c1d86ab">
+    <name>ДополнительныеПараметры</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дополнительные параметры</value>
+    </synonym>
+    <help>
+      <pages>
+        <lang>ru</lang>
+      </pages>
+    </help>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="62957889-503f-4923-a372-29776dc3b5e5">
+    <name>РедактированиеФормулы</name>
+    <synonym>
+      <key>ru</key>
+      <value>Редактирование формулы</value>
+    </synonym>
+    <help>
+      <pages>
+        <lang>ru</lang>
+      </pages>
+    </help>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <commands uuid="90385850-d37b-4b2e-ac87-95c17f32197c">
+    <name>ГрупповоеИзменениеРеквизитов</name>
+    <synonym>
+      <key>ru</key>
+      <value>Групповое изменение реквизитов</value>
+    </synonym>
+    <group>ActionsPanelTools</group>
+    <commandParameterType/>
+    <representation>Auto</representation>
+    <toolTip>
+      <key>ru</key>
+      <value>Групповое изменение реквизитов и табличных частей произвольных объектов</value>
+    </toolTip>
+  </commands>
+</mdclass:DataProcessor>

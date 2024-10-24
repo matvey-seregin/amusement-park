@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="e6032a40-6195-4889-99f5-f7f4c74d4e8f">
+  <producedTypes>
+    <selectionType typeId="343db0b1-94ed-404b-a2c9-0a95c738e779" valueTypeId="a3c85711-a6ed-464e-be73-14434a860542"/>
+    <listType typeId="8953e586-7158-41bd-9087-4b08d0bc0958" valueTypeId="e292b889-ff6b-43a0-a590-3c4564e7c3a4"/>
+    <managerType typeId="51d7838c-bd7a-4bf2-8ba6-0fa6b9fbcc7d" valueTypeId="fd3abf58-174e-4014-b1de-68858214cc79"/>
+    <recordSetType typeId="1ddd92d6-5db4-4b46-a6e1-f2bf35638c87" valueTypeId="5fdb2758-fdca-4380-b861-a587c7adb56d"/>
+    <recordKeyType typeId="b7481b53-289d-4e7b-87f6-19d05285b358" valueTypeId="eadf87f9-6a64-40ed-8f97-8d3a2fab834a"/>
+    <recordType typeId="ccbe13f6-8471-4c5d-9282-8b42428cd965" valueTypeId="e1af6695-e754-49a9-ae81-f57a51b36563"/>
+    <recordManagerType typeId="fa2baeb8-da1f-44b1-b023-6243c319ee1b" valueTypeId="588b9206-c8cb-4f6b-8117-561871032133"/>
+  </producedTypes>
+  <name>ИспользуемыеВидыДоступаПоТаблицам</name>
+  <synonym>
+    <key>ru</key>
+    <value>Используемые виды доступа по таблицам</value>
+  </synonym>
+  <defaultRecordForm>InformationRegister.ИспользуемыеВидыДоступаПоТаблицам.Form.ФормаЗаписи</defaultRecordForm>
+  <defaultListForm>InformationRegister.ИспользуемыеВидыДоступаПоТаблицам.Form.ФормаСписка</defaultListForm>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <dimensions uuid="f9f12c11-04e8-4999-b1ab-ddea896638a2">
+    <name>Таблица</name>
+    <synonym>
+      <key>ru</key>
+      <value>Таблица</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ИдентификаторыОбъектовРасширений</types>
+      <types>CatalogRef.ИдентификаторыОбъектовМетаданных</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Идентификатор объекта метаданных для которого в одной из ролей профиля заданы права доступа с ограничением на уровне записей.</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:ReferenceValue">
+      <value>Catalog.ИдентификаторыОбъектовМетаданных.EmptyRef</value>
+    </fillValue>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="47ae26c4-1c47-4d9d-a0b8-a9899d08a4ce">
+    <name>ТипЗначенийДоступа</name>
+    <synonym>
+      <key>ru</key>
+      <value>Тип значений доступа</value>
+    </synonym>
+    <type>
+      <types>DefinedType.ЗначениеДоступа</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Тип значений доступа (пустая ссылка), который соответствует виду доступа в группе доступа.
+Возможный используемый &quot;разрез&quot; ограничения прав доступа для таблицы, вычисленный по настройкам видов доступа в профилях и группах доступа.</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:ReferenceValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <forms uuid="83245a76-8502-47a4-98ae-2ffadb78a029">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="c9d5a41d-a2d9-4ec6-9a51-e4d254df1927">
+    <name>ФормаЗаписи</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма записи</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:InformationRegister>

@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="4d84bb11-e06e-4ed9-915b-76ee0e385a8b">
+  <producedTypes>
+    <selectionType typeId="96fd58ad-4dde-4411-ae22-538e3d057f97" valueTypeId="87b71e64-20c9-42e1-a71f-0f5c56f66fbf"/>
+    <listType typeId="8d72f2cf-0bf0-4479-be78-8bd14b980230" valueTypeId="14a4354a-08a4-494e-85c6-70656bcb9e61"/>
+    <managerType typeId="617e18f9-66c9-4b1c-a042-6d525022f37d" valueTypeId="db8b0154-94a1-490d-b168-f74c1e52a4ba"/>
+    <recordSetType typeId="f926fc51-6bea-440d-8d25-ac5708be74a9" valueTypeId="0411cbaf-6830-4770-933a-0821ec595b4e"/>
+    <recordKeyType typeId="7172e899-b9ff-4b21-b5a6-58cca4ca51c6" valueTypeId="5ef98a26-90a6-44d7-bbfc-12ab90de740c"/>
+    <recordType typeId="6c16eee2-9e28-42e1-a58e-21e355e8d30e" valueTypeId="2b150988-00f1-405c-8436-4e7076559cb8"/>
+    <recordManagerType typeId="c466d7b0-a5c2-4a50-bb6e-5026f899da93" valueTypeId="4046404e-1e34-46f4-92ad-c3b4b9b36596"/>
+  </producedTypes>
+  <name>НаследованиеНастроекПравОбъектов</name>
+  <synonym>
+    <key>ru</key>
+    <value>Наследование настроек прав объектов</value>
+  </synonym>
+  <defaultRecordForm>InformationRegister.НаследованиеНастроекПравОбъектов.Form.ФормаЗаписи</defaultRecordForm>
+  <defaultListForm>InformationRegister.НаследованиеНастроекПравОбъектов.Form.ФормаСписка</defaultListForm>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:BooleanValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:NumberValue">
+      <value>0</value>
+    </fillValue>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:DateValue">
+      <value>0001-01-01T00:00:00</value>
+    </fillValue>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="2b94076d-39ee-45ad-9ba5-435115cf5d4f">
+    <name>Наследовать</name>
+    <synonym>
+      <key>ru</key>
+      <value>Наследовать</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Значение настройки наследования (когда Объект = Родитель).</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <attributes uuid="72ace16c-e90a-4d05-bc23-4351d4c87683">
+    <name>УровеньИспользования</name>
+    <synonym>
+      <key>ru</key>
+      <value>Уровень использования</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>1</precision>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Вспомогательный реквизит, используемый в шаблонах ограничения доступа к данным.
+0 - использовать всегда,
+1 - наследовать.</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <dimensions uuid="bd86e378-84bb-486a-be7b-319a3fe3b70b">
+    <name>Объект</name>
+    <synonym>
+      <key>ru</key>
+      <value>Объект</value>
+    </synonym>
+    <type>
+      <types>DefinedType.ВладелецНастроекПрав</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Объект для которого настраивается наследование прав.</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:ReferenceValue">
+      <value>Catalog.ПапкиФайлов.EmptyRef</value>
+    </fillValue>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="ef3bc279-6721-4949-8dc0-f96141f7f05c">
+    <name>Родитель</name>
+    <synonym>
+      <key>ru</key>
+      <value>Родитель</value>
+    </synonym>
+    <type>
+      <types>DefinedType.ВладелецНастроекПрав</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Родитель объекта или сам объект.</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <forms uuid="f81c7e21-48ad-4b64-975d-e62d34c7235a">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="d0523c14-585e-45d3-9735-891235631004">
+    <name>ФормаЗаписи</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма записи</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:InformationRegister>

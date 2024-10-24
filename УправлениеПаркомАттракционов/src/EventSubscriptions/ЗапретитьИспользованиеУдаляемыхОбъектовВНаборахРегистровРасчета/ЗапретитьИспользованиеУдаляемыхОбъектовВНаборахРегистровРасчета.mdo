@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:EventSubscription xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="8b115575-9d8b-42f8-9ec8-0825a4397c7f">
+  <name>ЗапретитьИспользованиеУдаляемыхОбъектовВНаборахРегистровРасчета</name>
+  <synonym>
+    <key>ru</key>
+    <value>Запретить использование удаляемых объектов в наборах регистров расчета</value>
+  </synonym>
+  <source>
+    <types>CalculationRegisterRecordSet</types>
+  </source>
+  <event>BeforeWrite</event>
+  <handler>CommonModule.УдалениеПомеченныхОбъектовСлужебный.ЗапретитьИспользованиеУдаляемыхОбъектовВНаборахРегистровРасчетаПриЗаписи</handler>
+</mdclass:EventSubscription>

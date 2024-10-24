@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="84ba4ba7-2743-438a-8b65-cc14090f8a92">
+  <producedTypes>
+    <selectionType typeId="af30584d-2104-41f1-834e-2a7e3bf99cd9" valueTypeId="982c4668-bcc3-416c-8eaf-e8d1c0e5277b"/>
+    <listType typeId="533eb15d-1bac-4392-b27a-68f9c74ade04" valueTypeId="924ef404-ded9-4738-ace1-6172dc833ab2"/>
+    <managerType typeId="15284003-31e0-4d12-88d6-bcea0973f066" valueTypeId="be71bb77-9cbd-483a-bbd4-8249adc977c9"/>
+    <recordSetType typeId="5eec5109-6256-4adc-818f-ba4e9a546631" valueTypeId="586d8286-50ad-4154-bce1-48bca3850476"/>
+    <recordKeyType typeId="474d60ee-673d-461e-8baf-35e992db4386" valueTypeId="10610be3-4407-45f9-b0e8-b69b7c59d4f4"/>
+    <recordType typeId="9ddbb617-c96c-4fd1-9a4a-34995faff026" valueTypeId="a2fc152d-c293-432b-837a-5d12d8f1f311"/>
+    <recordManagerType typeId="2a820781-fb37-435a-85fd-1f6ce7fa5d81" valueTypeId="48b4589f-154a-4652-9190-c76af231a693"/>
+  </producedTypes>
+  <name>ОбновлениеКлючейДоступаТекущиеЗадания</name>
+  <synonym>
+    <key>ru</key>
+    <value>Обновление ключей доступа текущие задания</value>
+  </synonym>
+  <editType>InDialog</editType>
+  <defaultRecordForm>InformationRegister.ОбновлениеКлючейДоступаТекущиеЗадания.Form.ФормаЗаписи</defaultRecordForm>
+  <defaultListForm>InformationRegister.ОбновлениеКлючейДоступаТекущиеЗадания.Form.ФормаСписка</defaultListForm>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <recordPresentation>
+    <key>ru</key>
+    <value>Обновление ключей доступа текущее задание</value>
+  </recordPresentation>
+  <resources uuid="cdc4312c-b1af-407c-bfc3-28db04915aa6">
+    <name>Параметры</name>
+    <synonym>
+      <key>ru</key>
+      <value>Параметры</value>
+    </synonym>
+    <type>
+      <types>ValueStorage</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Параметры задания для начала или продолжения обновления.</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="97b76ee8-c73f-456b-9008-b453bd376317">
+    <name>Результат</name>
+    <synonym>
+      <key>ru</key>
+      <value>Результат</value>
+    </synonym>
+    <type>
+      <types>ValueStorage</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Если &quot;Это запуск&quot; равно Ложь, тогда есть результат
+выполнения задания по указанным параметрам,
+в противном случае результата нет.</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <attributes uuid="ee305e39-978b-4069-a4e6-05e761a5d6ae">
+    <name>ЭтоЗапуск</name>
+    <synonym>
+      <key>ru</key>
+      <value>Это запуск</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Если Истина, тогда результата нет, в противном случае есть.</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="965650ae-8a6e-469a-869a-0ce821818058">
+    <name>ДатаИзмененияЗаписиРегистра</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата изменения записи регистра</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers/>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Дата изменения записи регистра.
+Используется для отслеживания заданий, которые
+не подготовили результат за допустимое время.</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <dimensions uuid="00fde8e2-3eb3-484a-a960-a390cbdaa16a">
+    <name>ИдентификаторПотока</name>
+    <synonym>
+      <key>ru</key>
+      <value>Идентификатор потока</value>
+    </synonym>
+    <type>
+      <types>UUID</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Уникальный идентификатор фонового задания</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <forms uuid="c7a82aa5-043c-46a2-9f5a-cba098ca36bd">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="94744edd-61d0-4329-95d8-fc19dc7c6af1">
+    <name>ФормаЗаписи</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма записи</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:InformationRegister>

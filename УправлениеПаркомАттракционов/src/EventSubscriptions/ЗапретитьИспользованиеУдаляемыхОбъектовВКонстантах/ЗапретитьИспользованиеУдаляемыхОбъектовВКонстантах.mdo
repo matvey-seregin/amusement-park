@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:EventSubscription xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="d927f1f0-df5f-44a1-bbfd-152ebf1559dd">
+  <name>ЗапретитьИспользованиеУдаляемыхОбъектовВКонстантах</name>
+  <synonym>
+    <key>ru</key>
+    <value>Запретить использование удаляемых объектов в константах</value>
+  </synonym>
+  <source>
+    <types>ConstantValueManager</types>
+  </source>
+  <event>BeforeWrite</event>
+  <handler>CommonModule.УдалениеПомеченныхОбъектовСлужебный.ЗапретитьИспользованиеУдаляемыхОбъектовВКонстантахПриЗаписи</handler>
+</mdclass:EventSubscription>

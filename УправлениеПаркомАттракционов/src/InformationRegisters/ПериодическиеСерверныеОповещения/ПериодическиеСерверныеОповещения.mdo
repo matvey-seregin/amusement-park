@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="b65954b9-39f9-4f7c-8af2-939af0694368">
+  <producedTypes>
+    <selectionType typeId="4ac0a448-186b-42c4-985f-03cfe5b9426d" valueTypeId="07b5d97b-73be-4743-8513-e63197dec649"/>
+    <listType typeId="a1b62373-a1bb-48b7-af3d-594ff1f33e60" valueTypeId="b715f07a-f5b1-4090-a56a-2f8bf80833fe"/>
+    <managerType typeId="f3097ad5-b4db-42c7-bdaa-808e6a039986" valueTypeId="7029360f-a726-4b9c-9965-9f52f4ba4c7c"/>
+    <recordSetType typeId="5e15f97d-1268-4360-aff7-92bdacedc73f" valueTypeId="9585d8f3-f97c-4b7a-af83-0ccf98e6c795"/>
+    <recordKeyType typeId="34dc3f19-a32c-499b-84c1-4a46d5029bec" valueTypeId="396e80bc-078d-49fd-85c1-7eac0989b64e"/>
+    <recordType typeId="aff0f9e4-b7f9-45e8-b627-1055678f2de1" valueTypeId="8927d220-7985-47c6-ad3c-c2a0675882de"/>
+    <recordManagerType typeId="f11c3afc-6796-40d4-a2aa-a11b1c50cec9" valueTypeId="a2486558-055b-42af-a1d3-ac9d65ab4724"/>
+  </producedTypes>
+  <name>ПериодическиеСерверныеОповещения</name>
+  <synonym>
+    <key>ru</key>
+    <value>Периодические серверные оповещения</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <defaultRecordForm>InformationRegister.ПериодическиеСерверныеОповещения.Form.ФормаЗаписи</defaultRecordForm>
+  <defaultListForm>InformationRegister.ПериодическиеСерверныеОповещения.Form.ФормаСписка</defaultListForm>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="3a984dac-c971-42c3-9736-a45c46b55f01">
+    <name>ИдентификаторПользователяИБ</name>
+    <synonym>
+      <key>ru</key>
+      <value>Идентификатор пользователя ИБ</value>
+    </synonym>
+    <type>
+      <types>UUID</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Идентификатор пользователя информационной базы</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="edaa4ad4-4dd9-4225-85e8-b0d74d167985">
+    <name>Оповещения</name>
+    <synonym>
+      <key>ru</key>
+      <value>Оповещения</value>
+    </synonym>
+    <type>
+      <types>ValueStorage</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Периодические серверные оповещения сеанса</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <attributes uuid="c060feda-b1ec-4db3-b16e-d19b36833a2c">
+    <name>ДатаДобавления</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата добавления</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <dimensions uuid="2116217b-1660-499f-953d-f685738b0f30">
+    <name>КлючСеанса</name>
+    <synonym>
+      <key>ru</key>
+      <value>Ключ сеанса</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>36</length>
+      </stringQualifiers>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Ключ сеанса в виде строки &quot;&lt;Дата начала сеанса> &lt;Номер сеанса>&quot;, например, &quot;2022.03.02 10:38:07 8049&quot;</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <forms uuid="45b46613-13cc-4888-9bb7-53780402206f">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="5c224274-5495-49bc-b124-e6d649b09d57">
+    <name>ФормаЗаписи</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма записи</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:InformationRegister>

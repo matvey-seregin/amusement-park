@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:EventSubscription xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="f6d6f1b9-3956-4fdb-bbb0-5d81f083a072">
+  <name>ПроверитьДоступПередУдалением</name>
+  <synonym>
+    <key>ru</key>
+    <value>Проверить доступ перед удалением</value>
+  </synonym>
+  <source>
+    <types>DefinedType.ВладелецЗначенийКлючейДоступаОбъект</types>
+  </source>
+  <event>BeforeDelete</event>
+  <handler>CommonModule.УправлениеДоступомСлужебный.ПроверитьДоступПередУдалением</handler>
+</mdclass:EventSubscription>

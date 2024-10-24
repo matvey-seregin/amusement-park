@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:EventSubscription xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="8172256e-f51e-4de0-bd07-3668785f4cb9">
+  <name>ОбновитьВнешнегоПользователя</name>
+  <synonym>
+    <key>ru</key>
+    <value>Обновить внешнего пользователя</value>
+  </synonym>
+  <source>
+    <types>DefinedType.ВнешнийПользовательОбъект</types>
+  </source>
+  <event>OnWrite</event>
+  <handler>CommonModule.ПользователиСлужебный.ОбновитьВнешнегоПользователяПриЗаписи</handler>
+</mdclass:EventSubscription>

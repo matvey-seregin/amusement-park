@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="0e45c53e-7571-49bf-b673-cff53d32af89">
+  <producedTypes>
+    <selectionType typeId="37c78019-304a-461e-b32c-cf314a0e2565" valueTypeId="c630fa8b-4353-4e45-917c-392daba085d5"/>
+    <listType typeId="c82fd68f-d8ef-4107-bc66-19e21b5465b1" valueTypeId="4da5fddc-b785-41c9-b8ef-b925c21b7317"/>
+    <managerType typeId="4d5cb961-042c-4f53-ba42-dd22dabb663a" valueTypeId="90cace73-ecb3-42e7-9bed-d5e97982c135"/>
+    <recordSetType typeId="299f7b9d-7607-45ec-94d4-5517ccfac43e" valueTypeId="73f2b6af-609a-4f19-81cd-f3908cf68026"/>
+    <recordKeyType typeId="193e5d8c-36e8-4606-8643-91abf0bca61d" valueTypeId="415e681b-88d3-4cda-a0bc-cd14d81470d7"/>
+    <recordType typeId="c7f8f5e8-26d5-4647-aa10-52d09392f494" valueTypeId="cf0c50ad-9b44-4fb0-8636-0de9b338713e"/>
+    <recordManagerType typeId="271dd12d-77ba-4050-a6b8-25a6fed9a4cc" valueTypeId="7c2cfab0-fa4f-4b00-91a6-09bb6b9c546d"/>
+  </producedTypes>
+  <name>НеудаленныеОбъекты</name>
+  <synonym>
+    <key>ru</key>
+    <value>Неудаленные объекты</value>
+  </synonym>
+  <defaultListForm>InformationRegister.НеудаленныеОбъекты.Form.ФормаСписка</defaultListForm>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="169b0670-8fa7-48d1-b6b1-2cf581b18390">
+    <name>КоличествоПопыток</name>
+    <synonym>
+      <key>ru</key>
+      <value>Количество попыток</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="2e239650-973b-4908-b91e-477062046528">
+    <name>ВремяПоследнейПопытки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Время последней попытки</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="4692eeee-5b73-42f3-ad39-794141af9e2b">
+    <name>Объект</name>
+    <synonym>
+      <key>ru</key>
+      <value>Объект</value>
+    </synonym>
+    <type>
+      <types>ExchangePlanRef</types>
+      <types>BusinessProcessRef</types>
+      <types>DocumentRef</types>
+      <types>ChartOfCalculationTypesRef</types>
+      <types>TaskRef</types>
+      <types>ChartOfCharacteristicTypesRef</types>
+      <types>ChartOfAccountsRef</types>
+      <types>CatalogRef</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <forms uuid="093a2243-329b-49b2-b6cd-80a1f7e4634a">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:InformationRegister>

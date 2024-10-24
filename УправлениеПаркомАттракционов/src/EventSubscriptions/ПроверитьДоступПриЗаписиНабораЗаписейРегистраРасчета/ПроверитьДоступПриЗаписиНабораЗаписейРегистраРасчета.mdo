@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:EventSubscription xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="5f434c45-a5ff-4a07-8662-6a592298c7e9">
+  <name>ПроверитьДоступПриЗаписиНабораЗаписейРегистраРасчета</name>
+  <synonym>
+    <key>ru</key>
+    <value>Проверить доступ при записи набора записей регистра расчета</value>
+  </synonym>
+  <source>
+    <types>DefinedType.ВладелецЗначенийКлючейДоступаНаборЗаписейРегистраРасчета</types>
+  </source>
+  <event>OnWrite</event>
+  <handler>CommonModule.УправлениеДоступомСлужебный.ПроверитьДоступПриЗаписиНабораЗаписей</handler>
+</mdclass:EventSubscription>

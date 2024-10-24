@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="8bbbcfd9-b6da-41f6-b543-863b12b9fb59">
+  <producedTypes>
+    <selectionType typeId="f66e75ec-2149-4e0c-8ff1-3d257bae13e8" valueTypeId="b269a71b-edd5-4302-a2f7-90796d027744"/>
+    <listType typeId="3fed1c5d-9aa9-4e12-924b-4e8b5cc3df3f" valueTypeId="25e32945-0f30-44d0-89ea-c6e2f15e5521"/>
+    <managerType typeId="d12fbd89-9b30-47c8-95d7-42a2be5d85ff" valueTypeId="b3aa854d-de1c-483c-955f-3b87f7aa8475"/>
+    <recordSetType typeId="0c7d43e1-99fd-4c28-9bfd-349e44817fe7" valueTypeId="a2b3a4b6-9586-4da9-87c2-371a48f713d6"/>
+    <recordKeyType typeId="7f01235a-c212-4cd7-9275-1dac3bb16790" valueTypeId="92215164-54ce-4cdb-9367-bf057e6d5218"/>
+    <recordType typeId="80ad3b1a-f4ae-4627-8cab-27108ef4b36e" valueTypeId="454dc528-ee76-47d9-bbd9-18108c68644e"/>
+    <recordManagerType typeId="725b91e7-15bf-43e1-a595-d5e06cb95284" valueTypeId="af6e51ca-4200-4b7d-a60f-8ca4a081af76"/>
+  </producedTypes>
+  <name>ОбновлениеКлючейДоступаПользователей</name>
+  <synonym>
+    <key>ru</key>
+    <value>Обновление ключей доступа пользователей</value>
+  </synonym>
+  <editType>InDialog</editType>
+  <defaultRecordForm>InformationRegister.ОбновлениеКлючейДоступаПользователей.Form.ФормаЗаписи</defaultRecordForm>
+  <defaultListForm>InformationRegister.ОбновлениеКлючейДоступаПользователей.Form.ФормаСписка</defaultListForm>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <recordPresentation>
+    <key>ru</key>
+    <value>Обновление ключей доступа пользователей</value>
+  </recordPresentation>
+  <explanation>
+    <key>ru</key>
+    <value>Обновление ключей доступа пользователей, внешних пользователей и групп доступа</value>
+  </explanation>
+  <attributes uuid="eb48f8a9-1644-432d-a8a8-e63bc013a2fe">
+    <name>ТочечноеЗадание</name>
+    <synonym>
+      <key>ru</key>
+      <value>Точечное задание</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Точечное задание содержит ссылку на ведущий ключ доступа для обновления
+только тех ключей доступа, которые ссылаются на этот ведущий ключ доступа.</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="36951804-70a4-45fa-9fad-1c37fd3ce7b7">
+    <name>ПараметрыЗадания</name>
+    <synonym>
+      <key>ru</key>
+      <value>Параметры задания</value>
+    </synonym>
+    <type>
+      <types>ValueStorage</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Содержит структуру со ссылкой на последний ключ доступа
+(когда ключ уникальности не заполнен),
+а также ссылки на ведущие ключи доступа точечных заданий.</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="d0031774-fa35-469f-9f8a-3aaa920928a0">
+    <name>РазмерЗадания</name>
+    <synonym>
+      <key>ru</key>
+      <value>Размер задания</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>1</precision>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>1 - точечное задание,
+2 - обновление устаревших,
+3 - обновление с начала.</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="6da02618-2454-48fe-b1dc-399d0d40d043">
+    <name>ДатаИзмененияЗаписиРегистра</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата изменения записи регистра</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers/>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Дата изменения записи регистра.
+Используется для выбора записей, измененных после предыдущего выбора.</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <dimensions uuid="5a080203-ecd2-4f40-ac64-c8024eda595e">
+    <name>Список</name>
+    <synonym>
+      <key>ru</key>
+      <value>Список</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ИдентификаторыОбъектовРасширений</types>
+      <types>CatalogRef.ИдентификаторыОбъектовМетаданных</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Список элементов справочников, документов, регистров и др., для которого используется ключ доступа.</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="3eabcb69-398b-43f5-bf53-c20f90bee5c4">
+    <name>ДляВнешнихПользователей</name>
+    <synonym>
+      <key>ru</key>
+      <value>Для внешних пользователей</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Обновление ключей доступа для внешних пользователей</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </dimensions>
+  <dimensions uuid="9c33639e-529a-490f-9365-80778b54c3f7">
+    <name>КлючУникальности</name>
+    <synonym>
+      <key>ru</key>
+      <value>Ключ уникальности</value>
+    </synonym>
+    <type>
+      <types>UUID</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Произвольный уникальный идентификатор для распараллеливания записи из сеансов, регистрирующих необходимость обновления.</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </dimensions>
+  <forms uuid="561b97a0-9d42-4735-a606-8d5b5862689f">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="10d5c0c2-301f-4477-a88f-254f99a30fa0">
+    <name>ФормаЗаписи</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма записи</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:InformationRegister>

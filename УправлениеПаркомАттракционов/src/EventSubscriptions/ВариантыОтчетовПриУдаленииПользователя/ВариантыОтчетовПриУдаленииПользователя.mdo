@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:EventSubscription xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="8b13e848-8fd3-4326-bd18-5a5b12ed3dc5">
+  <name>ВариантыОтчетовПриУдаленииПользователя</name>
+  <synonym>
+    <key>ru</key>
+    <value>Варианты отчетов при удалении пользователя</value>
+  </synonym>
+  <source>
+    <types>CatalogObject.ВнешниеПользователи</types>
+    <types>CatalogObject.Пользователи</types>
+  </source>
+  <event>OnWrite</event>
+  <handler>CommonModule.ВариантыОтчетов.ПриУдаленииПользователя</handler>
+</mdclass:EventSubscription>

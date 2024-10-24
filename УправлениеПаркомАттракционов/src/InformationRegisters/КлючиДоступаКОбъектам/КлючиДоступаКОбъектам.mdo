@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="d7fdb3d5-3c18-4d9c-938a-2fbe8a96e877">
+  <producedTypes>
+    <selectionType typeId="02ee4fb2-c493-4e25-bf63-68d2c971b2a5" valueTypeId="9cc5bd94-e086-4c20-8d44-5bcc46e3a9b6"/>
+    <listType typeId="e11dbd55-e94a-463c-bda0-f95d3643abfa" valueTypeId="8ec1bef1-8ab8-4a8e-acbd-801c495712fd"/>
+    <managerType typeId="ef466d45-77f8-497b-96e9-8ed8cfec90cd" valueTypeId="9b050b85-a3c1-4417-ab43-b43553f0c39b"/>
+    <recordSetType typeId="af630487-2d92-478b-85df-a72d5fc35de3" valueTypeId="9f047e0a-3daa-41ca-83d9-27ce946434b7"/>
+    <recordKeyType typeId="d6f5365d-969d-4390-87eb-a5cad7c539af" valueTypeId="35149107-87be-440c-b70a-6572368f7250"/>
+    <recordType typeId="f4a12b04-f061-4f27-9489-ea1507758c49" valueTypeId="63529eb0-2759-4d85-a394-bbb6bb396002"/>
+    <recordManagerType typeId="566ae2c5-b0a9-46ed-bfd8-6035933a991f" valueTypeId="6ed414b0-e81a-4855-ba4d-2ab2a6f95034"/>
+  </producedTypes>
+  <name>КлючиДоступаКОбъектам</name>
+  <synonym>
+    <key>ru</key>
+    <value>Ключи доступа к объектам</value>
+  </synonym>
+  <editType>InDialog</editType>
+  <defaultRecordForm>InformationRegister.КлючиДоступаКОбъектам.Form.ФормаЗаписи</defaultRecordForm>
+  <defaultListForm>InformationRegister.КлючиДоступаКОбъектам.Form.ФормаСписка</defaultListForm>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <recordPresentation>
+    <key>ru</key>
+    <value>Ключ доступа к объекту</value>
+  </recordPresentation>
+  <resources uuid="b8658e11-42b6-41bb-b384-5380e2228338">
+    <name>КлючДоступаПользователей</name>
+    <synonym>
+      <key>ru</key>
+      <value>Ключ доступа пользователей</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.КлючиДоступа</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Группа однотипных объектов с одинаковым доступом (для пользователей)</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="40c0919f-2c53-4502-af06-745dfa47fd8e">
+    <name>КлючДоступаВнешнихПользователей</name>
+    <synonym>
+      <key>ru</key>
+      <value>Ключ доступа внешних пользователей</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.КлючиДоступа</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Группа однотипных объектов с одинаковым доступом (для внешних пользователей)</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="b01e4e7f-1b01-4c19-ab4b-7a8c1f6b0d22">
+    <name>Объект</name>
+    <synonym>
+      <key>ru</key>
+      <value>Объект</value>
+    </synonym>
+    <type>
+      <types>DefinedType.ВладелецЗначенийКлючейДоступа</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Элемент справочника, документ или другой объект, доступ к которому ограничивается</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <forms uuid="662a2803-da19-40c7-a906-e20d0843f67f">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="327c0731-1496-4463-837f-8f9c3e4c1a49">
+    <name>ФормаЗаписи</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма записи</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:InformationRegister>

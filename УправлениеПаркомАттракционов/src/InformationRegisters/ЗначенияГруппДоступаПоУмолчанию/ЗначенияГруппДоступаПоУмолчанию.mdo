@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="62903794-3b41-4d21-b800-1c26dbeda3ce">
+  <producedTypes>
+    <selectionType typeId="3b678902-70b9-4fcd-85f6-7539b3d28fef" valueTypeId="ac11ffe3-e28f-432e-bb0d-91c7dfc3b24c"/>
+    <listType typeId="728fd13a-9552-4c37-8ff9-5ed539f71d3c" valueTypeId="ca387b6f-6423-4878-b945-ed8a731828c8"/>
+    <managerType typeId="e467848e-f80b-4053-8296-f53548324cea" valueTypeId="736856f0-1d47-4d87-8608-ad52f02840ca"/>
+    <recordSetType typeId="26dd8abe-34c8-4ff6-bd2e-5ae9d9ece9af" valueTypeId="905ab43f-60d5-485d-8656-6cb4aed13c9c"/>
+    <recordKeyType typeId="876396a1-3e9d-458e-a499-faf9f8f77c0f" valueTypeId="1c8f2bb5-7f71-4228-a4c8-7ba596223cfa"/>
+    <recordType typeId="9950e222-b54c-4cb6-897e-2acdac1414f2" valueTypeId="1c582197-0d02-4964-938c-1b945eb37ac9"/>
+    <recordManagerType typeId="f3df5009-dd1c-4961-becb-4209bf61e433" valueTypeId="91d30c4b-b050-401f-8936-12285c4cbf6d"/>
+  </producedTypes>
+  <name>ЗначенияГруппДоступаПоУмолчанию</name>
+  <synonym>
+    <key>ru</key>
+    <value>Значения групп доступа по умолчанию</value>
+  </synonym>
+  <defaultRecordForm>InformationRegister.ЗначенияГруппДоступаПоУмолчанию.Form.ФормаЗаписи</defaultRecordForm>
+  <defaultListForm>InformationRegister.ЗначенияГруппДоступаПоУмолчанию.Form.ФормаСписка</defaultListForm>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="9bda4a0b-e8a7-4acf-9f07-4033b3a84ebc">
+    <name>ВсеРазрешены</name>
+    <synonym>
+      <key>ru</key>
+      <value>Все разрешены</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Все не указанные значения разрешены.</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:BooleanValue"/>
+    <indexing>Index</indexing>
+  </resources>
+  <attributes uuid="4ba2e55e-29bc-4fbe-83e8-8bfa36abfdab">
+    <name>ВсеРазрешеныБезИсключений</name>
+    <synonym>
+      <key>ru</key>
+      <value>Все разрешены без исключений</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Обозначает, что в группе доступа не указано
+значений доступа, а по умолчанию все разрешены.</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="93de88de-0069-4aa8-96b2-d5709e4def2f">
+    <name>БезНастройки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Без настройки</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Обозначает, что в профиле и группе доступа нет вида доступа или
+ограничение по виду доступа не используется в приложении.</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <dimensions uuid="9f94fadf-ac9d-4e57-9fe4-41ce8cfbec6a">
+    <name>ГруппаДоступа</name>
+    <synonym>
+      <key>ru</key>
+      <value>Группа доступа</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ГруппыДоступа</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Группа доступа из справочника Группы доступа,
+которой принадлежат записи о значениях доступа.</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:ReferenceValue">
+      <value>Catalog.ГруппыДоступа.EmptyRef</value>
+    </fillValue>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="12d4ffc8-592e-42a7-b8c6-20bd58f6da90">
+    <name>ТипЗначенийДоступа</name>
+    <synonym>
+      <key>ru</key>
+      <value>Тип значений доступа</value>
+    </synonym>
+    <type>
+      <types>DefinedType.ЗначениеДоступа</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Тип значений доступа (пустая ссылка),
+который соответствует виду доступа в группе доступа.</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:ReferenceValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <forms uuid="3a8d9010-8785-4d8d-b908-b821d7d681c9">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="2568a935-ea49-4b99-aa9c-de27de6a0e81">
+    <name>ФормаЗаписи</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма записи</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:InformationRegister>

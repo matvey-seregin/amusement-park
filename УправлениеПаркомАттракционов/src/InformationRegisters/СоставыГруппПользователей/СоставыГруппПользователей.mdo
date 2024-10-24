@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="86a871da-3725-43a1-a7c3-98acd187011b">
+  <producedTypes>
+    <selectionType typeId="fbf5a3bd-1af5-4617-b5c8-039b9e862af9" valueTypeId="9bd24560-b137-4e3e-9a67-ff8b32b4b125"/>
+    <listType typeId="87919e3d-3a32-4f6f-9f67-0748e2b5efbb" valueTypeId="06dc2b54-02bd-464d-97c1-b70050783eaa"/>
+    <managerType typeId="5574efa6-6dca-49d6-8806-15179bab75bb" valueTypeId="bb0d6e78-f2a2-45cf-9c22-398f1244a509"/>
+    <recordSetType typeId="ff3cf6be-dae2-4788-9976-8fa1e5a02190" valueTypeId="a3843565-f9b5-4e7a-910d-6088f13dea83"/>
+    <recordKeyType typeId="d57d5075-434c-46b3-b656-7feae217e61b" valueTypeId="cc52b3f5-aa22-49cb-ac6a-611631a5d86c"/>
+    <recordType typeId="84c905fa-8225-4f9b-ad90-db9c3ffbd6d9" valueTypeId="4b722a08-9298-40a1-9e5d-2091ab418a6b"/>
+    <recordManagerType typeId="f06d5306-ed2f-46ab-9ce4-03c5827998a8" valueTypeId="1326cd01-5159-4474-9b94-a9d6f83fbc77"/>
+  </producedTypes>
+  <name>СоставыГруппПользователей</name>
+  <synonym>
+    <key>ru</key>
+    <value>Составы групп пользователей</value>
+  </synonym>
+  <editType>InDialog</editType>
+  <defaultRecordForm>InformationRegister.СоставыГруппПользователей.Form.ФормаЗаписи</defaultRecordForm>
+  <defaultListForm>InformationRegister.СоставыГруппПользователей.Form.ФормаСписка</defaultListForm>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="2447cfeb-d877-4222-8ac2-b0026b85f932">
+    <name>Используется</name>
+    <synonym>
+      <key>ru</key>
+      <value>Используется</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Признак того, что и группа пользователей (группа внешних пользователей) не помечена на удаление и пользователь (внешний пользователь) не помечен на удаление и действителен.</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+  </resources>
+  <dimensions uuid="fb94e9cb-1f27-42a6-a701-18bbe5888e70">
+    <name>ГруппаПользователей</name>
+    <synonym>
+      <key>ru</key>
+      <value>Группа пользователей</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ВнешниеПользователи</types>
+      <types>CatalogRef.ГруппыВнешнихПользователей</types>
+      <types>CatalogRef.ГруппыПользователей</types>
+      <types>CatalogRef.Пользователи</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>1) Группа пользователей (группа внешних пользователей), в которую включен пользователь (внешний пользователь) с учетом иерархии групп.
+2) Пользователь (внешний пользователь), равный значению в поле Пользователь для упрощения запросов.</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="2e26e32e-a0c6-4460-99de-865622202166">
+    <name>Пользователь</name>
+    <synonym>
+      <key>ru</key>
+      <value>Пользователь</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ВнешниеПользователи</types>
+      <types>CatalogRef.Пользователи</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Пользователь (внешний пользователь) включенный в состав группы пользователей (группы внешних пользователей) с учетом иерархии групп.</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <forms uuid="c9489a6e-45af-4877-9788-158071571a0a">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="23959912-f8fc-42bc-9ec2-1d520ebc5dad">
+    <name>ФормаЗаписи</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма записи</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:InformationRegister>

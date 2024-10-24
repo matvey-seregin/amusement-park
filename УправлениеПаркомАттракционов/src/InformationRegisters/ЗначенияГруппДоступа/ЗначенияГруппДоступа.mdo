@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="96fe619a-b819-4f96-9788-e1f4ef57833a">
+  <producedTypes>
+    <selectionType typeId="a33da133-ed9d-4dc3-99a3-e2762238bf3c" valueTypeId="85e3892c-240f-41ce-8f9e-1be728a7ebd3"/>
+    <listType typeId="d4510730-7581-4332-9a70-a18da578acae" valueTypeId="a7a866e9-0521-40b2-a724-91a589d4332f"/>
+    <managerType typeId="f3f2058a-1efb-43d4-9a67-b9a97003ff49" valueTypeId="10c1b6f8-cb68-4549-bcc0-0c7efb756f8f"/>
+    <recordSetType typeId="f05409f4-2032-4ec5-98e9-da3433e62eba" valueTypeId="508ddd44-e251-4455-8c4b-112391ae6f60"/>
+    <recordKeyType typeId="f35f041e-b794-46dc-95ca-453882ce6493" valueTypeId="c46815b0-5c2c-4a9b-99b9-d7147994007d"/>
+    <recordType typeId="e2b569ca-9636-489d-9c68-4c5a9e645d99" valueTypeId="d50d4080-fab8-49fb-a4e8-49e305f0bf7e"/>
+    <recordManagerType typeId="2427b5b0-e27c-4803-b7db-f14e8c23a8d0" valueTypeId="451a51d5-9852-46f9-b390-ff939dad2c56"/>
+  </producedTypes>
+  <name>ЗначенияГруппДоступа</name>
+  <synonym>
+    <key>ru</key>
+    <value>Значения групп доступа</value>
+  </synonym>
+  <defaultRecordForm>InformationRegister.ЗначенияГруппДоступа.Form.ФормаЗаписи</defaultRecordForm>
+  <defaultListForm>InformationRegister.ЗначенияГруппДоступа.Form.ФормаСписка</defaultListForm>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="94dff2da-f721-411a-9fc0-5d013b685dcc">
+    <name>ЗначениеРазрешено</name>
+    <synonym>
+      <key>ru</key>
+      <value>Значение разрешено</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:BooleanValue"/>
+    <indexing>Index</indexing>
+  </resources>
+  <dimensions uuid="9343fc5f-7b08-4be5-8cd5-dbed635b819d">
+    <name>ГруппаДоступа</name>
+    <synonym>
+      <key>ru</key>
+      <value>Группа доступа</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ГруппыДоступа</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Группа доступа из справочника Группы доступа,
+которой принадлежат записи о значениях доступа.</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:ReferenceValue">
+      <value>Catalog.ГруппыДоступа.EmptyRef</value>
+    </fillValue>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="99e87e66-1b07-451b-a476-f5213cbd7150">
+    <name>ЗначениеДоступа</name>
+    <synonym>
+      <key>ru</key>
+      <value>Значение доступа</value>
+    </synonym>
+    <type>
+      <types>DefinedType.ЗначениеДоступа</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Значение доступа, заданное в группе доступа по виду доступа,
+которому соответствует его тип.</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:ReferenceValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <forms uuid="c3317f75-f6ad-41f6-97f1-77074c3ff62a">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="8800dec9-84f8-4643-8742-1d76fe575f58">
+    <name>ФормаЗаписи</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма записи</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:InformationRegister>

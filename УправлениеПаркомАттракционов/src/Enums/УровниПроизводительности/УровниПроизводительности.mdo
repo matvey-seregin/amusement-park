@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Enum xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="a3b0494c-f436-45ea-9577-4c0c86b057c9">
+  <producedTypes>
+    <refType typeId="3a1ef513-4baa-4e6f-9544-69d6cd655377" valueTypeId="800bdd8b-3fc2-4af8-a903-0a7627ae72d8"/>
+    <listType typeId="136ae8ec-1adc-4cb9-8394-5a114b688c7e" valueTypeId="94d2cfb0-46a0-46b7-a194-df85172614ac"/>
+    <managerType typeId="12797b1a-93bd-4d38-8c56-20a458120fb7" valueTypeId="8e7d6c9c-0c87-40d9-ae62-e54c3426dc52"/>
+  </producedTypes>
+  <name>УровниПроизводительности</name>
+  <synonym>
+    <key>ru</key>
+    <value>Уровни производительности</value>
+  </synonym>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Order</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Ref</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <quickChoice>true</quickChoice>
+  <choiceMode>BothWays</choiceMode>
+  <enumValues uuid="5101c142-b25c-4bef-80e7-7407f2c15c90">
+    <name>Отлично</name>
+    <synonym>
+      <key>ru</key>
+      <value>Отлично (>=0.95)</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="6d7872f1-fd54-41c4-8253-5f2b125f31ae">
+    <name>Хорошо</name>
+    <synonym>
+      <key>ru</key>
+      <value>Хорошо (apdex >= 0.85)</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="0c218200-27a8-4f71-9b09-3632dd453644">
+    <name>Плохо</name>
+    <synonym>
+      <key>ru</key>
+      <value>Плохо (apdex >= 0.70)</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="2d8a74e5-eb29-448b-b4c0-1f41fa171b5e">
+    <name>ОченьПлохо</name>
+    <synonym>
+      <key>ru</key>
+      <value>Очень плохо (apdex >= 0.50)</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="b5d30250-18ab-4af1-b99a-ff5dba334d1f">
+    <name>Неприемлемо</name>
+    <synonym>
+      <key>ru</key>
+      <value>Неприемлемо (apdex &lt; 0.50)</value>
+    </synonym>
+  </enumValues>
+</mdclass:Enum>

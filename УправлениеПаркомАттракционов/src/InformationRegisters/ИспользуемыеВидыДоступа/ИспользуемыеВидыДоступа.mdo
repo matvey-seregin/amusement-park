@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="d4e567c7-55f1-4564-b066-f5b2355ad82c">
+  <producedTypes>
+    <selectionType typeId="23415252-a8cf-4188-9f20-59646ce70520" valueTypeId="32d04c8d-acd3-4632-8f01-49982a81a980"/>
+    <listType typeId="bb06e17d-dc27-440e-ad7d-386825bc03ec" valueTypeId="5b1a2925-6a96-4e8d-acbf-59bb933bb019"/>
+    <managerType typeId="900c1335-d00a-4943-81a9-97e10baa0cab" valueTypeId="89d67ada-1e88-4c7c-88f9-5c064483a3b8"/>
+    <recordSetType typeId="16fdfe94-eeeb-4342-a9cd-dedc9f8c652d" valueTypeId="6621c3e2-186f-4002-a115-b28bac8c1e9d"/>
+    <recordKeyType typeId="2308b082-b490-45c9-916c-b708e1886d6f" valueTypeId="18538cb8-9b21-490e-b4bc-9c9a69025946"/>
+    <recordType typeId="cc668ad4-c51c-4906-ba96-93b2912841bc" valueTypeId="6dd0c672-4ea0-4be6-97e3-fb5a26b5cdbd"/>
+    <recordManagerType typeId="f93049e7-7aa2-47c0-8d65-06c7fd389362" valueTypeId="713dcf66-543e-48b9-bccf-8a904a16a30e"/>
+  </producedTypes>
+  <name>ИспользуемыеВидыДоступа</name>
+  <synonym>
+    <key>ru</key>
+    <value>Используемые виды доступа</value>
+  </synonym>
+  <defaultRecordForm>InformationRegister.ИспользуемыеВидыДоступа.Form.ФормаЗаписи</defaultRecordForm>
+  <defaultListForm>InformationRegister.ИспользуемыеВидыДоступа.Form.ФормаСписка</defaultListForm>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="57d1bde3-eaa7-476b-aecb-f78e0e97c765">
+    <name>Используется</name>
+    <synonym>
+      <key>ru</key>
+      <value>Используется</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="89cf2cd8-dc43-4742-af5a-5975e9546786">
+    <name>ТипЗначенийДоступа</name>
+    <synonym>
+      <key>ru</key>
+      <value>Тип значений доступа</value>
+    </synonym>
+    <type>
+      <types>DefinedType.ЗначениеДоступа</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Тип значений доступа (пустая ссылка), который соответствует виду доступа в группе доступа.
+Используемый &quot;разрез&quot; ограничения прав доступа для информационной базы в целом.</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:ReferenceValue"/>
+  </dimensions>
+  <forms uuid="089ae618-cd90-482a-b4a2-45a04aaecc0c">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="d1beef4e-9c78-49f5-9e52-1568fadf861d">
+    <name>ФормаЗаписи</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма записи</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:InformationRegister>

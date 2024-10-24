@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="4a69a70d-1b4c-4999-a3dd-ae1deb331fea">
+  <producedTypes>
+    <selectionType typeId="46c285bd-5421-4abc-b5a7-a5d83346b9bc" valueTypeId="3d381f2b-1e88-48bd-9f9d-a715ed97102b"/>
+    <listType typeId="5b468d78-5540-4544-840d-f1a7c3f1d47d" valueTypeId="155bd023-1d3a-49e7-8c16-84c0c7891ca2"/>
+    <managerType typeId="3f098b91-2af4-4d60-8974-8502dd347692" valueTypeId="95578d03-b64b-4af6-a2ef-df091f44d69c"/>
+    <recordSetType typeId="01e92450-7fdb-4e03-8200-7633146d68e2" valueTypeId="4a12cfda-ece7-43ce-82ea-42b267fce678"/>
+    <recordKeyType typeId="829fec6c-a6d4-491f-882b-76b94bf6daec" valueTypeId="e66b21a3-0307-407e-9927-4742ff87e4d8"/>
+    <recordType typeId="65248ca0-1753-480c-98d1-cf7b6865e873" valueTypeId="e42a81f4-2b79-4888-93bc-a4275e75f126"/>
+    <recordManagerType typeId="d7f515c5-a662-4e91-b889-7e66668d9e27" valueTypeId="4ded3292-9855-4bf3-bf0c-5ab23025ce91"/>
+  </producedTypes>
+  <name>ДанныеПроизводственногоКалендаря</name>
+  <synonym>
+    <key>ru</key>
+    <value>Данные производственного календаря</value>
+  </synonym>
+  <editType>InDialog</editType>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="3a36e0f5-a645-47f1-99ae-5b0493d604ad">
+    <name>ВидДня</name>
+    <synonym>
+      <key>ru</key>
+      <value>Вид дня</value>
+    </synonym>
+    <type>
+      <types>EnumRef.ВидыДнейПроизводственногоКалендаря</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Вид дня производственного календаря</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="57f762f7-b8e4-498b-a3dc-3d40c94855ec">
+    <name>ДатаПереноса</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата переноса</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Дата, с которой был осуществлен перенос дня</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="ca7d4086-de35-40fd-af65-73369d452135">
+    <name>ПроизводственныйКалендарь</name>
+    <synonym>
+      <key>ru</key>
+      <value>Производственный календарь</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ПроизводственныеКалендари</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Производственный календарь, сведения о котором хранятся в регистре</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="563c0f5c-e0b4-4229-a3f6-183091060aa4">
+    <name>Дата</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Дата календаря</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="bf967588-ea8f-49a3-9331-af2331ffa162">
+    <name>Год</name>
+    <synonym>
+      <key>ru</key>
+      <value>Год</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>4</precision>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <format>
+      <key>ru</key>
+      <value>ЧГ=</value>
+    </format>
+    <editFormat>
+      <key>ru</key>
+      <value>ЧГ=</value>
+    </editFormat>
+    <toolTip>
+      <key>ru</key>
+      <value>Календарный год</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

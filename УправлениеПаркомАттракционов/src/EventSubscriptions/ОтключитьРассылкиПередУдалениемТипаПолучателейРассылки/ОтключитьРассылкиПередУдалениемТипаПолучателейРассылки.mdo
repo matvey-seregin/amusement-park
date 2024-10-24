@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:EventSubscription xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="a2f943a4-05a3-4eb6-9a10-74b6859469a6">
+  <name>ОтключитьРассылкиПередУдалениемТипаПолучателейРассылки</name>
+  <synonym>
+    <key>ru</key>
+    <value>Отключить рассылки перед удалением типа получателей рассылки</value>
+  </synonym>
+  <source>
+    <types>CatalogObject.ИдентификаторыОбъектовРасширений</types>
+    <types>CatalogObject.ИдентификаторыОбъектовМетаданных</types>
+  </source>
+  <event>BeforeDelete</event>
+  <handler>CommonModule.РассылкаОтчетов.ОтключитьРассылкиПередУдалениемТипаПолучателейРассылки</handler>
+</mdclass:EventSubscription>

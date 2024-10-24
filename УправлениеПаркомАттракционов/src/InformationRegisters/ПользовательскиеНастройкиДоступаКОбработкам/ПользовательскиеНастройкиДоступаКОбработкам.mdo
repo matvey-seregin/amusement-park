@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="6f630213-c16c-421c-a160-09e3c729ab26">
+  <producedTypes>
+    <selectionType typeId="7f55bba7-6a5b-4614-b100-4d97e03e1dbc" valueTypeId="1cabea93-b0c0-4c3a-89a7-28d83daeffde"/>
+    <listType typeId="6726b736-d63a-4acf-bf3b-10cd6bdff16c" valueTypeId="503d0c5f-5fbb-4459-8070-50f0f7bf1408"/>
+    <managerType typeId="dd233b29-22f3-4d64-9dcb-1a37abd44b8b" valueTypeId="08a7d3a1-0cce-429d-9141-374cbbd2e5d8"/>
+    <recordSetType typeId="ebbd7e0a-1e18-4056-95bb-334cf2f8e0e7" valueTypeId="1bb93617-6269-4660-ac6a-d1cb1a33fa19"/>
+    <recordKeyType typeId="ccab196d-df49-4e75-9ec4-2a1719523ad8" valueTypeId="5acdbacb-fb0e-48a2-86be-02fe96f0ca9e"/>
+    <recordType typeId="bd1d9f3a-d496-4a06-8321-054cfd9e5597" valueTypeId="e5745836-6e72-4d6d-a7e3-623fa827c976"/>
+    <recordManagerType typeId="a9edfb90-edb2-4315-b71e-c2453ac41c3c" valueTypeId="998e443f-12f7-4d07-bb1e-820877789479"/>
+  </producedTypes>
+  <name>ПользовательскиеНастройкиДоступаКОбработкам</name>
+  <synonym>
+    <key>ru</key>
+    <value>Пользовательские настройки доступа к обработкам</value>
+  </synonym>
+  <editType>InDialog</editType>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="878c638c-7c84-4914-896a-d4fdf0d759ef">
+    <name>Доступно</name>
+    <synonym>
+      <key>ru</key>
+      <value>Доступно</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Признак доступности обработки для пользователя</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="6065653e-b7a9-4033-9617-f64430c57d89">
+    <name>ДополнительныйОтчетИлиОбработка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дополнительный отчет или обработка</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ДополнительныеОтчетыИОбработки</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Дополнительный отчет или обработка, к которой настроен доступ</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="9ec63da6-1f53-417f-9c7d-6879eaa56a7e">
+    <name>ИдентификаторКоманды</name>
+    <synonym>
+      <key>ru</key>
+      <value>Идентификатор команды</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>100</length>
+      </stringQualifiers>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Идентификатор команды, к которой настроен доступ</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <indexing>Index</indexing>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="00d1d85b-c258-4f10-9d13-a99375a29fc1">
+    <name>Пользователь</name>
+    <synonym>
+      <key>ru</key>
+      <value>Пользователь</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ВнешниеПользователи</types>
+      <types>CatalogRef.Пользователи</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Пользователь, для которого настроен доступ</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

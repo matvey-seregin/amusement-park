@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:WebService xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="a4ed8b24-bd23-45a7-9f34-61b25b91d0c6">
+  <name>InterfaceVersion</name>
+  <synonym>
+    <key>ru</key>
+    <value>Interface version</value>
+  </synonym>
+  <namespace>http://www.1c.ru/SaaS/1.0/WS</namespace>
+  <xdtoPackages xsi:type="core:StringValue">
+    <value>http://v8.1c.ru/8.1/data/core</value>
+  </xdtoPackages>
+  <descriptorFileName>InterfaceVersion.1cws</descriptorFileName>
+  <sessionMaxAge>20</sessionMaxAge>
+  <operations uuid="65efaa10-3239-4f0f-a08e-88c89d9d8d5a">
+    <name>GetVersions</name>
+    <synonym>
+      <key>ru</key>
+      <value>Get versions</value>
+    </synonym>
+    <comment>Получить массив поддерживаемых версий</comment>
+    <xdtoReturningValueType>
+      <name>Array</name>
+      <nsUri>http://v8.1c.ru/8.1/data/core</nsUri>
+    </xdtoReturningValueType>
+    <procedureName>GetVersions</procedureName>
+    <dataLockControlMode>Managed</dataLockControlMode>
+    <parameters uuid="93aa5247-6823-4f70-9d47-e5a0f409828a">
+      <name>InterfaceName</name>
+      <synonym>
+        <key>ru</key>
+        <value>Interface name</value>
+      </synonym>
+      <comment>Имя подсистемы</comment>
+      <xdtoValueType>
+        <name>string</name>
+        <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+      </xdtoValueType>
+    </parameters>
+  </operations>
+</mdclass:WebService>

@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="3ad5d8a7-3071-46aa-aebf-306bdb67983b">
+  <producedTypes>
+    <selectionType typeId="a5ab27d6-4bee-4056-809a-17006a6dd0b4" valueTypeId="989e95e1-a2c7-4e60-a96e-bbfb89b3bfae"/>
+    <listType typeId="6aa5661e-91e3-4b90-b9b0-be04bdb6d1e0" valueTypeId="1e7bcedd-3cab-41ee-b948-ef85a8d00ac3"/>
+    <managerType typeId="142d18ea-a851-4ee0-917b-2d4d1668fd30" valueTypeId="f9194061-1739-4ab6-a873-3697e0a52625"/>
+    <recordSetType typeId="a3914902-a4dd-4e22-92e8-286066780e71" valueTypeId="7f5e7348-da97-47e5-b8ea-2f70a98e2cc7"/>
+    <recordKeyType typeId="9058acf1-70e0-484e-a9b1-3339a492445c" valueTypeId="a4624f26-af5f-49fe-9dff-79609f4ac0ab"/>
+    <recordType typeId="9eff3d4a-b1dd-4244-8e7b-585dc7c17a90" valueTypeId="c999859f-2819-4b68-a48b-f0c7c2a80308"/>
+    <recordManagerType typeId="dbd12a6b-9b51-4125-b90c-d62afd0b7ea8" valueTypeId="fd990e1c-831c-4c99-89fe-f96cce823800"/>
+  </producedTypes>
+  <name>ДополнительныеСведения</name>
+  <synonym>
+    <key>ru</key>
+    <value>Дополнительные сведения</value>
+  </synonym>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:DateValue">
+      <value>0001-01-01T00:00:00</value>
+    </fillValue>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <includeHelpInContents>true</includeHelpInContents>
+  <help>
+    <pages>
+      <lang>ru</lang>
+    </pages>
+  </help>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <fullTextSearch>Use</fullTextSearch>
+  <resources uuid="ab7ef662-71c1-4d51-9f0f-ea8c5ea3df8a">
+    <name>Значение</name>
+    <synonym>
+      <key>ru</key>
+      <value>Значение</value>
+    </synonym>
+    <type>
+      <types>Characteristic.ДополнительныеРеквизитыИСведения</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Значение дополнительного сведения.</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <choiceParameterLinks>
+      <name>Отбор.Владелец</name>
+      <field>InformationRegister.ДополнительныеСведения.Dimension.Свойство</field>
+    </choiceParameterLinks>
+    <quickChoice>DontUse</quickChoice>
+    <createOnInput>Use</createOnInput>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="cb954476-c551-4a06-9bcd-18d67ba47dc8">
+    <name>Объект</name>
+    <synonym>
+      <key>ru</key>
+      <value>Объект</value>
+    </synonym>
+    <type>
+      <types>BusinessProcessRef</types>
+      <types>DocumentRef</types>
+      <types>ChartOfCalculationTypesRef</types>
+      <types>TaskRef</types>
+      <types>ChartOfCharacteristicTypesRef</types>
+      <types>ChartOfAccountsRef</types>
+      <types>CatalogRef</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Объект информационной базы, к которому относится дополнительное сведение</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:ReferenceValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="79201015-bfae-463e-81f1-0ae2d3066f3f">
+    <name>Свойство</name>
+    <synonym>
+      <key>ru</key>
+      <value>Свойство</value>
+    </synonym>
+    <type>
+      <types>ChartOfCharacteristicTypesRef.ДополнительныеРеквизитыИСведения</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Дополнительное сведение</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <quickChoice>DontUse</quickChoice>
+    <createOnInput>Use</createOnInput>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:ReferenceValue">
+      <value>ChartOfCharacteristicTypes.ДополнительныеРеквизитыИСведения.EmptyRef</value>
+    </fillValue>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

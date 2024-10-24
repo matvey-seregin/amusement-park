@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:EventSubscription xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="23e79add-7f1c-422a-9df1-8f76ebf805df">
+  <name>ЗапретитьУдалениеПредопределенныхЭлементов</name>
+  <synonym>
+    <key>ru</key>
+    <value>Запретить удаление предопределенных элементов</value>
+  </synonym>
+  <source>
+    <types>ChartOfCalculationTypesObject</types>
+    <types>ChartOfAccountsObject</types>
+    <types>ChartOfCharacteristicTypesObject</types>
+    <types>CatalogObject</types>
+  </source>
+  <event>BeforeDelete</event>
+  <handler>CommonModule.СтандартныеПодсистемыСервер.ЗапретитьУдалениеПредопределенныхЭлементовПередУдалением</handler>
+</mdclass:EventSubscription>

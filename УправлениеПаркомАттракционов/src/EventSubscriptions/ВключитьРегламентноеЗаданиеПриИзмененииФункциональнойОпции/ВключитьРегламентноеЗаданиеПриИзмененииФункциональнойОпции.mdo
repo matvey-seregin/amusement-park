@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:EventSubscription xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="9f36d26e-aa71-44d5-ac27-9aaa643555c3">
+  <name>ВключитьРегламентноеЗаданиеПриИзмененииФункциональнойОпции</name>
+  <synonym>
+    <key>ru</key>
+    <value>Включить регламентное задание при изменении функциональной опции</value>
+  </synonym>
+  <source>
+    <types>DefinedType.МестоХраненияФункциональныхОпций</types>
+  </source>
+  <event>BeforeWrite</event>
+  <handler>CommonModule.РегламентныеЗаданияСлужебный.ВключитьРегламентноеЗаданиеПриИзмененииФункциональнойОпции</handler>
+</mdclass:EventSubscription>
