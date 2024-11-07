@@ -10,11 +10,29 @@
 		</languageInfo>
 	</languageSettings>
 	<columns>
-		<size>2</size>
+		<size>5</size>
 		<columnsItem>
 			<index>0</index>
 			<column>
 				<formatIndex>1</formatIndex>
+			</column>
+		</columnsItem>
+		<columnsItem>
+			<index>1</index>
+			<column>
+				<formatIndex>2</formatIndex>
+			</column>
+		</columnsItem>
+		<columnsItem>
+			<index>2</index>
+			<column>
+				<formatIndex>3</formatIndex>
+			</column>
+		</columnsItem>
+		<columnsItem>
+			<index>4</index>
+			<column>
+				<formatIndex>4</formatIndex>
 			</column>
 		</columnsItem>
 	</columns>
@@ -30,7 +48,7 @@
 		<columnsItem>
 			<index>1</index>
 			<column>
-				<formatIndex>2</formatIndex>
+				<formatIndex>5</formatIndex>
 			</column>
 		</columnsItem>
 	</columns>
@@ -46,19 +64,19 @@
 		<columnsItem>
 			<index>1</index>
 			<column>
-				<formatIndex>3</formatIndex>
+				<formatIndex>2</formatIndex>
 			</column>
 		</columnsItem>
 		<columnsItem>
 			<index>2</index>
 			<column>
-				<formatIndex>4</formatIndex>
+				<formatIndex>6</formatIndex>
 			</column>
 		</columnsItem>
 		<columnsItem>
 			<index>3</index>
 			<column>
-				<formatIndex>5</formatIndex>
+				<formatIndex>7</formatIndex>
 			</column>
 		</columnsItem>
 	</columns>
@@ -75,7 +93,7 @@
 			<c>
 				<i>1</i>
 				<c>
-					<f>6</f>
+					<f>8</f>
 					<tl>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -100,7 +118,7 @@
 			<c>
 				<i>1</i>
 				<c>
-					<f>7</f>
+					<f>9</f>
 					<tl>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -111,13 +129,13 @@
 			</c>
 			<c>
 				<c>
-					<f>8</f>
+					<f>10</f>
 					<parameter>Номенклатура</parameter>
 				</c>
 			</c>
 			<c>
 				<c>
-					<f>9</f>
+					<f>11</f>
 				</c>
 			</c>
 		</row>
@@ -129,7 +147,7 @@
 			<c>
 				<i>1</i>
 				<c>
-					<f>10</f>
+					<f>12</f>
 					<tl>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -140,7 +158,7 @@
 			</c>
 			<c>
 				<c>
-					<f>11</f>
+					<f>13</f>
 					<parameter>КоличествоПосещений</parameter>
 				</c>
 			</c>
@@ -153,31 +171,82 @@
 			<c>
 				<i>1</i>
 				<c>
-					<f>12</f>
+					<f>14</f>
 					<tl>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Сумма документа:</v8:content>
+							<v8:content>Сумма:</v8:content>
 						</v8:item>
 					</tl>
 				</c>
 			</c>
 			<c>
 				<c>
-					<f>13</f>
+					<f>15</f>
+					<parameter>Сумма</parameter>
+				</c>
+			</c>
+		</row>
+	</rowsItem>
+	<rowsItem>
+		<index>7</index>
+		<indexTo>8</indexTo>
+		<row>
+			<empty>true</empty>
+		</row>
+	</rowsItem>
+	<rowsItem>
+		<index>9</index>
+		<row>
+			<c>
+				<i>1</i>
+				<c>
+					<f>16</f>
+					<tl>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сумма документа</v8:content>
+						</v8:item>
+					</tl>
+				</c>
+			</c>
+			<c>
+				<i>4</i>
+				<c>
+					<f>17</f>
 					<parameter>СуммаДокумента</parameter>
 				</c>
 			</c>
 		</row>
 	</rowsItem>
+	<drawing>
+		<drawingType>Picture</drawingType>
+		<id>1</id>
+		<formatIndex>0</formatIndex>
+		<beginRow>10</beginRow>
+		<beginRowOffset>24</beginRowOffset>
+		<endRow>19</endRow>
+		<endRowOffset>0</endRowOffset>
+		<beginColumn>1</beginColumn>
+		<beginColumnOffset>387</beginColumnOffset>
+		<endColumn>2</endColumn>
+		<endColumnOffset>357</endColumnOffset>
+		<autoSize>false</autoSize>
+		<pictureSize>Proportionally</pictureSize>
+		<pictureIndex>1</pictureIndex>
+	</drawing>
 	<templateMode>true</templateMode>
-	<height>7</height>
-	<vgRows>7</vgRows>
+	<height>21</height>
+	<vgRows>21</vgRows>
 	<merge>
 		<r>4</r>
 		<c>2</c>
 		<w>1</w>
 	</merge>
+	<namedItem xsi:type="NamedItemDrawing">
+		<name>QRКод</name>
+		<drawingID>1</drawingID>
+	</namedItem>
 	<namedItem xsi:type="NamedItemCells">
 		<name>Заголовок</name>
 		<area>
@@ -189,11 +258,21 @@
 		</area>
 	</namedItem>
 	<namedItem xsi:type="NamedItemCells">
-		<name>Шапка</name>
+		<name>ОписаниеТовара</name>
 		<area>
 			<type>Rows</type>
 			<beginRow>3</beginRow>
 			<endRow>6</endRow>
+			<beginColumn>-1</beginColumn>
+			<endColumn>-1</endColumn>
+		</area>
+	</namedItem>
+	<namedItem xsi:type="NamedItemCells">
+		<name>Подвал</name>
+		<area>
+			<type>Rows</type>
+			<beginRow>8</beginRow>
+			<endRow>20</endRow>
 			<beginColumn>-1</beginColumn>
 			<endColumn>-1</endColumn>
 		</area>
@@ -204,10 +283,16 @@
 		<width>16</width>
 	</format>
 	<format>
-		<width>640</width>
+		<width>162</width>
 	</format>
 	<format>
-		<width>162</width>
+		<width>141</width>
+	</format>
+	<format>
+		<width>98</width>
+	</format>
+	<format>
+		<width>640</width>
 	</format>
 	<format>
 		<width>144</width>
@@ -273,4 +358,19 @@
 		</format>
 		<autoIndent>0</autoIndent>
 	</format>
+	<format>
+		<width>162</width>
+		<verticalAlignment>Top</verticalAlignment>
+		<textPlacement>Wrap</textPlacement>
+		<fillType>Text</fillType>
+		<autoIndent>0</autoIndent>
+	</format>
+	<format>
+		<horizontalAlignment>Right</horizontalAlignment>
+		<fillType>Parameter</fillType>
+	</format>
+	<picture>
+		<index>0</index>
+		<picture t="false" ref="v8ui:МестоДляQRКода"/>
+	</picture>
 </document>
