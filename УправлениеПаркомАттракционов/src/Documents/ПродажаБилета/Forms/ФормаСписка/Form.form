@@ -202,6 +202,46 @@
       </extInfo>
     </items>
     <items xsi:type="form:FormField">
+      <name>Филиал</name>
+      <id>37</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <dataPath xsi:type="form:DataPath">
+        <segments>Список.Филиал</segments>
+      </dataPath>
+      <extendedTooltip>
+        <name>ФилиалРасширеннаяПодсказка</name>
+        <id>39</id>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <contextMenu>
+        <name>ФилиалКонтекстноеМеню</name>
+        <id>38</id>
+        <autoFill>true</autoFill>
+      </contextMenu>
+      <type>InputField</type>
+      <editMode>Enter</editMode>
+      <showInHeader>true</showInHeader>
+      <headerHorizontalAlign>Left</headerHorizontalAlign>
+      <showInFooter>true</showInFooter>
+      <extInfo xsi:type="form:InputFieldExtInfo">
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <wrap>true</wrap>
+        <chooseType>true</chooseType>
+        <typeDomainEnabled>true</typeDomainEnabled>
+        <textEdit>true</textEdit>
+      </extInfo>
+    </items>
+    <items xsi:type="form:FormField">
       <name>Клиент</name>
       <id>22</id>
       <visible>true</visible>
@@ -638,6 +678,7 @@
 	ПродажаБилета.СуммаДокумента,
 	ПродажаБилета.Комментарий,
 	ПродажаБилета.Ответственный,
+	ПродажаБилета.Филиал,
 	ВЫБОР
 		КОГДА НаличиеФайлов.ЕстьФайлы ЕСТЬ NULL
 			ТОГДА 0
@@ -716,12 +757,12 @@
         </title>
       </fields>
       <fields xsi:type="schema:DataCompositionSchemaDataSetField">
-        <dataPath>ПозицииПродажи</dataPath>
-        <field>ПозицииПродажи</field>
+        <dataPath>Филиал</dataPath>
+        <field>Филиал</field>
       </fields>
       <fields xsi:type="schema:DataCompositionSchemaDataSetField">
-        <dataPath>МоментВремени</dataPath>
-        <field>МоментВремени</field>
+        <dataPath>ПозицииПродажи</dataPath>
+        <field>ПозицииПродажи</field>
       </fields>
     </extInfo>
   </attributes>
