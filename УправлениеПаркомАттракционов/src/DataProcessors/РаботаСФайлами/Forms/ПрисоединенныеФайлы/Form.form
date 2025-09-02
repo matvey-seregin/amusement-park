@@ -479,6 +479,7 @@
       <excludedCommands>OutputList</excludedCommands>
       <excludedCommands>Refresh</excludedCommands>
       <excludedCommands>SaveDynamicListSettings</excludedCommands>
+      <excludedCommands>SearchHistory</excludedCommands>
       <excludedCommands>ShowMultipleSelection</excludedCommands>
       <items xsi:type="form:FormField">
         <name>СписокНомерКартинкиПодписанЗашифрован</name>
@@ -543,6 +544,10 @@
           <valuesPicture xsi:type="core:PictureRef">
             <picture>CommonPicture.ПодписанЗашифрованСостояния</picture>
           </valuesPicture>
+          <border xsi:type="core:BorderDef">
+            <style>Single</style>
+            <width>1</width>
+          </border>
         </extInfo>
       </items>
       <items xsi:type="form:FormGroup">
@@ -1695,6 +1700,35 @@
               <representationInContextMenu>Auto</representationInContextMenu>
             </items>
             <items xsi:type="form:Button">
+              <name>СписокКонтекстноеМенюОтправитьНаПодписание</name>
+              <id>382</id>
+              <title>
+                <key>ru</key>
+                <value>Отправить на подписание...</value>
+              </title>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <extendedTooltip>
+                <name>СписокКонтекстноеМенюОтправитьНаПодписаниеРасширеннаяПодсказка</name>
+                <id>383</id>
+                <type>Label</type>
+                <autoMaxWidth>true</autoMaxWidth>
+                <autoMaxHeight>true</autoMaxHeight>
+                <extInfo xsi:type="form:LabelDecorationExtInfo">
+                  <horizontalAlign>Left</horizontalAlign>
+                </extInfo>
+              </extendedTooltip>
+              <commandName>Form.Command.ОтправитьНаПодписание</commandName>
+              <representation>Auto</representation>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <placementArea>UserCmds</placementArea>
+              <representationInContextMenu>Auto</representationInContextMenu>
+            </items>
+            <items xsi:type="form:Button">
               <name>СписокКонтекстноеМенюДобавитьПодписьИзФайла</name>
               <id>81</id>
               <title>
@@ -2377,6 +2411,10 @@
           <key>ru</key>
           <value>Выберите файл для предварительного просмотра</value>
         </nonselectedPictureText>
+        <border xsi:type="core:BorderDef">
+          <style>Single</style>
+          <width>1</width>
+        </border>
       </extInfo>
     </items>
     <visible>true</visible>
@@ -3186,6 +3224,35 @@
             </extInfo>
           </extendedTooltip>
           <commandName>Form.Command.Подписать</commandName>
+          <representation>Auto</representation>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <placementArea>UserCmds</placementArea>
+          <representationInContextMenu>Auto</representationInContextMenu>
+        </items>
+        <items xsi:type="form:Button">
+          <name>ФормаОтправитьНаПодписание</name>
+          <id>380</id>
+          <title>
+            <key>ru</key>
+            <value>Отправить на подписание...</value>
+          </title>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <extendedTooltip>
+            <name>ФормаОтправитьНаПодписаниеРасширеннаяПодсказка</name>
+            <id>381</id>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <commandName>Form.Command.ОтправитьНаПодписание</commandName>
           <representation>Auto</representation>
           <autoMaxWidth>true</autoMaxWidth>
           <autoMaxHeight>true</autoMaxHeight>
@@ -4941,7 +5008,7 @@
     </edit>
   </attributes>
   <attributes>
-    <name>ЕстьЭлектроннаяПодпись</name>
+    <name>ДоступнаПечатьСоШтампом</name>
     <id>17</id>
     <valueType>
       <types>Boolean</types>
@@ -5847,9 +5914,31 @@
       <value>Список</value>
     </associatedTableElementId>
   </formCommands>
+  <formCommands>
+    <name>ОтправитьНаПодписание</name>
+    <title>
+      <key>ru</key>
+      <value>Отправить на подписание...</value>
+    </title>
+    <id>35</id>
+    <toolTip>
+      <key>ru</key>
+      <value>Отправить на подписание</value>
+    </toolTip>
+    <use>
+      <common>true</common>
+    </use>
+    <action xsi:type="form:FormCommandHandlerContainer">
+      <handler>
+        <name>ОтправитьНаПодписание</name>
+      </handler>
+    </action>
+  </formCommands>
   <parameters>
     <name>ВладелецФайла</name>
-    <valueType/>
+    <valueType>
+      <types>AnyRef</types>
+    </valueType>
     <keyParameter>true</keyParameter>
   </parameters>
   <parameters>
@@ -5882,6 +5971,12 @@
     <name>СкрыватьВладельца</name>
     <valueType>
       <types>Boolean</types>
+    </valueType>
+  </parameters>
+  <parameters>
+    <name>ТекущаяСтрока</name>
+    <valueType>
+      <types>CatalogRef</types>
     </valueType>
   </parameters>
   <commandInterface>

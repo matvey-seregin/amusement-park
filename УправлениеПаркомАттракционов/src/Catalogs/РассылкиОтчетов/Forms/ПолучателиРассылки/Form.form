@@ -147,6 +147,7 @@
           <autoMaxWidth>true</autoMaxWidth>
           <autoMaxHeight>true</autoMaxHeight>
           <wrap>true</wrap>
+          <autoMarkIncomplete>true</autoMarkIncomplete>
           <chooseType>true</chooseType>
           <typeDomainEnabled>true</typeDomainEnabled>
           <textEdit>true</textEdit>
@@ -607,6 +608,10 @@
     <handlers>
       <event>BeforeAddRow</event>
       <name>ПолучателиПередНачаломДобавления</name>
+    </handlers>
+    <handlers>
+      <event>BeforeEditEnd</event>
+      <name>ПолучателиПередОкончаниемРедактирования</name>
     </handlers>
     <handlers>
       <event>ChoiceProcessing</event>

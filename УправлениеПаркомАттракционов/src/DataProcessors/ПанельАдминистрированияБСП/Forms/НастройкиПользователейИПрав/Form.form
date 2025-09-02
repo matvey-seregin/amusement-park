@@ -1157,15 +1157,9 @@
             <id>2238</id>
             <title>
               <key>ru</key>
-              <value>Производительный вариант рекомендуется выбирать для клиент-серверной информационной базы,
-где он значительно эффективнее стандартного варианта. 
+              <value>Производительный вариант является основным для любых видов приложений, клиент-серверных и файловых информационных баз.
 
-Однако в многопользовательской файловой информационной базе он может ограничивать интенсивность
-одновременной работы нескольких пользователей, поэтому может потребоваться стандартный вариант.
-
-При этом если в файловой базе работает один пользователь, либо данные вводятся несколькими пользователями
-не интенсивно, то производительный вариант не накладывает каких-либо дополнительных ограничений и
-ускорит просмотр списков и формирование отчетов по сравнению со стандартным вариантом.</value>
+Стандартный вариант является устаревшим и оставлен для совместимости с предыдущими версиями. Его поддержка будет прекращена в будущих релизах. Также в нем недоступны или ограниченно доступны такие возможности, как отчет о правах на конкретный документ, сведения об ограничениях доступа и другие.</value>
             </title>
             <visible>true</visible>
             <enabled>true</enabled>
@@ -1220,6 +1214,47 @@
                 <value>true</value>
               </value>
             </choiceList>
+          </extInfo>
+        </items>
+        <items xsi:type="form:Decoration">
+          <name>СтандартныйВариантУстарел</name>
+          <id>2319</id>
+          <title>
+            <key>ru</key>
+            <value>Стандартный вариант устарел</value>
+          </title>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <toolTip>
+            <key>ru</key>
+            <value>Стандартный вариант работы устарел, рекомендуется производительный вариант.</value>
+          </toolTip>
+          <toolTipRepresentation>ShowRight</toolTipRepresentation>
+          <extendedTooltip>
+            <name>СтандартныйВариантУстарелРасширеннаяПодсказка</name>
+            <id>2321</id>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <contextMenu>
+            <name>СтандартныйВариантУстарелКонтекстноеМеню</name>
+            <id>2320</id>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:PictureDecorationExtInfo">
+            <picture xsi:type="core:PictureRef">
+              <picture>CommonPicture.Предупреждение</picture>
+            </picture>
+            <fileDragMode>AsFileRef</fileDragMode>
           </extInfo>
         </items>
         <items xsi:type="form:Button">

@@ -829,7 +829,7 @@
       <autoMaxHeight>true</autoMaxHeight>
       <extInfo xsi:type="form:PictureDecorationExtInfo">
         <picture xsi:type="core:PictureRef">
-          <picture>CommonPicture.Предупреждение</picture>
+          <picture>StdPicture.DialogExclamation</picture>
         </picture>
       </extInfo>
     </items>
@@ -1167,10 +1167,6 @@
           <dataPath xsi:type="form:DataPath">
             <segments>Страна</segments>
           </dataPath>
-          <toolTip>
-            <key>ru</key>
-            <value>Страна адреса</value>
-          </toolTip>
           <handlers>
             <event>OnChange</event>
             <name>СтранаПриИзменении</name>
@@ -1253,9 +1249,105 @@
             </choiceParameters>
             <inputHint>
               <key>ru</key>
-              <value>Введите первые буквы названия страны</value>
+              <value>Выберите или введите название страны</value>
             </inputHint>
             <choiceHistoryOnInput>DontUse</choiceHistoryOnInput>
+          </extInfo>
+        </items>
+        <items xsi:type="form:FormField">
+          <name>РегионИностранногоАдреса</name>
+          <id>597</id>
+          <title>
+            <key>ru</key>
+            <value>Регион</value>
+          </title>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <dataPath xsi:type="form:DataPath">
+            <segments>РегионИностранногоАдреса</segments>
+          </dataPath>
+          <handlers>
+            <event>OnChange</event>
+            <name>РегионИностранногоАдресаПриИзменении</name>
+          </handlers>
+          <extendedTooltip>
+            <name>РегионИностранногоАдресаРасширеннаяПодсказка</name>
+            <id>599</id>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <contextMenu>
+            <name>РегионИностранногоАдресаКонтекстноеМеню</name>
+            <id>598</id>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <type>InputField</type>
+          <editMode>Enter</editMode>
+          <showInHeader>true</showInHeader>
+          <headerHorizontalAlign>Left</headerHorizontalAlign>
+          <showInFooter>true</showInFooter>
+          <extInfo xsi:type="form:InputFieldExtInfo">
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <wrap>true</wrap>
+            <chooseType>true</chooseType>
+            <typeDomainEnabled>true</typeDomainEnabled>
+            <textEdit>true</textEdit>
+          </extInfo>
+        </items>
+        <items xsi:type="form:FormField">
+          <name>РайонИностранногоАдреса</name>
+          <id>600</id>
+          <title>
+            <key>ru</key>
+            <value>Район</value>
+          </title>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <dataPath xsi:type="form:DataPath">
+            <segments>РайонИностранногоАдреса</segments>
+          </dataPath>
+          <handlers>
+            <event>OnChange</event>
+            <name>РайонИностранногоАдресаПриИзменении</name>
+          </handlers>
+          <extendedTooltip>
+            <name>РайонИностранногоАдресаРасширеннаяПодсказка</name>
+            <id>602</id>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <contextMenu>
+            <name>РайонИностранногоАдресаКонтекстноеМеню</name>
+            <id>601</id>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <type>InputField</type>
+          <editMode>Enter</editMode>
+          <showInHeader>true</showInHeader>
+          <headerHorizontalAlign>Left</headerHorizontalAlign>
+          <showInFooter>true</showInFooter>
+          <extInfo xsi:type="form:InputFieldExtInfo">
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <wrap>true</wrap>
+            <chooseType>true</chooseType>
+            <typeDomainEnabled>true</typeDomainEnabled>
+            <textEdit>true</textEdit>
           </extInfo>
         </items>
         <items xsi:type="form:FormField">
@@ -1274,10 +1366,6 @@
             <segments>НаселенныйПункт</segments>
           </dataPath>
           <defaultItem>true</defaultItem>
-          <toolTip>
-            <key>ru</key>
-            <value>Город, населенный пункт адреса</value>
-          </toolTip>
           <handlers>
             <event>OnChange</event>
             <name>НаселенныйПунктПриИзменении</name>
@@ -1338,8 +1426,56 @@
             <textEdit>true</textEdit>
             <inputHint>
               <key>ru</key>
-              <value>Введите первые буквы названия населенного пункта</value>
+              <value>Выберите или введите название населенного пункта</value>
             </inputHint>
+          </extInfo>
+        </items>
+        <items xsi:type="form:FormField">
+          <name>ВнутригородскойРайонИностранногоАдреса</name>
+          <id>603</id>
+          <title>
+            <key>ru</key>
+            <value>Внутригородской район</value>
+          </title>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <dataPath xsi:type="form:DataPath">
+            <segments>ВнутригородскойРайонИностранногоАдреса</segments>
+          </dataPath>
+          <handlers>
+            <event>OnChange</event>
+            <name>ВнутригородскойРайонИностранногоАдресаПриИзменении</name>
+          </handlers>
+          <extendedTooltip>
+            <name>ВнутригородскойРайонИностранногоАдресаРасширеннаяПодсказка</name>
+            <id>605</id>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <contextMenu>
+            <name>ВнутригородскойРайонИностранногоАдресаКонтекстноеМеню</name>
+            <id>604</id>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <type>InputField</type>
+          <editMode>Enter</editMode>
+          <showInHeader>true</showInHeader>
+          <headerHorizontalAlign>Left</headerHorizontalAlign>
+          <showInFooter>true</showInFooter>
+          <extInfo xsi:type="form:InputFieldExtInfo">
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <wrap>true</wrap>
+            <chooseType>true</chooseType>
+            <typeDomainEnabled>true</typeDomainEnabled>
+            <textEdit>true</textEdit>
           </extInfo>
         </items>
         <items xsi:type="form:FormField">
@@ -1359,7 +1495,7 @@
           </dataPath>
           <toolTip>
             <key>ru</key>
-            <value>Улица адреса</value>
+            <value>Введите первые буквы названия улицы</value>
           </toolTip>
           <handlers>
             <event>OnChange</event>
@@ -1420,10 +1556,6 @@
             <typeDomainEnabled>true</typeDomainEnabled>
             <textEdit>true</textEdit>
             <editTextUpdate>OnValueChange</editTextUpdate>
-            <inputHint>
-              <key>ru</key>
-              <value>Введите первые буквы названия улицы</value>
-            </inputHint>
           </extInfo>
         </items>
         <visible>true</visible>
@@ -3019,7 +3151,44 @@
             <multiLine>true</multiLine>
             <typeDomainEnabled>true</typeDomainEnabled>
             <textEdit>true</textEdit>
+            <textColor xsi:type="core:ColorRef">
+              <color>Style.ПоясняющийТекст</color>
+            </textColor>
+            <borderColor xsi:type="core:ColorRef">
+              <color>Style.FormBackColor</color>
+            </borderColor>
           </extInfo>
+        </items>
+        <items xsi:type="form:Button">
+          <name>СкопироватьАдресВБуферОбмена</name>
+          <id>593</id>
+          <title>
+            <key>ru</key>
+            <value>Скопировать адрес в буфер обмена</value>
+          </title>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <extendedTooltip>
+            <name>СкопироватьАдресВБуферОбменаРасширеннаяПодсказка</name>
+            <id>594</id>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <type>UsualButton</type>
+          <commandName>Form.Command.СкопироватьАдресВБуферОбмена</commandName>
+          <representation>Auto</representation>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <placementArea>UserCmds</placementArea>
+          <representationInContextMenu>Auto</representationInContextMenu>
+          <shapeRepresentation>WhenActive</shapeRepresentation>
         </items>
         <visible>true</visible>
         <enabled>true</enabled>
@@ -3047,7 +3216,8 @@
         </extendedTooltip>
         <type>UsualGroup</type>
         <extInfo xsi:type="form:UsualGroupExtInfo">
-          <group>Vertical</group>
+          <group>AlwaysHorizontal</group>
+          <representation>WeakSeparation</representation>
           <showLeftMargin>true</showLeftMargin>
           <throughAlign>Auto</throughAlign>
           <currentRowUse>Auto</currentRowUse>
@@ -3576,8 +3746,8 @@
       </extInfo>
     </items>
     <items xsi:type="form:FormGroup">
-      <name>НужнаПомощь</name>
-      <id>551</id>
+      <name>ГруппаТребуетсяПомощь</name>
+      <id>561</id>
       <items xsi:type="form:Decoration">
         <name>ДекорацияНужнаПомощь</name>
         <id>553</id>
@@ -3585,9 +3755,7 @@
           <key>ru</key>
           <value>Адресные сведения предоставляются &lt;link https://fias.nalog.ru/>Государственным адресным реестром&lt;/> (ГАР). Ее оператор - ФНС России. 
 
-В случае если не удалось подобрать адрес или введенный адрес не проходит проверку, следует проверить его наличие на сайте ФНС России и обратиться в &lt;link https://www.nalog.ru/rn77/service/service_feedback/?service=22>службу поддержки online-сервисов&lt;/> ФНС России.
-
-В иных случаях обратитесь в службу поддержки фирмы &quot;1С&quot;, предоставив &lt;link e1cib/data/РегистрСведений.АдресныеОбъекты.Форма.СведенияОбАдресномКлассификаторе>технические сведения о возникшем затруднении&lt;/>.</value>
+В случае если не удалось подобрать адрес или введенный адрес не проходит проверку, следует проверить его наличие на сайте ФНС России и обратиться в &lt;link https://www.nalog.ru/rn77/service/service_feedback/?service=22>службу поддержки online-сервисов&lt;/> ФНС России.</value>
         </title>
         <visible>true</visible>
         <enabled>true</enabled>
@@ -3623,9 +3791,108 @@
         <type>Label</type>
         <autoMaxHeight>true</autoMaxHeight>
         <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </items>
+      <items xsi:type="form:FormGroup">
+        <name>ГруппаОбращенияВТехническуюПоддержку</name>
+        <id>585</id>
+        <items xsi:type="form:Decoration">
+          <name>ОписаниеОбращенияВПоддержку</name>
+          <id>587</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <extendedTooltip>
+            <name>ОписаниеОбращенияВПоддержкуРасширеннаяПодсказка</name>
+            <id>589</id>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <contextMenu>
+            <name>ОписаниеОбращенияВПоддержкуКонтекстноеМеню</name>
+            <id>588</id>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <type>Label</type>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <handlers>
+              <event>URLProcessing</event>
+              <name>ОписаниеОбращенияВПоддержкуОбработкаНавигационнойСсылки</name>
+            </handlers>
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </items>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <title>
+          <key>ru</key>
+          <value>Обращения в техническую поддержку</value>
+        </title>
+        <extendedTooltip>
+          <name>ГруппаОбращенияВТехническуюПоддержкуРасширеннаяПодсказка</name>
+          <id>586</id>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <type>UsualGroup</type>
+        <extInfo xsi:type="form:UsualGroupExtInfo">
+          <group>Vertical</group>
+          <behavior>Auto</behavior>
+          <showLeftMargin>true</showLeftMargin>
+          <united>true</united>
+          <throughAlign>Auto</throughAlign>
+          <currentRowUse>Auto</currentRowUse>
+        </extInfo>
+      </items>
+      <items xsi:type="form:Decoration">
+        <name>СведенияОбАдресе</name>
+        <id>590</id>
+        <title>
+          <key>ru</key>
+          <value>Дополнительно возможно просмотреть &lt;link СведенияОбАдресе>сведения об адресе&lt;/>. </value>
+        </title>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <extendedTooltip>
+          <name>СведенияОбАдресеРасширеннаяПодсказка</name>
+          <id>592</id>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <contextMenu>
+          <name>СведенияОбАдресеКонтекстноеМеню</name>
+          <id>591</id>
+          <autoFill>true</autoFill>
+        </contextMenu>
+        <formatted>true</formatted>
+        <type>Label</type>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
           <handlers>
             <event>URLProcessing</event>
-            <name>ДекорацияНужнаПомощьОбработкаНавигационнойСсылки</name>
+            <name>СведенияОбАдресеОбработкаНавигационнойСсылки</name>
           </handlers>
           <horizontalAlign>Left</horizontalAlign>
         </extInfo>
@@ -3637,18 +3904,12 @@
       </userVisible>
       <title>
         <key>ru</key>
-        <value>Нужна помощь?</value>
+        <value>Требуется помощь?</value>
       </title>
-      <groupHorizontalAlign>Right</groupHorizontalAlign>
       <groupVerticalAlign>Center</groupVerticalAlign>
       <extendedTooltip>
-        <name>НужнаПомощьРасширеннаяПодсказка</name>
-        <id>552</id>
-        <visible>true</visible>
-        <enabled>true</enabled>
-        <userVisible>
-          <common>true</common>
-        </userVisible>
+        <name>ГруппаТребуетсяПомощьРасширеннаяПодсказка</name>
+        <id>562</id>
         <type>Label</type>
         <autoMaxWidth>true</autoMaxWidth>
         <autoMaxHeight>true</autoMaxHeight>
@@ -3658,8 +3919,9 @@
       </extendedTooltip>
       <type>UsualGroup</type>
       <extInfo xsi:type="form:UsualGroupExtInfo">
-        <group>AlwaysHorizontal</group>
+        <group>Vertical</group>
         <behavior>PopUp</behavior>
+        <representation>WeakSeparation</representation>
         <showLeftMargin>true</showLeftMargin>
         <united>true</united>
         <showTitle>true</showTitle>
@@ -3930,7 +4192,7 @@
     <valueType>
       <types>String</types>
       <stringQualifiers>
-        <length>6</length>
+        <length>10</length>
       </stringQualifiers>
     </valueType>
     <view>
@@ -4880,6 +5142,73 @@
       <common>true</common>
     </edit>
   </attributes>
+  <attributes>
+    <name>ЦветПоясняющегоТекста</name>
+    <id>59</id>
+    <valueType>
+      <types>Color</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>РегионИностранногоАдреса</name>
+    <title>
+      <key>ru</key>
+      <value>Регион</value>
+    </title>
+    <id>60</id>
+    <valueType>
+      <types>String</types>
+      <stringQualifiers/>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>РайонИностранногоАдреса</name>
+    <title>
+      <key>ru</key>
+      <value>Район</value>
+    </title>
+    <id>61</id>
+    <valueType>
+      <types>String</types>
+      <stringQualifiers/>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>ВнутригородскойРайонИностранногоАдреса</name>
+    <title>
+      <key>ru</key>
+      <value>Внутригородской район</value>
+    </title>
+    <id>62</id>
+    <valueType>
+      <types>String</types>
+      <stringQualifiers/>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
   <formCommands>
     <name>КомандаОК</name>
     <title>
@@ -5199,10 +5528,6 @@
       <value>Отмена</value>
     </title>
     <id>6</id>
-    <toolTip>
-      <key>ru</key>
-      <value>Команда отмена</value>
-    </toolTip>
     <use>
       <common>true</common>
     </use>
@@ -5211,6 +5536,31 @@
         <name>КомандаОтмена</name>
       </handler>
     </action>
+    <currentRowUse>Auto</currentRowUse>
+  </formCommands>
+  <formCommands>
+    <name>СкопироватьАдресВБуферОбмена</name>
+    <title>
+      <key>ru</key>
+      <value>Скопировать адрес в буфер обмена</value>
+    </title>
+    <id>30</id>
+    <toolTip>
+      <key>ru</key>
+      <value>Скопировать адрес в буфер обмена</value>
+    </toolTip>
+    <use>
+      <common>true</common>
+    </use>
+    <picture xsi:type="core:PictureRef">
+      <picture>CommonPicture.СкопироватьВБуферОбмена</picture>
+    </picture>
+    <action xsi:type="form:FormCommandHandlerContainer">
+      <handler>
+        <name>СкопироватьАдресВБуферОбмена</name>
+      </handler>
+    </action>
+    <representation>Picture</representation>
     <currentRowUse>Auto</currentRowUse>
   </formCommands>
   <parameters>

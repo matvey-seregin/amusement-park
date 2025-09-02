@@ -6,12 +6,7 @@
     <displayImportance>VeryHigh</displayImportance>
     <items xsi:type="form:FormField">
       <name>ВариантСохранения</name>
-      <id>67</id>
-      <displayImportance>VeryHigh</displayImportance>
-      <title>
-        <key>ru</key>
-        <value>Вариант сохранения</value>
-      </title>
+      <id>110</id>
       <visible>true</visible>
       <enabled>true</enabled>
       <userVisible>
@@ -27,7 +22,7 @@
       </handlers>
       <extendedTooltip>
         <name>ВариантСохраненияРасширеннаяПодсказка</name>
-        <id>83</id>
+        <id>112</id>
         <visible>true</visible>
         <enabled>true</enabled>
         <userVisible>
@@ -42,7 +37,7 @@
       </extendedTooltip>
       <contextMenu>
         <name>ВариантСохраненияКонтекстноеМеню</name>
-        <id>68</id>
+        <id>111</id>
         <visible>true</visible>
         <enabled>true</enabled>
         <userVisible>
@@ -56,7 +51,6 @@
       <headerHorizontalAlign>Left</headerHorizontalAlign>
       <showInFooter>true</showInFooter>
       <extInfo xsi:type="form:RadioButtonsFieldExtInfo">
-        <radioButtonsType>RadioButtons</radioButtonsType>
         <choiceList>
           <presentation>
             <key>ru</key>
@@ -78,11 +72,11 @@
       </extInfo>
     </items>
     <items xsi:type="form:FormField">
-      <name>ПапкаДляСохраненияФайлов</name>
+      <name>КаталогСохраненияФайлов</name>
       <id>42</id>
       <title>
         <key>ru</key>
-        <value>Сохранить в папку на компьютер</value>
+        <value>Сохранить в каталог на компьютер</value>
       </title>
       <visible>true</visible>
       <enabled>true</enabled>
@@ -94,13 +88,8 @@
       </dataPath>
       <titleLocation>None</titleLocation>
       <extendedTooltip>
-        <name>ПапкаДляСохраненияФайловРасширеннаяПодсказка</name>
+        <name>КаталогСохраненияФайловРасширеннаяПодсказка</name>
         <id>86</id>
-        <visible>true</visible>
-        <enabled>true</enabled>
-        <userVisible>
-          <common>true</common>
-        </userVisible>
         <type>Label</type>
         <autoMaxWidth>true</autoMaxWidth>
         <autoMaxHeight>true</autoMaxHeight>
@@ -109,13 +98,8 @@
         </extInfo>
       </extendedTooltip>
       <contextMenu>
-        <name>ПапкаДляСохраненияФайловКонтекстноеМеню</name>
+        <name>КаталогСохраненияФайловКонтекстноеМеню</name>
         <id>43</id>
-        <visible>true</visible>
-        <enabled>true</enabled>
-        <userVisible>
-          <common>true</common>
-        </userVisible>
         <autoFill>true</autoFill>
       </contextMenu>
       <type>InputField</type>
@@ -193,14 +177,20 @@
       </dataPath>
       <titleLocation>None</titleLocation>
       <excludedCommands>Add</excludedCommands>
+      <excludedCommands>CancelSearch</excludedCommands>
       <excludedCommands>Change</excludedCommands>
       <excludedCommands>Copy</excludedCommands>
       <excludedCommands>Delete</excludedCommands>
       <excludedCommands>EndEdit</excludedCommands>
+      <excludedCommands>Find</excludedCommands>
+      <excludedCommands>FindByCurrentValue</excludedCommands>
       <excludedCommands>MoveDown</excludedCommands>
       <excludedCommands>MoveUp</excludedCommands>
       <excludedCommands>Pickup</excludedCommands>
+      <excludedCommands>SearchEverywhere</excludedCommands>
+      <excludedCommands>SearchHistory</excludedCommands>
       <excludedCommands>SelectAll</excludedCommands>
+      <excludedCommands>ShowMultipleSelection</excludedCommands>
       <excludedCommands>SortListAsc</excludedCommands>
       <excludedCommands>SortListDesc</excludedCommands>
       <items xsi:type="form:FormField">
@@ -471,7 +461,6 @@
       <rowPictureDataPath xsi:type="form:DataPath">
         <segments>ВыбранныеФорматыСохранения.Picture</segments>
       </rowPictureDataPath>
-      <searchStringLocation>Top</searchStringLocation>
     </items>
     <visible>true</visible>
     <enabled>true</enabled>
@@ -780,8 +769,8 @@
     <name>ПриСохраненииДанныхВНастройкахНаСервере</name>
   </handlers>
   <handlers>
-    <event>OnOpen</event>
-    <name>ПриОткрытии</name>
+    <event>OnLoadDataFromSettingsAtServer</event>
+    <name>ПриЗагрузкеДанныхИзНастроекНаСервере</name>
   </handlers>
   <handlers>
     <event>OnCreateAtServer</event>
@@ -858,10 +847,6 @@
   </attributes>
   <attributes>
     <name>ВариантСохранения</name>
-    <title>
-      <key>ru</key>
-      <value>Вариант сохранения</value>
-    </title>
     <id>8</id>
     <valueType>
       <types>String</types>
@@ -997,6 +982,14 @@
       <types>String</types>
       <stringQualifiers/>
     </valueType>
+  </parameters>
+  <parameters>
+    <name>Назначение</name>
+    <valueType>
+      <types>String</types>
+      <stringQualifiers/>
+    </valueType>
+    <keyParameter>true</keyParameter>
   </parameters>
   <commandInterface>
     <navigationPanel/>

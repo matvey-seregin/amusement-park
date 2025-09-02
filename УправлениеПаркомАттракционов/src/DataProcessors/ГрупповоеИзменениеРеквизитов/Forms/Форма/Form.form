@@ -1398,7 +1398,7 @@
                 </autoCommandBar>
                 <handlers>
                   <event>DragStart</event>
-                  <name>РеквизитыОбъекта1НачалоПеретаскивания</name>
+                  <name>РеквизитыОбъектаАлгоритмНачалоПеретаскивания</name>
                 </handlers>
                 <searchStringAddition>
                   <visible>true</visible>
@@ -3408,10 +3408,6 @@
     <name>ОбработкаВыбора</name>
   </handlers>
   <handlers>
-    <event>OnOpen</event>
-    <name>ПриОткрытии</name>
-  </handlers>
-  <handlers>
     <event>OnCreateAtServer</event>
     <name>ПриСозданииНаСервере</name>
   </handlers>
@@ -4016,19 +4012,6 @@
     </edit>
   </attributes>
   <attributes>
-    <name>ЭтоВнешняяОбработка</name>
-    <id>2</id>
-    <valueType>
-      <types>Boolean</types>
-    </valueType>
-    <view>
-      <common>true</common>
-    </view>
-    <edit>
-      <common>true</common>
-    </edit>
-  </attributes>
-  <attributes>
     <name>ВремяНачалаИзменения</name>
     <id>8</id>
     <valueType>
@@ -4183,20 +4166,6 @@
     </extInfo>
   </attributes>
   <attributes>
-    <name>ПутьКФайлуВнешнейОбработкиНаКлиенте</name>
-    <id>3</id>
-    <valueType>
-      <types>String</types>
-      <stringQualifiers/>
-    </valueType>
-    <view>
-      <common>true</common>
-    </view>
-    <edit>
-      <common>true</common>
-    </edit>
-  </attributes>
-  <attributes>
     <name>ЧислоОбъектовВПорции</name>
     <id>5</id>
     <valueType>
@@ -4205,19 +4174,6 @@
         <precision>5</precision>
         <nonNegative>true</nonNegative>
       </numberQualifiers>
-    </valueType>
-    <view>
-      <common>true</common>
-    </view>
-    <edit>
-      <common>true</common>
-    </edit>
-  </attributes>
-  <attributes>
-    <name>ВерсияБСПСоответствуетТребованиям</name>
-    <id>49</id>
-    <valueType>
-      <types>Boolean</types>
     </valueType>
     <view>
       <common>true</common>

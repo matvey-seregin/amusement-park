@@ -903,14 +903,14 @@
           </extInfo>
         </items>
         <items xsi:type="form:FormGroup">
-          <name>ГруппаСохранениеИРассылкаВарианта</name>
+          <name>ПодменюОтправить</name>
           <id>1123</id>
           <items xsi:type="form:Button">
             <name>СохранитьОтчет</name>
             <id>1101</id>
             <title>
               <key>ru</key>
-              <value>Сохранить в файл</value>
+              <value>На компьютер</value>
             </title>
             <visible>true</visible>
             <enabled>true</enabled>
@@ -940,44 +940,44 @@
             <representationInContextMenu>Auto</representationInContextMenu>
             <locationInCommandBar>InCommandBar</locationInCommandBar>
           </items>
-          <items xsi:type="form:FormGroup">
-            <name>ГруппаОтправить</name>
-            <id>63</id>
-            <items xsi:type="form:Button">
-              <name>ОтправитьПоПочте</name>
-              <id>97</id>
-              <title>
-                <key>ru</key>
-                <value>Отправить сейчас...</value>
-              </title>
+          <items xsi:type="form:Button">
+            <name>ОтправитьПоПочте</name>
+            <id>97</id>
+            <title>
+              <key>ru</key>
+              <value>Почта</value>
+            </title>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <extendedTooltip>
+              <name>ОтправитьПоПочтеРасширеннаяПодсказка</name>
+              <id>128</id>
               <visible>true</visible>
               <enabled>true</enabled>
               <userVisible>
                 <common>true</common>
               </userVisible>
-              <extendedTooltip>
-                <name>ОтправитьПоПочтеРасширеннаяПодсказка</name>
-                <id>128</id>
-                <visible>true</visible>
-                <enabled>true</enabled>
-                <userVisible>
-                  <common>true</common>
-                </userVisible>
-                <type>Label</type>
-                <autoMaxWidth>true</autoMaxWidth>
-                <autoMaxHeight>true</autoMaxHeight>
-                <extInfo xsi:type="form:LabelDecorationExtInfo">
-                  <horizontalAlign>Left</horizontalAlign>
-                </extInfo>
-              </extendedTooltip>
-              <commandName>Form.Command.ОтправитьПоПочте</commandName>
-              <representation>Picture</representation>
+              <type>Label</type>
               <autoMaxWidth>true</autoMaxWidth>
               <autoMaxHeight>true</autoMaxHeight>
-              <placementArea>UserCmds</placementArea>
-              <representationInContextMenu>Auto</representationInContextMenu>
-              <locationInCommandBar>InCommandBar</locationInCommandBar>
-            </items>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Left</horizontalAlign>
+              </extInfo>
+            </extendedTooltip>
+            <commandName>Form.Command.ОтправитьПоПочте</commandName>
+            <representation>Picture</representation>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <placementArea>UserCmds</placementArea>
+            <representationInContextMenu>Auto</representationInContextMenu>
+            <locationInCommandBar>InCommandBar</locationInCommandBar>
+          </items>
+          <items xsi:type="form:FormGroup">
+            <name>ГруппаОтправить</name>
+            <id>63</id>
             <visible>true</visible>
             <enabled>true</enabled>
             <userVisible>
@@ -1006,13 +1006,7 @@
                 <horizontalAlign>Left</horizontalAlign>
               </extInfo>
             </extendedTooltip>
-            <type>Popup</type>
-            <extInfo xsi:type="form:PopupGroupExtInfo">
-              <picture xsi:type="core:PictureRef">
-                <picture>CommonPicture.ЭлектронноеПисьмо</picture>
-              </picture>
-              <representation>Picture</representation>
-            </extInfo>
+            <extInfo xsi:type="form:ButtonGroupExtInfo"/>
           </items>
           <visible>true</visible>
           <enabled>true</enabled>
@@ -1021,16 +1015,11 @@
           </userVisible>
           <title>
             <key>ru</key>
-            <value>Сохранение и рассылка варианта</value>
+            <value>Отправить</value>
           </title>
           <extendedTooltip>
-            <name>ГруппаСохранениеИРассылкаВариантаРасширеннаяПодсказка</name>
+            <name>ПодменюОтправитьРасширеннаяПодсказка</name>
             <id>1124</id>
-            <visible>true</visible>
-            <enabled>true</enabled>
-            <userVisible>
-              <common>true</common>
-            </userVisible>
             <type>Label</type>
             <autoMaxWidth>true</autoMaxWidth>
             <autoMaxHeight>true</autoMaxHeight>
@@ -1038,8 +1027,12 @@
               <horizontalAlign>Left</horizontalAlign>
             </extInfo>
           </extendedTooltip>
-          <extInfo xsi:type="form:ButtonGroupExtInfo">
-            <representation>Compact</representation>
+          <type>Popup</type>
+          <extInfo xsi:type="form:PopupGroupExtInfo">
+            <picture xsi:type="core:PictureRef">
+              <picture>StdPicture.SendMessage</picture>
+            </picture>
+            <representation>Auto</representation>
           </extInfo>
         </items>
         <visible>true</visible>
@@ -3017,50 +3010,50 @@
           <representationInContextMenu>Auto</representationInContextMenu>
           <locationInCommandBar>InAdditionalSubmenu</locationInCommandBar>
         </items>
-        <items xsi:type="form:Button">
-          <name>СохранитьОтчетЕще</name>
-          <id>1103</id>
-          <title>
-            <key>ru</key>
-            <value>Сохранить в файл</value>
-          </title>
-          <visible>true</visible>
-          <enabled>true</enabled>
-          <userVisible>
-            <common>true</common>
-          </userVisible>
-          <extendedTooltip>
-            <name>СохранитьОтчетЕщеРасширеннаяПодсказка</name>
-            <id>1104</id>
+        <items xsi:type="form:FormGroup">
+          <name>ГруппаОтправитьОтчетЕще</name>
+          <id>1226</id>
+          <items xsi:type="form:Button">
+            <name>СохранитьОтчетЕще</name>
+            <id>1103</id>
+            <title>
+              <key>ru</key>
+              <value>На компьютер</value>
+            </title>
             <visible>true</visible>
             <enabled>true</enabled>
             <userVisible>
               <common>true</common>
             </userVisible>
-            <type>Label</type>
+            <extendedTooltip>
+              <name>СохранитьОтчетЕщеРасширеннаяПодсказка</name>
+              <id>1104</id>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <type>Label</type>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Left</horizontalAlign>
+              </extInfo>
+            </extendedTooltip>
+            <commandName>Form.Command.СохранитьОтчет</commandName>
+            <representation>Auto</representation>
             <autoMaxWidth>true</autoMaxWidth>
             <autoMaxHeight>true</autoMaxHeight>
-            <extInfo xsi:type="form:LabelDecorationExtInfo">
-              <horizontalAlign>Left</horizontalAlign>
-            </extInfo>
-          </extendedTooltip>
-          <commandName>Form.Command.СохранитьОтчет</commandName>
-          <representation>Auto</representation>
-          <autoMaxWidth>true</autoMaxWidth>
-          <autoMaxHeight>true</autoMaxHeight>
-          <placementArea>UserCmds</placementArea>
-          <representationInContextMenu>Auto</representationInContextMenu>
-          <locationInCommandBar>InAdditionalSubmenu</locationInCommandBar>
-        </items>
-        <items xsi:type="form:FormGroup">
-          <name>ГруппаОтправитьЕще</name>
-          <id>754</id>
+            <placementArea>UserCmds</placementArea>
+            <representationInContextMenu>Auto</representationInContextMenu>
+            <locationInCommandBar>InAdditionalSubmenu</locationInCommandBar>
+          </items>
           <items xsi:type="form:Button">
             <name>ОтправитьПоПочтеЕще</name>
             <id>756</id>
             <title>
               <key>ru</key>
-              <value>Отправить сейчас...</value>
+              <value>Почта</value>
             </title>
             <visible>true</visible>
             <enabled>true</enabled>
@@ -3090,6 +3083,39 @@
             <representationInContextMenu>Auto</representationInContextMenu>
             <locationInCommandBar>InAdditionalSubmenu</locationInCommandBar>
           </items>
+          <items xsi:type="form:FormGroup">
+            <name>ГруппаОтправитьЕще</name>
+            <id>754</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <title>
+              <key>ru</key>
+              <value>Отправить</value>
+            </title>
+            <toolTip>
+              <key>ru</key>
+              <value>Отправить отчет по электронной почте</value>
+            </toolTip>
+            <extendedTooltip>
+              <name>ГруппаОтправитьЕщеРасширеннаяПодсказка</name>
+              <id>755</id>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <type>Label</type>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Left</horizontalAlign>
+              </extInfo>
+            </extendedTooltip>
+            <extInfo xsi:type="form:ButtonGroupExtInfo"/>
+          </items>
           <visible>true</visible>
           <enabled>true</enabled>
           <userVisible>
@@ -3099,18 +3125,9 @@
             <key>ru</key>
             <value>Отправить</value>
           </title>
-          <toolTip>
-            <key>ru</key>
-            <value>Отправить отчет по электронной почте</value>
-          </toolTip>
           <extendedTooltip>
-            <name>ГруппаОтправитьЕщеРасширеннаяПодсказка</name>
-            <id>755</id>
-            <visible>true</visible>
-            <enabled>true</enabled>
-            <userVisible>
-              <common>true</common>
-            </userVisible>
+            <name>ГруппаОтправитьОтчетЕщеРасширеннаяПодсказка</name>
+            <id>1227</id>
             <type>Label</type>
             <autoMaxWidth>true</autoMaxWidth>
             <autoMaxHeight>true</autoMaxHeight>
@@ -3121,9 +3138,9 @@
           <type>Popup</type>
           <extInfo xsi:type="form:PopupGroupExtInfo">
             <picture xsi:type="core:PictureRef">
-              <picture>CommonPicture.ЭлектронноеПисьмо</picture>
+              <picture>StdPicture.SendMessage</picture>
             </picture>
-            <representation>Picture</representation>
+            <representation>Auto</representation>
           </extInfo>
         </items>
         <visible>true</visible>
@@ -8896,7 +8913,7 @@
     <name>СохранитьВариантОтчетаВФайл</name>
     <title>
       <key>ru</key>
-      <value>Сохранить в файл...</value>
+      <value>На компьютер</value>
     </title>
     <id>22</id>
     <toolTip>

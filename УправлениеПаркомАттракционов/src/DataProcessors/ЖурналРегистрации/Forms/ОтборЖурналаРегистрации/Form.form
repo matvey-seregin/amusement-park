@@ -449,26 +449,89 @@
         <items xsi:type="form:FormGroup">
           <name>КоманднаяПанельВажность</name>
           <id>313</id>
-          <items xsi:type="form:Button">
-            <name>УстановитьФлажки</name>
-            <id>243</id>
-            <title>
-              <key>ru</key>
-              <value>Установить флажки</value>
-            </title>
-            <visible>true</visible>
-            <enabled>true</enabled>
-            <userVisible>
-              <common>true</common>
-            </userVisible>
-            <extendedTooltip>
-              <name>УстановитьФлажкиРасширеннаяПодсказка</name>
-              <id>244</id>
+          <items xsi:type="form:FormGroup">
+            <name>ГруппаФлажкиВажность</name>
+            <id>362</id>
+            <items xsi:type="form:Button">
+              <name>УстановитьФлажки</name>
+              <id>243</id>
+              <title>
+                <key>ru</key>
+                <value>Установить флажки</value>
+              </title>
               <visible>true</visible>
               <enabled>true</enabled>
               <userVisible>
                 <common>true</common>
               </userVisible>
+              <extendedTooltip>
+                <name>УстановитьФлажкиРасширеннаяПодсказка</name>
+                <id>244</id>
+                <visible>true</visible>
+                <enabled>true</enabled>
+                <userVisible>
+                  <common>true</common>
+                </userVisible>
+                <type>Label</type>
+                <autoMaxWidth>true</autoMaxWidth>
+                <autoMaxHeight>true</autoMaxHeight>
+                <extInfo xsi:type="form:LabelDecorationExtInfo">
+                  <horizontalAlign>Left</horizontalAlign>
+                </extInfo>
+              </extendedTooltip>
+              <commandName>Form.Command.УстановитьФлажкиВажности</commandName>
+              <representation>Auto</representation>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <placementArea>UserCmds</placementArea>
+              <representationInContextMenu>Auto</representationInContextMenu>
+            </items>
+            <items xsi:type="form:Button">
+              <name>СнятьФлажки</name>
+              <id>245</id>
+              <title>
+                <key>ru</key>
+                <value>Снять флажки</value>
+              </title>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <extendedTooltip>
+                <name>СнятьФлажкиРасширеннаяПодсказка</name>
+                <id>246</id>
+                <visible>true</visible>
+                <enabled>true</enabled>
+                <userVisible>
+                  <common>true</common>
+                </userVisible>
+                <type>Label</type>
+                <autoMaxWidth>true</autoMaxWidth>
+                <autoMaxHeight>true</autoMaxHeight>
+                <extInfo xsi:type="form:LabelDecorationExtInfo">
+                  <horizontalAlign>Left</horizontalAlign>
+                </extInfo>
+              </extendedTooltip>
+              <commandName>Form.Command.СнятьФлажкиВажности</commandName>
+              <representation>Auto</representation>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <placementArea>UserCmds</placementArea>
+              <representationInContextMenu>Auto</representationInContextMenu>
+            </items>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <title>
+              <key>ru</key>
+              <value>Важность</value>
+            </title>
+            <extendedTooltip>
+              <name>ГруппаФлажкиВажностьРасширеннаяПодсказка</name>
+              <id>363</id>
               <type>Label</type>
               <autoMaxWidth>true</autoMaxWidth>
               <autoMaxHeight>true</autoMaxHeight>
@@ -476,46 +539,9 @@
                 <horizontalAlign>Left</horizontalAlign>
               </extInfo>
             </extendedTooltip>
-            <commandName>Form.Command.УстановитьФлажкиВажности</commandName>
-            <representation>Auto</representation>
-            <autoMaxWidth>true</autoMaxWidth>
-            <autoMaxHeight>true</autoMaxHeight>
-            <placementArea>UserCmds</placementArea>
-            <representationInContextMenu>Auto</representationInContextMenu>
-          </items>
-          <items xsi:type="form:Button">
-            <name>СнятьФлажки</name>
-            <id>245</id>
-            <title>
-              <key>ru</key>
-              <value>Снять флажки</value>
-            </title>
-            <visible>true</visible>
-            <enabled>true</enabled>
-            <userVisible>
-              <common>true</common>
-            </userVisible>
-            <extendedTooltip>
-              <name>СнятьФлажкиРасширеннаяПодсказка</name>
-              <id>246</id>
-              <visible>true</visible>
-              <enabled>true</enabled>
-              <userVisible>
-                <common>true</common>
-              </userVisible>
-              <type>Label</type>
-              <autoMaxWidth>true</autoMaxWidth>
-              <autoMaxHeight>true</autoMaxHeight>
-              <extInfo xsi:type="form:LabelDecorationExtInfo">
-                <horizontalAlign>Left</horizontalAlign>
-              </extInfo>
-            </extendedTooltip>
-            <commandName>Form.Command.СнятьФлажкиВажности</commandName>
-            <representation>Auto</representation>
-            <autoMaxWidth>true</autoMaxWidth>
-            <autoMaxHeight>true</autoMaxHeight>
-            <placementArea>UserCmds</placementArea>
-            <representationInContextMenu>Auto</representationInContextMenu>
+            <extInfo xsi:type="form:ButtonGroupExtInfo">
+              <representation>Compact</representation>
+            </extInfo>
           </items>
           <visible>true</visible>
           <enabled>true</enabled>
@@ -2763,21 +2789,161 @@
       </borderColor>
       <representationInContextMenu>Auto</representationInContextMenu>
     </items>
+    <items xsi:type="form:Button">
+      <name>ФормаСохранитьЗначения</name>
+      <id>364</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <extendedTooltip>
+        <name>ФормаСохранитьЗначенияРасширеннаяПодсказка</name>
+        <id>365</id>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <commandName>Form.StandardCommand.SaveValues</commandName>
+      <representation>Auto</representation>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <placementArea>UserCmds</placementArea>
+      <representationInContextMenu>Auto</representationInContextMenu>
+    </items>
+    <items xsi:type="form:Button">
+      <name>ФормаВосстановитьЗначения</name>
+      <id>368</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <extendedTooltip>
+        <name>ФормаВосстановитьЗначенияРасширеннаяПодсказка</name>
+        <id>369</id>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <commandName>Form.StandardCommand.RestoreValues</commandName>
+      <representation>Auto</representation>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <placementArea>UserCmds</placementArea>
+      <representationInContextMenu>Auto</representationInContextMenu>
+    </items>
+    <items xsi:type="form:FormGroup">
+      <name>НастройкиФормы</name>
+      <id>360</id>
+      <items xsi:type="form:Button">
+        <name>СохранитьНастройкиВФайл</name>
+        <id>356</id>
+        <title>
+          <key>ru</key>
+          <value>Сохранить настройки в файл...</value>
+        </title>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <extendedTooltip>
+          <name>СохранитьНастройкиВФайлРасширеннаяПодсказка</name>
+          <id>357</id>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <commandName>Form.Command.СохранитьНастройкиВФайл</commandName>
+        <representation>Auto</representation>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <placementArea>UserCmds</placementArea>
+        <representationInContextMenu>Auto</representationInContextMenu>
+        <locationInCommandBar>InAdditionalSubmenu</locationInCommandBar>
+      </items>
+      <items xsi:type="form:Button">
+        <name>ЗагрузитьНастройкиИзФайла</name>
+        <id>358</id>
+        <title>
+          <key>ru</key>
+          <value>Загрузить настройки из файла...</value>
+        </title>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <extendedTooltip>
+          <name>ЗагрузитьНастройкиИзФайлаРасширеннаяПодсказка</name>
+          <id>359</id>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <commandName>Form.Command.ЗагрузитьНастройкиИзФайла</commandName>
+        <representation>Auto</representation>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <placementArea>UserCmds</placementArea>
+        <representationInContextMenu>Auto</representationInContextMenu>
+        <locationInCommandBar>InAdditionalSubmenu</locationInCommandBar>
+      </items>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <title>
+        <key>ru</key>
+        <value>Форма группа1</value>
+      </title>
+      <extendedTooltip>
+        <name>НастройкиФормыРасширеннаяПодсказка</name>
+        <id>361</id>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <extInfo xsi:type="form:ButtonGroupExtInfo"/>
+    </items>
     <visible>true</visible>
     <enabled>true</enabled>
     <userVisible>
       <common>true</common>
     </userVisible>
     <horizontalAlign>Left</horizontalAlign>
+    <autoFill>true</autoFill>
   </autoCommandBar>
   <handlers>
     <event>NotificationProcessing</event>
     <name>ОбработкаОповещения</name>
   </handlers>
   <handlers>
+    <event>OnLoadDataFromSettingsAtServer</event>
+    <name>ПриЗагрузкеДанныхИзНастроекНаСервере</name>
+  </handlers>
+  <handlers>
     <event>OnCreateAtServer</event>
     <name>ПриСозданииНаСервере</name>
   </handlers>
+  <saveDataInSettings>UseList</saveDataInSettings>
   <saveWindowSettings>true</saveWindowSettings>
   <autoTitle>true</autoTitle>
   <group>Vertical</group>
@@ -2811,6 +2977,9 @@
     <notDefaultUseAlwaysAttributes xsi:type="form:DataPath">
       <segments>СписокПользователей.ValueType</segments>
     </notDefaultUseAlwaysAttributes>
+    <settingsSavedData xsi:type="form:DataPath">
+      <segments>СписокПользователей</segments>
+    </settingsSavedData>
     <extInfo xsi:type="form:ValueListExtInfo">
       <itemValueType>
         <types>String</types>
@@ -2830,6 +2999,9 @@
     <edit>
       <common>true</common>
     </edit>
+    <settingsSavedData xsi:type="form:DataPath">
+      <segments>События</segments>
+    </settingsSavedData>
     <extInfo xsi:type="form:ValueListExtInfo">
       <itemValueType/>
     </extInfo>
@@ -2859,6 +3031,9 @@
     <notDefaultUseAlwaysAttributes xsi:type="form:DataPath">
       <segments>Компьютеры.ValueType</segments>
     </notDefaultUseAlwaysAttributes>
+    <settingsSavedData xsi:type="form:DataPath">
+      <segments>Компьютеры</segments>
+    </settingsSavedData>
     <extInfo xsi:type="form:ValueListExtInfo">
       <itemValueType>
         <types>String</types>
@@ -2888,6 +3063,9 @@
     <notDefaultUseAlwaysAttributes xsi:type="form:DataPath">
       <segments>Приложения.ValueType</segments>
     </notDefaultUseAlwaysAttributes>
+    <settingsSavedData xsi:type="form:DataPath">
+      <segments>Приложения</segments>
+    </settingsSavedData>
     <extInfo xsi:type="form:ValueListExtInfo">
       <itemValueType>
         <types>String</types>
@@ -2917,6 +3095,9 @@
     <notDefaultUseAlwaysAttributes xsi:type="form:DataPath">
       <segments>Важность.ValueType</segments>
     </notDefaultUseAlwaysAttributes>
+    <settingsSavedData xsi:type="form:DataPath">
+      <segments>Важность</segments>
+    </settingsSavedData>
     <extInfo xsi:type="form:ValueListExtInfo">
       <itemValueType>
         <types>String</types>
@@ -2941,6 +3122,9 @@
     <edit>
       <common>true</common>
     </edit>
+    <settingsSavedData xsi:type="form:DataPath">
+      <segments>Комментарий</segments>
+    </settingsSavedData>
   </attributes>
   <attributes>
     <name>Метаданные</name>
@@ -2967,6 +3151,9 @@
     <notDefaultUseAlwaysAttributes xsi:type="form:DataPath">
       <segments>Метаданные.ValueType</segments>
     </notDefaultUseAlwaysAttributes>
+    <settingsSavedData xsi:type="form:DataPath">
+      <segments>Метаданные</segments>
+    </settingsSavedData>
     <extInfo xsi:type="form:ValueListExtInfo">
       <itemValueType>
         <types>String</types>
@@ -2999,6 +3186,9 @@
     <edit>
       <common>true</common>
     </edit>
+    <settingsSavedData xsi:type="form:DataPath">
+      <segments>Данные</segments>
+    </settingsSavedData>
   </attributes>
   <attributes>
     <name>ПредставлениеДанных</name>
@@ -3018,6 +3208,9 @@
     <edit>
       <common>true</common>
     </edit>
+    <settingsSavedData xsi:type="form:DataPath">
+      <segments>ПредставлениеДанных</segments>
+    </settingsSavedData>
   </attributes>
   <attributes>
     <name>СтатусТранзакции</name>
@@ -3044,6 +3237,9 @@
     <notDefaultUseAlwaysAttributes xsi:type="form:DataPath">
       <segments>СтатусТранзакции.ValueType</segments>
     </notDefaultUseAlwaysAttributes>
+    <settingsSavedData xsi:type="form:DataPath">
+      <segments>СтатусТранзакции</segments>
+    </settingsSavedData>
     <extInfo xsi:type="form:ValueListExtInfo">
       <itemValueType>
         <types>String</types>
@@ -3068,6 +3264,9 @@
     <edit>
       <common>true</common>
     </edit>
+    <settingsSavedData xsi:type="form:DataPath">
+      <segments>Транзакция</segments>
+    </settingsSavedData>
   </attributes>
   <attributes>
     <name>СтрСеансы</name>
@@ -3086,6 +3285,9 @@
     <edit>
       <common>true</common>
     </edit>
+    <settingsSavedData xsi:type="form:DataPath">
+      <segments>СтрСеансы</segments>
+    </settingsSavedData>
   </attributes>
   <attributes>
     <name>Сеансы</name>
@@ -3133,6 +3335,9 @@
     <notDefaultUseAlwaysAttributes xsi:type="form:DataPath">
       <segments>РабочиеСерверы.ValueType</segments>
     </notDefaultUseAlwaysAttributes>
+    <settingsSavedData xsi:type="form:DataPath">
+      <segments>РабочиеСерверы</segments>
+    </settingsSavedData>
     <extInfo xsi:type="form:ValueListExtInfo">
       <itemValueType>
         <types>String</types>
@@ -3165,6 +3370,9 @@
     <notDefaultUseAlwaysAttributes xsi:type="form:DataPath">
       <segments>ОсновныеIPПорты.ValueType</segments>
     </notDefaultUseAlwaysAttributes>
+    <settingsSavedData xsi:type="form:DataPath">
+      <segments>ОсновныеIPПорты</segments>
+    </settingsSavedData>
     <extInfo xsi:type="form:ValueListExtInfo">
       <itemValueType>
         <types>Number</types>
@@ -3199,6 +3407,9 @@
     <notDefaultUseAlwaysAttributes xsi:type="form:DataPath">
       <segments>ВспомогательныеIPПорты.ValueType</segments>
     </notDefaultUseAlwaysAttributes>
+    <settingsSavedData xsi:type="form:DataPath">
+      <segments>ВспомогательныеIPПорты</segments>
+    </settingsSavedData>
     <extInfo xsi:type="form:ValueListExtInfo">
       <itemValueType>
         <types>Number</types>
@@ -3266,6 +3477,9 @@
     <edit>
       <common>true</common>
     </edit>
+    <settingsSavedData xsi:type="form:DataPath">
+      <segments>ИнтервалОтбораДатаНачала</segments>
+    </settingsSavedData>
   </attributes>
   <attributes>
     <name>ИнтервалОтбораДатаОкончания</name>
@@ -3284,6 +3498,9 @@
     <edit>
       <common>true</common>
     </edit>
+    <settingsSavedData xsi:type="form:DataPath">
+      <segments>ИнтервалОтбораДатаОкончания</segments>
+    </settingsSavedData>
   </attributes>
   <attributes>
     <name>СобытияОтображаемые</name>
@@ -3351,6 +3568,9 @@
     <edit>
       <common>true</common>
     </edit>
+    <settingsSavedData xsi:type="form:DataPath">
+      <segments>РазделениеДанныхСеанса</segments>
+    </settingsSavedData>
     <extInfo xsi:type="form:ValueListExtInfo">
       <itemValueType/>
     </extInfo>
@@ -3371,6 +3591,9 @@
     <edit>
       <common>true</common>
     </edit>
+    <settingsSavedData xsi:type="form:DataPath">
+      <segments>ДанныеНесколькоЗначений</segments>
+    </settingsSavedData>
   </attributes>
   <attributes>
     <name>ДанныеСписок</name>
@@ -3388,6 +3611,9 @@
     <edit>
       <common>true</common>
     </edit>
+    <settingsSavedData xsi:type="form:DataPath">
+      <segments>ДанныеСписок</segments>
+    </settingsSavedData>
     <extInfo xsi:type="form:ValueListExtInfo">
       <itemValueType>
         <types>Boolean</types>
@@ -3419,6 +3645,9 @@
     <edit>
       <common>true</common>
     </edit>
+    <settingsSavedData xsi:type="form:DataPath">
+      <segments>ОбластиДанных</segments>
+    </settingsSavedData>
     <extInfo xsi:type="form:ValueListExtInfo">
       <itemValueType/>
     </extInfo>
@@ -3562,6 +3791,40 @@
       </handler>
     </action>
     <currentRowUse>DontUse</currentRowUse>
+  </formCommands>
+  <formCommands>
+    <name>СохранитьНастройкиВФайл</name>
+    <title>
+      <key>ru</key>
+      <value>Сохранить настройки в файл...</value>
+    </title>
+    <id>7</id>
+    <use>
+      <common>true</common>
+    </use>
+    <action xsi:type="form:FormCommandHandlerContainer">
+      <handler>
+        <name>СохранитьНастройкиВФайл</name>
+      </handler>
+    </action>
+    <currentRowUse>Auto</currentRowUse>
+  </formCommands>
+  <formCommands>
+    <name>ЗагрузитьНастройкиИзФайла</name>
+    <title>
+      <key>ru</key>
+      <value>Загрузить настройки из файла...</value>
+    </title>
+    <id>8</id>
+    <use>
+      <common>true</common>
+    </use>
+    <action xsi:type="form:FormCommandHandlerContainer">
+      <handler>
+        <name>ЗагрузитьНастройкиИзФайла</name>
+      </handler>
+    </action>
+    <currentRowUse>Auto</currentRowUse>
   </formCommands>
   <parameters>
     <name>Отбор</name>

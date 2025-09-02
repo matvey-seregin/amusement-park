@@ -2,7 +2,7 @@
 <form:Form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:form="http://g5.1c.ru/v8/dt/form">
   <title>
     <key>ru</key>
-    <value>Населенный пункт</value>
+    <value>Город, населенный пункт</value>
   </title>
   <items xsi:type="form:FormField">
     <name>ТипАдреса</name>
@@ -79,8 +79,12 @@
     <name>ГруппаЧастейАдреса</name>
     <id>7</id>
     <items xsi:type="form:FormField">
-      <name>СубъектРФ</name>
+      <name>Регион</name>
       <id>12</id>
+      <title>
+        <key>ru</key>
+        <value>Регион</value>
+      </title>
       <visible>true</visible>
       <enabled>true</enabled>
       <userVisible>
@@ -95,13 +99,8 @@
         <name>СубъектРФПриИзменении</name>
       </handlers>
       <extendedTooltip>
-        <name>СубъектРФРасширеннаяПодсказка</name>
+        <name>РегионРасширеннаяПодсказка</name>
         <id>14</id>
-        <visible>true</visible>
-        <enabled>true</enabled>
-        <userVisible>
-          <common>true</common>
-        </userVisible>
         <type>Label</type>
         <autoMaxWidth>true</autoMaxWidth>
         <autoMaxHeight>true</autoMaxHeight>
@@ -110,13 +109,8 @@
         </extInfo>
       </extendedTooltip>
       <contextMenu>
-        <name>СубъектРФКонтекстноеМеню</name>
+        <name>РегионКонтекстноеМеню</name>
         <id>13</id>
-        <visible>true</visible>
-        <enabled>true</enabled>
-        <userVisible>
-          <common>true</common>
-        </userVisible>
         <autoFill>true</autoFill>
       </contextMenu>
       <type>InputField</type>

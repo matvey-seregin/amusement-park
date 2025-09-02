@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<form:Form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:form="http://g5.1c.ru/v8/dt/form">
+<form:Form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:form="http://g5.1c.ru/v8/dt/form">
   <items xsi:type="form:FormGroup">
     <name>ГруппаЗаголовок</name>
     <id>1580</id>
@@ -164,7 +164,7 @@
             <id>1606</id>
             <title>
               <key>ru</key>
-              <value>Настройка макетов печатных форм документов.</value>
+              <value>Настройка макетов печатных форм справочников и документов.</value>
             </title>
             <visible>true</visible>
             <enabled>true</enabled>
@@ -180,6 +180,37 @@
           </extendedTooltip>
           <type>Hyperlink</type>
           <commandName>InformationRegister.ПользовательскиеМакетыПечати.StandardCommand.OpenList</commandName>
+          <representation>Auto</representation>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <placementArea>UserCmds</placementArea>
+          <toolTipRepresentation>ShowBottom</toolTipRepresentation>
+          <representationInContextMenu>Auto</representationInContextMenu>
+        </items>
+        <items xsi:type="form:Button">
+          <name>ОткрытьМакетыВыгрузки</name>
+          <id>1742</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <extendedTooltip>
+            <name>ОткрытьМакетыВыгрузкиРасширеннаяПодсказка</name>
+            <id>1743</id>
+            <title>
+              <key>ru</key>
+              <value>Настройка макетов выгрузки справочников и документов.</value>
+            </title>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <type>Hyperlink</type>
+          <commandName>0</commandName>
           <representation>Auto</representation>
           <autoMaxWidth>true</autoMaxWidth>
           <autoMaxHeight>true</autoMaxHeight>
@@ -303,102 +334,171 @@
         <items xsi:type="form:FormGroup">
           <name>ГруппаАвтоматическийПеревод</name>
           <id>1709</id>
-          <items xsi:type="form:FormField">
-            <name>ИспользоватьСервисПереводаТекста</name>
-            <id>1719</id>
-            <title>
-              <key>ru</key>
-              <value>Перевод текста</value>
-            </title>
-            <visible>true</visible>
-            <enabled>true</enabled>
-            <userVisible>
-              <common>true</common>
-            </userVisible>
-            <titleLocation>None</titleLocation>
-            <handlers>
-              <event>OnChange</event>
-              <name>ИспользоватьСервисПереводаТекстаПриИзменении</name>
-            </handlers>
-            <extendedTooltip>
-              <name>ИспользоватьСервисПереводаТекстаРасширеннаяПодсказка</name>
-              <id>1721</id>
+          <items xsi:type="form:FormGroup">
+            <name>ГруппаИспользоватьСервисПереводаТекста</name>
+            <id>1753</id>
+            <items xsi:type="form:FormField">
+              <name>ИспользоватьСервисПереводаТекста1</name>
+              <id>1755</id>
+              <title>
+                <key>ru</key>
+                <value>Использовать сервис перевода текста</value>
+              </title>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <dataPath xsi:type="form:DataPath">
+                <segments>ИспользоватьСервисПереводаТекста</segments>
+              </dataPath>
+              <titleLocation>None</titleLocation>
+              <extendedTooltip>
+                <name>ИспользоватьСервисПереводаТекста1РасширеннаяПодсказка</name>
+                <id>1757</id>
+                <type>Label</type>
+                <autoMaxWidth>true</autoMaxWidth>
+                <autoMaxHeight>true</autoMaxHeight>
+                <extInfo xsi:type="form:LabelDecorationExtInfo">
+                  <horizontalAlign>Left</horizontalAlign>
+                </extInfo>
+              </extendedTooltip>
+              <contextMenu>
+                <name>ИспользоватьСервисПереводаТекста1КонтекстноеМеню</name>
+                <id>1756</id>
+                <autoFill>true</autoFill>
+              </contextMenu>
+              <type>CheckBoxField</type>
+              <editMode>Enter</editMode>
+              <showInHeader>true</showInHeader>
+              <headerHorizontalAlign>Left</headerHorizontalAlign>
+              <showInFooter>true</showInFooter>
+              <extInfo xsi:type="form:CheckBoxFieldExtInfo"/>
+            </items>
+            <items xsi:type="form:FormField">
+              <name>ИспользоватьСервисПереводаТекста</name>
+              <id>1719</id>
+              <title>
+                <key>ru</key>
+                <value>Перевод текста</value>
+              </title>
               <visible>true</visible>
               <enabled>true</enabled>
               <userVisible>
                 <common>true</common>
               </userVisible>
-              <type>Label</type>
-              <autoMaxWidth>true</autoMaxWidth>
-              <autoMaxHeight>true</autoMaxHeight>
-              <extInfo xsi:type="form:LabelDecorationExtInfo">
-                <horizontalAlign>Left</horizontalAlign>
-              </extInfo>
-            </extendedTooltip>
-            <contextMenu>
-              <name>ИспользоватьСервисПереводаТекстаКонтекстноеМеню</name>
-              <id>1720</id>
-              <visible>true</visible>
-              <enabled>true</enabled>
-              <userVisible>
-                <common>true</common>
-              </userVisible>
-              <autoFill>true</autoFill>
-            </contextMenu>
-            <type>CheckBoxField</type>
-            <editMode>Enter</editMode>
-            <showInHeader>true</showInHeader>
-            <headerHorizontalAlign>Left</headerHorizontalAlign>
-            <showInFooter>true</showInFooter>
-            <extInfo xsi:type="form:CheckBoxFieldExtInfo"/>
-          </items>
-          <items xsi:type="form:Decoration">
-            <name>НастройкаСервисаПереводаТекста</name>
-            <id>1722</id>
-            <title>
-              <key>ru</key>
-              <value>Перевод текста с помощью онлайн-переводчика</value>
-            </title>
-            <visible>true</visible>
-            <enabled>true</enabled>
-            <userVisible>
-              <common>true</common>
-            </userVisible>
-            <extendedTooltip>
-              <name>НастройкаСервисаПереводаТекстаРасширеннаяПодсказка</name>
-              <id>1724</id>
-              <visible>true</visible>
-              <enabled>true</enabled>
-              <userVisible>
-                <common>true</common>
-              </userVisible>
-              <type>Label</type>
-              <autoMaxWidth>true</autoMaxWidth>
-              <autoMaxHeight>true</autoMaxHeight>
-              <extInfo xsi:type="form:LabelDecorationExtInfo">
-                <horizontalAlign>Left</horizontalAlign>
-              </extInfo>
-            </extendedTooltip>
-            <contextMenu>
-              <name>НастройкаСервисаПереводаТекстаКонтекстноеМеню</name>
-              <id>1723</id>
-              <visible>true</visible>
-              <enabled>true</enabled>
-              <userVisible>
-                <common>true</common>
-              </userVisible>
-              <autoFill>true</autoFill>
-            </contextMenu>
-            <formatted>true</formatted>
-            <type>Label</type>
-            <autoMaxWidth>true</autoMaxWidth>
-            <autoMaxHeight>true</autoMaxHeight>
-            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <titleLocation>None</titleLocation>
               <handlers>
-                <event>URLProcessing</event>
-                <name>НастройкаСервисаПереводаТекстаОбработкаНавигационнойСсылки</name>
+                <event>OnChange</event>
+                <name>ИспользоватьСервисПереводаТекстаПриИзменении</name>
               </handlers>
-              <horizontalAlign>Left</horizontalAlign>
+              <extendedTooltip>
+                <name>ИспользоватьСервисПереводаТекстаРасширеннаяПодсказка</name>
+                <id>1721</id>
+                <visible>true</visible>
+                <enabled>true</enabled>
+                <userVisible>
+                  <common>true</common>
+                </userVisible>
+                <type>Label</type>
+                <autoMaxWidth>true</autoMaxWidth>
+                <autoMaxHeight>true</autoMaxHeight>
+                <extInfo xsi:type="form:LabelDecorationExtInfo">
+                  <horizontalAlign>Left</horizontalAlign>
+                </extInfo>
+              </extendedTooltip>
+              <contextMenu>
+                <name>ИспользоватьСервисПереводаТекстаКонтекстноеМеню</name>
+                <id>1720</id>
+                <visible>true</visible>
+                <enabled>true</enabled>
+                <userVisible>
+                  <common>true</common>
+                </userVisible>
+                <autoFill>true</autoFill>
+              </contextMenu>
+              <type>CheckBoxField</type>
+              <editMode>Enter</editMode>
+              <showInHeader>true</showInHeader>
+              <headerHorizontalAlign>Left</headerHorizontalAlign>
+              <showInFooter>true</showInFooter>
+              <extInfo xsi:type="form:CheckBoxFieldExtInfo"/>
+            </items>
+            <items xsi:type="form:Decoration">
+              <name>НастройкаСервисаПереводаТекста</name>
+              <id>1722</id>
+              <title>
+                <key>ru</key>
+                <value>Перевод текста с помощью онлайн-переводчика</value>
+              </title>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <extendedTooltip>
+                <name>НастройкаСервисаПереводаТекстаРасширеннаяПодсказка</name>
+                <id>1724</id>
+                <visible>true</visible>
+                <enabled>true</enabled>
+                <userVisible>
+                  <common>true</common>
+                </userVisible>
+                <type>Label</type>
+                <autoMaxWidth>true</autoMaxWidth>
+                <autoMaxHeight>true</autoMaxHeight>
+                <extInfo xsi:type="form:LabelDecorationExtInfo">
+                  <horizontalAlign>Left</horizontalAlign>
+                </extInfo>
+              </extendedTooltip>
+              <contextMenu>
+                <name>НастройкаСервисаПереводаТекстаКонтекстноеМеню</name>
+                <id>1723</id>
+                <visible>true</visible>
+                <enabled>true</enabled>
+                <userVisible>
+                  <common>true</common>
+                </userVisible>
+                <autoFill>true</autoFill>
+              </contextMenu>
+              <formatted>true</formatted>
+              <type>Label</type>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <handlers>
+                  <event>URLProcessing</event>
+                  <name>НастройкаСервисаПереводаТекстаОбработкаНавигационнойСсылки</name>
+                </handlers>
+                <horizontalAlign>Left</horizontalAlign>
+              </extInfo>
+            </items>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <title>
+              <key>ru</key>
+              <value>Использовать сервис перевода текста</value>
+            </title>
+            <extendedTooltip>
+              <name>ГруппаИспользоватьСервисПереводаТекстаРасширеннаяПодсказка</name>
+              <id>1754</id>
+              <type>Label</type>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Left</horizontalAlign>
+              </extInfo>
+            </extendedTooltip>
+            <type>UsualGroup</type>
+            <extInfo xsi:type="form:UsualGroupExtInfo">
+              <group>AlwaysHorizontal</group>
+              <behavior>Auto</behavior>
+              <representation>WeakSeparation</representation>
+              <showLeftMargin>true</showLeftMargin>
+              <united>true</united>
+              <throughAlign>Auto</throughAlign>
+              <currentRowUse>Auto</currentRowUse>
             </extInfo>
           </items>
           <visible>true</visible>
@@ -432,7 +532,111 @@
           </extendedTooltip>
           <type>UsualGroup</type>
           <extInfo xsi:type="form:UsualGroupExtInfo">
+            <group>Vertical</group>
+            <showLeftMargin>true</showLeftMargin>
+            <united>true</united>
+            <throughAlign>Auto</throughAlign>
+            <currentRowUse>Auto</currentRowUse>
+          </extInfo>
+        </items>
+        <items xsi:type="form:FormGroup">
+          <name>ГруппаКомментарийРазрешенДоступКИнтернетСервисам</name>
+          <id>1745</id>
+          <items xsi:type="form:Decoration">
+            <name>ДекорацияРазрешенДоступКИнтернетСервисам</name>
+            <id>1747</id>
+            <title>
+              <key>ru</key>
+              <value>Декорация разрешен доступ к интернет сервисам</value>
+            </title>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <extendedTooltip>
+              <name>ДекорацияРазрешенДоступКИнтернетСервисамРасширеннаяПодсказка</name>
+              <id>1749</id>
+              <type>Label</type>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Left</horizontalAlign>
+              </extInfo>
+            </extendedTooltip>
+            <contextMenu>
+              <name>ДекорацияРазрешенДоступКИнтернетСервисамКонтекстноеМеню</name>
+              <id>1748</id>
+              <autoFill>true</autoFill>
+            </contextMenu>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:PictureDecorationExtInfo">
+              <picture xsi:type="core:PictureRef">
+                <picture>CommonPicture.ИнформацияПоНедоступнымПолям</picture>
+              </picture>
+              <fileDragMode>AsFileRef</fileDragMode>
+            </extInfo>
+          </items>
+          <items xsi:type="form:Decoration">
+            <name>КомментарийРазрешенДоступКИнтернетСервисам</name>
+            <id>1750</id>
+            <title>
+              <key>ru</key>
+              <value>Для разблокировки настройки необходимо включить доступ к Интернет-сервисам &quot;Интернет-поддержка и сервисы&quot; — &quot;Разрешить доступ к Интернет-сервисам&quot;.</value>
+            </title>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <extendedTooltip>
+              <name>КомментарийРазрешенДоступКИнтернетСервисамРасширеннаяПодсказка</name>
+              <id>1752</id>
+              <type>Label</type>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Left</horizontalAlign>
+              </extInfo>
+            </extendedTooltip>
+            <contextMenu>
+              <name>КомментарийРазрешенДоступКИнтернетСервисамКонтекстноеМеню</name>
+              <id>1751</id>
+              <autoFill>true</autoFill>
+            </contextMenu>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <horizontalStretch>false</horizontalStretch>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </items>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <title>
+            <key>ru</key>
+            <value>Комментарий разрешен доступ к интернет сервисам</value>
+          </title>
+          <extendedTooltip>
+            <name>ГруппаКомментарийРазрешенДоступКИнтернетСервисамРасширеннаяПодсказка</name>
+            <id>1746</id>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <type>UsualGroup</type>
+          <extInfo xsi:type="form:UsualGroupExtInfo">
             <group>AlwaysHorizontal</group>
+            <behavior>Auto</behavior>
+            <representation>WeakSeparation</representation>
             <showLeftMargin>true</showLeftMargin>
             <united>true</united>
             <throughAlign>Auto</throughAlign>
@@ -909,6 +1113,10 @@
           <items xsi:type="form:FormField">
             <name>КоличествоМесяцевХраненияИсторииРассылкиОтчетов</name>
             <id>1732</id>
+            <title>
+              <key>ru</key>
+              <value>Количество месяцев хранения истории</value>
+            </title>
             <visible>true</visible>
             <enabled>true</enabled>
             <userVisible>
@@ -918,6 +1126,10 @@
               <segments>НаборКонстант.КоличествоМесяцевХраненияИсторииРассылкиОтчетов</segments>
             </dataPath>
             <titleLocation>None</titleLocation>
+            <toolTip>
+              <key>ru</key>
+              <value>Количество месяцев хранения истории рассылки отчетов</value>
+            </toolTip>
             <handlers>
               <event>OnChange</event>
               <name>КоличествоМесяцевХраненияИсторииРассылкиОтчетовПриИзменении</name>
@@ -1751,6 +1963,10 @@
     <horizontalAlign>Left</horizontalAlign>
   </autoCommandBar>
   <handlers>
+    <event>NotificationProcessing</event>
+    <name>ОбработкаОповещения</name>
+  </handlers>
+  <handlers>
     <event>OnCreateAtServer</event>
     <name>ПриСозданииНаСервере</name>
   </handlers>
@@ -1798,6 +2014,23 @@
     <name>РежимРаботы</name>
     <id>15</id>
     <valueType/>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>ИспользоватьСервисПереводаТекста</name>
+    <title>
+      <key>ru</key>
+      <value>Использовать сервис перевода текста</value>
+    </title>
+    <id>16</id>
+    <valueType>
+      <types>Boolean</types>
+    </valueType>
     <view>
       <common>true</common>
     </view>

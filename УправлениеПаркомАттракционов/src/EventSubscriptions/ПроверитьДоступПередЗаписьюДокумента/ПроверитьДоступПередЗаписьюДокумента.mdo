@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:EventSubscription xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="6da15c1d-e144-472e-9a3a-2797c7df16e4">
+  <name>ПроверитьДоступПередЗаписьюДокумента</name>
+  <synonym>
+    <key>ru</key>
+    <value>Проверить доступ перед записью документа</value>
+  </synonym>
+  <source>
+    <types>DefinedType.ВладелецЗначенийКлючейДоступаДокумент</types>
+  </source>
+  <event>BeforeWrite</event>
+  <handler>CommonModule.УправлениеДоступомСлужебный.ПроверитьДоступПередЗаписью</handler>
+</mdclass:EventSubscription>

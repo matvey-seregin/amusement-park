@@ -1712,6 +1712,10 @@
           <valuesPicture xsi:type="core:PictureRef">
             <picture>CommonPicture.СостояниеРассылкиОтчетов</picture>
           </valuesPicture>
+          <border xsi:type="core:BorderDef">
+            <style>Single</style>
+            <width>1</width>
+          </border>
         </extInfo>
       </items>
       <items xsi:type="form:FormField">
@@ -1853,6 +1857,10 @@
           <valuesPicture xsi:type="core:PictureRef">
             <picture>StdPicture.SetTime</picture>
           </valuesPicture>
+          <border xsi:type="core:BorderDef">
+            <style>Single</style>
+            <width>1</width>
+          </border>
         </extInfo>
       </items>
       <items xsi:type="form:FormField">
@@ -2689,8 +2697,8 @@
 (
 	ВЫБРАТЬ ПЕРВЫЕ 1 ИСТИНА
 	ИЗ
-		Справочник.РассылкиОтчетов.Отчеты КАК Отчеты
-	ГДЕ Отчеты.Ссылка = Рассылки.Ссылка И Отчеты.Отчет = &amp;ОтчетОтбор
+		Справочник.РассылкиОтчетов.Отчеты КАК ВариантыОтчетов
+	ГДЕ ВариантыОтчетов.Ссылка = Рассылки.Ссылка И ВариантыОтчетов.Отчет = &amp;ОтчетОтбор
 )}</queryText>
       <mainTable>Catalog.РассылкиОтчетов</mainTable>
       <dynamicDataRead>true</dynamicDataRead>

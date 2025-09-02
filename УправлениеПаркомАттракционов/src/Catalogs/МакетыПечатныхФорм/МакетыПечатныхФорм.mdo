@@ -210,6 +210,71 @@
     <fullTextSearch>Use</fullTextSearch>
     <dataHistory>Use</dataHistory>
   </attributes>
+  <attributes uuid="edb423a4-89d3-408e-aafb-d57e8ee70bc0">
+    <name>МакетДляВыгрузкиОбъекта</name>
+    <synonym>
+      <key>ru</key>
+      <value>Макет для выгрузки объекта</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="6278dff7-da49-457f-9896-94e3ca3be75d">
+    <name>ФорматСохраненияОбъекта</name>
+    <synonym>
+      <key>ru</key>
+      <value>Формат сохранения объекта</value>
+    </synonym>
+    <type>
+      <types>EnumRef.ФорматыВыгрузкиОбъектов</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="c232a478-2e10-4d0c-9733-fbfc7db1ab74">
+    <name>ОсновнаяПечатнаяФорма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Основная печатная форма</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="2f25ecec-fe3e-463c-b538-9815d96c52c6">
+    <name>НаименованиеПечатнойФормы</name>
+    <synonym>
+      <key>ru</key>
+      <value>Наименование печатной формы</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>100</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
   <tabularSections uuid="a816deca-4863-44e2-a8ff-89bfa5fbb0ac">
     <producedTypes>
       <objectType typeId="3a365e44-e054-4d53-9bff-320b132d9473" valueTypeId="2111fca4-ace0-4d05-b8da-b7e66e546a28"/>
@@ -334,6 +399,15 @@
         <lang>ru</lang>
       </pages>
     </help>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="6278272c-687e-46d6-9f6f-16c5ddf369bb">
+    <name>НастройкиМакета</name>
+    <synonym>
+      <key>ru</key>
+      <value>Настройки макета</value>
+    </synonym>
     <usePurposes>PersonalComputer</usePurposes>
     <usePurposes>MobileDevice</usePurposes>
   </forms>
