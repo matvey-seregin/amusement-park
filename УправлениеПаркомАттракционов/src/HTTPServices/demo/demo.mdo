@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:HTTPService xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="bf0d7dba-f069-4e27-84ce-90deef58fa82">
+  <name>demo</name>
+  <synonym>
+    <key>ru</key>
+    <value>Demo</value>
+  </synonym>
+  <rootURL>demo</rootURL>
+  <reuseSessions>AutoUse</reuseSessions>
+  <sessionMaxAge>20</sessionMaxAge>
+  <urlTemplates uuid="42ad5f66-7d34-425b-81a0-321fb8e6bed7">
+    <name>Ping</name>
+    <synonym>
+      <key>ru</key>
+      <value>Ping</value>
+    </synonym>
+    <template>/ping</template>
+    <methods uuid="1bb3723e-2d8f-4257-9bc1-800a42d200d0">
+      <name>ПроверитьДоступность</name>
+      <synonym>
+        <key>ru</key>
+        <value>Проверить доступность</value>
+      </synonym>
+      <handler>PingПроверитьДоступность</handler>
+    </methods>
+  </urlTemplates>
+</mdclass:HTTPService>
