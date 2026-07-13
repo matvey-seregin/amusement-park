@@ -21,6 +21,7 @@
     </dataPath>
     <titleLocation>None</titleLocation>
     <excludedCommands>Add</excludedCommands>
+    <excludedCommands>Change</excludedCommands>
     <excludedCommands>Copy</excludedCommands>
     <excludedCommands>Delete</excludedCommands>
     <excludedCommands>EndEdit</excludedCommands>
@@ -57,12 +58,11 @@
         <autoFill>true</autoFill>
       </contextMenu>
       <type>InputField</type>
-      <editMode>Enter</editMode>
+      <editMode>Auto</editMode>
       <showInHeader>true</showInHeader>
       <headerHorizontalAlign>Left</headerHorizontalAlign>
       <showInFooter>true</showInFooter>
       <extInfo xsi:type="form:InputFieldExtInfo">
-        <width>12</width>
         <autoMaxWidth>true</autoMaxWidth>
         <autoMaxHeight>true</autoMaxHeight>
         <horizontalStretch>false</horizontalStretch>
@@ -103,12 +103,11 @@
         <autoFill>true</autoFill>
       </contextMenu>
       <type>InputField</type>
-      <editMode>Enter</editMode>
+      <editMode>Auto</editMode>
       <showInHeader>true</showInHeader>
       <headerHorizontalAlign>Left</headerHorizontalAlign>
       <showInFooter>true</showInFooter>
       <extInfo xsi:type="form:InputFieldExtInfo">
-        <width>5</width>
         <autoMaxWidth>true</autoMaxWidth>
         <autoMaxHeight>true</autoMaxHeight>
         <wrap>true</wrap>
@@ -148,12 +147,11 @@
         <autoFill>true</autoFill>
       </contextMenu>
       <type>InputField</type>
-      <editMode>Enter</editMode>
+      <editMode>Auto</editMode>
       <showInHeader>true</showInHeader>
       <headerHorizontalAlign>Left</headerHorizontalAlign>
       <showInFooter>true</showInFooter>
       <extInfo xsi:type="form:InputFieldExtInfo">
-        <width>10</width>
         <autoMaxWidth>true</autoMaxWidth>
         <autoMaxHeight>true</autoMaxHeight>
         <wrap>true</wrap>
@@ -193,12 +191,11 @@
         <autoFill>true</autoFill>
       </contextMenu>
       <type>InputField</type>
-      <editMode>Enter</editMode>
+      <editMode>Auto</editMode>
       <showInHeader>true</showInHeader>
       <headerHorizontalAlign>Left</headerHorizontalAlign>
       <showInFooter>true</showInFooter>
       <extInfo xsi:type="form:InputFieldExtInfo">
-        <width>10</width>
         <autoMaxWidth>true</autoMaxWidth>
         <autoMaxHeight>true</autoMaxHeight>
         <wrap>true</wrap>
@@ -275,7 +272,7 @@
         <autoFill>true</autoFill>
       </contextMenu>
       <type>InputField</type>
-      <editMode>Enter</editMode>
+      <editMode>Auto</editMode>
       <showInHeader>true</showInHeader>
       <headerHorizontalAlign>Left</headerHorizontalAlign>
       <showInFooter>true</showInFooter>
@@ -293,15 +290,19 @@
       <name>КлассификаторКоманднаяПанель</name>
       <id>19</id>
       <items xsi:type="form:Button">
-        <name>КлассификаторИзменить</name>
+        <name>КлассификаторОткрытьДанныеПоСтране</name>
         <id>78</id>
+        <title>
+          <key>ru</key>
+          <value>Открыть</value>
+        </title>
         <visible>true</visible>
         <enabled>true</enabled>
         <userVisible>
           <common>true</common>
         </userVisible>
         <extendedTooltip>
-          <name>КлассификаторИзменитьРасширеннаяПодсказка</name>
+          <name>КлассификаторОткрытьДанныеПоСтранеРасширеннаяПодсказка</name>
           <id>79</id>
           <type>Label</type>
           <autoMaxWidth>true</autoMaxWidth>
@@ -310,13 +311,14 @@
             <horizontalAlign>Left</horizontalAlign>
           </extInfo>
         </extendedTooltip>
-        <commandName>Form.Item.Классификатор.StandardCommand.Change</commandName>
+        <commandName>Form.Command.ОткрытьДанныеПоСтране</commandName>
         <buttonImportance>Normal</buttonImportance>
         <representation>Auto</representation>
         <autoMaxWidth>true</autoMaxWidth>
         <autoMaxHeight>true</autoMaxHeight>
         <placementArea>UserCmds</placementArea>
         <representationInContextMenu>Auto</representationInContextMenu>
+        <locationInCommandBar>InAdditionalSubmenu</locationInCommandBar>
       </items>
       <items xsi:type="form:FormGroup">
         <name>КлассификаторГруппаВывестиСписок</name>
@@ -498,17 +500,21 @@
         <representationInContextMenu>Auto</representationInContextMenu>
         <locationInCommandBar>InCommandBarAndInAdditionalSubmenu</locationInCommandBar>
       </items>
-      <items xsi:type="form:Button">
-        <name>КлассификаторИзменитьФорму</name>
-        <id>47</id>
+      <items xsi:type="form:Addition">
+        <title>
+          <key>ru</key>
+          <value>Классификатор строка поиска</value>
+        </title>
         <visible>true</visible>
         <enabled>true</enabled>
         <userVisible>
           <common>true</common>
         </userVisible>
+        <name>КлассификаторСтрокаПоиска</name>
+        <id>105</id>
         <extendedTooltip>
-          <name>КлассификаторИзменитьФормуРасширеннаяПодсказка</name>
-          <id>61</id>
+          <name>КлассификаторСтрокаПоискаРасширеннаяПодсказка</name>
+          <id>107</id>
           <type>Label</type>
           <autoMaxWidth>true</autoMaxWidth>
           <autoMaxHeight>true</autoMaxHeight>
@@ -516,42 +522,17 @@
             <horizontalAlign>Left</horizontalAlign>
           </extInfo>
         </extendedTooltip>
-        <commandName>Form.StandardCommand.CustomizeForm</commandName>
-        <buttonImportance>Normal</buttonImportance>
-        <representation>Auto</representation>
-        <autoMaxWidth>true</autoMaxWidth>
-        <autoMaxHeight>true</autoMaxHeight>
-        <placementArea>UserCmds</placementArea>
-        <representationInContextMenu>Auto</representationInContextMenu>
-      </items>
-      <items xsi:type="form:Button">
-        <name>КлассификаторСправка</name>
-        <id>43</id>
-        <visible>true</visible>
-        <enabled>true</enabled>
-        <userVisible>
-          <common>true</common>
-        </userVisible>
-        <extendedTooltip>
-          <name>КлассификаторСправкаРасширеннаяПодсказка</name>
-          <id>62</id>
-          <type>Label</type>
+        <contextMenu>
+          <name>КлассификаторСтрокаПоискаКонтекстноеМеню</name>
+          <id>106</id>
+          <autoFill>true</autoFill>
+        </contextMenu>
+        <source>Классификатор</source>
+        <extInfo xsi:type="form:SearchStringAdditionExtInfo">
           <autoMaxWidth>true</autoMaxWidth>
-          <autoMaxHeight>true</autoMaxHeight>
-          <extInfo xsi:type="form:LabelDecorationExtInfo">
-            <horizontalAlign>Left</horizontalAlign>
-          </extInfo>
-        </extendedTooltip>
-        <commandName>Form.StandardCommand.Help</commandName>
-        <buttonImportance>Normal</buttonImportance>
-        <representation>Auto</representation>
-        <autoMaxWidth>true</autoMaxWidth>
-        <autoMaxHeight>true</autoMaxHeight>
-        <placementArea>UserCmds</placementArea>
-        <representationInContextMenu>Auto</representationInContextMenu>
+        </extInfo>
       </items>
       <horizontalAlign>Left</horizontalAlign>
-      <autoFill>true</autoFill>
     </autoCommandBar>
     <handlers>
       <event>ValueChoice</event>
@@ -658,15 +639,19 @@
       <name>КлассификаторКонтекстноеМеню</name>
       <id>18</id>
       <items xsi:type="form:Button">
-        <name>КлассификаторКонтекстноеМенюИзменить</name>
+        <name>КлассификаторКонтекстноеМенюОткрытьДанныеПоСтране</name>
         <id>35</id>
+        <title>
+          <key>ru</key>
+          <value>Открыть</value>
+        </title>
         <visible>true</visible>
         <enabled>true</enabled>
         <userVisible>
           <common>true</common>
         </userVisible>
         <extendedTooltip>
-          <name>КлассификаторКонтекстноеМенюИзменитьРасширеннаяПодсказка</name>
+          <name>КлассификаторКонтекстноеМенюОткрытьДанныеПоСтранеРасширеннаяПодсказка</name>
           <id>48</id>
           <type>Label</type>
           <autoMaxWidth>true</autoMaxWidth>
@@ -675,7 +660,7 @@
             <horizontalAlign>Left</horizontalAlign>
           </extInfo>
         </extendedTooltip>
-        <commandName>Form.Item.Классификатор.StandardCommand.Change</commandName>
+        <commandName>Form.Command.ОткрытьДанныеПоСтране</commandName>
         <buttonImportance>Normal</buttonImportance>
         <representation>Auto</representation>
         <autoMaxWidth>true</autoMaxWidth>
@@ -846,6 +831,7 @@
     <autoMaxWidth>true</autoMaxWidth>
     <autoMaxHeight>true</autoMaxHeight>
     <autoMaxRowsCount>true</autoMaxRowsCount>
+    <choiceMode>true</choiceMode>
     <header>true</header>
     <headerHeight>1</headerHeight>
     <footerHeight>1</footerHeight>
@@ -867,11 +853,35 @@
     <autoMaxCardHeight>true</autoMaxCardHeight>
     <rowFilter xsi:type="core:UndefinedValue"/>
   </items>
-  <commandBarLocation>None</commandBarLocation>
-  <showCommandBar>false</showCommandBar>
   <autoCommandBar>
     <name>ФормаКоманднаяПанель</name>
     <id>-1</id>
+    <items xsi:type="form:Button">
+      <name>ФормаВыбрать</name>
+      <id>101</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <extendedTooltip>
+        <name>ФормаВыбратьРасширеннаяПодсказка</name>
+        <id>102</id>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <commandName>Form.Item.Классификатор.StandardCommand.Choose</commandName>
+      <representation>Auto</representation>
+      <defaultButton>true</defaultButton>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <placementArea>UserCmds</placementArea>
+      <representationInContextMenu>Auto</representationInContextMenu>
+    </items>
     <horizontalAlign>Left</horizontalAlign>
     <autoFill>true</autoFill>
   </autoCommandBar>
@@ -1120,6 +1130,28 @@
       <common>true</common>
     </edit>
   </attributes>
+  <formCommands>
+    <name>ОткрытьДанныеПоСтране</name>
+    <title>
+      <key>ru</key>
+      <value>Открыть</value>
+    </title>
+    <id>1</id>
+    <toolTip>
+      <key>ru</key>
+      <value>Открыть данные по стране</value>
+    </toolTip>
+    <use>
+      <common>true</common>
+    </use>
+    <action xsi:type="form:FormCommandHandlerContainer">
+      <handler>
+        <name>ОткрытьДанныеПоСтране</name>
+      </handler>
+    </action>
+    <currentRowUse>Auto</currentRowUse>
+    <selectedRowsUse>Auto</selectedRowsUse>
+  </formCommands>
   <parameters>
     <name>ТекущаяСтрока</name>
     <valueType>

@@ -7,33 +7,6 @@
   <items xsi:type="form:FormGroup">
     <name>ГруппаКоманднаяПанельСПоиском</name>
     <id>98</id>
-    <items xsi:type="form:Button">
-      <name>Выбрать</name>
-      <id>70</id>
-      <visible>true</visible>
-      <enabled>true</enabled>
-      <userVisible>
-        <common>true</common>
-      </userVisible>
-      <extendedTooltip>
-        <name>ВыбратьРасширеннаяПодсказка</name>
-        <id>71</id>
-        <type>Label</type>
-        <autoMaxWidth>true</autoMaxWidth>
-        <autoMaxHeight>true</autoMaxHeight>
-        <extInfo xsi:type="form:LabelDecorationExtInfo">
-          <horizontalAlign>Left</horizontalAlign>
-        </extInfo>
-      </extendedTooltip>
-      <type>UsualButton</type>
-      <commandName>Form.Item.ВариантыАдреса.StandardCommand.Choose</commandName>
-      <representation>Auto</representation>
-      <defaultButton>true</defaultButton>
-      <autoMaxWidth>true</autoMaxWidth>
-      <autoMaxHeight>true</autoMaxHeight>
-      <placementArea>UserCmds</placementArea>
-      <representationInContextMenu>Auto</representationInContextMenu>
-    </items>
     <items xsi:type="form:Addition">
       <visible>true</visible>
       <enabled>true</enabled>
@@ -58,8 +31,10 @@
         <autoFill>true</autoFill>
       </contextMenu>
       <source>ВариантыАдреса</source>
+      <groupHorizontalAlign>Right</groupHorizontalAlign>
       <extInfo xsi:type="form:SearchStringAdditionExtInfo">
         <autoMaxWidth>true</autoMaxWidth>
+        <horizontalStretch>true</horizontalStretch>
       </extInfo>
     </items>
     <items xsi:type="form:FormField">
@@ -94,7 +69,7 @@
         <autoFill>true</autoFill>
       </contextMenu>
       <type>InputField</type>
-      <editMode>Enter</editMode>
+      <editMode>Auto</editMode>
       <showInHeader>true</showInHeader>
       <headerHorizontalAlign>Left</headerHorizontalAlign>
       <showInFooter>true</showInFooter>
@@ -107,8 +82,8 @@
           <event>Clearing</event>
           <name>ПоискВВебСервисеОчистка</name>
         </handlers>
-        <autoMaxWidth>true</autoMaxWidth>
         <autoMaxHeight>true</autoMaxHeight>
+        <horizontalStretch>true</horizontalStretch>
         <wrap>true</wrap>
         <clearButton>true</clearButton>
         <chooseType>true</chooseType>
@@ -122,34 +97,6 @@
         </inputHint>
       </extInfo>
     </items>
-    <items xsi:type="form:FormGroup">
-      <name>ГруппаЕще</name>
-      <id>100</id>
-      <visible>true</visible>
-      <enabled>true</enabled>
-      <userVisible>
-        <common>true</common>
-      </userVisible>
-      <title>
-        <key>ru</key>
-        <value>Еще</value>
-      </title>
-      <extendedTooltip>
-        <name>ГруппаЕщеРасширеннаяПодсказка</name>
-        <id>101</id>
-        <type>Label</type>
-        <autoMaxWidth>true</autoMaxWidth>
-        <autoMaxHeight>true</autoMaxHeight>
-        <extInfo xsi:type="form:LabelDecorationExtInfo">
-          <horizontalAlign>Left</horizontalAlign>
-        </extInfo>
-      </extendedTooltip>
-      <type>CommandBar</type>
-      <extInfo xsi:type="form:CommandBarExtInfo">
-        <horizontalAlign>Left</horizontalAlign>
-        <commandSource>Form</commandSource>
-      </extInfo>
-    </items>
     <visible>true</visible>
     <enabled>true</enabled>
     <userVisible>
@@ -160,6 +107,7 @@
       <value>Командная панель</value>
     </title>
     <shortcut>Ctrl+F</shortcut>
+    <groupHorizontalAlign>Right</groupHorizontalAlign>
     <extendedTooltip>
       <name>ГруппаКоманднаяПанельСПоискомРасширеннаяПодсказка</name>
       <id>99</id>
@@ -173,6 +121,7 @@
     <type>UsualGroup</type>
     <extInfo xsi:type="form:UsualGroupExtInfo">
       <group>HorizontalIfPossible</group>
+      <horizontalAlign>Right</horizontalAlign>
       <behavior>Auto</behavior>
       <showLeftMargin>true</showLeftMargin>
       <united>true</united>
@@ -509,10 +458,39 @@
       <currentRowUse>Auto</currentRowUse>
     </extInfo>
   </items>
+  <commandBarLocation>Top</commandBarLocation>
+  <showCommandBar>true</showCommandBar>
   <autoCommandBar>
     <name>ФормаКоманднаяПанель</name>
     <id>-1</id>
+    <items xsi:type="form:Button">
+      <name>Выбрать</name>
+      <id>70</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <extendedTooltip>
+        <name>ВыбратьРасширеннаяПодсказка</name>
+        <id>71</id>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <commandName>Form.Item.ВариантыАдреса.StandardCommand.Choose</commandName>
+      <representation>Auto</representation>
+      <defaultButton>true</defaultButton>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <placementArea>UserCmds</placementArea>
+      <representationInContextMenu>Auto</representationInContextMenu>
+    </items>
     <horizontalAlign>Left</horizontalAlign>
+    <autoFill>true</autoFill>
   </autoCommandBar>
   <handlers>
     <event>OnOpen</event>
@@ -814,6 +792,35 @@
       <common>true</common>
     </edit>
   </attributes>
+  <attributes>
+    <name>ДополнительныйРодитель</name>
+    <id>15</id>
+    <valueType>
+      <types>UUID</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>ДополнительныйУровень</name>
+    <id>16</id>
+    <valueType>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+      </numberQualifiers>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
   <formCommands>
     <name>Обновить</name>
     <title>
@@ -857,6 +864,7 @@
         <name>Предыдущие</name>
       </handler>
     </action>
+    <actionPurpose>Finish</actionPurpose>
     <representation>Picture</representation>
     <currentRowUse>Auto</currentRowUse>
     <selectedRowsUse>Auto</selectedRowsUse>
@@ -883,6 +891,7 @@
         <name>Следующие</name>
       </handler>
     </action>
+    <actionPurpose>Finish</actionPurpose>
     <representation>TextPicture</representation>
     <currentRowUse>Auto</currentRowUse>
     <selectedRowsUse>Auto</selectedRowsUse>

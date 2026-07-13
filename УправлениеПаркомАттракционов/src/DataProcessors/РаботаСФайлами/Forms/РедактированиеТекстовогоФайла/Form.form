@@ -36,7 +36,7 @@
         <autoFill>true</autoFill>
       </contextMenu>
       <type>TextDocumentField</type>
-      <editMode>Enter</editMode>
+      <editMode>Auto</editMode>
       <showInHeader>true</showInHeader>
       <headerHorizontalAlign>Left</headerHorizontalAlign>
       <showInFooter>true</showInFooter>
@@ -144,6 +144,38 @@
       <representationInContextMenu>Auto</representationInContextMenu>
     </items>
     <items xsi:type="form:Button">
+      <name>ОткрытьКарточку</name>
+      <id>33</id>
+      <title>
+        <key>ru</key>
+        <value>Открыть карточку</value>
+      </title>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <extendedTooltip>
+        <name>ОткрытьКарточкуРасширеннаяПодсказка</name>
+        <id>68</id>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <commandName>Form.Command.ОткрытьКарточку</commandName>
+      <buttonImportance>Normal</buttonImportance>
+      <representation>Auto</representation>
+      <width>35</width>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <placementArea>UserCmds</placementArea>
+      <representationInContextMenu>Auto</representationInContextMenu>
+      <locationInCommandBar>InAdditionalSubmenu</locationInCommandBar>
+    </items>
+    <items xsi:type="form:Button">
       <name>Редактировать</name>
       <id>32</id>
       <title>
@@ -174,6 +206,38 @@
       <placementArea>UserCmds</placementArea>
       <representationInContextMenu>Auto</representationInContextMenu>
       <locationInCommandBar>InCommandBarAndInAdditionalSubmenu</locationInCommandBar>
+    </items>
+    <items xsi:type="form:Button">
+      <name>СохранитьКак</name>
+      <id>7</id>
+      <title>
+        <key>ru</key>
+        <value>Сохранить как...</value>
+      </title>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <extendedTooltip>
+        <name>СохранитьКакРасширеннаяПодсказка</name>
+        <id>70</id>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <commandName>Form.Command.СохранитьКак</commandName>
+      <buttonImportance>Normal</buttonImportance>
+      <representation>Auto</representation>
+      <width>35</width>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <placementArea>UserCmds</placementArea>
+      <representationInContextMenu>Auto</representationInContextMenu>
+      <locationInCommandBar>InAdditionalSubmenu</locationInCommandBar>
     </items>
     <items xsi:type="form:Button">
       <name>ЗакончитьРедактирование</name>
@@ -208,72 +272,6 @@
       <locationInCommandBar>InAdditionalSubmenu</locationInCommandBar>
     </items>
     <items xsi:type="form:Button">
-      <name>ФормаОбщаяКомандаЗадачиПоПредмету</name>
-      <id>62</id>
-      <title>
-        <key>ru</key>
-        <value>Файл</value>
-      </title>
-      <visible>true</visible>
-      <enabled>true</enabled>
-      <userVisible>
-        <common>true</common>
-      </userVisible>
-      <dataPath xsi:type="form:DataPath">
-        <segments>Файл</segments>
-      </dataPath>
-      <extendedTooltip>
-        <name>ФормаОбщаяКомандаЗадачиПоПредметуРасширеннаяПодсказка</name>
-        <id>67</id>
-        <type>Label</type>
-        <autoMaxWidth>true</autoMaxWidth>
-        <autoMaxHeight>true</autoMaxHeight>
-        <extInfo xsi:type="form:LabelDecorationExtInfo">
-          <horizontalAlign>Left</horizontalAlign>
-        </extInfo>
-      </extendedTooltip>
-      <commandName>0</commandName>
-      <buttonImportance>Normal</buttonImportance>
-      <representation>Auto</representation>
-      <autoMaxWidth>true</autoMaxWidth>
-      <autoMaxHeight>true</autoMaxHeight>
-      <placementArea>UserCmds</placementArea>
-      <representationInContextMenu>Auto</representationInContextMenu>
-      <locationInCommandBar>InAdditionalSubmenu</locationInCommandBar>
-    </items>
-    <items xsi:type="form:Button">
-      <name>ОткрытьКарточку</name>
-      <id>33</id>
-      <title>
-        <key>ru</key>
-        <value>Открыть карточку</value>
-      </title>
-      <visible>true</visible>
-      <enabled>true</enabled>
-      <userVisible>
-        <common>true</common>
-      </userVisible>
-      <extendedTooltip>
-        <name>ОткрытьКарточкуРасширеннаяПодсказка</name>
-        <id>68</id>
-        <type>Label</type>
-        <autoMaxWidth>true</autoMaxWidth>
-        <autoMaxHeight>true</autoMaxHeight>
-        <extInfo xsi:type="form:LabelDecorationExtInfo">
-          <horizontalAlign>Left</horizontalAlign>
-        </extInfo>
-      </extendedTooltip>
-      <commandName>Form.Command.ОткрытьКарточку</commandName>
-      <buttonImportance>Normal</buttonImportance>
-      <representation>Auto</representation>
-      <width>35</width>
-      <autoMaxWidth>true</autoMaxWidth>
-      <autoMaxHeight>true</autoMaxHeight>
-      <placementArea>UserCmds</placementArea>
-      <representationInContextMenu>Auto</representationInContextMenu>
-      <locationInCommandBar>InAdditionalSubmenu</locationInCommandBar>
-    </items>
-    <items xsi:type="form:Button">
       <name>ПоказатьОтличия</name>
       <id>8</id>
       <title>
@@ -296,38 +294,6 @@
         </extInfo>
       </extendedTooltip>
       <commandName>Form.Command.ПоказатьОтличия</commandName>
-      <buttonImportance>Normal</buttonImportance>
-      <representation>Auto</representation>
-      <width>35</width>
-      <autoMaxWidth>true</autoMaxWidth>
-      <autoMaxHeight>true</autoMaxHeight>
-      <placementArea>UserCmds</placementArea>
-      <representationInContextMenu>Auto</representationInContextMenu>
-      <locationInCommandBar>InAdditionalSubmenu</locationInCommandBar>
-    </items>
-    <items xsi:type="form:Button">
-      <name>СохранитьКак</name>
-      <id>7</id>
-      <title>
-        <key>ru</key>
-        <value>Сохранить как...</value>
-      </title>
-      <visible>true</visible>
-      <enabled>true</enabled>
-      <userVisible>
-        <common>true</common>
-      </userVisible>
-      <extendedTooltip>
-        <name>СохранитьКакРасширеннаяПодсказка</name>
-        <id>70</id>
-        <type>Label</type>
-        <autoMaxWidth>true</autoMaxWidth>
-        <autoMaxHeight>true</autoMaxHeight>
-        <extInfo xsi:type="form:LabelDecorationExtInfo">
-          <horizontalAlign>Left</horizontalAlign>
-        </extInfo>
-      </extendedTooltip>
-      <commandName>Form.Command.СохранитьКак</commandName>
       <buttonImportance>Normal</buttonImportance>
       <representation>Auto</representation>
       <width>35</width>
@@ -392,6 +358,40 @@
         </extInfo>
       </extendedTooltip>
       <commandName>Form.Command.ВыбратьКодировку</commandName>
+      <buttonImportance>Normal</buttonImportance>
+      <representation>Auto</representation>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <placementArea>UserCmds</placementArea>
+      <representationInContextMenu>Auto</representationInContextMenu>
+      <locationInCommandBar>InAdditionalSubmenu</locationInCommandBar>
+    </items>
+    <items xsi:type="form:Button">
+      <name>ФормаОбщаяКомандаЗадачиПоПредмету</name>
+      <id>62</id>
+      <title>
+        <key>ru</key>
+        <value>Файл</value>
+      </title>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <dataPath xsi:type="form:DataPath">
+        <segments>Файл</segments>
+      </dataPath>
+      <extendedTooltip>
+        <name>ФормаОбщаяКомандаЗадачиПоПредметуРасширеннаяПодсказка</name>
+        <id>67</id>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <commandName>0</commandName>
       <buttonImportance>Normal</buttonImportance>
       <representation>Auto</representation>
       <autoMaxWidth>true</autoMaxWidth>
@@ -687,6 +687,7 @@
         <name>Записать</name>
       </handler>
     </action>
+    <actionPurpose>Finish</actionPurpose>
     <representation>Text</representation>
     <currentRowUse>DontUse</currentRowUse>
     <selectedRowsUse>Auto</selectedRowsUse>
@@ -765,6 +766,7 @@
         <name>ЗаписатьИЗакрыть</name>
       </handler>
     </action>
+    <actionPurpose>Finish</actionPurpose>
     <representation>Text</representation>
     <currentRowUse>DontUse</currentRowUse>
     <selectedRowsUse>Auto</selectedRowsUse>

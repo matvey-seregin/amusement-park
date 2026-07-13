@@ -58,7 +58,7 @@
         </contextMenu>
         <type>PictureField</type>
         <readOnly>true</readOnly>
-        <editMode>Enter</editMode>
+        <editMode>Auto</editMode>
         <showInHeader>true</showInHeader>
         <headerHorizontalAlign>Left</headerHorizontalAlign>
         <showInFooter>true</showInFooter>
@@ -108,6 +108,7 @@
           <autoFill>true</autoFill>
         </contextMenu>
         <type>InputField</type>
+        <readOnly>true</readOnly>
         <editMode>Auto</editMode>
         <showInHeader>true</showInHeader>
         <headerHorizontalAlign>Left</headerHorizontalAlign>
@@ -180,7 +181,7 @@
         <autoFill>true</autoFill>
       </contextMenu>
       <type>InputField</type>
-      <editMode>Enter</editMode>
+      <editMode>Auto</editMode>
       <showInHeader>true</showInHeader>
       <headerHorizontalAlign>Left</headerHorizontalAlign>
       <showInFooter>true</showInFooter>
@@ -203,7 +204,7 @@
       <id>39</id>
       <title>
         <key>ru</key>
-        <value>?</value>
+        <value>Подсказка</value>
       </title>
       <visible>true</visible>
       <enabled>true</enabled>
@@ -233,7 +234,8 @@
         <autoFill>true</autoFill>
       </contextMenu>
       <type>LabelField</type>
-      <editMode>Enter</editMode>
+      <readOnly>true</readOnly>
+      <editMode>Auto</editMode>
       <cellHyperlink>true</cellHyperlink>
       <showInHeader>true</showInHeader>
       <headerHorizontalAlign>Left</headerHorizontalAlign>
@@ -273,6 +275,10 @@
     <handlers>
       <event>OnStartEdit</event>
       <name>ТаблицаЗначенийСвойствПриНачалеРедактирования</name>
+    </handlers>
+    <handlers>
+      <event>OnHover</event>
+      <name>ТаблицаЗначенийСвойствПриНаведении</name>
     </handlers>
     <handlers>
       <event>OnChange</event>
@@ -480,9 +486,6 @@
       <textColor xsi:type="core:ColorRef">
         <color>Style.ButtonTextColor</color>
       </textColor>
-      <backColor xsi:type="core:ColorRef">
-        <color>Style.ButtonBackColor</color>
-      </backColor>
       <representationInContextMenu>Auto</representationInContextMenu>
       <locationInCommandBar>InAdditionalSubmenu</locationInCommandBar>
     </items>
@@ -835,6 +838,7 @@
         <name>Записать</name>
       </handler>
     </action>
+    <actionPurpose>Finish</actionPurpose>
     <currentRowUse>DontUse</currentRowUse>
     <selectedRowsUse>Auto</selectedRowsUse>
   </formCommands>
@@ -860,6 +864,7 @@
         <name>ЗаписатьИЗакрыть</name>
       </handler>
     </action>
+    <actionPurpose>Finish</actionPurpose>
     <representation>Text</representation>
     <currentRowUse>DontUse</currentRowUse>
     <selectedRowsUse>Auto</selectedRowsUse>

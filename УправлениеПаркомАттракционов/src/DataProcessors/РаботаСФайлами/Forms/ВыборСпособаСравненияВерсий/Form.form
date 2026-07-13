@@ -2,7 +2,7 @@
 <form:Form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:form="http://g5.1c.ru/v8/dt/form">
   <title>
     <key>ru</key>
-    <value>Выберите способ сравнения версий файлов</value>
+    <value>Способ сравнения версий файлов</value>
   </title>
   <items xsi:type="form:FormField">
     <name>СпособСравненияВерсийФайлов</name>
@@ -35,7 +35,7 @@
       <autoFill>true</autoFill>
     </contextMenu>
     <type>InputField</type>
-    <editMode>Enter</editMode>
+    <editMode>Auto</editMode>
     <showInHeader>true</showInHeader>
     <headerHorizontalAlign>Left</headerHorizontalAlign>
     <showInFooter>true</showInFooter>
@@ -55,11 +55,11 @@
     <name>ФормаКоманднаяПанель</name>
     <id>-1</id>
     <items xsi:type="form:Button">
-      <name>ОК</name>
+      <name>Выбрать</name>
       <id>4</id>
       <title>
         <key>ru</key>
-        <value>ОК</value>
+        <value>Выбрать</value>
       </title>
       <visible>true</visible>
       <enabled>true</enabled>
@@ -68,7 +68,7 @@
       </userVisible>
       <skipOnInput>false</skipOnInput>
       <extendedTooltip>
-        <name>ОКРасширеннаяПодсказка</name>
+        <name>ВыбратьРасширеннаяПодсказка</name>
         <id>7</id>
         <type>Label</type>
         <autoMaxWidth>true</autoMaxWidth>
@@ -111,34 +111,8 @@
       <placementArea>UserCmds</placementArea>
       <representationInContextMenu>Auto</representationInContextMenu>
     </items>
-    <items xsi:type="form:Button">
-      <name>Справка</name>
-      <id>6</id>
-      <visible>true</visible>
-      <enabled>true</enabled>
-      <userVisible>
-        <common>true</common>
-      </userVisible>
-      <skipOnInput>false</skipOnInput>
-      <extendedTooltip>
-        <name>СправкаРасширеннаяПодсказка</name>
-        <id>9</id>
-        <type>Label</type>
-        <autoMaxWidth>true</autoMaxWidth>
-        <autoMaxHeight>true</autoMaxHeight>
-        <extInfo xsi:type="form:LabelDecorationExtInfo">
-          <horizontalAlign>Left</horizontalAlign>
-        </extInfo>
-      </extendedTooltip>
-      <commandName>Form.StandardCommand.Help</commandName>
-      <buttonImportance>Normal</buttonImportance>
-      <representation>Auto</representation>
-      <autoMaxWidth>true</autoMaxWidth>
-      <autoMaxHeight>true</autoMaxHeight>
-      <placementArea>UserCmds</placementArea>
-      <representationInContextMenu>Auto</representationInContextMenu>
-    </items>
     <horizontalAlign>Right</horizontalAlign>
+    <autoFill>true</autoFill>
   </autoCommandBar>
   <handlers>
     <event>OnCreateAtServer</event>
@@ -194,6 +168,7 @@
         <name>ЗаписатьИЗакрыть</name>
       </handler>
     </action>
+    <actionPurpose>Finish</actionPurpose>
     <representation>TextPicture</representation>
     <currentRowUse>DontUse</currentRowUse>
     <selectedRowsUse>Auto</selectedRowsUse>

@@ -69,7 +69,9 @@
         <showInHeader>true</showInHeader>
         <headerHorizontalAlign>Left</headerHorizontalAlign>
         <showInFooter>true</showInFooter>
-        <extInfo xsi:type="form:CheckBoxFieldExtInfo"/>
+        <extInfo xsi:type="form:CheckBoxFieldExtInfo">
+          <checkBoxType>CheckBox</checkBoxType>
+        </extInfo>
       </items>
       <items xsi:type="form:FormField">
         <name>ДоступныеОбъектыДляИзмененияЗначение</name>
@@ -147,6 +149,7 @@
       <name>ДоступныеОбъектыДляИзмененияКоманднаяПанель</name>
       <id>10</id>
       <horizontalAlign>Left</horizontalAlign>
+      <autoFill>true</autoFill>
     </autoCommandBar>
     <handlers>
       <event>Selection</event>
@@ -245,8 +248,6 @@
     <autoMaxWidth>true</autoMaxWidth>
     <autoMaxHeight>true</autoMaxHeight>
     <autoMaxRowsCount>true</autoMaxRowsCount>
-    <multipleChoice>true</multipleChoice>
-    <selectionMode>MultiRow</selectionMode>
     <headerHeight>1</headerHeight>
     <footerHeight>1</footerHeight>
     <horizontalScrollBar>AutoUse</horizontalScrollBar>
@@ -264,6 +265,7 @@
     <rowPictureDataPath xsi:type="form:DataPath">
       <segments>ДоступныеОбъектыДляИзменения.Picture</segments>
     </rowPictureDataPath>
+    <searchStringLocation>CommandBar</searchStringLocation>
     <autoMaxCardHeight>true</autoMaxCardHeight>
   </items>
   <autoCommandBar>
@@ -299,47 +301,20 @@
       <placementArea>UserCmds</placementArea>
       <representationInContextMenu>Auto</representationInContextMenu>
     </items>
-    <items xsi:type="form:Button">
-      <name>ФормаСнятьФлажки</name>
-      <id>31</id>
-      <visible>true</visible>
-      <enabled>true</enabled>
-      <userVisible>
-        <common>true</common>
-      </userVisible>
-      <extendedTooltip>
-        <name>ФормаСнятьФлажкиРасширеннаяПодсказка</name>
-        <id>32</id>
-        <type>Label</type>
-        <autoMaxWidth>true</autoMaxWidth>
-        <autoMaxHeight>true</autoMaxHeight>
-        <extInfo xsi:type="form:LabelDecorationExtInfo">
-          <horizontalAlign>Left</horizontalAlign>
-        </extInfo>
-      </extendedTooltip>
-      <commandName>Form.Item.ДоступныеОбъектыДляИзменения.StandardCommand.UncheckAll</commandName>
-      <buttonImportance>Normal</buttonImportance>
-      <representation>Auto</representation>
-      <autoMaxWidth>true</autoMaxWidth>
-      <autoMaxHeight>true</autoMaxHeight>
-      <placementArea>UserCmds</placementArea>
-      <representationInContextMenu>Auto</representationInContextMenu>
-    </items>
     <items xsi:type="form:Addition">
       <title>
         <key>ru</key>
-        <value>Поиск</value>
+        <value>Строка поиска такси</value>
       </title>
-      <visible>true</visible>
       <enabled>true</enabled>
       <userVisible>
         <common>true</common>
       </userVisible>
-      <name>СтрокаПоиска</name>
-      <id>35</id>
+      <name>СтрокаПоискаТакси</name>
+      <id>42</id>
       <extendedTooltip>
-        <name>СтрокаПоискаРасширеннаяПодсказка</name>
-        <id>37</id>
+        <name>СтрокаПоискаТаксиРасширеннаяПодсказка</name>
+        <id>44</id>
         <type>Label</type>
         <autoMaxWidth>true</autoMaxWidth>
         <autoMaxHeight>true</autoMaxHeight>
@@ -348,8 +323,8 @@
         </extInfo>
       </extendedTooltip>
       <contextMenu>
-        <name>СтрокаПоискаКонтекстноеМеню</name>
-        <id>36</id>
+        <name>СтрокаПоискаТаксиКонтекстноеМеню</name>
+        <id>43</id>
         <autoFill>true</autoFill>
       </contextMenu>
       <source>ДоступныеОбъектыДляИзменения</source>
@@ -415,7 +390,10 @@
       <common>true</common>
     </edit>
     <extInfo xsi:type="form:ValueListExtInfo">
-      <itemValueType/>
+      <itemValueType>
+        <types>String</types>
+        <stringQualifiers/>
+      </itemValueType>
     </extInfo>
   </attributes>
   <formCommands>
@@ -437,6 +415,7 @@
         <name>Выбрать</name>
       </handler>
     </action>
+    <actionPurpose>Finish</actionPurpose>
     <currentRowUse>DontUse</currentRowUse>
     <selectedRowsUse>Auto</selectedRowsUse>
   </formCommands>

@@ -426,7 +426,7 @@
           <autoFill>true</autoFill>
         </contextMenu>
         <type>InputField</type>
-        <editMode>Enter</editMode>
+        <editMode>Auto</editMode>
         <showInHeader>true</showInHeader>
         <headerHorizontalAlign>Left</headerHorizontalAlign>
         <showInFooter>true</showInFooter>
@@ -656,7 +656,6 @@
       <autoMaxWidth>true</autoMaxWidth>
       <autoMaxHeight>true</autoMaxHeight>
       <autoMaxRowsCount>true</autoMaxRowsCount>
-      <selectionMode>MultiRow</selectionMode>
       <header>true</header>
       <headerHeight>1</headerHeight>
       <footerHeight>1</footerHeight>
@@ -729,7 +728,7 @@
       <id>21</id>
       <title>
         <key>ru</key>
-        <value>ОК</value>
+        <value>Выбрать и закрыть</value>
       </title>
       <visible>true</visible>
       <enabled>true</enabled>
@@ -749,32 +748,6 @@
       <commandName>Form.Command.ОК</commandName>
       <representation>Auto</representation>
       <defaultButton>true</defaultButton>
-      <autoMaxWidth>true</autoMaxWidth>
-      <autoMaxHeight>true</autoMaxHeight>
-      <placementArea>UserCmds</placementArea>
-      <representationInContextMenu>Auto</representationInContextMenu>
-    </items>
-    <items xsi:type="form:Button">
-      <name>ФормаОтмена</name>
-      <id>31</id>
-      <visible>true</visible>
-      <enabled>true</enabled>
-      <userVisible>
-        <common>true</common>
-      </userVisible>
-      <extendedTooltip>
-        <name>ФормаОтменаРасширеннаяПодсказка</name>
-        <id>32</id>
-        <type>Label</type>
-        <autoMaxWidth>true</autoMaxWidth>
-        <autoMaxHeight>true</autoMaxHeight>
-        <extInfo xsi:type="form:LabelDecorationExtInfo">
-          <horizontalAlign>Left</horizontalAlign>
-        </extInfo>
-      </extendedTooltip>
-      <commandName>Form.StandardCommand.Cancel</commandName>
-      <buttonImportance>Normal</buttonImportance>
-      <representation>Auto</representation>
       <autoMaxWidth>true</autoMaxWidth>
       <autoMaxHeight>true</autoMaxHeight>
       <placementArea>UserCmds</placementArea>
@@ -979,6 +952,7 @@
         <name>ОК</name>
       </handler>
     </action>
+    <actionPurpose>Finish</actionPurpose>
     <currentRowUse>DontUse</currentRowUse>
     <selectedRowsUse>Auto</selectedRowsUse>
   </formCommands>

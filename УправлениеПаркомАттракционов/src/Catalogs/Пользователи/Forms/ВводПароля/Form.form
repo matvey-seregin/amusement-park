@@ -28,10 +28,10 @@
       <autoFill>true</autoFill>
     </contextMenu>
     <type>Label</type>
+    <autoMaxWidth>true</autoMaxWidth>
     <autoMaxHeight>true</autoMaxHeight>
     <extInfo xsi:type="form:LabelDecorationExtInfo">
       <horizontalAlign>Left</horizontalAlign>
-      <titleHeight>2</titleHeight>
     </extInfo>
   </items>
   <items xsi:type="form:FormField">
@@ -66,7 +66,7 @@
       <autoFill>true</autoFill>
     </contextMenu>
     <type>InputField</type>
-    <editMode>Enter</editMode>
+    <editMode>Auto</editMode>
     <showInHeader>true</showInHeader>
     <headerHorizontalAlign>Left</headerHorizontalAlign>
     <showInFooter>true</showInFooter>
@@ -81,17 +81,15 @@
       <textSize>Normal</textSize>
     </extInfo>
   </items>
-  <commandBarLocation>Bottom</commandBarLocation>
-  <showCommandBar>true</showCommandBar>
   <autoCommandBar>
     <name>ФормаКоманднаяПанель</name>
     <id>-1</id>
     <items xsi:type="form:Button">
-      <name>ФормаОК</name>
+      <name>ФормаПродолжить</name>
       <id>8</id>
       <title>
         <key>ru</key>
-        <value>ОК</value>
+        <value>Продолжить</value>
       </title>
       <visible>true</visible>
       <enabled>true</enabled>
@@ -100,7 +98,7 @@
       </userVisible>
       <defaultItem>true</defaultItem>
       <extendedTooltip>
-        <name>ФормаОКРасширеннаяПодсказка</name>
+        <name>ФормаПродолжитьРасширеннаяПодсказка</name>
         <id>9</id>
         <type>Label</type>
         <autoMaxWidth>true</autoMaxWidth>
@@ -109,7 +107,7 @@
           <horizontalAlign>Left</horizontalAlign>
         </extInfo>
       </extendedTooltip>
-      <commandName>Form.Command.ОК</commandName>
+      <commandName>Form.Command.Продолжить</commandName>
       <representation>Auto</representation>
       <defaultButton>true</defaultButton>
       <autoMaxWidth>true</autoMaxWidth>
@@ -117,39 +115,14 @@
       <placementArea>UserCmds</placementArea>
       <representationInContextMenu>Auto</representationInContextMenu>
     </items>
-    <items xsi:type="form:Button">
-      <name>ФормаОтмена</name>
-      <id>6</id>
-      <visible>true</visible>
-      <enabled>true</enabled>
-      <userVisible>
-        <common>true</common>
-      </userVisible>
-      <extendedTooltip>
-        <name>ФормаОтменаРасширеннаяПодсказка</name>
-        <id>7</id>
-        <type>Label</type>
-        <autoMaxWidth>true</autoMaxWidth>
-        <autoMaxHeight>true</autoMaxHeight>
-        <extInfo xsi:type="form:LabelDecorationExtInfo">
-          <horizontalAlign>Left</horizontalAlign>
-        </extInfo>
-      </extendedTooltip>
-      <commandName>Form.StandardCommand.Cancel</commandName>
-      <buttonImportance>Normal</buttonImportance>
-      <representation>Auto</representation>
-      <autoMaxWidth>true</autoMaxWidth>
-      <autoMaxHeight>true</autoMaxHeight>
-      <placementArea>UserCmds</placementArea>
-      <representationInContextMenu>Auto</representationInContextMenu>
-    </items>
-    <horizontalAlign>Right</horizontalAlign>
+    <horizontalAlign>Left</horizontalAlign>
+    <autoFill>true</autoFill>
   </autoCommandBar>
   <handlers>
     <event>OnCreateAtServer</event>
     <name>ПриСозданииНаСервере</name>
   </handlers>
-  <windowOpeningMode>DontBlock</windowOpeningMode>
+  <windowOpeningMode>LockOwner</windowOpeningMode>
   <saveWindowSettings>true</saveWindowSettings>
   <autoUrl>true</autoUrl>
   <group>Vertical</group>
@@ -173,15 +146,15 @@
     </edit>
   </attributes>
   <formCommands>
-    <name>ОК</name>
+    <name>Продолжить</name>
     <title>
       <key>ru</key>
-      <value>ОК</value>
+      <value>Продолжить</value>
     </title>
     <id>1</id>
     <toolTip>
       <key>ru</key>
-      <value>ОК</value>
+      <value>Продолжить</value>
     </toolTip>
     <use>
       <common>true</common>
@@ -191,6 +164,7 @@
         <name>ОК</name>
       </handler>
     </action>
+    <actionPurpose>Finish</actionPurpose>
     <currentRowUse>Auto</currentRowUse>
     <selectedRowsUse>Auto</selectedRowsUse>
   </formCommands>

@@ -101,16 +101,16 @@
     </extendedTooltip>
     <type>UsualGroup</type>
     <extInfo xsi:type="form:UsualGroupExtInfo">
-      <group>HorizontalIfPossible</group>
+      <group>AlwaysHorizontal</group>
       <showLeftMargin>true</showLeftMargin>
       <united>true</united>
       <throughAlign>Auto</throughAlign>
       <currentRowUse>Auto</currentRowUse>
     </extInfo>
   </items>
-  <items xsi:type="form:FormGroup">
-    <name>ГруппаКоманды</name>
-    <id>9</id>
+  <autoCommandBar>
+    <name>ФормаКоманднаяПанель</name>
+    <id>-1</id>
     <items xsi:type="form:Button">
       <name>Закрыть</name>
       <id>11</id>
@@ -140,35 +140,6 @@
       <placementArea>UserCmds</placementArea>
       <representationInContextMenu>Auto</representationInContextMenu>
     </items>
-    <visible>true</visible>
-    <enabled>true</enabled>
-    <userVisible>
-      <common>true</common>
-    </userVisible>
-    <title>
-      <key>ru</key>
-      <value>Команды</value>
-    </title>
-    <extendedTooltip>
-      <name>ГруппаКомандыРасширеннаяПодсказка</name>
-      <id>10</id>
-      <type>Label</type>
-      <autoMaxWidth>true</autoMaxWidth>
-      <autoMaxHeight>true</autoMaxHeight>
-      <extInfo xsi:type="form:LabelDecorationExtInfo">
-        <horizontalAlign>Left</horizontalAlign>
-      </extInfo>
-    </extendedTooltip>
-    <type>CommandBar</type>
-    <extInfo xsi:type="form:CommandBarExtInfo">
-      <horizontalAlign>Right</horizontalAlign>
-    </extInfo>
-  </items>
-  <commandBarLocation>None</commandBarLocation>
-  <showCommandBar>false</showCommandBar>
-  <autoCommandBar>
-    <name>ФормаКоманднаяПанель</name>
-    <id>-1</id>
     <horizontalAlign>Left</horizontalAlign>
     <autoFill>true</autoFill>
   </autoCommandBar>
@@ -184,7 +155,7 @@
     <event>OnCreateAtServer</event>
     <name>ПриСозданииНаСервере</name>
   </handlers>
-  <windowOpeningMode>DontBlock</windowOpeningMode>
+  <windowOpeningMode>LockWholeInterface</windowOpeningMode>
   <saveWindowSettings>true</saveWindowSettings>
   <autoUrl>true</autoUrl>
   <group>Vertical</group>
@@ -309,12 +280,6 @@
   </parameters>
   <parameters>
     <name>РежимВосстановления</name>
-    <valueType>
-      <types>Boolean</types>
-    </valueType>
-  </parameters>
-  <parameters>
-    <name>РежимПроверки</name>
     <valueType>
       <types>Boolean</types>
     </valueType>

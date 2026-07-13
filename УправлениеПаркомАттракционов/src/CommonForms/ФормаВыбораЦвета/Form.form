@@ -5,8 +5,40 @@
     <value>Выберите цвет текста</value>
   </title>
   <items xsi:type="form:FormGroup">
-    <name>ГруппаДополнительныеДействия</name>
-    <id>1</id>
+    <name>ГруппаЦветов</name>
+    <id>11</id>
+    <visible>true</visible>
+    <enabled>true</enabled>
+    <userVisible>
+      <common>true</common>
+    </userVisible>
+    <title>
+      <key>ru</key>
+      <value>Цветов</value>
+    </title>
+    <extendedTooltip>
+      <name>ГруппаЦветовРасширеннаяПодсказка</name>
+      <id>12</id>
+      <type>Label</type>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <extInfo xsi:type="form:LabelDecorationExtInfo">
+        <horizontalAlign>Left</horizontalAlign>
+      </extInfo>
+    </extendedTooltip>
+    <type>UsualGroup</type>
+    <extInfo xsi:type="form:UsualGroupExtInfo">
+      <group>Vertical</group>
+      <behavior>Auto</behavior>
+      <showLeftMargin>true</showLeftMargin>
+      <united>true</united>
+      <throughAlign>Auto</throughAlign>
+      <currentRowUse>Auto</currentRowUse>
+    </extInfo>
+  </items>
+  <autoCommandBar>
+    <name>ФормаКоманднаяПанель</name>
+    <id>-1</id>
     <items xsi:type="form:Button">
       <name>ОчиститьЦвет</name>
       <id>9</id>
@@ -29,7 +61,6 @@
           <horizontalAlign>Left</horizontalAlign>
         </extInfo>
       </extendedTooltip>
-      <type>UsualButton</type>
       <commandName>Form.Command.ОчиститьЦвет</commandName>
       <buttonImportance>Normal</buttonImportance>
       <representation>Auto</representation>
@@ -38,9 +69,9 @@
       <placementArea>UserCmds</placementArea>
       <representationInContextMenu>Auto</representationInContextMenu>
     </items>
-    <items xsi:type="form:Decoration">
+    <items xsi:type="form:Button">
       <name>ДругиеЦвета</name>
-      <id>6</id>
+      <id>13</id>
       <title>
         <key>ru</key>
         <value>Другие цвета</value>
@@ -52,7 +83,7 @@
       </userVisible>
       <extendedTooltip>
         <name>ДругиеЦветаРасширеннаяПодсказка</name>
-        <id>8</id>
+        <id>14</id>
         <type>Label</type>
         <autoMaxWidth>true</autoMaxWidth>
         <autoMaxHeight>true</autoMaxHeight>
@@ -60,62 +91,21 @@
           <horizontalAlign>Left</horizontalAlign>
         </extInfo>
       </extendedTooltip>
-      <contextMenu>
-        <name>ДругиеЦветаКонтекстноеМеню</name>
-        <id>7</id>
-        <autoFill>true</autoFill>
-      </contextMenu>
-      <type>Label</type>
+      <commandName>Form.Command.ДругиеЦвета</commandName>
+      <buttonImportance>Supplementary</buttonImportance>
+      <representation>Auto</representation>
       <autoMaxWidth>true</autoMaxWidth>
       <autoMaxHeight>true</autoMaxHeight>
-      <extInfo xsi:type="form:LabelDecorationExtInfo">
-        <handlers>
-          <event>Click</event>
-          <name>ДругиеЦветаНажатие</name>
-        </handlers>
-        <hyperlink>true</hyperlink>
-      </extInfo>
+      <placementArea>UserCmds</placementArea>
+      <representationInContextMenu>Auto</representationInContextMenu>
     </items>
-    <visible>true</visible>
-    <enabled>true</enabled>
-    <userVisible>
-      <common>true</common>
-    </userVisible>
-    <title>
-      <key>ru</key>
-      <value>Дополнительные действия</value>
-    </title>
-    <horizontalStretch>true</horizontalStretch>
-    <extendedTooltip>
-      <name>ГруппаДополнительныеДействияРасширеннаяПодсказка</name>
-      <id>2</id>
-      <type>Label</type>
-      <autoMaxWidth>true</autoMaxWidth>
-      <autoMaxHeight>true</autoMaxHeight>
-      <extInfo xsi:type="form:LabelDecorationExtInfo">
-        <horizontalAlign>Left</horizontalAlign>
-      </extInfo>
-    </extendedTooltip>
-    <type>UsualGroup</type>
-    <extInfo xsi:type="form:UsualGroupExtInfo">
-      <group>HorizontalIfPossible</group>
-      <showLeftMargin>true</showLeftMargin>
-      <united>true</united>
-      <throughAlign>Auto</throughAlign>
-      <currentRowUse>Auto</currentRowUse>
-    </extInfo>
-  </items>
-  <autoCommandBar>
-    <name>ФормаКоманднаяПанель</name>
-    <id>-1</id>
     <horizontalAlign>Left</horizontalAlign>
+    <autoFill>true</autoFill>
   </autoCommandBar>
   <handlers>
     <event>OnCreateAtServer</event>
     <name>ПриСозданииНаСервере</name>
   </handlers>
-  <width>30</width>
-  <height>17</height>
   <windowOpeningMode>LockOwner</windowOpeningMode>
   <saveWindowSettings>true</saveWindowSettings>
   <autoUrl>true</autoUrl>
@@ -152,6 +142,30 @@
         <name>ОчиститьЦвет</name>
       </handler>
     </action>
+    <actionPurpose>Finish</actionPurpose>
+    <currentRowUse>Auto</currentRowUse>
+    <selectedRowsUse>Auto</selectedRowsUse>
+  </formCommands>
+  <formCommands>
+    <name>ДругиеЦвета</name>
+    <title>
+      <key>ru</key>
+      <value>Другие цвета</value>
+    </title>
+    <id>2</id>
+    <toolTip>
+      <key>ru</key>
+      <value>Другие цвета</value>
+    </toolTip>
+    <use>
+      <common>true</common>
+    </use>
+    <action xsi:type="form:FormCommandHandlerContainer">
+      <handler>
+        <name>ДругиеЦвета</name>
+      </handler>
+    </action>
+    <actionPurpose>Finish</actionPurpose>
     <currentRowUse>Auto</currentRowUse>
     <selectedRowsUse>Auto</selectedRowsUse>
   </formCommands>

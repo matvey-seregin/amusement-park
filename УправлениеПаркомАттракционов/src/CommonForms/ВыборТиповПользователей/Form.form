@@ -16,6 +16,9 @@
       <segments>Назначение</segments>
     </dataPath>
     <titleLocation>None</titleLocation>
+    <excludedCommands>Change</excludedCommands>
+    <excludedCommands>EndEdit</excludedCommands>
+    <excludedCommands>Pickup</excludedCommands>
     <items xsi:type="form:FormGroup">
       <name>НазначениеГруппа</name>
       <id>66</id>
@@ -54,7 +57,9 @@
         <showInHeader>true</showInHeader>
         <headerHorizontalAlign>Left</headerHorizontalAlign>
         <showInFooter>true</showInFooter>
-        <extInfo xsi:type="form:CheckBoxFieldExtInfo"/>
+        <extInfo xsi:type="form:CheckBoxFieldExtInfo">
+          <checkBoxType>CheckBox</checkBoxType>
+        </extInfo>
       </items>
       <items xsi:type="form:FormField">
         <name>НазначениеПредставление</name>
@@ -131,7 +136,62 @@
     <autoCommandBar>
       <name>НазначениеКоманднаяПанель</name>
       <id>49</id>
+      <items xsi:type="form:Button">
+        <name>НазначениеУстановитьФлажки</name>
+        <id>83</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <extendedTooltip>
+          <name>НазначениеУстановитьФлажкиРасширеннаяПодсказка</name>
+          <id>84</id>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <commandName>Form.Item.Назначение.StandardCommand.CheckAll</commandName>
+        <buttonImportance>Normal</buttonImportance>
+        <representation>Auto</representation>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <placementArea>UserCmds</placementArea>
+        <representationInContextMenu>Auto</representationInContextMenu>
+        <locationInCommandBar>InCommandBarAndInAdditionalSubmenu</locationInCommandBar>
+      </items>
+      <items xsi:type="form:Button">
+        <name>НазначениеСнятьФлажки</name>
+        <id>85</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <extendedTooltip>
+          <name>НазначениеСнятьФлажкиРасширеннаяПодсказка</name>
+          <id>86</id>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <commandName>Form.Item.Назначение.StandardCommand.UncheckAll</commandName>
+        <buttonImportance>Normal</buttonImportance>
+        <representation>Auto</representation>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <placementArea>UserCmds</placementArea>
+        <representationInContextMenu>Auto</representationInContextMenu>
+        <locationInCommandBar>InCommandBarAndInAdditionalSubmenu</locationInCommandBar>
+      </items>
       <horizontalAlign>Left</horizontalAlign>
+      <autoFill>true</autoFill>
     </autoCommandBar>
     <searchStringAddition>
       <name>НазначениеСтрокаПоиска</name>
@@ -219,12 +279,9 @@
       <id>48</id>
       <autoFill>true</autoFill>
     </contextMenu>
-    <changeRowSet>true</changeRowSet>
-    <changeRowOrder>true</changeRowOrder>
     <autoMaxWidth>true</autoMaxWidth>
     <autoMaxHeight>true</autoMaxHeight>
     <autoMaxRowsCount>true</autoMaxRowsCount>
-    <selectionMode>MultiRow</selectionMode>
     <headerHeight>1</headerHeight>
     <footerHeight>1</footerHeight>
     <horizontalScrollBar>AutoUse</horizontalScrollBar>
@@ -242,6 +299,7 @@
     <rowPictureDataPath xsi:type="form:DataPath">
       <segments>Назначение.Picture</segments>
     </rowPictureDataPath>
+    <searchStringLocation>CommandBar</searchStringLocation>
     <autoMaxCardHeight>true</autoMaxCardHeight>
   </items>
   <autoCommandBar>
@@ -277,118 +335,6 @@
       <placementArea>UserCmds</placementArea>
       <representationInContextMenu>Auto</representationInContextMenu>
     </items>
-    <items xsi:type="form:FormGroup">
-      <name>ГруппаКомандФлажки</name>
-      <id>72</id>
-      <items xsi:type="form:Button">
-        <name>НазначениеУстановитьФлажки</name>
-        <id>68</id>
-        <visible>true</visible>
-        <enabled>true</enabled>
-        <userVisible>
-          <common>true</common>
-        </userVisible>
-        <extendedTooltip>
-          <name>НазначениеУстановитьФлажкиРасширеннаяПодсказка</name>
-          <id>69</id>
-          <type>Label</type>
-          <autoMaxWidth>true</autoMaxWidth>
-          <autoMaxHeight>true</autoMaxHeight>
-          <extInfo xsi:type="form:LabelDecorationExtInfo">
-            <horizontalAlign>Left</horizontalAlign>
-          </extInfo>
-        </extendedTooltip>
-        <commandName>Form.Item.Назначение.StandardCommand.CheckAll</commandName>
-        <buttonImportance>Normal</buttonImportance>
-        <representation>Auto</representation>
-        <autoMaxWidth>true</autoMaxWidth>
-        <autoMaxHeight>true</autoMaxHeight>
-        <placementArea>UserCmds</placementArea>
-        <representationInContextMenu>Auto</representationInContextMenu>
-        <locationInCommandBar>InCommandBarAndInAdditionalSubmenu</locationInCommandBar>
-      </items>
-      <items xsi:type="form:Button">
-        <name>НазначениеСнятьФлажки</name>
-        <id>70</id>
-        <visible>true</visible>
-        <enabled>true</enabled>
-        <userVisible>
-          <common>true</common>
-        </userVisible>
-        <extendedTooltip>
-          <name>НазначениеСнятьФлажкиРасширеннаяПодсказка</name>
-          <id>71</id>
-          <type>Label</type>
-          <autoMaxWidth>true</autoMaxWidth>
-          <autoMaxHeight>true</autoMaxHeight>
-          <extInfo xsi:type="form:LabelDecorationExtInfo">
-            <horizontalAlign>Left</horizontalAlign>
-          </extInfo>
-        </extendedTooltip>
-        <commandName>Form.Item.Назначение.StandardCommand.UncheckAll</commandName>
-        <buttonImportance>Normal</buttonImportance>
-        <representation>Auto</representation>
-        <autoMaxWidth>true</autoMaxWidth>
-        <autoMaxHeight>true</autoMaxHeight>
-        <placementArea>UserCmds</placementArea>
-        <representationInContextMenu>Auto</representationInContextMenu>
-        <locationInCommandBar>InCommandBarAndInAdditionalSubmenu</locationInCommandBar>
-      </items>
-      <visible>true</visible>
-      <enabled>true</enabled>
-      <userVisible>
-        <common>true</common>
-      </userVisible>
-      <title>
-        <key>ru</key>
-        <value>Команд флажки</value>
-      </title>
-      <extendedTooltip>
-        <name>ГруппаКомандФлажкиРасширеннаяПодсказка</name>
-        <id>73</id>
-        <type>Label</type>
-        <autoMaxWidth>true</autoMaxWidth>
-        <autoMaxHeight>true</autoMaxHeight>
-        <extInfo xsi:type="form:LabelDecorationExtInfo">
-          <horizontalAlign>Left</horizontalAlign>
-        </extInfo>
-      </extendedTooltip>
-      <extInfo xsi:type="form:ButtonGroupExtInfo">
-        <representation>Compact</representation>
-      </extInfo>
-    </items>
-    <items xsi:type="form:Addition">
-      <title>
-        <key>ru</key>
-        <value>Поиск</value>
-      </title>
-      <visible>true</visible>
-      <enabled>true</enabled>
-      <userVisible>
-        <common>true</common>
-      </userVisible>
-      <name>СтрокаПоиск</name>
-      <id>74</id>
-      <extendedTooltip>
-        <name>СтрокаПоискРасширеннаяПодсказка</name>
-        <id>76</id>
-        <type>Label</type>
-        <autoMaxWidth>true</autoMaxWidth>
-        <autoMaxHeight>true</autoMaxHeight>
-        <extInfo xsi:type="form:LabelDecorationExtInfo">
-          <horizontalAlign>Left</horizontalAlign>
-        </extInfo>
-      </extendedTooltip>
-      <contextMenu>
-        <name>СтрокаПоискКонтекстноеМеню</name>
-        <id>75</id>
-        <autoFill>true</autoFill>
-      </contextMenu>
-      <source>Назначение</source>
-      <extInfo xsi:type="form:SearchStringAdditionExtInfo">
-        <autoMaxWidth>true</autoMaxWidth>
-      </extInfo>
-    </items>
     <horizontalAlign>Left</horizontalAlign>
     <autoFill>true</autoFill>
   </autoCommandBar>
@@ -399,7 +345,7 @@
   <windowOpeningMode>LockOwner</windowOpeningMode>
   <saveWindowSettings>true</saveWindowSettings>
   <autoUrl>true</autoUrl>
-  <group>Vertical</group>
+  <group>Auto</group>
   <autoFillCheck>true</autoFillCheck>
   <allowFormCustomize>true</allowFormCustomize>
   <enabled>true</enabled>
@@ -444,6 +390,7 @@
         <name>Выбрать</name>
       </handler>
     </action>
+    <actionPurpose>Finish</actionPurpose>
     <currentRowUse>DontUse</currentRowUse>
     <selectedRowsUse>Auto</selectedRowsUse>
   </formCommands>

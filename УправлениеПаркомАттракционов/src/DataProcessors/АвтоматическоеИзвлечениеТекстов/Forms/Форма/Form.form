@@ -38,7 +38,7 @@
         <autoFill>true</autoFill>
       </contextMenu>
       <type>InputField</type>
-      <editMode>Enter</editMode>
+      <editMode>Auto</editMode>
       <showInHeader>true</showInHeader>
       <headerHorizontalAlign>Left</headerHorizontalAlign>
       <showInFooter>true</showInFooter>
@@ -46,45 +46,14 @@
         <autoMaxWidth>true</autoMaxWidth>
         <autoMaxHeight>true</autoMaxHeight>
         <wrap>true</wrap>
-        <spinButton>true</spinButton>
+        <editFormat>
+          <key>ru</key>
+          <value>ЧФ='Ч сек.'</value>
+        </editFormat>
         <chooseType>true</chooseType>
         <typeDomainEnabled>true</typeDomainEnabled>
         <textEdit>true</textEdit>
         <textSize>Normal</textSize>
-      </extInfo>
-    </items>
-    <items xsi:type="form:Decoration">
-      <name>ДекорацияСек</name>
-      <id>9</id>
-      <title>
-        <key>ru</key>
-        <value>(сек)</value>
-      </title>
-      <visible>true</visible>
-      <enabled>true</enabled>
-      <userVisible>
-        <common>true</common>
-      </userVisible>
-      <extendedTooltip>
-        <name>ДекорацияСекРасширеннаяПодсказка</name>
-        <id>27</id>
-        <type>Label</type>
-        <autoMaxWidth>true</autoMaxWidth>
-        <autoMaxHeight>true</autoMaxHeight>
-        <extInfo xsi:type="form:LabelDecorationExtInfo">
-          <horizontalAlign>Left</horizontalAlign>
-        </extInfo>
-      </extendedTooltip>
-      <contextMenu>
-        <name>ДекорацияСекКонтекстноеМеню</name>
-        <id>10</id>
-        <autoFill>true</autoFill>
-      </contextMenu>
-      <type>Label</type>
-      <autoMaxHeight>true</autoMaxHeight>
-      <skipOnInput>false</skipOnInput>
-      <extInfo xsi:type="form:LabelDecorationExtInfo">
-        <horizontalAlign>Left</horizontalAlign>
       </extInfo>
     </items>
     <visible>true</visible>
@@ -150,7 +119,7 @@
       <autoFill>true</autoFill>
     </contextMenu>
     <type>InputField</type>
-    <editMode>Enter</editMode>
+    <editMode>Auto</editMode>
     <showInHeader>true</showInHeader>
     <headerHorizontalAlign>Left</headerHorizontalAlign>
     <showInFooter>true</showInFooter>
@@ -233,7 +202,7 @@
         <autoFill>true</autoFill>
       </contextMenu>
       <type>LabelField</type>
-      <editMode>Enter</editMode>
+      <editMode>Auto</editMode>
       <showInHeader>true</showInHeader>
       <headerHorizontalAlign>Left</headerHorizontalAlign>
       <showInFooter>true</showInFooter>
@@ -282,7 +251,7 @@
       <id>18</id>
       <title>
         <key>ru</key>
-        <value>Старт</value>
+        <value>Запустить</value>
       </title>
       <visible>true</visible>
       <enabled>true</enabled>
@@ -300,8 +269,8 @@
         </extInfo>
       </extendedTooltip>
       <commandName>Form.Command.Старт</commandName>
-      <buttonImportance>Normal</buttonImportance>
       <representation>Auto</representation>
+      <defaultButton>true</defaultButton>
       <autoMaxWidth>true</autoMaxWidth>
       <autoMaxHeight>true</autoMaxHeight>
       <placementArea>UserCmds</placementArea>
@@ -312,7 +281,7 @@
       <id>19</id>
       <title>
         <key>ru</key>
-        <value>Стоп</value>
+        <value>Остановить</value>
       </title>
       <visible>true</visible>
       <enabled>true</enabled>
@@ -362,32 +331,6 @@
       <commandName>Form.Command.ИзвлечьВсе</commandName>
       <buttonImportance>Normal</buttonImportance>
       <representation>Auto</representation>
-      <autoMaxWidth>true</autoMaxWidth>
-      <autoMaxHeight>true</autoMaxHeight>
-      <placementArea>UserCmds</placementArea>
-      <representationInContextMenu>Auto</representationInContextMenu>
-    </items>
-    <items xsi:type="form:Button">
-      <name>Закрыть</name>
-      <id>3</id>
-      <visible>true</visible>
-      <enabled>true</enabled>
-      <userVisible>
-        <common>true</common>
-      </userVisible>
-      <skipOnInput>false</skipOnInput>
-      <extendedTooltip>
-        <name>ЗакрытьРасширеннаяПодсказка</name>
-        <id>24</id>
-        <type>Label</type>
-        <autoMaxWidth>true</autoMaxWidth>
-        <autoMaxHeight>true</autoMaxHeight>
-        <extInfo xsi:type="form:LabelDecorationExtInfo">
-          <horizontalAlign>Left</horizontalAlign>
-        </extInfo>
-      </extendedTooltip>
-      <commandName>Form.StandardCommand.Close</commandName>
-      <defaultButton>true</defaultButton>
       <autoMaxWidth>true</autoMaxWidth>
       <autoMaxHeight>true</autoMaxHeight>
       <placementArea>UserCmds</placementArea>
@@ -588,6 +531,7 @@
         <name>Старт</name>
       </handler>
     </action>
+    <actionPurpose>Finish</actionPurpose>
     <currentRowUse>DontUse</currentRowUse>
     <selectedRowsUse>Auto</selectedRowsUse>
   </formCommands>
@@ -610,6 +554,7 @@
         <name>Стоп</name>
       </handler>
     </action>
+    <actionPurpose>Finish</actionPurpose>
     <currentRowUse>DontUse</currentRowUse>
     <selectedRowsUse>Auto</selectedRowsUse>
   </formCommands>
@@ -632,6 +577,7 @@
         <name>ИзвлечьВсе</name>
       </handler>
     </action>
+    <actionPurpose>Finish</actionPurpose>
     <currentRowUse>DontUse</currentRowUse>
     <selectedRowsUse>Auto</selectedRowsUse>
   </formCommands>

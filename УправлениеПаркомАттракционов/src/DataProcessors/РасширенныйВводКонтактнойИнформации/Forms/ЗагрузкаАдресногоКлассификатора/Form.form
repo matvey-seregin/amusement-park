@@ -70,11 +70,13 @@
       <autoFill>true</autoFill>
     </contextMenu>
     <type>CheckBoxField</type>
-    <editMode>Enter</editMode>
+    <editMode>Auto</editMode>
     <showInHeader>true</showInHeader>
     <headerHorizontalAlign>Left</headerHorizontalAlign>
     <showInFooter>true</showInFooter>
-    <extInfo xsi:type="form:CheckBoxFieldExtInfo"/>
+    <extInfo xsi:type="form:CheckBoxFieldExtInfo">
+      <checkBoxType>Switcher</checkBoxType>
+    </extInfo>
   </items>
   <commandBarLocation>Bottom</commandBarLocation>
   <showCommandBar>true</showCommandBar>
@@ -107,36 +109,6 @@
       <commandName>Form.Command.Загрузить</commandName>
       <representation>Auto</representation>
       <defaultButton>true</defaultButton>
-      <autoMaxWidth>true</autoMaxWidth>
-      <autoMaxHeight>true</autoMaxHeight>
-      <placementArea>UserCmds</placementArea>
-      <representationInContextMenu>Auto</representationInContextMenu>
-    </items>
-    <items xsi:type="form:Button">
-      <name>Отмена</name>
-      <id>9</id>
-      <title>
-        <key>ru</key>
-        <value>Закрыть</value>
-      </title>
-      <visible>true</visible>
-      <enabled>true</enabled>
-      <userVisible>
-        <common>true</common>
-      </userVisible>
-      <extendedTooltip>
-        <name>ОтменаРасширеннаяПодсказка</name>
-        <id>10</id>
-        <type>Label</type>
-        <autoMaxWidth>true</autoMaxWidth>
-        <autoMaxHeight>true</autoMaxHeight>
-        <extInfo xsi:type="form:LabelDecorationExtInfo">
-          <horizontalAlign>Left</horizontalAlign>
-        </extInfo>
-      </extendedTooltip>
-      <commandName>Form.Command.Отмена</commandName>
-      <buttonImportance>Normal</buttonImportance>
-      <representation>Auto</representation>
       <autoMaxWidth>true</autoMaxWidth>
       <autoMaxHeight>true</autoMaxHeight>
       <placementArea>UserCmds</placementArea>
@@ -207,28 +179,7 @@
         <name>Загрузить</name>
       </handler>
     </action>
-    <currentRowUse>DontUse</currentRowUse>
-    <selectedRowsUse>Auto</selectedRowsUse>
-  </formCommands>
-  <formCommands>
-    <name>Отмена</name>
-    <title>
-      <key>ru</key>
-      <value>Закрыть</value>
-    </title>
-    <id>2</id>
-    <toolTip>
-      <key>ru</key>
-      <value>Отмена</value>
-    </toolTip>
-    <use>
-      <common>true</common>
-    </use>
-    <action xsi:type="form:FormCommandHandlerContainer">
-      <handler>
-        <name>Отмена</name>
-      </handler>
-    </action>
+    <actionPurpose>Finish</actionPurpose>
     <currentRowUse>DontUse</currentRowUse>
     <selectedRowsUse>Auto</selectedRowsUse>
   </formCommands>

@@ -70,7 +70,7 @@
           <autoFill>true</autoFill>
         </contextMenu>
         <type>Label</type>
-        <autoMaxWidth>true</autoMaxWidth>
+        <width>60</width>
         <autoMaxHeight>true</autoMaxHeight>
         <extInfo xsi:type="form:LabelDecorationExtInfo">
           <horizontalAlign>Left</horizontalAlign>
@@ -106,25 +106,51 @@
     <items xsi:type="form:FormGroup">
       <name>СтраницаВыбор</name>
       <id>83</id>
-      <items xsi:type="form:FormGroup">
-        <name>КомандыФормы</name>
-        <id>75</id>
-        <items xsi:type="form:Button">
-          <name>Выбрать</name>
-          <id>16</id>
+      <items xsi:type="form:Table">
+        <name>ТаблицаДоменов</name>
+        <id>5</id>
+        <title>
+          <key>ru</key>
+          <value>Домены</value>
+        </title>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <dataPath xsi:type="form:DataPath">
+          <segments>ТаблицаДоменов</segments>
+        </dataPath>
+        <skipOnInput>false</skipOnInput>
+        <titleLocation>Top</titleLocation>
+        <excludedCommands>Add</excludedCommands>
+        <excludedCommands>Change</excludedCommands>
+        <excludedCommands>Copy</excludedCommands>
+        <excludedCommands>CopyToClipboard</excludedCommands>
+        <excludedCommands>Delete</excludedCommands>
+        <excludedCommands>EndEdit</excludedCommands>
+        <excludedCommands>MoveDown</excludedCommands>
+        <excludedCommands>MoveUp</excludedCommands>
+        <excludedCommands>SortListAsc</excludedCommands>
+        <excludedCommands>SortListDesc</excludedCommands>
+        <items xsi:type="form:FormField">
+          <name>ТаблицаДоменовИмяДомена</name>
+          <id>11</id>
           <title>
             <key>ru</key>
-            <value>Выбрать</value>
+            <value>Домен</value>
           </title>
           <visible>true</visible>
           <enabled>true</enabled>
           <userVisible>
             <common>true</common>
           </userVisible>
-          <skipOnInput>false</skipOnInput>
+          <dataPath xsi:type="form:DataPath">
+            <segments>ТаблицаДоменов.ИмяДомена</segments>
+          </dataPath>
           <extendedTooltip>
-            <name>ВыбратьРасширеннаяПодсказка</name>
-            <id>28</id>
+            <name>ТаблицаДоменовИмяДоменаРасширеннаяПодсказка</name>
+            <id>34</id>
             <type>Label</type>
             <autoMaxWidth>true</autoMaxWidth>
             <autoMaxHeight>true</autoMaxHeight>
@@ -132,394 +158,44 @@
               <horizontalAlign>Left</horizontalAlign>
             </extInfo>
           </extendedTooltip>
-          <commandName>Form.Command.Выбрать</commandName>
-          <representation>Auto</representation>
-          <defaultButton>true</defaultButton>
-          <autoMaxWidth>true</autoMaxWidth>
-          <autoMaxHeight>true</autoMaxHeight>
-          <placementArea>UserCmds</placementArea>
-          <textColor xsi:type="core:ColorRef">
-            <color>Style.ButtonTextColor</color>
-          </textColor>
-          <backColor xsi:type="core:ColorRef">
-            <color>Style.ButtonBackColor</color>
-          </backColor>
-          <borderColor xsi:type="core:ColorRef">
-            <color>Style.BorderColor</color>
-          </borderColor>
-          <representationInContextMenu>Auto</representationInContextMenu>
-        </items>
-        <visible>true</visible>
-        <enabled>true</enabled>
-        <userVisible>
-          <common>true</common>
-        </userVisible>
-        <title>
-          <key>ru</key>
-          <value>Команды формы</value>
-        </title>
-        <extendedTooltip>
-          <name>КомандыФормыРасширеннаяПодсказка</name>
-          <id>76</id>
-          <type>Label</type>
-          <autoMaxWidth>true</autoMaxWidth>
-          <autoMaxHeight>true</autoMaxHeight>
-          <extInfo xsi:type="form:LabelDecorationExtInfo">
-            <horizontalAlign>Left</horizontalAlign>
+          <contextMenu>
+            <name>ТаблицаДоменовИмяДоменаКонтекстноеМеню</name>
+            <id>12</id>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <type>InputField</type>
+          <editMode>Auto</editMode>
+          <showInHeader>true</showInHeader>
+          <headerHorizontalAlign>Left</headerHorizontalAlign>
+          <showInFooter>true</showInFooter>
+          <extInfo xsi:type="form:InputFieldExtInfo">
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <chooseType>true</chooseType>
+            <typeDomainEnabled>true</typeDomainEnabled>
+            <textEdit>true</textEdit>
+            <borderColor xsi:type="core:ColorRef">
+              <color>Style.BorderColor</color>
+            </borderColor>
+            <textSize>Normal</textSize>
           </extInfo>
-        </extendedTooltip>
-        <type>CommandBar</type>
-        <extInfo xsi:type="form:CommandBarExtInfo">
+        </items>
+        <autoCommandBar>
+          <name>ТаблицаДоменовКоманднаяПанель</name>
+          <id>7</id>
           <horizontalAlign>Left</horizontalAlign>
-          <commandSource>Form</commandSource>
-        </extInfo>
-      </items>
-      <items xsi:type="form:FormGroup">
-        <name>ДоменыИПользователи</name>
-        <id>2</id>
-        <items xsi:type="form:FormGroup">
-          <name>ГруппаДомены</name>
-          <id>51</id>
-          <items xsi:type="form:Table">
-            <name>ТаблицаДоменов</name>
-            <id>5</id>
-            <title>
-              <key>ru</key>
-              <value>Таблица доменов</value>
-            </title>
-            <visible>true</visible>
-            <enabled>true</enabled>
-            <userVisible>
-              <common>true</common>
-            </userVisible>
-            <dataPath xsi:type="form:DataPath">
-              <segments>СписокДоменов</segments>
-            </dataPath>
-            <skipOnInput>false</skipOnInput>
-            <titleLocation>None</titleLocation>
-            <excludedCommands>Add</excludedCommands>
-            <excludedCommands>Change</excludedCommands>
-            <excludedCommands>Copy</excludedCommands>
-            <excludedCommands>CopyToClipboard</excludedCommands>
-            <excludedCommands>Delete</excludedCommands>
-            <excludedCommands>EndEdit</excludedCommands>
-            <excludedCommands>MoveDown</excludedCommands>
-            <excludedCommands>MoveUp</excludedCommands>
-            <excludedCommands>SortListAsc</excludedCommands>
-            <excludedCommands>SortListDesc</excludedCommands>
-            <items xsi:type="form:FormField">
-              <name>Домены</name>
-              <id>11</id>
-              <title>
-                <key>ru</key>
-                <value>Домены</value>
-              </title>
-              <visible>true</visible>
-              <enabled>true</enabled>
-              <userVisible>
-                <common>true</common>
-              </userVisible>
-              <dataPath xsi:type="form:DataPath">
-                <segments>СписокДоменов.ИмяДомена</segments>
-              </dataPath>
-              <extendedTooltip>
-                <name>ДоменыРасширеннаяПодсказка</name>
-                <id>34</id>
-                <type>Label</type>
-                <autoMaxWidth>true</autoMaxWidth>
-                <autoMaxHeight>true</autoMaxHeight>
-                <extInfo xsi:type="form:LabelDecorationExtInfo">
-                  <horizontalAlign>Left</horizontalAlign>
-                </extInfo>
-              </extendedTooltip>
-              <contextMenu>
-                <name>ДоменыКонтекстноеМеню</name>
-                <id>12</id>
-                <autoFill>true</autoFill>
-              </contextMenu>
-              <type>InputField</type>
-              <editMode>Enter</editMode>
-              <showInHeader>true</showInHeader>
-              <headerHorizontalAlign>Left</headerHorizontalAlign>
-              <showInFooter>true</showInFooter>
-              <extInfo xsi:type="form:InputFieldExtInfo">
-                <autoMaxWidth>true</autoMaxWidth>
-                <autoMaxHeight>true</autoMaxHeight>
-                <chooseType>true</chooseType>
-                <typeDomainEnabled>true</typeDomainEnabled>
-                <textEdit>true</textEdit>
-                <borderColor xsi:type="core:ColorRef">
-                  <color>Style.BorderColor</color>
-                </borderColor>
-                <textSize>Normal</textSize>
-              </extInfo>
-            </items>
-            <autoCommandBar>
-              <name>ТаблицаДоменовКоманднаяПанель</name>
-              <id>7</id>
-              <items xsi:type="form:Button">
-                <name>ТаблицаДоменовНайти</name>
-                <id>41</id>
-                <visible>true</visible>
-                <enabled>true</enabled>
-                <userVisible>
-                  <common>true</common>
-                </userVisible>
-                <extendedTooltip>
-                  <name>ТаблицаДоменовНайтиРасширеннаяПодсказка</name>
-                  <id>42</id>
-                  <type>Label</type>
-                  <autoMaxWidth>true</autoMaxWidth>
-                  <autoMaxHeight>true</autoMaxHeight>
-                  <extInfo xsi:type="form:LabelDecorationExtInfo">
-                    <horizontalAlign>Left</horizontalAlign>
-                  </extInfo>
-                </extendedTooltip>
-                <commandName>Form.Item.ТаблицаДоменов.StandardCommand.Find</commandName>
-                <buttonImportance>Normal</buttonImportance>
-                <representation>PictureAndText</representation>
-                <autoMaxWidth>true</autoMaxWidth>
-                <autoMaxHeight>true</autoMaxHeight>
-                <placementArea>UserCmds</placementArea>
-                <representationInContextMenu>Auto</representationInContextMenu>
-              </items>
-              <items xsi:type="form:Button">
-                <name>ТаблицаДоменовОтменитьПоиск</name>
-                <id>43</id>
-                <visible>true</visible>
-                <enabled>true</enabled>
-                <userVisible>
-                  <common>true</common>
-                </userVisible>
-                <extendedTooltip>
-                  <name>ТаблицаДоменовОтменитьПоискРасширеннаяПодсказка</name>
-                  <id>44</id>
-                  <type>Label</type>
-                  <autoMaxWidth>true</autoMaxWidth>
-                  <autoMaxHeight>true</autoMaxHeight>
-                  <extInfo xsi:type="form:LabelDecorationExtInfo">
-                    <horizontalAlign>Left</horizontalAlign>
-                  </extInfo>
-                </extendedTooltip>
-                <commandName>Form.Item.ТаблицаДоменов.StandardCommand.CancelSearch</commandName>
-                <buttonImportance>Normal</buttonImportance>
-                <representation>PictureAndText</representation>
-                <autoMaxWidth>true</autoMaxWidth>
-                <autoMaxHeight>true</autoMaxHeight>
-                <placementArea>UserCmds</placementArea>
-                <representationInContextMenu>Auto</representationInContextMenu>
-              </items>
-              <horizontalAlign>Left</horizontalAlign>
-              <autoFill>true</autoFill>
-            </autoCommandBar>
-            <handlers>
-              <event>OnActivateRow</event>
-              <name>ТаблицаДоменовПриАктивизацииСтроки</name>
-            </handlers>
-            <searchStringAddition>
-              <name>ТаблицаДоменовSearchString</name>
-              <id>53</id>
-              <extendedTooltip>
-                <name>ТаблицаДоменовSearchStringExtendedTooltip</name>
-                <id>55</id>
-                <type>Label</type>
-                <autoMaxWidth>true</autoMaxWidth>
-                <autoMaxHeight>true</autoMaxHeight>
-                <extInfo xsi:type="form:LabelDecorationExtInfo">
-                  <horizontalAlign>Left</horizontalAlign>
-                </extInfo>
-              </extendedTooltip>
-              <contextMenu>
-                <name>ТаблицаДоменовSearchStringContextMenu</name>
-                <id>54</id>
-                <autoFill>true</autoFill>
-              </contextMenu>
-              <source>ТаблицаДоменов</source>
-              <extInfo xsi:type="form:SearchStringAdditionExtInfo">
-                <autoMaxWidth>true</autoMaxWidth>
-              </extInfo>
-            </searchStringAddition>
-            <viewStatusAddition>
-              <name>ТаблицаДоменовViewStatus</name>
-              <id>56</id>
-              <extendedTooltip>
-                <name>ТаблицаДоменовViewStatusExtendedTooltip</name>
-                <id>58</id>
-                <type>Label</type>
-                <autoMaxWidth>true</autoMaxWidth>
-                <autoMaxHeight>true</autoMaxHeight>
-                <extInfo xsi:type="form:LabelDecorationExtInfo">
-                  <horizontalAlign>Left</horizontalAlign>
-                </extInfo>
-              </extendedTooltip>
-              <contextMenu>
-                <name>ТаблицаДоменовViewStatusContextMenu</name>
-                <id>57</id>
-                <autoFill>true</autoFill>
-              </contextMenu>
-              <type>ViewStatusAddition</type>
-              <source>ТаблицаДоменов</source>
-              <extInfo xsi:type="form:ViewStatusAdditionExtInfo">
-                <autoMaxWidth>true</autoMaxWidth>
-              </extInfo>
-            </viewStatusAddition>
-            <searchControlAddition>
-              <name>ТаблицаДоменовSearchControl</name>
-              <id>59</id>
-              <extendedTooltip>
-                <name>ТаблицаДоменовSearchControlExtendedTooltip</name>
-                <id>61</id>
-                <type>Label</type>
-                <autoMaxWidth>true</autoMaxWidth>
-                <autoMaxHeight>true</autoMaxHeight>
-                <extInfo xsi:type="form:LabelDecorationExtInfo">
-                  <horizontalAlign>Left</horizontalAlign>
-                </extInfo>
-              </extendedTooltip>
-              <contextMenu>
-                <name>ТаблицаДоменовSearchControlContextMenu</name>
-                <id>60</id>
-                <autoFill>true</autoFill>
-              </contextMenu>
-              <type>SearchControlAddition</type>
-              <source>ТаблицаДоменов</source>
-              <extInfo xsi:type="form:SearchControlAdditionExtInfo">
-                <autoMaxWidth>true</autoMaxWidth>
-              </extInfo>
-            </searchControlAddition>
-            <extendedTooltip>
-              <name>ТаблицаДоменовРасширеннаяПодсказка</name>
-              <id>33</id>
-              <type>Label</type>
-              <autoMaxWidth>true</autoMaxWidth>
-              <autoMaxHeight>true</autoMaxHeight>
-              <extInfo xsi:type="form:LabelDecorationExtInfo">
-                <horizontalAlign>Left</horizontalAlign>
-              </extInfo>
-            </extendedTooltip>
-            <contextMenu>
-              <name>ТаблицаДоменовКонтекстноеМеню</name>
-              <id>6</id>
-              <items xsi:type="form:Button">
-                <name>ТаблицаДоменовКонтекстноеМенюНайти</name>
-                <id>17</id>
-                <visible>true</visible>
-                <enabled>true</enabled>
-                <userVisible>
-                  <common>true</common>
-                </userVisible>
-                <extendedTooltip>
-                  <name>ТаблицаДоменовКонтекстноеМенюНайтиРасширеннаяПодсказка</name>
-                  <id>30</id>
-                  <type>Label</type>
-                  <autoMaxWidth>true</autoMaxWidth>
-                  <autoMaxHeight>true</autoMaxHeight>
-                  <extInfo xsi:type="form:LabelDecorationExtInfo">
-                    <horizontalAlign>Left</horizontalAlign>
-                  </extInfo>
-                </extendedTooltip>
-                <commandName>Form.Item.ТаблицаДоменов.StandardCommand.Find</commandName>
-                <buttonImportance>Normal</buttonImportance>
-                <representation>Auto</representation>
-                <autoMaxWidth>true</autoMaxWidth>
-                <autoMaxHeight>true</autoMaxHeight>
-                <placementArea>UserCmds</placementArea>
-                <representationInContextMenu>Auto</representationInContextMenu>
-              </items>
-              <items xsi:type="form:Button">
-                <name>ТаблицаДоменовКонтекстноеМенюОтменитьПоиск</name>
-                <id>18</id>
-                <visible>true</visible>
-                <enabled>true</enabled>
-                <userVisible>
-                  <common>true</common>
-                </userVisible>
-                <extendedTooltip>
-                  <name>ТаблицаДоменовКонтекстноеМенюОтменитьПоискРасширеннаяПодсказка</name>
-                  <id>31</id>
-                  <type>Label</type>
-                  <autoMaxWidth>true</autoMaxWidth>
-                  <autoMaxHeight>true</autoMaxHeight>
-                  <extInfo xsi:type="form:LabelDecorationExtInfo">
-                    <horizontalAlign>Left</horizontalAlign>
-                  </extInfo>
-                </extendedTooltip>
-                <commandName>Form.Item.ТаблицаДоменов.StandardCommand.CancelSearch</commandName>
-                <buttonImportance>Normal</buttonImportance>
-                <representation>Auto</representation>
-                <autoMaxWidth>true</autoMaxWidth>
-                <autoMaxHeight>true</autoMaxHeight>
-                <placementArea>UserCmds</placementArea>
-                <representationInContextMenu>Auto</representationInContextMenu>
-              </items>
-              <items xsi:type="form:Button">
-                <name>ТаблицаДоменовКонтекстноеМенюВывестиСписок</name>
-                <id>21</id>
-                <visible>true</visible>
-                <enabled>true</enabled>
-                <userVisible>
-                  <common>true</common>
-                </userVisible>
-                <extendedTooltip>
-                  <name>ТаблицаДоменовКонтекстноеМенюВывестиСписокРасширеннаяПодсказка</name>
-                  <id>32</id>
-                  <type>Label</type>
-                  <autoMaxWidth>true</autoMaxWidth>
-                  <autoMaxHeight>true</autoMaxHeight>
-                  <extInfo xsi:type="form:LabelDecorationExtInfo">
-                    <horizontalAlign>Left</horizontalAlign>
-                  </extInfo>
-                </extendedTooltip>
-                <commandName>Form.Item.ТаблицаДоменов.StandardCommand.OutputList</commandName>
-                <buttonImportance>Normal</buttonImportance>
-                <representation>Auto</representation>
-                <autoMaxWidth>true</autoMaxWidth>
-                <autoMaxHeight>true</autoMaxHeight>
-                <placementArea>UserCmds</placementArea>
-                <representationInContextMenu>Auto</representationInContextMenu>
-              </items>
-              <autoFill>true</autoFill>
-            </contextMenu>
-            <autoFill>true</autoFill>
-            <readOnly>true</readOnly>
-            <changeRowSet>true</changeRowSet>
-            <changeRowOrder>true</changeRowOrder>
-            <width>15</width>
-            <autoMaxWidth>true</autoMaxWidth>
-            <autoMaxHeight>true</autoMaxHeight>
-            <heightInTableRows>3</heightInTableRows>
-            <autoMaxRowsCount>true</autoMaxRowsCount>
-            <headerHeight>1</headerHeight>
-            <footerHeight>1</footerHeight>
-            <horizontalScrollBar>AutoUse</horizontalScrollBar>
-            <verticalScrollBar>AutoUse</verticalScrollBar>
-            <horizontalLines>true</horizontalLines>
-            <verticalLines>true</verticalLines>
-            <horizontalLinesBWA>false</horizontalLinesBWA>
-            <verticalLinesBWA>false</verticalLinesBWA>
-            <useAlternationRowColorBWA>false</useAlternationRowColorBWA>
-            <searchOnInput>Auto</searchOnInput>
-            <initialListView>Auto</initialListView>
-            <horizontalStretch>true</horizontalStretch>
-            <verticalStretch>true</verticalStretch>
-            <borderColor xsi:type="core:ColorRef">
-              <color>Style.BorderColor</color>
-            </borderColor>
-            <autoMaxCardHeight>true</autoMaxCardHeight>
-            <rowFilter xsi:type="core:UndefinedValue"/>
-          </items>
-          <visible>true</visible>
-          <enabled>true</enabled>
-          <userVisible>
-            <common>true</common>
-          </userVisible>
-          <title>
-            <key>ru</key>
-            <value>Домены:</value>
-          </title>
+          <autoFill>true</autoFill>
+        </autoCommandBar>
+        <handlers>
+          <event>OnActivateRow</event>
+          <name>ТаблицаДоменовПриАктивизацииСтроки</name>
+        </handlers>
+        <searchStringAddition>
+          <name>ТаблицаДоменовSearchString</name>
+          <id>53</id>
           <extendedTooltip>
-            <name>ГруппаДоменыРасширеннаяПодсказка</name>
-            <id>52</id>
+            <name>ТаблицаДоменовSearchStringExtendedTooltip</name>
+            <id>55</id>
             <type>Label</type>
             <autoMaxWidth>true</autoMaxWidth>
             <autoMaxHeight>true</autoMaxHeight>
@@ -527,389 +203,22 @@
               <horizontalAlign>Left</horizontalAlign>
             </extInfo>
           </extendedTooltip>
-          <type>UsualGroup</type>
-          <extInfo xsi:type="form:UsualGroupExtInfo">
-            <group>Vertical</group>
-            <representation>WeakSeparation</representation>
-            <showLeftMargin>true</showLeftMargin>
-            <united>true</united>
-            <showTitle>auto</showTitle>
-            <throughAlign>Auto</throughAlign>
-            <currentRowUse>Auto</currentRowUse>
-          </extInfo>
-        </items>
-        <items xsi:type="form:FormGroup">
-          <name>ГруппаПользователи</name>
-          <id>49</id>
-          <items xsi:type="form:Table">
-            <name>ТаблицаПользователейДомена</name>
-            <id>8</id>
-            <title>
-              <key>ru</key>
-              <value>Таблица пользователей домена</value>
-            </title>
-            <visible>true</visible>
-            <enabled>true</enabled>
-            <userVisible>
-              <common>true</common>
-            </userVisible>
-            <dataPath xsi:type="form:DataPath">
-              <segments>СписокПользователейТекущегоДомена</segments>
-            </dataPath>
-            <skipOnInput>false</skipOnInput>
-            <titleLocation>None</titleLocation>
-            <excludedCommands>Add</excludedCommands>
-            <excludedCommands>Change</excludedCommands>
-            <excludedCommands>Copy</excludedCommands>
-            <excludedCommands>CopyToClipboard</excludedCommands>
-            <excludedCommands>Delete</excludedCommands>
-            <excludedCommands>EndEdit</excludedCommands>
-            <excludedCommands>MoveDown</excludedCommands>
-            <excludedCommands>MoveUp</excludedCommands>
-            <excludedCommands>SortListAsc</excludedCommands>
-            <excludedCommands>SortListDesc</excludedCommands>
-            <items xsi:type="form:FormField">
-              <name>Пользователи</name>
-              <id>13</id>
-              <title>
-                <key>ru</key>
-                <value>Пользователи</value>
-              </title>
-              <visible>true</visible>
-              <enabled>true</enabled>
-              <userVisible>
-                <common>true</common>
-              </userVisible>
-              <dataPath xsi:type="form:DataPath">
-                <segments>СписокПользователейТекущегоДомена.ИмяПользователя</segments>
-              </dataPath>
-              <extendedTooltip>
-                <name>ПользователиРасширеннаяПодсказка</name>
-                <id>40</id>
-                <type>Label</type>
-                <autoMaxWidth>true</autoMaxWidth>
-                <autoMaxHeight>true</autoMaxHeight>
-                <extInfo xsi:type="form:LabelDecorationExtInfo">
-                  <horizontalAlign>Left</horizontalAlign>
-                </extInfo>
-              </extendedTooltip>
-              <contextMenu>
-                <name>ПользователиКонтекстноеМеню</name>
-                <id>14</id>
-                <autoFill>true</autoFill>
-              </contextMenu>
-              <type>InputField</type>
-              <editMode>Enter</editMode>
-              <showInHeader>true</showInHeader>
-              <headerHorizontalAlign>Left</headerHorizontalAlign>
-              <showInFooter>true</showInFooter>
-              <extInfo xsi:type="form:InputFieldExtInfo">
-                <autoMaxWidth>true</autoMaxWidth>
-                <autoMaxHeight>true</autoMaxHeight>
-                <chooseType>true</chooseType>
-                <typeDomainEnabled>true</typeDomainEnabled>
-                <textEdit>true</textEdit>
-                <borderColor xsi:type="core:ColorRef">
-                  <color>Style.BorderColor</color>
-                </borderColor>
-                <textSize>Normal</textSize>
-              </extInfo>
-            </items>
-            <autoCommandBar>
-              <name>ТаблицаПользователейДоменаКоманднаяПанель</name>
-              <id>10</id>
-              <items xsi:type="form:Button">
-                <name>ТаблицаПользователейДоменаНайти</name>
-                <id>45</id>
-                <visible>true</visible>
-                <enabled>true</enabled>
-                <userVisible>
-                  <common>true</common>
-                </userVisible>
-                <extendedTooltip>
-                  <name>ТаблицаПользователейДоменаНайтиРасширеннаяПодсказка</name>
-                  <id>46</id>
-                  <type>Label</type>
-                  <autoMaxWidth>true</autoMaxWidth>
-                  <autoMaxHeight>true</autoMaxHeight>
-                  <extInfo xsi:type="form:LabelDecorationExtInfo">
-                    <horizontalAlign>Left</horizontalAlign>
-                  </extInfo>
-                </extendedTooltip>
-                <commandName>Form.Item.ТаблицаПользователейДомена.StandardCommand.Find</commandName>
-                <buttonImportance>Normal</buttonImportance>
-                <representation>PictureAndText</representation>
-                <autoMaxWidth>true</autoMaxWidth>
-                <autoMaxHeight>true</autoMaxHeight>
-                <placementArea>UserCmds</placementArea>
-                <representationInContextMenu>Auto</representationInContextMenu>
-              </items>
-              <items xsi:type="form:Button">
-                <name>ТаблицаПользователейДоменаОтменитьПоиск</name>
-                <id>47</id>
-                <visible>true</visible>
-                <enabled>true</enabled>
-                <userVisible>
-                  <common>true</common>
-                </userVisible>
-                <extendedTooltip>
-                  <name>ТаблицаПользователейДоменаОтменитьПоискРасширеннаяПодсказка</name>
-                  <id>48</id>
-                  <type>Label</type>
-                  <autoMaxWidth>true</autoMaxWidth>
-                  <autoMaxHeight>true</autoMaxHeight>
-                  <extInfo xsi:type="form:LabelDecorationExtInfo">
-                    <horizontalAlign>Left</horizontalAlign>
-                  </extInfo>
-                </extendedTooltip>
-                <commandName>Form.Item.ТаблицаПользователейДомена.StandardCommand.CancelSearch</commandName>
-                <buttonImportance>Normal</buttonImportance>
-                <representation>PictureAndText</representation>
-                <autoMaxWidth>true</autoMaxWidth>
-                <autoMaxHeight>true</autoMaxHeight>
-                <placementArea>UserCmds</placementArea>
-                <representationInContextMenu>Auto</representationInContextMenu>
-              </items>
-              <horizontalAlign>Left</horizontalAlign>
-              <autoFill>true</autoFill>
-            </autoCommandBar>
-            <handlers>
-              <event>Selection</event>
-              <name>ТаблицаПользователейДоменаВыбор</name>
-            </handlers>
-            <searchStringAddition>
-              <name>ТаблицаПользователейДоменаSearchString</name>
-              <id>62</id>
-              <extendedTooltip>
-                <name>ТаблицаПользователейДоменаSearchStringExtendedTooltip</name>
-                <id>64</id>
-                <type>Label</type>
-                <autoMaxWidth>true</autoMaxWidth>
-                <autoMaxHeight>true</autoMaxHeight>
-                <extInfo xsi:type="form:LabelDecorationExtInfo">
-                  <horizontalAlign>Left</horizontalAlign>
-                </extInfo>
-              </extendedTooltip>
-              <contextMenu>
-                <name>ТаблицаПользователейДоменаSearchStringContextMenu</name>
-                <id>63</id>
-                <autoFill>true</autoFill>
-              </contextMenu>
-              <source>ТаблицаПользователейДомена</source>
-              <extInfo xsi:type="form:SearchStringAdditionExtInfo">
-                <autoMaxWidth>true</autoMaxWidth>
-              </extInfo>
-            </searchStringAddition>
-            <viewStatusAddition>
-              <name>ТаблицаПользователейДоменаViewStatus</name>
-              <id>65</id>
-              <extendedTooltip>
-                <name>ТаблицаПользователейДоменаViewStatusExtendedTooltip</name>
-                <id>67</id>
-                <type>Label</type>
-                <autoMaxWidth>true</autoMaxWidth>
-                <autoMaxHeight>true</autoMaxHeight>
-                <extInfo xsi:type="form:LabelDecorationExtInfo">
-                  <horizontalAlign>Left</horizontalAlign>
-                </extInfo>
-              </extendedTooltip>
-              <contextMenu>
-                <name>ТаблицаПользователейДоменаViewStatusContextMenu</name>
-                <id>66</id>
-                <autoFill>true</autoFill>
-              </contextMenu>
-              <type>ViewStatusAddition</type>
-              <source>ТаблицаПользователейДомена</source>
-              <extInfo xsi:type="form:ViewStatusAdditionExtInfo">
-                <autoMaxWidth>true</autoMaxWidth>
-              </extInfo>
-            </viewStatusAddition>
-            <searchControlAddition>
-              <name>ТаблицаПользователейДоменаSearchControl</name>
-              <id>68</id>
-              <extendedTooltip>
-                <name>ТаблицаПользователейДоменаSearchControlExtendedTooltip</name>
-                <id>70</id>
-                <type>Label</type>
-                <autoMaxWidth>true</autoMaxWidth>
-                <autoMaxHeight>true</autoMaxHeight>
-                <extInfo xsi:type="form:LabelDecorationExtInfo">
-                  <horizontalAlign>Left</horizontalAlign>
-                </extInfo>
-              </extendedTooltip>
-              <contextMenu>
-                <name>ТаблицаПользователейДоменаSearchControlContextMenu</name>
-                <id>69</id>
-                <autoFill>true</autoFill>
-              </contextMenu>
-              <type>SearchControlAddition</type>
-              <source>ТаблицаПользователейДомена</source>
-              <extInfo xsi:type="form:SearchControlAdditionExtInfo">
-                <autoMaxWidth>true</autoMaxWidth>
-              </extInfo>
-            </searchControlAddition>
-            <extendedTooltip>
-              <name>ТаблицаПользователейДоменаРасширеннаяПодсказка</name>
-              <id>39</id>
-              <type>Label</type>
-              <autoMaxWidth>true</autoMaxWidth>
-              <autoMaxHeight>true</autoMaxHeight>
-              <extInfo xsi:type="form:LabelDecorationExtInfo">
-                <horizontalAlign>Left</horizontalAlign>
-              </extInfo>
-            </extendedTooltip>
-            <contextMenu>
-              <name>ТаблицаПользователейДоменаКонтекстноеМеню</name>
-              <id>9</id>
-              <items xsi:type="form:Button">
-                <name>ТаблицаПользователейДоменаКонтекстноеМенюВыбрать</name>
-                <id>27</id>
-                <title>
-                  <key>ru</key>
-                  <value>Выбрать</value>
-                </title>
-                <visible>true</visible>
-                <enabled>true</enabled>
-                <userVisible>
-                  <common>true</common>
-                </userVisible>
-                <extendedTooltip>
-                  <name>ТаблицаПользователейДоменаКонтекстноеМенюВыбратьРасширеннаяПодсказка</name>
-                  <id>35</id>
-                  <type>Label</type>
-                  <autoMaxWidth>true</autoMaxWidth>
-                  <autoMaxHeight>true</autoMaxHeight>
-                  <extInfo xsi:type="form:LabelDecorationExtInfo">
-                    <horizontalAlign>Left</horizontalAlign>
-                  </extInfo>
-                </extendedTooltip>
-                <commandName>Form.Command.Выбрать</commandName>
-                <buttonImportance>Normal</buttonImportance>
-                <representation>Auto</representation>
-                <autoMaxWidth>true</autoMaxWidth>
-                <autoMaxHeight>true</autoMaxHeight>
-                <placementArea>UserCmds</placementArea>
-                <representationInContextMenu>Auto</representationInContextMenu>
-              </items>
-              <items xsi:type="form:Button">
-                <name>ТаблицаПользователейДоменаКонтекстноеМенюНайти</name>
-                <id>22</id>
-                <visible>true</visible>
-                <enabled>true</enabled>
-                <userVisible>
-                  <common>true</common>
-                </userVisible>
-                <extendedTooltip>
-                  <name>ТаблицаПользователейДоменаКонтекстноеМенюНайтиРасширеннаяПодсказка</name>
-                  <id>36</id>
-                  <type>Label</type>
-                  <autoMaxWidth>true</autoMaxWidth>
-                  <autoMaxHeight>true</autoMaxHeight>
-                  <extInfo xsi:type="form:LabelDecorationExtInfo">
-                    <horizontalAlign>Left</horizontalAlign>
-                  </extInfo>
-                </extendedTooltip>
-                <commandName>Form.Item.ТаблицаПользователейДомена.StandardCommand.Find</commandName>
-                <buttonImportance>Normal</buttonImportance>
-                <representation>Auto</representation>
-                <autoMaxWidth>true</autoMaxWidth>
-                <autoMaxHeight>true</autoMaxHeight>
-                <placementArea>UserCmds</placementArea>
-                <representationInContextMenu>Auto</representationInContextMenu>
-              </items>
-              <items xsi:type="form:Button">
-                <name>ТаблицаПользователейДоменаКонтекстноеМенюОтменитьПоиск</name>
-                <id>23</id>
-                <visible>true</visible>
-                <enabled>true</enabled>
-                <userVisible>
-                  <common>true</common>
-                </userVisible>
-                <extendedTooltip>
-                  <name>ТаблицаПользователейДоменаКонтекстноеМенюОтменитьПоискРасширеннаяПодсказка</name>
-                  <id>37</id>
-                  <type>Label</type>
-                  <autoMaxWidth>true</autoMaxWidth>
-                  <autoMaxHeight>true</autoMaxHeight>
-                  <extInfo xsi:type="form:LabelDecorationExtInfo">
-                    <horizontalAlign>Left</horizontalAlign>
-                  </extInfo>
-                </extendedTooltip>
-                <commandName>Form.Item.ТаблицаПользователейДомена.StandardCommand.CancelSearch</commandName>
-                <buttonImportance>Normal</buttonImportance>
-                <representation>Auto</representation>
-                <autoMaxWidth>true</autoMaxWidth>
-                <autoMaxHeight>true</autoMaxHeight>
-                <placementArea>UserCmds</placementArea>
-                <representationInContextMenu>Auto</representationInContextMenu>
-              </items>
-              <items xsi:type="form:Button">
-                <name>ТаблицаПользователейДоменаКонтекстноеМенюВывестиСписок</name>
-                <id>26</id>
-                <visible>true</visible>
-                <enabled>true</enabled>
-                <userVisible>
-                  <common>true</common>
-                </userVisible>
-                <extendedTooltip>
-                  <name>ТаблицаПользователейДоменаКонтекстноеМенюВывестиСписокРасширеннаяПодсказка</name>
-                  <id>38</id>
-                  <type>Label</type>
-                  <autoMaxWidth>true</autoMaxWidth>
-                  <autoMaxHeight>true</autoMaxHeight>
-                  <extInfo xsi:type="form:LabelDecorationExtInfo">
-                    <horizontalAlign>Left</horizontalAlign>
-                  </extInfo>
-                </extendedTooltip>
-                <commandName>Form.Item.ТаблицаПользователейДомена.StandardCommand.OutputList</commandName>
-                <buttonImportance>Normal</buttonImportance>
-                <representation>Auto</representation>
-                <autoMaxWidth>true</autoMaxWidth>
-                <autoMaxHeight>true</autoMaxHeight>
-                <placementArea>UserCmds</placementArea>
-                <representationInContextMenu>Auto</representationInContextMenu>
-              </items>
-              <autoFill>true</autoFill>
-            </contextMenu>
+          <contextMenu>
+            <name>ТаблицаДоменовSearchStringContextMenu</name>
+            <id>54</id>
             <autoFill>true</autoFill>
-            <readOnly>true</readOnly>
-            <changeRowSet>true</changeRowSet>
-            <changeRowOrder>true</changeRowOrder>
+          </contextMenu>
+          <source>ТаблицаДоменов</source>
+          <extInfo xsi:type="form:SearchStringAdditionExtInfo">
             <autoMaxWidth>true</autoMaxWidth>
-            <autoMaxHeight>true</autoMaxHeight>
-            <heightInTableRows>5</heightInTableRows>
-            <autoMaxRowsCount>true</autoMaxRowsCount>
-            <headerHeight>1</headerHeight>
-            <footerHeight>1</footerHeight>
-            <horizontalScrollBar>AutoUse</horizontalScrollBar>
-            <verticalScrollBar>AutoUse</verticalScrollBar>
-            <horizontalLines>true</horizontalLines>
-            <verticalLines>true</verticalLines>
-            <horizontalLinesBWA>false</horizontalLinesBWA>
-            <verticalLinesBWA>false</verticalLinesBWA>
-            <useAlternationRowColorBWA>false</useAlternationRowColorBWA>
-            <searchOnInput>Auto</searchOnInput>
-            <initialListView>Auto</initialListView>
-            <horizontalStretch>true</horizontalStretch>
-            <verticalStretch>true</verticalStretch>
-            <borderColor xsi:type="core:ColorRef">
-              <color>Style.BorderColor</color>
-            </borderColor>
-            <autoMaxCardHeight>true</autoMaxCardHeight>
-            <rowFilter xsi:type="core:UndefinedValue"/>
-          </items>
-          <visible>true</visible>
-          <enabled>true</enabled>
-          <userVisible>
-            <common>true</common>
-          </userVisible>
-          <title>
-            <key>ru</key>
-            <value>Пользователи:</value>
-          </title>
+          </extInfo>
+        </searchStringAddition>
+        <viewStatusAddition>
+          <name>ТаблицаДоменовViewStatus</name>
+          <id>56</id>
           <extendedTooltip>
-            <name>ГруппаПользователиРасширеннаяПодсказка</name>
-            <id>50</id>
+            <name>ТаблицаДоменовViewStatusExtendedTooltip</name>
+            <id>58</id>
             <type>Label</type>
             <autoMaxWidth>true</autoMaxWidth>
             <autoMaxHeight>true</autoMaxHeight>
@@ -917,29 +226,44 @@
               <horizontalAlign>Left</horizontalAlign>
             </extInfo>
           </extendedTooltip>
-          <type>UsualGroup</type>
-          <extInfo xsi:type="form:UsualGroupExtInfo">
-            <group>Vertical</group>
-            <representation>WeakSeparation</representation>
-            <showLeftMargin>true</showLeftMargin>
-            <united>true</united>
-            <showTitle>auto</showTitle>
-            <throughAlign>Auto</throughAlign>
-            <currentRowUse>Auto</currentRowUse>
+          <contextMenu>
+            <name>ТаблицаДоменовViewStatusContextMenu</name>
+            <id>57</id>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <type>ViewStatusAddition</type>
+          <source>ТаблицаДоменов</source>
+          <extInfo xsi:type="form:ViewStatusAdditionExtInfo">
+            <autoMaxWidth>true</autoMaxWidth>
           </extInfo>
-        </items>
-        <visible>true</visible>
-        <enabled>true</enabled>
-        <userVisible>
-          <common>true</common>
-        </userVisible>
-        <title>
-          <key>ru</key>
-          <value>Домены и пользователи</value>
-        </title>
+        </viewStatusAddition>
+        <searchControlAddition>
+          <name>ТаблицаДоменовSearchControl</name>
+          <id>59</id>
+          <extendedTooltip>
+            <name>ТаблицаДоменовSearchControlExtendedTooltip</name>
+            <id>61</id>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <contextMenu>
+            <name>ТаблицаДоменовSearchControlContextMenu</name>
+            <id>60</id>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <type>SearchControlAddition</type>
+          <source>ТаблицаДоменов</source>
+          <extInfo xsi:type="form:SearchControlAdditionExtInfo">
+            <autoMaxWidth>true</autoMaxWidth>
+          </extInfo>
+        </searchControlAddition>
         <extendedTooltip>
-          <name>ДоменыИПользователиРасширеннаяПодсказка</name>
-          <id>29</id>
+          <name>ТаблицаДоменовРасширеннаяПодсказка</name>
+          <id>33</id>
           <type>Label</type>
           <autoMaxWidth>true</autoMaxWidth>
           <autoMaxHeight>true</autoMaxHeight>
@@ -947,15 +271,266 @@
             <horizontalAlign>Left</horizontalAlign>
           </extInfo>
         </extendedTooltip>
-        <type>UsualGroup</type>
-        <extInfo xsi:type="form:UsualGroupExtInfo">
-          <group>HorizontalIfPossible</group>
-          <behavior>Auto</behavior>
-          <showLeftMargin>true</showLeftMargin>
-          <united>true</united>
-          <throughAlign>Auto</throughAlign>
-          <currentRowUse>Auto</currentRowUse>
-        </extInfo>
+        <contextMenu>
+          <name>ТаблицаДоменовКонтекстноеМеню</name>
+          <id>6</id>
+          <autoFill>true</autoFill>
+        </contextMenu>
+        <autoFill>true</autoFill>
+        <readOnly>true</readOnly>
+        <changeRowSet>true</changeRowSet>
+        <changeRowOrder>true</changeRowOrder>
+        <width>25</width>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <heightInTableRows>3</heightInTableRows>
+        <autoMaxRowsCount>true</autoMaxRowsCount>
+        <headerHeight>1</headerHeight>
+        <footerHeight>1</footerHeight>
+        <horizontalScrollBar>AutoUse</horizontalScrollBar>
+        <verticalScrollBar>AutoUse</verticalScrollBar>
+        <horizontalLines>true</horizontalLines>
+        <verticalLines>true</verticalLines>
+        <horizontalLinesBWA>false</horizontalLinesBWA>
+        <verticalLinesBWA>false</verticalLinesBWA>
+        <useAlternationRowColorBWA>false</useAlternationRowColorBWA>
+        <searchOnInput>Auto</searchOnInput>
+        <initialListView>Auto</initialListView>
+        <initialRowActivation>Activate</initialRowActivation>
+        <horizontalStretch>true</horizontalStretch>
+        <verticalStretch>true</verticalStretch>
+        <borderColor xsi:type="core:ColorRef">
+          <color>Style.BorderColor</color>
+        </borderColor>
+        <autoMaxCardHeight>true</autoMaxCardHeight>
+        <rowFilter xsi:type="core:UndefinedValue"/>
+      </items>
+      <items xsi:type="form:Table">
+        <name>ТаблицаПользователейДомена</name>
+        <id>8</id>
+        <title>
+          <key>ru</key>
+          <value>Пользователи</value>
+        </title>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <dataPath xsi:type="form:DataPath">
+          <segments>ТаблицаПользователейДомена</segments>
+        </dataPath>
+        <skipOnInput>false</skipOnInput>
+        <excludedCommands>Add</excludedCommands>
+        <excludedCommands>Change</excludedCommands>
+        <excludedCommands>Copy</excludedCommands>
+        <excludedCommands>CopyToClipboard</excludedCommands>
+        <excludedCommands>Delete</excludedCommands>
+        <excludedCommands>EndEdit</excludedCommands>
+        <excludedCommands>MoveDown</excludedCommands>
+        <excludedCommands>MoveUp</excludedCommands>
+        <excludedCommands>SortListAsc</excludedCommands>
+        <excludedCommands>SortListDesc</excludedCommands>
+        <items xsi:type="form:FormField">
+          <name>ТаблицаПользователейДоменаИмяПользователя</name>
+          <id>13</id>
+          <title>
+            <key>ru</key>
+            <value>Пользователь</value>
+          </title>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <dataPath xsi:type="form:DataPath">
+            <segments>ТаблицаПользователейДомена.ИмяПользователя</segments>
+          </dataPath>
+          <extendedTooltip>
+            <name>ТаблицаПользователейДоменаИмяПользователяРасширеннаяПодсказка</name>
+            <id>40</id>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <contextMenu>
+            <name>ТаблицаПользователейДоменаИмяПользователяКонтекстноеМеню</name>
+            <id>14</id>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <type>InputField</type>
+          <editMode>Auto</editMode>
+          <showInHeader>true</showInHeader>
+          <headerHorizontalAlign>Left</headerHorizontalAlign>
+          <showInFooter>true</showInFooter>
+          <extInfo xsi:type="form:InputFieldExtInfo">
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <chooseType>true</chooseType>
+            <typeDomainEnabled>true</typeDomainEnabled>
+            <textEdit>true</textEdit>
+            <borderColor xsi:type="core:ColorRef">
+              <color>Style.BorderColor</color>
+            </borderColor>
+            <textSize>Normal</textSize>
+          </extInfo>
+        </items>
+        <autoCommandBar>
+          <name>ТаблицаПользователейДоменаКоманднаяПанель</name>
+          <id>10</id>
+          <items xsi:type="form:Button">
+            <name>ТаблицаПользователейДоменаВыбрать</name>
+            <id>100</id>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <extendedTooltip>
+              <name>ТаблицаПользователейДоменаВыбратьРасширеннаяПодсказка</name>
+              <id>101</id>
+              <type>Label</type>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Left</horizontalAlign>
+              </extInfo>
+            </extendedTooltip>
+            <commandName>Form.Item.ТаблицаПользователейДомена.StandardCommand.Choose</commandName>
+            <buttonImportance>Normal</buttonImportance>
+            <representation>Auto</representation>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <placementArea>UserCmds</placementArea>
+            <representationInContextMenu>Auto</representationInContextMenu>
+          </items>
+          <horizontalAlign>Left</horizontalAlign>
+          <autoFill>true</autoFill>
+        </autoCommandBar>
+        <handlers>
+          <event>ValueChoice</event>
+          <name>ТаблицаПользователейДоменаВыборЗначения</name>
+        </handlers>
+        <handlers>
+          <event>Selection</event>
+          <name>ТаблицаПользователейДоменаВыбор</name>
+        </handlers>
+        <searchStringAddition>
+          <name>ТаблицаПользователейДоменаSearchString</name>
+          <id>62</id>
+          <extendedTooltip>
+            <name>ТаблицаПользователейДоменаSearchStringExtendedTooltip</name>
+            <id>64</id>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <contextMenu>
+            <name>ТаблицаПользователейДоменаSearchStringContextMenu</name>
+            <id>63</id>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <source>ТаблицаПользователейДомена</source>
+          <extInfo xsi:type="form:SearchStringAdditionExtInfo">
+            <autoMaxWidth>true</autoMaxWidth>
+          </extInfo>
+        </searchStringAddition>
+        <viewStatusAddition>
+          <name>ТаблицаПользователейДоменаViewStatus</name>
+          <id>65</id>
+          <extendedTooltip>
+            <name>ТаблицаПользователейДоменаViewStatusExtendedTooltip</name>
+            <id>67</id>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <contextMenu>
+            <name>ТаблицаПользователейДоменаViewStatusContextMenu</name>
+            <id>66</id>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <type>ViewStatusAddition</type>
+          <source>ТаблицаПользователейДомена</source>
+          <extInfo xsi:type="form:ViewStatusAdditionExtInfo">
+            <autoMaxWidth>true</autoMaxWidth>
+          </extInfo>
+        </viewStatusAddition>
+        <searchControlAddition>
+          <name>ТаблицаПользователейДоменаSearchControl</name>
+          <id>68</id>
+          <extendedTooltip>
+            <name>ТаблицаПользователейДоменаSearchControlExtendedTooltip</name>
+            <id>70</id>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <contextMenu>
+            <name>ТаблицаПользователейДоменаSearchControlContextMenu</name>
+            <id>69</id>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <type>SearchControlAddition</type>
+          <source>ТаблицаПользователейДомена</source>
+          <extInfo xsi:type="form:SearchControlAdditionExtInfo">
+            <autoMaxWidth>true</autoMaxWidth>
+          </extInfo>
+        </searchControlAddition>
+        <extendedTooltip>
+          <name>ТаблицаПользователейДоменаРасширеннаяПодсказка</name>
+          <id>39</id>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <contextMenu>
+          <name>ТаблицаПользователейДоменаКонтекстноеМеню</name>
+          <id>9</id>
+          <autoFill>true</autoFill>
+        </contextMenu>
+        <autoFill>true</autoFill>
+        <readOnly>true</readOnly>
+        <changeRowSet>true</changeRowSet>
+        <changeRowOrder>true</changeRowOrder>
+        <width>50</width>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <heightInTableRows>5</heightInTableRows>
+        <autoMaxRowsCount>true</autoMaxRowsCount>
+        <choiceMode>true</choiceMode>
+        <headerHeight>1</headerHeight>
+        <footerHeight>1</footerHeight>
+        <horizontalScrollBar>AutoUse</horizontalScrollBar>
+        <verticalScrollBar>AutoUse</verticalScrollBar>
+        <horizontalLines>true</horizontalLines>
+        <verticalLines>true</verticalLines>
+        <horizontalLinesBWA>false</horizontalLinesBWA>
+        <verticalLinesBWA>false</verticalLinesBWA>
+        <useAlternationRowColorBWA>false</useAlternationRowColorBWA>
+        <searchOnInput>Auto</searchOnInput>
+        <initialListView>Auto</initialListView>
+        <horizontalStretch>true</horizontalStretch>
+        <verticalStretch>true</verticalStretch>
+        <borderColor xsi:type="core:ColorRef">
+          <color>Style.BorderColor</color>
+        </borderColor>
+        <autoMaxCardHeight>true</autoMaxCardHeight>
+        <rowFilter xsi:type="core:UndefinedValue"/>
       </items>
       <visible>true</visible>
       <enabled>true</enabled>
@@ -978,7 +553,7 @@
       </extendedTooltip>
       <type>Page</type>
       <extInfo xsi:type="form:PageGroupExtInfo">
-        <group>Vertical</group>
+        <group>AutoScreenTypeSensitive</group>
         <showTitle>auto</showTitle>
         <scrollOnCompress>false</scrollOnCompress>
       </extInfo>
@@ -1010,11 +585,42 @@
   <autoCommandBar>
     <name>ФормаКоманднаяПанель</name>
     <id>-1</id>
+    <items xsi:type="form:Button">
+      <name>ФормаВыбрать</name>
+      <id>98</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <extendedTooltip>
+        <name>ФормаВыбратьРасширеннаяПодсказка</name>
+        <id>99</id>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <commandName>Form.Item.ТаблицаПользователейДомена.StandardCommand.Choose</commandName>
+      <representation>Auto</representation>
+      <defaultButton>true</defaultButton>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <placementArea>UserCmds</placementArea>
+      <representationInContextMenu>Auto</representationInContextMenu>
+    </items>
     <horizontalAlign>Left</horizontalAlign>
+    <autoFill>true</autoFill>
   </autoCommandBar>
   <handlers>
     <event>OnOpen</event>
     <name>ПриОткрытии</name>
+  </handlers>
+  <handlers>
+    <event>OnCreateAtServer</event>
+    <name>ПриСозданииНаСервере</name>
   </handlers>
   <excludedCommands>Abort</excludedCommands>
   <excludedCommands>Cancel</excludedCommands>
@@ -1037,10 +643,10 @@
   <showTitle>auto</showTitle>
   <showCloseButton>true</showCloseButton>
   <attributes>
-    <name>СписокДоменов</name>
+    <name>ТаблицаДоменов</name>
     <title>
       <key>ru</key>
-      <value>Список доменов</value>
+      <value>Таблица доменов</value>
     </title>
     <id>1</id>
     <valueType>
@@ -1072,10 +678,10 @@
     </columns>
   </attributes>
   <attributes>
-    <name>СписокПользователейТекущегоДомена</name>
+    <name>ТаблицаПользователейДомена</name>
     <title>
       <key>ru</key>
-      <value>Список пользователей текущего домена</value>
+      <value>Таблица пользователей домена</value>
     </title>
     <id>3</id>
     <valueType>
@@ -1117,32 +723,6 @@
       <common>true</common>
     </edit>
   </attributes>
-  <formCommands>
-    <name>Выбрать</name>
-    <title>
-      <key>ru</key>
-      <value>Выбрать</value>
-    </title>
-    <id>1</id>
-    <toolTip>
-      <key>ru</key>
-      <value>Выбрать пользователя операционной системы</value>
-    </toolTip>
-    <use>
-      <common>true</common>
-    </use>
-    <picture xsi:type="core:PictureRef">
-      <picture>StdPicture.ChooseValue</picture>
-    </picture>
-    <action xsi:type="form:FormCommandHandlerContainer">
-      <handler>
-        <name>Выбрать</name>
-      </handler>
-    </action>
-    <representation>TextPicture</representation>
-    <currentRowUse>DontUse</currentRowUse>
-    <selectedRowsUse>Auto</selectedRowsUse>
-  </formCommands>
   <commandInterface>
     <navigationPanel/>
     <commandBar/>

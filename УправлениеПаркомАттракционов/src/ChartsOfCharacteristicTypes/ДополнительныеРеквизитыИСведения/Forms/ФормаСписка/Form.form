@@ -31,34 +31,6 @@
       <currentRowUse>Auto</currentRowUse>
     </extInfo>
   </items>
-  <items xsi:type="form:FormGroup">
-    <name>КоманднаяПанель</name>
-    <id>14</id>
-    <visible>true</visible>
-    <enabled>true</enabled>
-    <userVisible>
-      <common>true</common>
-    </userVisible>
-    <title>
-      <key>ru</key>
-      <value>Командная панель</value>
-    </title>
-    <extendedTooltip>
-      <name>КоманднаяПанельРасширеннаяПодсказка</name>
-      <id>15</id>
-      <type>Label</type>
-      <autoMaxWidth>true</autoMaxWidth>
-      <autoMaxHeight>true</autoMaxHeight>
-      <extInfo xsi:type="form:LabelDecorationExtInfo">
-        <horizontalAlign>Left</horizontalAlign>
-      </extInfo>
-    </extendedTooltip>
-    <type>CommandBar</type>
-    <extInfo xsi:type="form:CommandBarExtInfo">
-      <horizontalAlign>Left</horizontalAlign>
-      <commandSource>Form</commandSource>
-    </extInfo>
-  </items>
   <items xsi:type="form:Table">
     <name>Список</name>
     <id>1</id>
@@ -108,7 +80,7 @@
         <autoFill>true</autoFill>
       </contextMenu>
       <type>InputField</type>
-      <editMode>Enter</editMode>
+      <editMode>Auto</editMode>
       <showInHeader>true</showInHeader>
       <headerHorizontalAlign>Left</headerHorizontalAlign>
       <showInFooter>true</showInFooter>
@@ -153,7 +125,7 @@
         <autoFill>true</autoFill>
       </contextMenu>
       <type>InputField</type>
-      <editMode>Enter</editMode>
+      <editMode>Auto</editMode>
       <showInHeader>true</showInHeader>
       <headerHorizontalAlign>Left</headerHorizontalAlign>
       <showInFooter>true</showInFooter>
@@ -191,7 +163,7 @@
         <autoFill>true</autoFill>
       </contextMenu>
       <type>LabelField</type>
-      <editMode>Enter</editMode>
+      <editMode>Auto</editMode>
       <showInHeader>true</showInHeader>
       <headerHorizontalAlign>Left</headerHorizontalAlign>
       <showInFooter>true</showInFooter>
@@ -201,6 +173,7 @@
       </extInfo>
     </items>
     <commandBarLocation>None</commandBarLocation>
+    <showCommandBar>false</showCommandBar>
     <autoCommandBar>
       <name>СписокКоманднаяПанель</name>
       <id>3</id>
@@ -299,7 +272,6 @@
     <autoMaxWidth>true</autoMaxWidth>
     <autoMaxHeight>true</autoMaxHeight>
     <autoMaxRowsCount>true</autoMaxRowsCount>
-    <selectionMode>MultiRow</selectionMode>
     <header>true</header>
     <headerHeight>1</headerHeight>
     <footerHeight>1</footerHeight>
@@ -317,6 +289,7 @@
     <rowsPicture xsi:type="core:PictureRef">
       <picture>CommonPicture.ДополнительныеРеквизитыСведения</picture>
     </rowsPicture>
+    <searchStringLocation>Top</searchStringLocation>
     <autoMaxCardHeight>true</autoMaxCardHeight>
     <extInfo xsi:type="form:DynamicListTableExtInfo">
       <autoRefreshPeriod>60</autoRefreshPeriod>
@@ -329,10 +302,13 @@
       <userSettingsGroup>ГруппаПользовательскихНастроек</userSettingsGroup>
     </extInfo>
   </items>
+  <commandBarLocation>Top</commandBarLocation>
+  <showCommandBar>true</showCommandBar>
   <autoCommandBar>
     <name>ФормаКоманднаяПанель</name>
     <id>-1</id>
     <horizontalAlign>Left</horizontalAlign>
+    <autoFill>true</autoFill>
   </autoCommandBar>
   <handlers>
     <event>OnCreateAtServer</event>

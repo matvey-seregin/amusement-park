@@ -1,132 +1,234 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<form:Form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:form="http://g5.1c.ru/v8/dt/form">
+<form:Form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:form="http://g5.1c.ru/v8/dt/form">
   <title>
     <key>ru</key>
     <value>Копирование настроек</value>
   </title>
   <items xsi:type="form:FormGroup">
-    <name>ГруппаОткрытыеКопируемыеФормы</name>
-    <id>23</id>
+    <name>ГруппаОсновное</name>
+    <id>28</id>
     <items xsi:type="form:Decoration">
-      <name>СообщениеОткрытыеФормы</name>
-      <id>25</id>
-      <title>
-        <key>ru</key>
-        <value>В приложении есть &lt;link ОткрытыеОкна>открытые окна&lt;/>, настройки которых копируются другому пользователю, 
+      <name>ДекорацияКартинка</name>
+      <id>32</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <extendedTooltip>
+        <name>ДекорацияКартинкаРасширеннаяПодсказка</name>
+        <id>34</id>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <contextMenu>
+        <name>ДекорацияКартинкаКонтекстноеМеню</name>
+        <id>33</id>
+        <autoFill>true</autoFill>
+      </contextMenu>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <extInfo xsi:type="form:PictureDecorationExtInfo">
+        <picture xsi:type="core:PictureRef">
+          <picture>StdPicture.DialogExclamation</picture>
+        </picture>
+        <fileDragMode>AsFileRef</fileDragMode>
+      </extInfo>
+    </items>
+    <items xsi:type="form:FormGroup">
+      <name>ГруппаСообщения</name>
+      <id>30</id>
+      <items xsi:type="form:FormGroup">
+        <name>ГруппаОткрытыеКопируемыеФормы</name>
+        <id>23</id>
+        <items xsi:type="form:Decoration">
+          <name>СообщениеОткрытыеФормы</name>
+          <id>25</id>
+          <title>
+            <key>ru</key>
+            <value>В приложении есть &lt;link ОткрытыеОкна>открытые окна&lt;/>, настройки которых копируются другому пользователю, 
 если в них были внесены изменения, то новые настройки могут быть не скопированы.
 Рекомендуется закрыть перечисленные окна и повторить копирование.
 </value>
-      </title>
-      <visible>true</visible>
-      <enabled>true</enabled>
-      <userVisible>
-        <common>true</common>
-      </userVisible>
-      <extendedTooltip>
-        <name>СообщениеОткрытыеФормыРасширеннаяПодсказка</name>
-        <id>27</id>
-        <type>Label</type>
-        <autoMaxWidth>true</autoMaxWidth>
-        <autoMaxHeight>true</autoMaxHeight>
-        <extInfo xsi:type="form:LabelDecorationExtInfo">
-          <horizontalAlign>Left</horizontalAlign>
+          </title>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <extendedTooltip>
+            <name>СообщениеОткрытыеФормыРасширеннаяПодсказка</name>
+            <id>27</id>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <contextMenu>
+            <name>СообщениеОткрытыеФормыКонтекстноеМеню</name>
+            <id>26</id>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <formatted>true</formatted>
+          <type>Label</type>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <handlers>
+              <event>URLProcessing</event>
+              <name>СообщениеОткрытыеФормыОбработкаНавигационнойСсылки</name>
+            </handlers>
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </items>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <title>
+          <key>ru</key>
+          <value>Открытые копируемые формы</value>
+        </title>
+        <extendedTooltip>
+          <name>ГруппаОткрытыеКопируемыеФормыРасширеннаяПодсказка</name>
+          <id>24</id>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <type>UsualGroup</type>
+        <extInfo xsi:type="form:UsualGroupExtInfo">
+          <group>HorizontalIfPossible</group>
+          <showLeftMargin>true</showLeftMargin>
+          <united>true</united>
+          <throughAlign>Auto</throughAlign>
+          <currentRowUse>Auto</currentRowUse>
         </extInfo>
-      </extendedTooltip>
-      <contextMenu>
-        <name>СообщениеОткрытыеФормыКонтекстноеМеню</name>
-        <id>26</id>
-        <autoFill>true</autoFill>
-      </contextMenu>
-      <formatted>true</formatted>
-      <type>Label</type>
-      <extInfo xsi:type="form:LabelDecorationExtInfo">
-        <handlers>
-          <event>URLProcessing</event>
-          <name>СообщениеОткрытыеФормыОбработкаНавигационнойСсылки</name>
-        </handlers>
-        <horizontalAlign>Left</horizontalAlign>
-      </extInfo>
-    </items>
-    <visible>true</visible>
-    <enabled>true</enabled>
-    <userVisible>
-      <common>true</common>
-    </userVisible>
-    <title>
-      <key>ru</key>
-      <value>Открытые копируемые формы</value>
-    </title>
-    <extendedTooltip>
-      <name>ГруппаОткрытыеКопируемыеФормыРасширеннаяПодсказка</name>
-      <id>24</id>
-      <type>Label</type>
-      <autoMaxWidth>true</autoMaxWidth>
-      <autoMaxHeight>true</autoMaxHeight>
-      <extInfo xsi:type="form:LabelDecorationExtInfo">
-        <horizontalAlign>Left</horizontalAlign>
-      </extInfo>
-    </extendedTooltip>
-    <type>UsualGroup</type>
-    <extInfo xsi:type="form:UsualGroupExtInfo">
-      <group>HorizontalIfPossible</group>
-      <showLeftMargin>true</showLeftMargin>
-      <united>true</united>
-      <throughAlign>Auto</throughAlign>
-      <currentRowUse>Auto</currentRowUse>
-    </extInfo>
-  </items>
-  <items xsi:type="form:FormGroup">
-    <name>ГруппаАктивныеПользователи</name>
-    <id>7</id>
-    <items xsi:type="form:Decoration">
-      <name>Сообщение</name>
-      <id>1</id>
-      <title>
-        <key>ru</key>
-        <value>Пользователи, которым копируются настройки внешнего вида приложения,
+      </items>
+      <items xsi:type="form:FormGroup">
+        <name>ГруппаАктивныеПользователи</name>
+        <id>7</id>
+        <items xsi:type="form:Decoration">
+          <name>Сообщение</name>
+          <id>1</id>
+          <title>
+            <key>ru</key>
+            <value>Пользователи, которым копируются настройки внешнего вида приложения,
 должны завершить свои сеансы работы.
 В противном случае настройки могут не примениться.</value>
-      </title>
+          </title>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <extendedTooltip>
+            <name>СообщениеРасширеннаяПодсказка</name>
+            <id>20</id>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <contextMenu>
+            <name>СообщениеКонтекстноеМеню</name>
+            <id>2</id>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <type>Label</type>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </items>
+        <items xsi:type="form:Decoration">
+          <name>СписокАктивныхПользователей</name>
+          <id>8</id>
+          <title>
+            <key>ru</key>
+            <value>Список активных пользователей</value>
+          </title>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <extendedTooltip>
+            <name>СписокАктивныхПользователейРасширеннаяПодсказка</name>
+            <id>22</id>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <contextMenu>
+            <name>СписокАктивныхПользователейКонтекстноеМеню</name>
+            <id>9</id>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <type>Label</type>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <handlers>
+              <event>Click</event>
+              <name>СписокАктивныхПользователейНажатие</name>
+            </handlers>
+            <hyperlink>true</hyperlink>
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </items>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <title>
+          <key>ru</key>
+          <value>Активные пользователи</value>
+        </title>
+        <extendedTooltip>
+          <name>ГруппаАктивныеПользователиРасширеннаяПодсказка</name>
+          <id>21</id>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <type>UsualGroup</type>
+        <extInfo xsi:type="form:UsualGroupExtInfo">
+          <group>Vertical</group>
+          <representation>NormalSeparation</representation>
+          <showLeftMargin>true</showLeftMargin>
+          <united>true</united>
+          <throughAlign>Auto</throughAlign>
+          <currentRowUse>Auto</currentRowUse>
+        </extInfo>
+      </items>
       <visible>true</visible>
       <enabled>true</enabled>
       <userVisible>
         <common>true</common>
       </userVisible>
-      <extendedTooltip>
-        <name>СообщениеРасширеннаяПодсказка</name>
-        <id>20</id>
-        <type>Label</type>
-        <autoMaxWidth>true</autoMaxWidth>
-        <autoMaxHeight>true</autoMaxHeight>
-        <extInfo xsi:type="form:LabelDecorationExtInfo">
-          <horizontalAlign>Left</horizontalAlign>
-        </extInfo>
-      </extendedTooltip>
-      <contextMenu>
-        <name>СообщениеКонтекстноеМеню</name>
-        <id>2</id>
-        <autoFill>true</autoFill>
-      </contextMenu>
-      <type>Label</type>
-      <extInfo xsi:type="form:LabelDecorationExtInfo">
-        <horizontalAlign>Left</horizontalAlign>
-      </extInfo>
-    </items>
-    <items xsi:type="form:Decoration">
-      <name>СписокАктивныхПользователей</name>
-      <id>8</id>
       <title>
         <key>ru</key>
-        <value>Список активных пользователей</value>
+        <value>Сообщения</value>
       </title>
-      <visible>true</visible>
-      <enabled>true</enabled>
-      <userVisible>
-        <common>true</common>
-      </userVisible>
       <extendedTooltip>
-        <name>СписокАктивныхПользователейРасширеннаяПодсказка</name>
-        <id>22</id>
+        <name>ГруппаСообщенияРасширеннаяПодсказка</name>
+        <id>31</id>
         <type>Label</type>
         <autoMaxWidth>true</autoMaxWidth>
         <autoMaxHeight>true</autoMaxHeight>
@@ -134,20 +236,14 @@
           <horizontalAlign>Left</horizontalAlign>
         </extInfo>
       </extendedTooltip>
-      <contextMenu>
-        <name>СписокАктивныхПользователейКонтекстноеМеню</name>
-        <id>9</id>
-        <autoFill>true</autoFill>
-      </contextMenu>
-      <type>Label</type>
-      <autoMaxHeight>true</autoMaxHeight>
-      <extInfo xsi:type="form:LabelDecorationExtInfo">
-        <handlers>
-          <event>Click</event>
-          <name>СписокАктивныхПользователейНажатие</name>
-        </handlers>
-        <hyperlink>true</hyperlink>
-        <horizontalAlign>Left</horizontalAlign>
+      <type>UsualGroup</type>
+      <extInfo xsi:type="form:UsualGroupExtInfo">
+        <group>Vertical</group>
+        <behavior>Auto</behavior>
+        <showLeftMargin>true</showLeftMargin>
+        <united>true</united>
+        <throughAlign>Auto</throughAlign>
+        <currentRowUse>Auto</currentRowUse>
       </extInfo>
     </items>
     <visible>true</visible>
@@ -157,11 +253,11 @@
     </userVisible>
     <title>
       <key>ru</key>
-      <value>Активные пользователи</value>
+      <value>Основное</value>
     </title>
     <extendedTooltip>
-      <name>ГруппаАктивныеПользователиРасширеннаяПодсказка</name>
-      <id>21</id>
+      <name>ГруппаОсновноеРасширеннаяПодсказка</name>
+      <id>29</id>
       <type>Label</type>
       <autoMaxWidth>true</autoMaxWidth>
       <autoMaxHeight>true</autoMaxHeight>
@@ -171,8 +267,8 @@
     </extendedTooltip>
     <type>UsualGroup</type>
     <extInfo xsi:type="form:UsualGroupExtInfo">
-      <group>Vertical</group>
-      <representation>NormalSeparation</representation>
+      <group>AutoScreenTypeSensitive</group>
+      <behavior>Auto</behavior>
       <showLeftMargin>true</showLeftMargin>
       <united>true</united>
       <throughAlign>Auto</throughAlign>
@@ -312,6 +408,7 @@
         <name>Скопировать</name>
       </handler>
     </action>
+    <actionPurpose>Finish</actionPurpose>
     <currentRowUse>DontUse</currentRowUse>
     <selectedRowsUse>Auto</selectedRowsUse>
   </formCommands>

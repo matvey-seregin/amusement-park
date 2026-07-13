@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:HTTPService xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="8b987786-276d-41f9-9a76-b2bf5522568c">
+  <name>ОткрытаяАвторизацияПочтовогоСервиса</name>
+  <synonym>
+    <key>ru</key>
+    <value>Открытая авторизация почтового сервиса</value>
+  </synonym>
+  <rootURL>oauth2_mail</rootURL>
+  <reuseSessions>AutoUse</reuseSessions>
+  <sessionMaxAge>20</sessionMaxAge>
+  <urlTemplates uuid="2253b155-a656-4fa3-bfd0-771ac5bf4cd7">
+    <name>ОтправитьКодАвторизации</name>
+    <synonym>
+      <key>ru</key>
+      <value>Отправить код авторизации</value>
+    </synonym>
+    <template>/callback</template>
+    <methods uuid="ff13c826-11ed-49ad-b4f9-eab0648cdc95">
+      <name>GET</name>
+      <synonym>
+        <key>ru</key>
+        <value>GET</value>
+      </synonym>
+      <handler>ОтправитьКодАвторизации</handler>
+    </methods>
+  </urlTemplates>
+  <urlTemplates uuid="dda40f8b-1b12-4ac7-b228-e340ae1831a9">
+    <name>ПроверитьДоступностьСервиса</name>
+    <synonym>
+      <key>ru</key>
+      <value>Проверить доступность сервиса</value>
+    </synonym>
+    <template>/ping</template>
+    <methods uuid="baf54006-7a8f-4233-b7a7-016dd2971e05">
+      <name>GET</name>
+      <synonym>
+        <key>ru</key>
+        <value>GET</value>
+      </synonym>
+      <handler>ПроверитьДоступностьСервиса</handler>
+    </methods>
+  </urlTemplates>
+</mdclass:HTTPService>

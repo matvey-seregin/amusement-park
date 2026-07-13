@@ -1,80 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<form:Form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:form="http://g5.1c.ru/v8/dt/form">
+<form:Form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:form="http://g5.1c.ru/v8/dt/form">
   <title>
     <key>ru</key>
     <value>Права доступа обновлены</value>
   </title>
   <items xsi:type="form:FormGroup">
-    <name>КартинкаИНадпись</name>
+    <name>ГруппаПредупреждение</name>
     <id>1</id>
-    <items xsi:type="form:Decoration">
-      <name>Картинка</name>
-      <id>3</id>
-      <visible>true</visible>
-      <enabled>true</enabled>
-      <userVisible>
-        <common>true</common>
-      </userVisible>
-      <extendedTooltip>
-        <name>КартинкаРасширеннаяПодсказка</name>
-        <id>5</id>
-        <type>Label</type>
-        <autoMaxWidth>true</autoMaxWidth>
-        <autoMaxHeight>true</autoMaxHeight>
-        <extInfo xsi:type="form:LabelDecorationExtInfo">
-          <horizontalAlign>Left</horizontalAlign>
-        </extInfo>
-      </extendedTooltip>
-      <contextMenu>
-        <name>КартинкаКонтекстноеМеню</name>
-        <id>4</id>
-        <autoFill>true</autoFill>
-      </contextMenu>
-      <autoMaxWidth>true</autoMaxWidth>
-      <autoMaxHeight>true</autoMaxHeight>
-      <extInfo xsi:type="form:PictureDecorationExtInfo">
-        <picture xsi:type="core:PictureRef">
-          <picture>StdPicture.DialogInformation</picture>
-        </picture>
-        <fileDragMode>AsFileRef</fileDragMode>
-      </extInfo>
-    </items>
-    <items xsi:type="form:Decoration">
-      <name>Надпись</name>
-      <id>6</id>
-      <title>
-        <key>ru</key>
-        <value>Администратор изменил права доступа.
-Перезапустите приложение, чтобы они вступили в силу.</value>
-      </title>
-      <visible>true</visible>
-      <enabled>true</enabled>
-      <userVisible>
-        <common>true</common>
-      </userVisible>
-      <toolTipRepresentation>Button</toolTipRepresentation>
-      <extendedTooltip>
-        <name>НадписьРасширеннаяПодсказка</name>
-        <id>8</id>
-        <type>Label</type>
-        <autoMaxWidth>true</autoMaxWidth>
-        <autoMaxHeight>true</autoMaxHeight>
-        <extInfo xsi:type="form:LabelDecorationExtInfo">
-          <horizontalAlign>Left</horizontalAlign>
-        </extInfo>
-      </extendedTooltip>
-      <contextMenu>
-        <name>НадписьКонтекстноеМеню</name>
-        <id>7</id>
-        <autoFill>true</autoFill>
-      </contextMenu>
-      <type>Label</type>
-      <autoMaxWidth>true</autoMaxWidth>
-      <autoMaxHeight>true</autoMaxHeight>
-      <extInfo xsi:type="form:LabelDecorationExtInfo">
-        <horizontalAlign>Left</horizontalAlign>
-      </extInfo>
-    </items>
     <visible>true</visible>
     <enabled>true</enabled>
     <userVisible>
@@ -82,10 +14,11 @@
     </userVisible>
     <title>
       <key>ru</key>
-      <value>Картинка и надпись</value>
+      <value>Предупреждение</value>
     </title>
+    <width>40</width>
     <extendedTooltip>
-      <name>КартинкаИНадписьРасширеннаяПодсказка</name>
+      <name>ГруппаПредупреждениеРасширеннаяПодсказка</name>
       <id>2</id>
       <type>Label</type>
       <autoMaxWidth>true</autoMaxWidth>
@@ -96,17 +29,14 @@
     </extendedTooltip>
     <type>UsualGroup</type>
     <extInfo xsi:type="form:UsualGroupExtInfo">
-      <group>AlwaysHorizontal</group>
-      <verticalAlign>Center</verticalAlign>
-      <representation>NormalSeparation</representation>
+      <group>Vertical</group>
+      <behavior>Auto</behavior>
       <showLeftMargin>true</showLeftMargin>
       <united>true</united>
       <throughAlign>Auto</throughAlign>
       <currentRowUse>Auto</currentRowUse>
     </extInfo>
   </items>
-  <commandBarLocation>Bottom</commandBarLocation>
-  <showCommandBar>true</showCommandBar>
   <autoCommandBar>
     <name>ФормаКоманднаяПанель</name>
     <id>-1</id>
@@ -170,16 +100,21 @@
       <placementArea>UserCmds</placementArea>
       <representationInContextMenu>Auto</representationInContextMenu>
     </items>
-    <horizontalAlign>Right</horizontalAlign>
+    <horizontalAlign>Left</horizontalAlign>
+    <autoFill>true</autoFill>
   </autoCommandBar>
   <handlers>
     <event>OnOpen</event>
     <name>ПриОткрытии</name>
   </handlers>
+  <handlers>
+    <event>OnCreateAtServer</event>
+    <name>ПриСозданииНаСервере</name>
+  </handlers>
   <windowOpeningMode>LockWholeInterface</windowOpeningMode>
   <saveWindowSettings>true</saveWindowSettings>
   <autoUrl>true</autoUrl>
-  <group>Vertical</group>
+  <group>Auto</group>
   <autoFillCheck>true</autoFillCheck>
   <allowFormCustomize>true</allowFormCustomize>
   <enabled>true</enabled>
@@ -204,6 +139,7 @@
         <name>Перезапустить</name>
       </handler>
     </action>
+    <actionPurpose>Finish</actionPurpose>
     <currentRowUse>Auto</currentRowUse>
     <selectedRowsUse>Auto</selectedRowsUse>
   </formCommands>
@@ -226,6 +162,7 @@
         <name>НапомнитьЗавтра</name>
       </handler>
     </action>
+    <actionPurpose>Finish</actionPurpose>
     <currentRowUse>Auto</currentRowUse>
     <selectedRowsUse>Auto</selectedRowsUse>
   </formCommands>

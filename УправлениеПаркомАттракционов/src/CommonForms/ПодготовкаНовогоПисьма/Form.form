@@ -66,7 +66,9 @@
       </headerPicture>
       <headerHorizontalAlign>Center</headerHorizontalAlign>
       <showInFooter>true</showInFooter>
-      <extInfo xsi:type="form:CheckBoxFieldExtInfo"/>
+      <extInfo xsi:type="form:CheckBoxFieldExtInfo">
+        <checkBoxType>CheckBox</checkBoxType>
+      </extInfo>
     </items>
     <items xsi:type="form:FormGroup">
       <name>ПолучателиГруппа</name>
@@ -503,7 +505,6 @@
     <autoMaxHeight>true</autoMaxHeight>
     <heightControlVariant>InFormRows</heightControlVariant>
     <autoMaxRowsCount>true</autoMaxRowsCount>
-    <selectionMode>MultiRow</selectionMode>
     <rowSelectionMode>Row</rowSelectionMode>
     <header>true</header>
     <headerHeight>1</headerHeight>
@@ -814,7 +815,7 @@
         <autoFill>true</autoFill>
       </contextMenu>
       <type>LabelField</type>
-      <editMode>Enter</editMode>
+      <editMode>Auto</editMode>
       <showInHeader>true</showInHeader>
       <headerHorizontalAlign>Left</headerHorizontalAlign>
       <showInFooter>true</showInFooter>
@@ -860,7 +861,7 @@
         <autoFill>true</autoFill>
       </contextMenu>
       <type>CheckBoxField</type>
-      <editMode>Enter</editMode>
+      <editMode>Auto</editMode>
       <showInHeader>true</showInHeader>
       <headerHorizontalAlign>Left</headerHorizontalAlign>
       <showInFooter>true</showInFooter>
@@ -903,7 +904,7 @@
         <autoFill>true</autoFill>
       </contextMenu>
       <type>CheckBoxField</type>
-      <editMode>Enter</editMode>
+      <editMode>Auto</editMode>
       <showInHeader>true</showInHeader>
       <headerHorizontalAlign>Left</headerHorizontalAlign>
       <showInFooter>true</showInFooter>
@@ -941,7 +942,7 @@
         <autoFill>true</autoFill>
       </contextMenu>
       <type>CheckBoxField</type>
-      <editMode>Enter</editMode>
+      <editMode>Auto</editMode>
       <showInHeader>true</showInHeader>
       <headerHorizontalAlign>Left</headerHorizontalAlign>
       <showInFooter>true</showInFooter>
@@ -1310,7 +1311,7 @@
     <name>Подготовить</name>
     <title>
       <key>ru</key>
-      <value>Подготовить...</value>
+      <value>Подготовить</value>
     </title>
     <id>1</id>
     <toolTip>
@@ -1325,6 +1326,7 @@
         <name>Выбрать</name>
       </handler>
     </action>
+    <actionPurpose>Finish</actionPurpose>
     <currentRowUse>DontUse</currentRowUse>
     <selectedRowsUse>Auto</selectedRowsUse>
   </formCommands>

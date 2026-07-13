@@ -20,6 +20,19 @@
       <segments>ОбластиПоискаДублей</segments>
     </dataPath>
     <titleLocation>None</titleLocation>
+    <excludedCommands>Add</excludedCommands>
+    <excludedCommands>Change</excludedCommands>
+    <excludedCommands>CheckAll</excludedCommands>
+    <excludedCommands>Copy</excludedCommands>
+    <excludedCommands>Delete</excludedCommands>
+    <excludedCommands>EndEdit</excludedCommands>
+    <excludedCommands>MoveDown</excludedCommands>
+    <excludedCommands>MoveUp</excludedCommands>
+    <excludedCommands>Pickup</excludedCommands>
+    <excludedCommands>ShowRowRearrangement</excludedCommands>
+    <excludedCommands>SortListAsc</excludedCommands>
+    <excludedCommands>SortListDesc</excludedCommands>
+    <excludedCommands>UncheckAll</excludedCommands>
     <items xsi:type="form:FormField">
       <name>ОбластиПоискаДублейПредставление</name>
       <id>16</id>
@@ -66,7 +79,8 @@
         <textSize>Normal</textSize>
       </extInfo>
     </items>
-    <commandBarLocation>None</commandBarLocation>
+    <commandBarLocation>Top</commandBarLocation>
+    <showCommandBar>true</showCommandBar>
     <autoCommandBar>
       <name>ОбластиПоискаДублейКоманднаяПанель</name>
       <id>3</id>
@@ -166,7 +180,6 @@
     <autoMaxWidth>true</autoMaxWidth>
     <autoMaxHeight>true</autoMaxHeight>
     <autoMaxRowsCount>true</autoMaxRowsCount>
-    <selectionMode>MultiRow</selectionMode>
     <headerHeight>1</headerHeight>
     <footerHeight>1</footerHeight>
     <horizontalScrollBar>AutoUse</horizontalScrollBar>
@@ -184,6 +197,7 @@
     <rowPictureDataPath xsi:type="form:DataPath">
       <segments>ОбластиПоискаДублей.Picture</segments>
     </rowPictureDataPath>
+    <searchStringLocation>CommandBar</searchStringLocation>
     <autoMaxCardHeight>true</autoMaxCardHeight>
   </items>
   <autoCommandBar>
@@ -218,38 +232,6 @@
       <autoMaxHeight>true</autoMaxHeight>
       <placementArea>UserCmds</placementArea>
       <representationInContextMenu>Auto</representationInContextMenu>
-    </items>
-    <items xsi:type="form:Addition">
-      <title>
-        <key>ru</key>
-        <value>Поиск</value>
-      </title>
-      <visible>true</visible>
-      <enabled>true</enabled>
-      <userVisible>
-        <common>true</common>
-      </userVisible>
-      <name>СтрокаПоиска</name>
-      <id>28</id>
-      <extendedTooltip>
-        <name>СтрокаПоискаРасширеннаяПодсказка</name>
-        <id>30</id>
-        <type>Label</type>
-        <autoMaxWidth>true</autoMaxWidth>
-        <autoMaxHeight>true</autoMaxHeight>
-        <extInfo xsi:type="form:LabelDecorationExtInfo">
-          <horizontalAlign>Left</horizontalAlign>
-        </extInfo>
-      </extendedTooltip>
-      <contextMenu>
-        <name>СтрокаПоискаКонтекстноеМеню</name>
-        <id>29</id>
-        <autoFill>true</autoFill>
-      </contextMenu>
-      <source>ОбластиПоискаДублей</source>
-      <extInfo xsi:type="form:SearchStringAdditionExtInfo">
-        <autoMaxWidth>true</autoMaxWidth>
-      </extInfo>
     </items>
     <horizontalAlign>Left</horizontalAlign>
   </autoCommandBar>
@@ -347,6 +329,7 @@
         <name>Выбрать</name>
       </handler>
     </action>
+    <actionPurpose>Finish</actionPurpose>
     <currentRowUse>DontUse</currentRowUse>
     <selectedRowsUse>Auto</selectedRowsUse>
   </formCommands>

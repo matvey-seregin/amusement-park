@@ -43,9 +43,9 @@
         </picture>
       </extInfo>
     </items>
-    <items xsi:type="form:FormField">
-      <name>Сообщение</name>
-      <id>3</id>
+    <items xsi:type="form:Decoration">
+      <name>ДекорацияСообщение</name>
+      <id>39</id>
       <title>
         <key>ru</key>
         <value>Сообщение</value>
@@ -55,13 +55,9 @@
       <userVisible>
         <common>true</common>
       </userVisible>
-      <dataPath xsi:type="form:DataPath">
-        <segments>Сообщение</segments>
-      </dataPath>
-      <titleLocation>None</titleLocation>
       <extendedTooltip>
-        <name>СообщениеРасширеннаяПодсказка</name>
-        <id>25</id>
+        <name>ДекорацияСообщениеРасширеннаяПодсказка</name>
+        <id>41</id>
         <type>Label</type>
         <autoMaxWidth>true</autoMaxWidth>
         <autoMaxHeight>true</autoMaxHeight>
@@ -70,21 +66,15 @@
         </extInfo>
       </extendedTooltip>
       <contextMenu>
-        <name>СообщениеКонтекстноеМеню</name>
-        <id>4</id>
+        <name>ДекорацияСообщениеКонтекстноеМеню</name>
+        <id>40</id>
         <autoFill>true</autoFill>
       </contextMenu>
-      <type>LabelField</type>
-      <editMode>Enter</editMode>
-      <showInHeader>true</showInHeader>
-      <headerHorizontalAlign>Left</headerHorizontalAlign>
-      <showInFooter>true</showInFooter>
-      <extInfo xsi:type="form:LabelFieldExtInfo">
-        <width>65</width>
-        <autoMaxWidth>true</autoMaxWidth>
-        <height>3</height>
-        <autoMaxHeight>true</autoMaxHeight>
-        <verticalStretch>false</verticalStretch>
+      <type>Label</type>
+      <maxWidth>50</maxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <extInfo xsi:type="form:LabelDecorationExtInfo">
+        <horizontalAlign>Left</horizontalAlign>
       </extInfo>
     </items>
     <visible>true</visible>
@@ -108,7 +98,7 @@
     </extendedTooltip>
     <type>UsualGroup</type>
     <extInfo xsi:type="form:UsualGroupExtInfo">
-      <group>AlwaysHorizontal</group>
+      <group>AutoScreenTypeSensitive</group>
       <showLeftMargin>true</showLeftMargin>
       <united>true</united>
       <throughAlign>Auto</throughAlign>
@@ -121,6 +111,38 @@
     <items xsi:type="form:FormGroup">
       <name>ГруппаФайлИКнопка</name>
       <id>17</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <title>
+        <key>ru</key>
+        <value>Файл и кнопка</value>
+      </title>
+      <extendedTooltip>
+        <name>ГруппаФайлИКнопкаРасширеннаяПодсказка</name>
+        <id>28</id>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <type>UsualGroup</type>
+      <extInfo xsi:type="form:UsualGroupExtInfo">
+        <group>AlwaysHorizontal</group>
+        <verticalAlign>Center</verticalAlign>
+        <showLeftMargin>true</showLeftMargin>
+        <united>true</united>
+        <throughAlign>Auto</throughAlign>
+        <currentRowUse>Auto</currentRowUse>
+      </extInfo>
+    </items>
+    <items xsi:type="form:FormGroup">
+      <name>Группа1</name>
+      <id>35</id>
       <items xsi:type="form:FormField">
         <name>Файл</name>
         <id>8</id>
@@ -154,15 +176,15 @@
         </contextMenu>
         <type>InputField</type>
         <readOnly>true</readOnly>
-        <editMode>Enter</editMode>
+        <editMode>Auto</editMode>
         <showInHeader>true</showInHeader>
         <headerHorizontalAlign>Left</headerHorizontalAlign>
         <showInFooter>true</showInFooter>
         <extInfo xsi:type="form:InputFieldExtInfo">
-          <width>60</width>
           <autoMaxWidth>true</autoMaxWidth>
           <autoMaxHeight>true</autoMaxHeight>
           <wrap>true</wrap>
+          <extendedEditMultipleValues>true</extendedEditMultipleValues>
           <chooseType>true</chooseType>
           <typeDomainEnabled>true</typeDomainEnabled>
           <textEdit>true</textEdit>
@@ -171,7 +193,7 @@
       </items>
       <items xsi:type="form:Button">
         <name>ОткрытьКаталог</name>
-        <id>14</id>
+        <id>37</id>
         <title>
           <key>ru</key>
           <value>Открыть каталог</value>
@@ -181,10 +203,9 @@
         <userVisible>
           <common>true</common>
         </userVisible>
-        <skipOnInput>false</skipOnInput>
         <extendedTooltip>
           <name>ОткрытьКаталогРасширеннаяПодсказка</name>
-          <id>30</id>
+          <id>38</id>
           <type>Label</type>
           <autoMaxWidth>true</autoMaxWidth>
           <autoMaxHeight>true</autoMaxHeight>
@@ -194,7 +215,7 @@
         </extendedTooltip>
         <type>UsualButton</type>
         <commandName>Form.Command.ОткрытьКаталог</commandName>
-        <buttonImportance>Normal</buttonImportance>
+        <buttonImportance>Supplementary</buttonImportance>
         <representation>Auto</representation>
         <autoMaxWidth>true</autoMaxWidth>
         <autoMaxHeight>true</autoMaxHeight>
@@ -208,11 +229,11 @@
       </userVisible>
       <title>
         <key>ru</key>
-        <value>Файл и кнопка</value>
+        <value>Группа</value>
       </title>
       <extendedTooltip>
-        <name>ГруппаФайлИКнопкаРасширеннаяПодсказка</name>
-        <id>28</id>
+        <name>Группа1РасширеннаяПодсказка</name>
+        <id>36</id>
         <type>Label</type>
         <autoMaxWidth>true</autoMaxWidth>
         <autoMaxHeight>true</autoMaxHeight>
@@ -222,7 +243,9 @@
       </extendedTooltip>
       <type>UsualGroup</type>
       <extInfo xsi:type="form:UsualGroupExtInfo">
-        <group>AlwaysHorizontal</group>
+        <group>Auto</group>
+        <horizontalSpacing>Half</horizontalSpacing>
+        <behavior>Auto</behavior>
         <showLeftMargin>true</showLeftMargin>
         <united>true</united>
         <throughAlign>Auto</throughAlign>
@@ -290,7 +313,7 @@
       <autoFill>true</autoFill>
     </contextMenu>
     <type>RadioButtonField</type>
-    <editMode>Enter</editMode>
+    <editMode>Auto</editMode>
     <showInHeader>true</showInHeader>
     <headerHorizontalAlign>Left</headerHorizontalAlign>
     <showInFooter>true</showInFooter>
@@ -396,24 +419,6 @@
   <showTitle>auto</showTitle>
   <showCloseButton>true</showCloseButton>
   <attributes>
-    <name>Сообщение</name>
-    <title>
-      <key>ru</key>
-      <value>Сообщение</value>
-    </title>
-    <id>2</id>
-    <valueType>
-      <types>String</types>
-      <stringQualifiers/>
-    </valueType>
-    <view>
-      <common>true</common>
-    </view>
-    <edit>
-      <common>true</common>
-    </edit>
-  </attributes>
-  <attributes>
     <name>РежимСозданияФайла</name>
     <title>
       <key>ru</key>
@@ -470,6 +475,7 @@
         <name>СохранитьФайл</name>
       </handler>
     </action>
+    <actionPurpose>Finish</actionPurpose>
     <currentRowUse>DontUse</currentRowUse>
     <selectedRowsUse>Auto</selectedRowsUse>
   </formCommands>

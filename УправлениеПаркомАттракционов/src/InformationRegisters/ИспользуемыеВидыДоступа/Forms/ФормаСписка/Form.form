@@ -12,6 +12,7 @@
       <key>ru</key>
       <value>Группа пользовательских настроек</value>
     </title>
+    <verticalStretch>false</verticalStretch>
     <extendedTooltip>
       <name>ГруппаПользовательскихНастроекРасширеннаяПодсказка</name>
       <id>31</id>
@@ -25,101 +26,11 @@
     <type>UsualGroup</type>
     <extInfo xsi:type="form:UsualGroupExtInfo">
       <group>Vertical</group>
-      <representation>WeakSeparation</representation>
+      <behavior>Auto</behavior>
       <showLeftMargin>true</showLeftMargin>
       <united>true</united>
       <throughAlign>Auto</throughAlign>
       <currentRowUse>Auto</currentRowUse>
-    </extInfo>
-  </items>
-  <items xsi:type="form:FormGroup">
-    <name>КоманднаяПанель</name>
-    <id>32</id>
-    <items xsi:type="form:Button">
-      <name>ФормаОбновитьДанныеРегистра</name>
-      <id>13</id>
-      <title>
-        <key>ru</key>
-        <value>Обновить данные регистра</value>
-      </title>
-      <visible>true</visible>
-      <enabled>true</enabled>
-      <userVisible>
-        <common>true</common>
-      </userVisible>
-      <extendedTooltip>
-        <name>ФормаОбновитьДанныеРегистраРасширеннаяПодсказка</name>
-        <id>14</id>
-        <type>Label</type>
-        <autoMaxWidth>true</autoMaxWidth>
-        <autoMaxHeight>true</autoMaxHeight>
-        <extInfo xsi:type="form:LabelDecorationExtInfo">
-          <horizontalAlign>Left</horizontalAlign>
-        </extInfo>
-      </extendedTooltip>
-      <commandName>Form.Command.ОбновитьДанныеРегистра</commandName>
-      <buttonImportance>Normal</buttonImportance>
-      <representation>Auto</representation>
-      <autoMaxWidth>true</autoMaxWidth>
-      <autoMaxHeight>true</autoMaxHeight>
-      <placementArea>UserCmds</placementArea>
-      <representationInContextMenu>Auto</representationInContextMenu>
-      <locationInCommandBar>InAdditionalSubmenu</locationInCommandBar>
-    </items>
-    <items xsi:type="form:Button">
-      <name>ФормаВключитьВозможностьРедактирования</name>
-      <id>12</id>
-      <title>
-        <key>ru</key>
-        <value>Включить возможность редактирования</value>
-      </title>
-      <visible>true</visible>
-      <enabled>true</enabled>
-      <userVisible>
-        <common>true</common>
-      </userVisible>
-      <extendedTooltip>
-        <name>ФормаВключитьВозможностьРедактированияРасширеннаяПодсказка</name>
-        <id>15</id>
-        <type>Label</type>
-        <autoMaxWidth>true</autoMaxWidth>
-        <autoMaxHeight>true</autoMaxHeight>
-        <extInfo xsi:type="form:LabelDecorationExtInfo">
-          <horizontalAlign>Left</horizontalAlign>
-        </extInfo>
-      </extendedTooltip>
-      <commandName>Form.Command.ВключитьВозможностьРедактирования</commandName>
-      <buttonImportance>Normal</buttonImportance>
-      <representation>Auto</representation>
-      <autoMaxWidth>true</autoMaxWidth>
-      <autoMaxHeight>true</autoMaxHeight>
-      <placementArea>UserCmds</placementArea>
-      <representationInContextMenu>Auto</representationInContextMenu>
-      <locationInCommandBar>InAdditionalSubmenu</locationInCommandBar>
-    </items>
-    <visible>true</visible>
-    <enabled>true</enabled>
-    <userVisible>
-      <common>true</common>
-    </userVisible>
-    <title>
-      <key>ru</key>
-      <value>Командная панель</value>
-    </title>
-    <extendedTooltip>
-      <name>КоманднаяПанельРасширеннаяПодсказка</name>
-      <id>33</id>
-      <type>Label</type>
-      <autoMaxWidth>true</autoMaxWidth>
-      <autoMaxHeight>true</autoMaxHeight>
-      <extInfo xsi:type="form:LabelDecorationExtInfo">
-        <horizontalAlign>Left</horizontalAlign>
-      </extInfo>
-    </extendedTooltip>
-    <type>CommandBar</type>
-    <extInfo xsi:type="form:CommandBarExtInfo">
-      <horizontalAlign>Left</horizontalAlign>
-      <commandSource>Form</commandSource>
     </extInfo>
   </items>
   <items xsi:type="form:Table">
@@ -141,7 +52,7 @@
     <titleLocation>None</titleLocation>
     <excludedCommands>Copy</excludedCommands>
     <items xsi:type="form:FormField">
-      <name>ТипЗначенийДоступа</name>
+      <name>СписокТипЗначенийДоступа</name>
       <id>43</id>
       <visible>true</visible>
       <enabled>true</enabled>
@@ -152,7 +63,7 @@
         <segments>Список.ТипЗначенийДоступа</segments>
       </dataPath>
       <extendedTooltip>
-        <name>ТипЗначенийДоступаРасширеннаяПодсказка</name>
+        <name>СписокТипЗначенийДоступаРасширеннаяПодсказка</name>
         <id>45</id>
         <type>Label</type>
         <autoMaxWidth>true</autoMaxWidth>
@@ -162,12 +73,12 @@
         </extInfo>
       </extendedTooltip>
       <contextMenu>
-        <name>ТипЗначенийДоступаКонтекстноеМеню</name>
+        <name>СписокТипЗначенийДоступаКонтекстноеМеню</name>
         <id>44</id>
         <autoFill>true</autoFill>
       </contextMenu>
       <type>LabelField</type>
-      <editMode>Enter</editMode>
+      <editMode>Auto</editMode>
       <showInHeader>true</showInHeader>
       <headerHorizontalAlign>Left</headerHorizontalAlign>
       <showInFooter>true</showInFooter>
@@ -177,7 +88,7 @@
       </extInfo>
     </items>
     <items xsi:type="form:FormField">
-      <name>Используется</name>
+      <name>СписокИспользуется</name>
       <id>46</id>
       <visible>true</visible>
       <enabled>true</enabled>
@@ -188,7 +99,7 @@
         <segments>Список.Используется</segments>
       </dataPath>
       <extendedTooltip>
-        <name>ИспользуетсяРасширеннаяПодсказка</name>
+        <name>СписокИспользуетсяРасширеннаяПодсказка</name>
         <id>48</id>
         <type>Label</type>
         <autoMaxWidth>true</autoMaxWidth>
@@ -198,22 +109,23 @@
         </extInfo>
       </extendedTooltip>
       <contextMenu>
-        <name>ИспользуетсяКонтекстноеМеню</name>
+        <name>СписокИспользуетсяКонтекстноеМеню</name>
         <id>47</id>
         <autoFill>true</autoFill>
       </contextMenu>
       <type>CheckBoxField</type>
-      <editMode>Enter</editMode>
+      <editMode>Auto</editMode>
       <showInHeader>true</showInHeader>
       <headerHorizontalAlign>Left</headerHorizontalAlign>
       <showInFooter>true</showInFooter>
+      <autoWidthInTable>None</autoWidthInTable>
       <extInfo xsi:type="form:CheckBoxFieldExtInfo"/>
     </items>
-    <commandBarLocation>None</commandBarLocation>
     <autoCommandBar>
       <name>СписокКоманднаяПанель</name>
       <id>3</id>
       <horizontalAlign>Left</horizontalAlign>
+      <autoFill>true</autoFill>
     </autoCommandBar>
     <searchStringAddition>
       <name>СписокSearchString</name>
@@ -335,22 +247,85 @@
       <allowGettingCurrentRowURL>true</allowGettingCurrentRowURL>
       <userSettingsGroup>ГруппаПользовательскихНастроек</userSettingsGroup>
     </extInfo>
+    <showCommandBarNeedDereferenced>true</showCommandBarNeedDereferenced>
   </items>
   <autoCommandBar>
     <name>ФормаКоманднаяПанель</name>
     <id>-1</id>
+    <items xsi:type="form:Button">
+      <name>ФормаВключитьВозможностьРедактирования</name>
+      <id>12</id>
+      <title>
+        <key>ru</key>
+        <value>Включить возможность редактирования</value>
+      </title>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <extendedTooltip>
+        <name>ФормаВключитьВозможностьРедактированияРасширеннаяПодсказка</name>
+        <id>15</id>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <commandName>Form.Command.ФормаВключитьВозможностьРедактирования</commandName>
+      <buttonImportance>Normal</buttonImportance>
+      <representation>Auto</representation>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <placementArea>UserCmds</placementArea>
+      <representationInContextMenu>Auto</representationInContextMenu>
+      <locationInCommandBar>InAdditionalSubmenu</locationInCommandBar>
+    </items>
+    <items xsi:type="form:Button">
+      <name>ФормаОбновитьДанныеРегистра</name>
+      <id>13</id>
+      <title>
+        <key>ru</key>
+        <value>Обновить данные регистра</value>
+      </title>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <extendedTooltip>
+        <name>ФормаОбновитьДанныеРегистраРасширеннаяПодсказка</name>
+        <id>14</id>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <commandName>Form.Command.ФормаОбновитьДанныеРегистра</commandName>
+      <buttonImportance>Normal</buttonImportance>
+      <representation>Auto</representation>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <placementArea>UserCmds</placementArea>
+      <representationInContextMenu>Auto</representationInContextMenu>
+      <locationInCommandBar>InAdditionalSubmenu</locationInCommandBar>
+    </items>
     <horizontalAlign>Left</horizontalAlign>
+    <autoFill>true</autoFill>
   </autoCommandBar>
   <handlers>
     <event>OnCreateAtServer</event>
     <name>ПриСозданииНаСервере</name>
   </handlers>
-  <excludedCommands>Copy</excludedCommands>
   <windowOpeningMode>DontBlock</windowOpeningMode>
   <saveWindowSettings>true</saveWindowSettings>
   <autoTitle>true</autoTitle>
   <autoUrl>true</autoUrl>
-  <group>Vertical</group>
+  <group>Auto</group>
   <autoFillCheck>true</autoFillCheck>
   <allowFormCustomize>true</allowFormCustomize>
   <enabled>true</enabled>
@@ -378,7 +353,7 @@
     </extInfo>
   </attributes>
   <formCommands>
-    <name>ВключитьВозможностьРедактирования</name>
+    <name>ФормаВключитьВозможностьРедактирования</name>
     <title>
       <key>ru</key>
       <value>Включить возможность редактирования</value>
@@ -393,14 +368,14 @@
     </use>
     <action xsi:type="form:FormCommandHandlerContainer">
       <handler>
-        <name>ВключитьВозможностьРедактирования</name>
+        <name>ФормаВключитьВозможностьРедактирования</name>
       </handler>
     </action>
     <currentRowUse>DontUse</currentRowUse>
     <selectedRowsUse>Auto</selectedRowsUse>
   </formCommands>
   <formCommands>
-    <name>ОбновитьДанныеРегистра</name>
+    <name>ФормаОбновитьДанныеРегистра</name>
     <title>
       <key>ru</key>
       <value>Обновить данные регистра</value>
@@ -415,7 +390,7 @@
     </use>
     <action xsi:type="form:FormCommandHandlerContainer">
       <handler>
-        <name>ОбновитьДанныеРегистра</name>
+        <name>ФормаОбновитьДанныеРегистра</name>
       </handler>
     </action>
     <currentRowUse>DontUse</currentRowUse>

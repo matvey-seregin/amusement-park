@@ -4,11 +4,11 @@
     <name>ГруппаОтборы</name>
     <id>46</id>
     <items xsi:type="form:FormField">
-      <name>ГруппировкаПоРазделам</name>
-      <id>256</id>
+      <name>ГруппировкаПоВидамОбъектов</name>
+      <id>280</id>
       <title>
         <key>ru</key>
-        <value>Группировка по разделам</value>
+        <value>Группировка</value>
       </title>
       <visible>true</visible>
       <enabled>true</enabled>
@@ -16,16 +16,15 @@
         <common>true</common>
       </userVisible>
       <dataPath xsi:type="form:DataPath">
-        <segments>ГруппировкаПоРазделам</segments>
+        <segments>ГруппировкаПоВидамОбъектов</segments>
       </dataPath>
-      <titleLocation>None</titleLocation>
       <handlers>
         <event>OnChange</event>
-        <name>ГруппировкаПоРазделамПриИзменении</name>
+        <name>ГруппировкаПоВидамОбъектовПриИзменении</name>
       </handlers>
       <extendedTooltip>
-        <name>ГруппировкаПоРазделамРасширеннаяПодсказка</name>
-        <id>258</id>
+        <name>ГруппировкаПоВидамОбъектовРасширеннаяПодсказка</name>
+        <id>282</id>
         <type>Label</type>
         <autoMaxWidth>true</autoMaxWidth>
         <autoMaxHeight>true</autoMaxHeight>
@@ -34,12 +33,12 @@
         </extInfo>
       </extendedTooltip>
       <contextMenu>
-        <name>ГруппировкаПоРазделамКонтекстноеМеню</name>
-        <id>257</id>
+        <name>ГруппировкаПоВидамОбъектовКонтекстноеМеню</name>
+        <id>281</id>
         <autoFill>true</autoFill>
       </contextMenu>
       <type>CheckBoxField</type>
-      <editMode>Enter</editMode>
+      <editMode>Auto</editMode>
       <showInHeader>true</showInHeader>
       <headerHorizontalAlign>Left</headerHorizontalAlign>
       <showInFooter>true</showInFooter>
@@ -47,7 +46,7 @@
         <checkBoxType>Tumbler</checkBoxType>
         <editFormat>
           <key>ru</key>
-          <value>БЛ='По объектам'; БИ='По подсистемам'</value>
+          <value>БЛ='По подсистемам'; БИ='По объектам'</value>
         </editFormat>
       </extInfo>
     </items>
@@ -86,7 +85,7 @@
         <autoFill>true</autoFill>
       </contextMenu>
       <type>InputField</type>
-      <editMode>Enter</editMode>
+      <editMode>Auto</editMode>
       <showInHeader>true</showInHeader>
       <headerHorizontalAlign>Left</headerHorizontalAlign>
       <showInFooter>true</showInFooter>
@@ -186,7 +185,7 @@
         <autoFill>true</autoFill>
       </contextMenu>
       <type>InputField</type>
-      <editMode>Enter</editMode>
+      <editMode>Auto</editMode>
       <showInHeader>true</showInHeader>
       <headerHorizontalAlign>Left</headerHorizontalAlign>
       <showInFooter>true</showInFooter>
@@ -238,7 +237,7 @@
         <autoFill>true</autoFill>
       </contextMenu>
       <type>InputField</type>
-      <editMode>Enter</editMode>
+      <editMode>Auto</editMode>
       <showInHeader>true</showInHeader>
       <headerHorizontalAlign>Left</headerHorizontalAlign>
       <showInFooter>true</showInFooter>
@@ -449,10 +448,8 @@
         <headerHorizontalAlign>Left</headerHorizontalAlign>
         <showInFooter>true</showInFooter>
         <extInfo xsi:type="form:InputFieldExtInfo">
-          <width>40</width>
           <autoMaxWidth>true</autoMaxWidth>
           <autoMaxHeight>true</autoMaxHeight>
-          <horizontalStretch>false</horizontalStretch>
           <wrap>true</wrap>
           <chooseType>true</chooseType>
           <typeDomainEnabled>true</typeDomainEnabled>
@@ -528,6 +525,7 @@
         <picture>CommonPicture.ВводимыеСимволыВидны</picture>
       </headerPicture>
       <headerHorizontalAlign>Left</headerHorizontalAlign>
+      <autoWidthInTable>None</autoWidthInTable>
       <extInfo xsi:type="form:CheckBoxFieldExtInfo"/>
     </items>
     <items xsi:type="form:FormField">
@@ -573,6 +571,7 @@
         <picture>CommonPicture.РедактироватьМакет</picture>
       </headerPicture>
       <headerHorizontalAlign>Left</headerHorizontalAlign>
+      <autoWidthInTable>None</autoWidthInTable>
       <extInfo xsi:type="form:ImageFieldExtInfo">
         <autoMaxWidth>true</autoMaxWidth>
         <autoMaxHeight>true</autoMaxHeight>
@@ -621,7 +620,7 @@
           <autoFill>true</autoFill>
         </contextMenu>
         <type>PictureField</type>
-        <editMode>Enter</editMode>
+        <editMode>Auto</editMode>
         <headerHorizontalAlign>Left</headerHorizontalAlign>
         <showInFooter>true</showInFooter>
         <extInfo xsi:type="form:ImageFieldExtInfo">
@@ -670,7 +669,7 @@
           <autoFill>true</autoFill>
         </contextMenu>
         <type>InputField</type>
-        <editMode>Enter</editMode>
+        <editMode>Auto</editMode>
         <showInHeader>true</showInHeader>
         <headerHorizontalAlign>Left</headerHorizontalAlign>
         <showInFooter>true</showInFooter>
@@ -754,6 +753,7 @@
         <picture>StdPicture.DataCompositionOutputParameters</picture>
       </headerPicture>
       <headerHorizontalAlign>Left</headerHorizontalAlign>
+      <autoWidthInTable>None</autoWidthInTable>
       <cellHyperlinkRepresentation>Show</cellHyperlinkRepresentation>
       <cellHyperlinkDisplayVariant>Always</cellHyperlinkDisplayVariant>
       <extInfo xsi:type="form:ImageFieldExtInfo">
@@ -846,10 +846,11 @@
       <editMode>Auto</editMode>
       <showInHeader>true</showInHeader>
       <headerHorizontalAlign>Left</headerHorizontalAlign>
+      <autoWidthInTable>None</autoWidthInTable>
       <extInfo xsi:type="form:ImageFieldExtInfo">
-        <autoMaxWidth>true</autoMaxWidth>
         <autoMaxHeight>true</autoMaxHeight>
         <verticalStretch>true</verticalStretch>
+        <pictureSize>AutoSize</pictureSize>
         <border xsi:type="core:BorderDef">
           <style>Single</style>
           <width>1</width>
@@ -894,7 +895,6 @@
       <headerHorizontalAlign>Left</headerHorizontalAlign>
       <showInFooter>true</showInFooter>
       <extInfo xsi:type="form:InputFieldExtInfo">
-        <width>30</width>
         <autoMaxWidth>true</autoMaxWidth>
         <autoMaxHeight>true</autoMaxHeight>
         <horizontalStretch>false</horizontalStretch>
@@ -905,173 +905,9 @@
         <textSize>Normal</textSize>
       </extInfo>
     </items>
-    <items xsi:type="form:FormField">
-      <name>МакетыОтступ</name>
-      <id>193</id>
-      <title>
-        <key>ru</key>
-        <value>Отступ</value>
-      </title>
-      <visible>true</visible>
-      <enabled>true</enabled>
-      <userVisible>
-        <common>true</common>
-      </userVisible>
-      <dataPath xsi:type="form:DataPath">
-        <segments>Макеты.Отступ</segments>
-      </dataPath>
-      <titleLocation>None</titleLocation>
-      <extendedTooltip>
-        <name>МакетыОтступРасширеннаяПодсказка</name>
-        <id>195</id>
-        <type>Label</type>
-        <autoMaxWidth>true</autoMaxWidth>
-        <autoMaxHeight>true</autoMaxHeight>
-        <extInfo xsi:type="form:LabelDecorationExtInfo">
-          <horizontalAlign>Left</horizontalAlign>
-        </extInfo>
-      </extendedTooltip>
-      <contextMenu>
-        <name>МакетыОтступКонтекстноеМеню</name>
-        <id>194</id>
-        <autoFill>true</autoFill>
-      </contextMenu>
-      <type>InputField</type>
-      <editMode>Enter</editMode>
-      <showInHeader>true</showInHeader>
-      <headerHorizontalAlign>Left</headerHorizontalAlign>
-      <showInFooter>true</showInFooter>
-      <extInfo xsi:type="form:InputFieldExtInfo">
-        <autoMaxHeight>true</autoMaxHeight>
-        <horizontalStretch>true</horizontalStretch>
-        <wrap>true</wrap>
-        <chooseType>true</chooseType>
-        <typeDomainEnabled>true</typeDomainEnabled>
-        <textEdit>true</textEdit>
-        <textSize>Normal</textSize>
-      </extInfo>
-    </items>
     <autoCommandBar>
       <name>МакетыКоманднаяПанель</name>
       <id>124</id>
-      <items xsi:type="form:FormGroup">
-        <name>МакетыГруппаДобавитьМакет</name>
-        <id>200</id>
-        <items xsi:type="form:Button">
-          <name>МакетыДобавитьМакет</name>
-          <id>162</id>
-          <title>
-            <key>ru</key>
-            <value>Создать макет табличного документа</value>
-          </title>
-          <visible>true</visible>
-          <enabled>true</enabled>
-          <userVisible>
-            <common>true</common>
-          </userVisible>
-          <extendedTooltip>
-            <name>МакетыДобавитьМакетРасширеннаяПодсказка</name>
-            <id>163</id>
-            <type>Label</type>
-            <autoMaxWidth>true</autoMaxWidth>
-            <autoMaxHeight>true</autoMaxHeight>
-            <extInfo xsi:type="form:LabelDecorationExtInfo">
-              <horizontalAlign>Left</horizontalAlign>
-            </extInfo>
-          </extendedTooltip>
-          <commandName>Form.Command.ДобавитьМакет</commandName>
-          <buttonImportance>Normal</buttonImportance>
-          <representation>Auto</representation>
-          <autoMaxWidth>true</autoMaxWidth>
-          <autoMaxHeight>true</autoMaxHeight>
-          <placementArea>UserCmds</placementArea>
-          <representationInContextMenu>Auto</representationInContextMenu>
-        </items>
-        <items xsi:type="form:Button">
-          <name>МакетыДобавитьМакетOfficeOpenXML</name>
-          <id>202</id>
-          <title>
-            <key>ru</key>
-            <value>Создать макет Office Open XML</value>
-          </title>
-          <visible>true</visible>
-          <enabled>true</enabled>
-          <userVisible>
-            <common>true</common>
-          </userVisible>
-          <extendedTooltip>
-            <name>МакетыДобавитьМакетOfficeOpenXMLРасширеннаяПодсказка</name>
-            <id>203</id>
-            <type>Label</type>
-            <autoMaxWidth>true</autoMaxWidth>
-            <autoMaxHeight>true</autoMaxHeight>
-            <extInfo xsi:type="form:LabelDecorationExtInfo">
-              <horizontalAlign>Left</horizontalAlign>
-            </extInfo>
-          </extendedTooltip>
-          <commandName>Form.Command.ДобавитьМакетOfficeOpenXML</commandName>
-          <buttonImportance>Normal</buttonImportance>
-          <representation>Auto</representation>
-          <autoMaxWidth>true</autoMaxWidth>
-          <autoMaxHeight>true</autoMaxHeight>
-          <placementArea>UserCmds</placementArea>
-          <representationInContextMenu>Auto</representationInContextMenu>
-        </items>
-        <items xsi:type="form:Button">
-          <name>МакетыДобавитьМакетВыгрузки</name>
-          <id>254</id>
-          <title>
-            <key>ru</key>
-            <value>Создать макет выгрузки</value>
-          </title>
-          <visible>true</visible>
-          <enabled>true</enabled>
-          <userVisible>
-            <common>true</common>
-          </userVisible>
-          <extendedTooltip>
-            <name>МакетыДобавитьМакетВыгрузкиРасширеннаяПодсказка</name>
-            <id>255</id>
-            <type>Label</type>
-            <autoMaxWidth>true</autoMaxWidth>
-            <autoMaxHeight>true</autoMaxHeight>
-            <extInfo xsi:type="form:LabelDecorationExtInfo">
-              <horizontalAlign>Left</horizontalAlign>
-            </extInfo>
-          </extendedTooltip>
-          <commandName>Form.Command.ДобавитьМакетВыгрузки</commandName>
-          <buttonImportance>Normal</buttonImportance>
-          <representation>Auto</representation>
-          <autoMaxWidth>true</autoMaxWidth>
-          <autoMaxHeight>true</autoMaxHeight>
-          <placementArea>UserCmds</placementArea>
-          <representationInContextMenu>Auto</representationInContextMenu>
-        </items>
-        <visible>true</visible>
-        <enabled>true</enabled>
-        <userVisible>
-          <common>true</common>
-        </userVisible>
-        <title>
-          <key>ru</key>
-          <value>Создать</value>
-        </title>
-        <extendedTooltip>
-          <name>МакетыГруппаДобавитьМакетРасширеннаяПодсказка</name>
-          <id>201</id>
-          <type>Label</type>
-          <autoMaxWidth>true</autoMaxWidth>
-          <autoMaxHeight>true</autoMaxHeight>
-          <extInfo xsi:type="form:LabelDecorationExtInfo">
-            <horizontalAlign>Left</horizontalAlign>
-          </extInfo>
-        </extendedTooltip>
-        <type>Popup</type>
-        <extInfo xsi:type="form:PopupGroupExtInfo">
-          <representation>Auto</representation>
-          <importance>Normal</importance>
-        </extInfo>
-      </items>
       <items xsi:type="form:Button">
         <name>МакетыСкопировать</name>
         <id>170</id>
@@ -1101,6 +937,7 @@
         <autoMaxHeight>true</autoMaxHeight>
         <placementArea>UserCmds</placementArea>
         <representationInContextMenu>Auto</representationInContextMenu>
+        <locationInCommandBar>InCommandBarAndInAdditionalSubmenu</locationInCommandBar>
       </items>
       <items xsi:type="form:Button">
         <name>МакетыИзменитьМакет</name>
@@ -1131,6 +968,7 @@
         <autoMaxHeight>true</autoMaxHeight>
         <placementArea>UserCmds</placementArea>
         <representationInContextMenu>Auto</representationInContextMenu>
+        <locationInCommandBar>InCommandBarAndInAdditionalSubmenu</locationInCommandBar>
       </items>
       <items xsi:type="form:FormGroup">
         <name>МакетыПечатныхФормГруппаПереключениеИспользуемогоМакета</name>
@@ -1164,6 +1002,7 @@
           <autoMaxHeight>true</autoMaxHeight>
           <placementArea>UserCmds</placementArea>
           <representationInContextMenu>Auto</representationInContextMenu>
+          <locationInCommandBar>InCommandBarAndInAdditionalSubmenu</locationInCommandBar>
         </items>
         <items xsi:type="form:Button">
           <name>МакетыПечатныхФормИспользоватьСтандартныйМакет</name>
@@ -1194,6 +1033,7 @@
           <autoMaxHeight>true</autoMaxHeight>
           <placementArea>UserCmds</placementArea>
           <representationInContextMenu>Auto</representationInContextMenu>
+          <locationInCommandBar>InCommandBarAndInAdditionalSubmenu</locationInCommandBar>
         </items>
         <visible>true</visible>
         <enabled>true</enabled>
@@ -1251,6 +1091,7 @@
         <autoMaxHeight>true</autoMaxHeight>
         <placementArea>UserCmds</placementArea>
         <representationInContextMenu>Auto</representationInContextMenu>
+        <locationInCommandBar>InCommandBarAndInAdditionalSubmenu</locationInCommandBar>
       </items>
       <items xsi:type="form:Button">
         <name>МакетыПечатныхФормУдалитьИзмененныйМакет</name>
@@ -1283,60 +1124,6 @@
         <representationInContextMenu>Auto</representationInContextMenu>
         <locationInCommandBar>InAdditionalSubmenu</locationInCommandBar>
       </items>
-      <items xsi:type="form:FormGroup">
-        <name>МакетыПечатныхФормГруппаВсеДействия</name>
-        <id>164</id>
-        <items xsi:type="form:Button">
-          <name>МакетыПечатныхФормИзменитьФорму</name>
-          <id>168</id>
-          <visible>true</visible>
-          <enabled>true</enabled>
-          <userVisible>
-            <common>true</common>
-          </userVisible>
-          <extendedTooltip>
-            <name>МакетыПечатныхФормИзменитьФормуРасширеннаяПодсказка</name>
-            <id>169</id>
-            <type>Label</type>
-            <autoMaxWidth>true</autoMaxWidth>
-            <autoMaxHeight>true</autoMaxHeight>
-            <extInfo xsi:type="form:LabelDecorationExtInfo">
-              <horizontalAlign>Left</horizontalAlign>
-            </extInfo>
-          </extendedTooltip>
-          <commandName>Form.StandardCommand.CustomizeForm</commandName>
-          <buttonImportance>Normal</buttonImportance>
-          <representation>Auto</representation>
-          <autoMaxWidth>true</autoMaxWidth>
-          <autoMaxHeight>true</autoMaxHeight>
-          <placementArea>UserCmds</placementArea>
-          <representationInContextMenu>Auto</representationInContextMenu>
-        </items>
-        <visible>true</visible>
-        <enabled>true</enabled>
-        <userVisible>
-          <common>true</common>
-        </userVisible>
-        <title>
-          <key>ru</key>
-          <value>Макеты печатных форм группа все действия</value>
-        </title>
-        <toolTip>
-          <key>ru</key>
-          <value>Все действия</value>
-        </toolTip>
-        <extendedTooltip>
-          <name>МакетыПечатныхФормГруппаВсеДействияРасширеннаяПодсказка</name>
-          <id>165</id>
-          <type>Label</type>
-          <autoMaxWidth>true</autoMaxWidth>
-          <autoMaxHeight>true</autoMaxHeight>
-          <extInfo xsi:type="form:LabelDecorationExtInfo">
-            <horizontalAlign>Left</horizontalAlign>
-          </extInfo>
-        </extendedTooltip>
-        <extInfo xsi:type="form:ButtonGroupExtInfo"/>
-      </items>
       <items xsi:type="form:Button">
         <name>МакетыУсловияДоступности</name>
         <id>191</id>
@@ -1366,9 +1153,9 @@
         <autoMaxHeight>true</autoMaxHeight>
         <placementArea>UserCmds</placementArea>
         <representationInContextMenu>Auto</representationInContextMenu>
+        <locationInCommandBar>InCommandBarAndInAdditionalSubmenu</locationInCommandBar>
       </items>
       <horizontalAlign>Left</horizontalAlign>
-      <autoFill>true</autoFill>
     </autoCommandBar>
     <handlers>
       <event>Selection</event>
@@ -1534,7 +1321,6 @@
     </contextMenu>
     <representation>Tree</representation>
     <autoMaxWidth>true</autoMaxWidth>
-    <autoMaxHeight>true</autoMaxHeight>
     <autoMaxRowsCount>true</autoMaxRowsCount>
     <selectionMode>MultiRow</selectionMode>
     <header>true</header>
@@ -1555,119 +1341,127 @@
     <fileDragMode>AsFileRef</fileDragMode>
     <autoMaxCardHeight>true</autoMaxCardHeight>
   </items>
-  <items xsi:type="form:FormGroup">
-    <name>ГруппаДополнительнаяИнформация</name>
-    <id>114</id>
-    <items xsi:type="form:Decoration">
-      <name>КартинкаИнформации</name>
-      <id>116</id>
-      <title>
-        <key>ru</key>
-        <value>Картинка информации</value>
-      </title>
-      <visible>true</visible>
-      <enabled>true</enabled>
-      <userVisible>
-        <common>true</common>
-      </userVisible>
-      <extendedTooltip>
-        <name>КартинкаИнформацииРасширеннаяПодсказка</name>
-        <id>118</id>
-        <type>Label</type>
-        <autoMaxWidth>true</autoMaxWidth>
-        <autoMaxHeight>true</autoMaxHeight>
-        <extInfo xsi:type="form:LabelDecorationExtInfo">
-          <horizontalAlign>Left</horizontalAlign>
-        </extInfo>
-      </extendedTooltip>
-      <contextMenu>
-        <name>КартинкаИнформацииКонтекстноеМеню</name>
-        <id>117</id>
-        <autoFill>true</autoFill>
-      </contextMenu>
-      <autoMaxWidth>true</autoMaxWidth>
-      <autoMaxHeight>true</autoMaxHeight>
-      <extInfo xsi:type="form:PictureDecorationExtInfo">
-        <picture xsi:type="core:PictureRef">
-          <picture>StdPicture.Information</picture>
-        </picture>
-      </extInfo>
-    </items>
-    <items xsi:type="form:Decoration">
-      <name>ДополнительнаяИнформация</name>
-      <id>119</id>
-      <title>
-        <key>ru</key>
-        <value>Список доступных языков печатных форм расширен &lt;link ПерейтиКЯзыкамПечатныхФорм>дополнительными языками&lt;/>.
-Для вывода печатной формы на дополнительном языке требуется выполнить перевод ее макета на этот язык.
-Для перевода макета необходимо перейти к его редактированию, переключить язык и внести необходимые изменения.</value>
-      </title>
-      <visible>true</visible>
-      <enabled>true</enabled>
-      <userVisible>
-        <common>true</common>
-      </userVisible>
-      <extendedTooltip>
-        <name>ДополнительнаяИнформацияРасширеннаяПодсказка</name>
-        <id>121</id>
-        <type>Label</type>
-        <autoMaxWidth>true</autoMaxWidth>
-        <autoMaxHeight>true</autoMaxHeight>
-        <extInfo xsi:type="form:LabelDecorationExtInfo">
-          <horizontalAlign>Left</horizontalAlign>
-        </extInfo>
-      </extendedTooltip>
-      <contextMenu>
-        <name>ДополнительнаяИнформацияКонтекстноеМеню</name>
-        <id>120</id>
-        <autoFill>true</autoFill>
-      </contextMenu>
-      <formatted>true</formatted>
-      <type>Label</type>
-      <autoMaxHeight>true</autoMaxHeight>
-      <horizontalStretch>true</horizontalStretch>
-      <extInfo xsi:type="form:LabelDecorationExtInfo">
-        <handlers>
-          <event>URLProcessing</event>
-          <name>ДополнительнаяИнформацияОбработкаНавигационнойСсылки</name>
-        </handlers>
-        <horizontalAlign>Left</horizontalAlign>
-        <verticalAlign>Center</verticalAlign>
-      </extInfo>
-    </items>
-    <visible>true</visible>
-    <enabled>true</enabled>
-    <userVisible>
-      <common>true</common>
-    </userVisible>
-    <title>
-      <key>ru</key>
-      <value>Дополнительная информация</value>
-    </title>
-    <extendedTooltip>
-      <name>ГруппаДополнительнаяИнформацияРасширеннаяПодсказка</name>
-      <id>115</id>
-      <type>Label</type>
-      <autoMaxWidth>true</autoMaxWidth>
-      <autoMaxHeight>true</autoMaxHeight>
-      <extInfo xsi:type="form:LabelDecorationExtInfo">
-        <horizontalAlign>Left</horizontalAlign>
-      </extInfo>
-    </extendedTooltip>
-    <type>UsualGroup</type>
-    <extInfo xsi:type="form:UsualGroupExtInfo">
-      <group>HorizontalIfPossible</group>
-      <showLeftMargin>true</showLeftMargin>
-      <united>true</united>
-      <throughAlign>Auto</throughAlign>
-      <currentRowUse>Auto</currentRowUse>
-    </extInfo>
-  </items>
-  <commandBarLocation>None</commandBarLocation>
-  <showCommandBar>false</showCommandBar>
   <autoCommandBar>
     <name>ФормаКоманднаяПанель</name>
     <id>-1</id>
+    <items xsi:type="form:FormGroup">
+      <name>МакетыГруппаДобавитьМакет</name>
+      <id>200</id>
+      <items xsi:type="form:Button">
+        <name>МакетыДобавитьМакет</name>
+        <id>162</id>
+        <title>
+          <key>ru</key>
+          <value>Создать макет табличного документа</value>
+        </title>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <extendedTooltip>
+          <name>МакетыДобавитьМакетРасширеннаяПодсказка</name>
+          <id>163</id>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <commandName>Form.Command.ДобавитьМакет</commandName>
+        <buttonImportance>Normal</buttonImportance>
+        <representation>Auto</representation>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <placementArea>UserCmds</placementArea>
+        <representationInContextMenu>Auto</representationInContextMenu>
+      </items>
+      <items xsi:type="form:Button">
+        <name>МакетыДобавитьМакетOfficeOpenXML</name>
+        <id>202</id>
+        <title>
+          <key>ru</key>
+          <value>Создать макет Office Open XML</value>
+        </title>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <extendedTooltip>
+          <name>МакетыДобавитьМакетOfficeOpenXMLРасширеннаяПодсказка</name>
+          <id>203</id>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <commandName>Form.Command.ДобавитьМакетOfficeOpenXML</commandName>
+        <buttonImportance>Normal</buttonImportance>
+        <representation>Auto</representation>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <placementArea>UserCmds</placementArea>
+        <representationInContextMenu>Auto</representationInContextMenu>
+      </items>
+      <items xsi:type="form:Button">
+        <name>МакетыДобавитьМакетВыгрузки</name>
+        <id>254</id>
+        <title>
+          <key>ru</key>
+          <value>Создать макет выгрузки</value>
+        </title>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <extendedTooltip>
+          <name>МакетыДобавитьМакетВыгрузкиРасширеннаяПодсказка</name>
+          <id>255</id>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <commandName>Form.Command.ДобавитьМакетВыгрузки</commandName>
+        <buttonImportance>Normal</buttonImportance>
+        <representation>Auto</representation>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <placementArea>UserCmds</placementArea>
+        <representationInContextMenu>Auto</representationInContextMenu>
+      </items>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <title>
+        <key>ru</key>
+        <value>Создать</value>
+      </title>
+      <extendedTooltip>
+        <name>МакетыГруппаДобавитьМакетРасширеннаяПодсказка</name>
+        <id>201</id>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <type>Popup</type>
+      <extInfo xsi:type="form:PopupGroupExtInfo">
+        <representation>Auto</representation>
+        <importance>Normal</importance>
+      </extInfo>
+    </items>
     <horizontalAlign>Left</horizontalAlign>
     <autoFill>true</autoFill>
   </autoCommandBar>
@@ -2012,10 +1806,6 @@
     </columns>
     <columns>
       <name>Отступ</name>
-      <title>
-        <key>ru</key>
-        <value>Отступ</value>
-      </title>
       <id>15</id>
       <valueType>
         <types>String</types>
@@ -2408,10 +2198,10 @@
     </edit>
   </attributes>
   <attributes>
-    <name>ГруппировкаПоРазделам</name>
+    <name>ГруппировкаПоВидамОбъектов</name>
     <title>
       <key>ru</key>
-      <value>Группировка по разделам</value>
+      <value>Группировка</value>
     </title>
     <id>49</id>
     <valueType>
@@ -2423,6 +2213,9 @@
     <edit>
       <common>true</common>
     </edit>
+    <settingsSavedData xsi:type="form:DataPath">
+      <segments>ГруппировкаПоВидамОбъектов</segments>
+    </settingsSavedData>
   </attributes>
   <formCommands>
     <name>ИспользоватьИзмененныйМакет</name>
@@ -2446,8 +2239,10 @@
         <name>ИспользоватьИзмененныйМакет</name>
       </handler>
     </action>
-    <currentRowUse>DontUse</currentRowUse>
-    <selectedRowsUse>Auto</selectedRowsUse>
+    <representation>Picture</representation>
+    <associatedTableElementId xsi:type="core:StringValue">
+      <value>Макеты</value>
+    </associatedTableElementId>
   </formCommands>
   <formCommands>
     <name>ИспользоватьСтандартныйМакет</name>
@@ -2471,8 +2266,10 @@
         <name>ИспользоватьСтандартныйМакет</name>
       </handler>
     </action>
-    <currentRowUse>DontUse</currentRowUse>
-    <selectedRowsUse>Auto</selectedRowsUse>
+    <representation>Picture</representation>
+    <associatedTableElementId xsi:type="core:StringValue">
+      <value>Макеты</value>
+    </associatedTableElementId>
   </formCommands>
   <formCommands>
     <name>ИзменитьМакет</name>
@@ -2497,8 +2294,10 @@
         <name>ИзменитьМакет</name>
       </handler>
     </action>
-    <representation>TextPicture</representation>
-    <currentRowUse>DontUse</currentRowUse>
+    <representation>Picture</representation>
+    <associatedTableElementId xsi:type="core:StringValue">
+      <value>Макеты</value>
+    </associatedTableElementId>
     <selectedRowsUse>Auto</selectedRowsUse>
   </formCommands>
   <formCommands>
@@ -2523,8 +2322,9 @@
         <name>УдалитьВыбранныеИзмененныеМакеты</name>
       </handler>
     </action>
-    <currentRowUse>DontUse</currentRowUse>
-    <selectedRowsUse>Auto</selectedRowsUse>
+    <associatedTableElementId xsi:type="core:StringValue">
+      <value>Макеты</value>
+    </associatedTableElementId>
   </formCommands>
   <formCommands>
     <name>ДобавитьМакет</name>
@@ -2545,6 +2345,7 @@
         <name>ДобавитьМакет</name>
       </handler>
     </action>
+    <actionPurpose>Create</actionPurpose>
     <representation>Text</representation>
     <currentRowUse>Auto</currentRowUse>
     <selectedRowsUse>Auto</selectedRowsUse>
@@ -2572,7 +2373,9 @@
         <name>Скопировать</name>
       </handler>
     </action>
-    <currentRowUse>Auto</currentRowUse>
+    <associatedTableElementId xsi:type="core:StringValue">
+      <value>Макеты</value>
+    </associatedTableElementId>
     <selectedRowsUse>Auto</selectedRowsUse>
   </formCommands>
   <formCommands>
@@ -2590,7 +2393,9 @@
         <name>УсловияДоступности</name>
       </handler>
     </action>
-    <currentRowUse>Auto</currentRowUse>
+    <associatedTableElementId xsi:type="core:StringValue">
+      <value>Макеты</value>
+    </associatedTableElementId>
     <selectedRowsUse>Auto</selectedRowsUse>
   </formCommands>
   <formCommands>
@@ -2612,6 +2417,9 @@
       </handler>
     </action>
     <currentRowUse>Auto</currentRowUse>
+    <associatedTableElementId xsi:type="core:StringValue">
+      <value>Макеты</value>
+    </associatedTableElementId>
     <selectedRowsUse>Auto</selectedRowsUse>
   </formCommands>
   <formCommands>
@@ -2629,6 +2437,7 @@
         <name>ДобавитьМакетOfficeOpenXML</name>
       </handler>
     </action>
+    <actionPurpose>Create</actionPurpose>
     <currentRowUse>Auto</currentRowUse>
     <selectedRowsUse>Auto</selectedRowsUse>
   </formCommands>
@@ -2642,12 +2451,17 @@
     <use>
       <common>true</common>
     </use>
+    <picture xsi:type="core:PictureRef">
+      <picture>StdPicture.ShowInList</picture>
+    </picture>
     <action xsi:type="form:FormCommandHandlerContainer">
       <handler>
         <name>ПерейтиВСписок</name>
       </handler>
     </action>
-    <currentRowUse>Auto</currentRowUse>
+    <associatedTableElementId xsi:type="core:StringValue">
+      <value>Макеты</value>
+    </associatedTableElementId>
     <selectedRowsUse>Auto</selectedRowsUse>
   </formCommands>
   <formCommands>
@@ -2669,6 +2483,7 @@
         <name>ДобавитьМакетВыгрузки</name>
       </handler>
     </action>
+    <actionPurpose>Create</actionPurpose>
     <currentRowUse>Auto</currentRowUse>
     <selectedRowsUse>Auto</selectedRowsUse>
   </formCommands>

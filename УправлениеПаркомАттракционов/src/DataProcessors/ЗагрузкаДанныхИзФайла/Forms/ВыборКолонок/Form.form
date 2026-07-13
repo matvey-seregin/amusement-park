@@ -4,6 +4,40 @@
     <key>ru</key>
     <value>Колонки для сопоставления</value>
   </title>
+  <items xsi:type="form:Decoration">
+    <name>Пояснение</name>
+    <id>37</id>
+    <title>
+      <key>ru</key>
+      <value>Сопоставьте загружаемые данные с элементами в справочнике. 
+Сопоставление возможно произвести несколько раз, выбирая разные колонки для сравнения.</value>
+    </title>
+    <visible>true</visible>
+    <enabled>true</enabled>
+    <userVisible>
+      <common>true</common>
+    </userVisible>
+    <extendedTooltip>
+      <name>ПояснениеРасширеннаяПодсказка</name>
+      <id>39</id>
+      <type>Label</type>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <extInfo xsi:type="form:LabelDecorationExtInfo">
+        <horizontalAlign>Left</horizontalAlign>
+      </extInfo>
+    </extendedTooltip>
+    <contextMenu>
+      <name>ПояснениеКонтекстноеМеню</name>
+      <id>38</id>
+      <autoFill>true</autoFill>
+    </contextMenu>
+    <type>Label</type>
+    <autoMaxHeight>true</autoMaxHeight>
+    <extInfo xsi:type="form:LabelDecorationExtInfo">
+      <horizontalAlign>Left</horizontalAlign>
+    </extInfo>
+  </items>
   <items xsi:type="form:Table">
     <name>СписокКолонок</name>
     <id>1</id>
@@ -69,7 +103,9 @@
         <showInHeader>true</showInHeader>
         <headerHorizontalAlign>Left</headerHorizontalAlign>
         <showInFooter>true</showInFooter>
-        <extInfo xsi:type="form:CheckBoxFieldExtInfo"/>
+        <extInfo xsi:type="form:CheckBoxFieldExtInfo">
+          <checkBoxType>CheckBox</checkBoxType>
+        </extInfo>
       </items>
       <items xsi:type="form:FormField">
         <name>СписокКолонокЗначение</name>
@@ -113,7 +149,6 @@
           <wrap>true</wrap>
           <chooseType>true</chooseType>
           <typeDomainEnabled>true</typeDomainEnabled>
-          <textEdit>true</textEdit>
           <textSize>Normal</textSize>
         </extInfo>
       </items>
@@ -146,38 +181,8 @@
     <autoCommandBar>
       <name>СписокКолонокКоманднаяПанель</name>
       <id>3</id>
-      <items xsi:type="form:Button">
-        <name>ФормаВыбор</name>
-        <id>11</id>
-        <title>
-          <key>ru</key>
-          <value>Сопоставить</value>
-        </title>
-        <visible>true</visible>
-        <enabled>true</enabled>
-        <userVisible>
-          <common>true</common>
-        </userVisible>
-        <extendedTooltip>
-          <name>ФормаВыборРасширеннаяПодсказка</name>
-          <id>12</id>
-          <type>Label</type>
-          <autoMaxWidth>true</autoMaxWidth>
-          <autoMaxHeight>true</autoMaxHeight>
-          <extInfo xsi:type="form:LabelDecorationExtInfo">
-            <horizontalAlign>Left</horizontalAlign>
-          </extInfo>
-        </extendedTooltip>
-        <commandName>Form.Command.Выбрать</commandName>
-        <representation>Auto</representation>
-        <defaultButton>true</defaultButton>
-        <autoMaxWidth>true</autoMaxWidth>
-        <autoMaxHeight>true</autoMaxHeight>
-        <placementArea>UserCmds</placementArea>
-        <representationInContextMenu>Auto</representationInContextMenu>
-      </items>
       <items xsi:type="form:FormGroup">
-        <name>СписокКолонокГруппа1</name>
+        <name>СписокКолонокГруппаВыбор</name>
         <id>28</id>
         <items xsi:type="form:Button">
           <name>СписокКолонокУстановитьФлажки</name>
@@ -243,7 +248,7 @@
           <value>Колонок группа 1</value>
         </title>
         <extendedTooltip>
-          <name>СписокКолонокГруппа1РасширеннаяПодсказка</name>
+          <name>СписокКолонокГруппаВыборРасширеннаяПодсказка</name>
           <id>29</id>
           <type>Label</type>
           <autoMaxWidth>true</autoMaxWidth>
@@ -254,38 +259,6 @@
         </extendedTooltip>
         <extInfo xsi:type="form:ButtonGroupExtInfo">
           <representation>Compact</representation>
-        </extInfo>
-      </items>
-      <items xsi:type="form:Addition">
-        <title>
-          <key>ru</key>
-          <value>Поиск</value>
-        </title>
-        <visible>true</visible>
-        <enabled>true</enabled>
-        <userVisible>
-          <common>true</common>
-        </userVisible>
-        <name>СтрокаПоиска</name>
-        <id>30</id>
-        <extendedTooltip>
-          <name>СтрокаПоискаРасширеннаяПодсказка</name>
-          <id>32</id>
-          <type>Label</type>
-          <autoMaxWidth>true</autoMaxWidth>
-          <autoMaxHeight>true</autoMaxHeight>
-          <extInfo xsi:type="form:LabelDecorationExtInfo">
-            <horizontalAlign>Left</horizontalAlign>
-          </extInfo>
-        </extendedTooltip>
-        <contextMenu>
-          <name>СтрокаПоискаКонтекстноеМеню</name>
-          <id>31</id>
-          <autoFill>true</autoFill>
-        </contextMenu>
-        <source>СписокКолонок</source>
-        <extInfo xsi:type="form:SearchStringAdditionExtInfo">
-          <autoMaxWidth>true</autoMaxWidth>
         </extInfo>
       </items>
       <horizontalAlign>Left</horizontalAlign>
@@ -404,11 +377,42 @@
     <rowPictureDataPath xsi:type="form:DataPath">
       <segments>СписокКолонок.Picture</segments>
     </rowPictureDataPath>
+    <searchStringLocation>CommandBar</searchStringLocation>
     <autoMaxCardHeight>true</autoMaxCardHeight>
   </items>
   <autoCommandBar>
     <name>ФормаКоманднаяПанель</name>
     <id>-1</id>
+    <items xsi:type="form:Button">
+      <name>ФормаВыбор</name>
+      <id>11</id>
+      <title>
+        <key>ru</key>
+        <value>Сопоставить</value>
+      </title>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <extendedTooltip>
+        <name>ФормаВыборРасширеннаяПодсказка</name>
+        <id>12</id>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <commandName>Form.Command.Выбрать</commandName>
+      <representation>Auto</representation>
+      <defaultButton>true</defaultButton>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <placementArea>UserCmds</placementArea>
+      <representationInContextMenu>Auto</representationInContextMenu>
+    </items>
     <horizontalAlign>Left</horizontalAlign>
   </autoCommandBar>
   <handlers>
@@ -480,6 +484,7 @@
         <name>Выбор</name>
       </handler>
     </action>
+    <actionPurpose>Finish</actionPurpose>
     <currentRowUse>DontUse</currentRowUse>
     <selectedRowsUse>Auto</selectedRowsUse>
   </formCommands>

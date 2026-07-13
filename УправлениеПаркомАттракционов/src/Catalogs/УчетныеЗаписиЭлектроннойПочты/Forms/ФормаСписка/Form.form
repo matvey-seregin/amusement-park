@@ -1,64 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <form:Form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:form="http://g5.1c.ru/v8/dt/form">
-  <items xsi:type="form:FormGroup">
-    <name>ГруппаПользовательскихНастроек</name>
-    <id>27</id>
-    <visible>true</visible>
-    <enabled>true</enabled>
-    <userVisible>
-      <common>true</common>
-    </userVisible>
-    <title>
-      <key>ru</key>
-      <value>Группа пользовательских настроек</value>
-    </title>
-    <extendedTooltip>
-      <name>ГруппаПользовательскихНастроекРасширеннаяПодсказка</name>
-      <id>28</id>
-      <type>Label</type>
-      <autoMaxWidth>true</autoMaxWidth>
-      <autoMaxHeight>true</autoMaxHeight>
-      <extInfo xsi:type="form:LabelDecorationExtInfo">
-        <horizontalAlign>Left</horizontalAlign>
-      </extInfo>
-    </extendedTooltip>
-    <type>UsualGroup</type>
-    <extInfo xsi:type="form:UsualGroupExtInfo">
-      <group>Vertical</group>
-      <showLeftMargin>true</showLeftMargin>
-      <united>true</united>
-      <throughAlign>Auto</throughAlign>
-      <currentRowUse>Auto</currentRowUse>
-    </extInfo>
-  </items>
-  <items xsi:type="form:FormGroup">
-    <name>КоманднаяПанель</name>
-    <id>29</id>
-    <visible>true</visible>
-    <enabled>true</enabled>
-    <userVisible>
-      <common>true</common>
-    </userVisible>
-    <title>
-      <key>ru</key>
-      <value>Командная панель</value>
-    </title>
-    <extendedTooltip>
-      <name>КоманднаяПанельРасширеннаяПодсказка</name>
-      <id>30</id>
-      <type>Label</type>
-      <autoMaxWidth>true</autoMaxWidth>
-      <autoMaxHeight>true</autoMaxHeight>
-      <extInfo xsi:type="form:LabelDecorationExtInfo">
-        <horizontalAlign>Left</horizontalAlign>
-      </extInfo>
-    </extendedTooltip>
-    <type>CommandBar</type>
-    <extInfo xsi:type="form:CommandBarExtInfo">
-      <horizontalAlign>Left</horizontalAlign>
-      <commandSource>Form</commandSource>
-    </extInfo>
-  </items>
   <items xsi:type="form:Table">
     <name>Список</name>
     <id>1</id>
@@ -109,12 +50,11 @@
         <autoFill>true</autoFill>
       </contextMenu>
       <type>LabelField</type>
-      <editMode>Enter</editMode>
+      <editMode>Auto</editMode>
       <showInHeader>true</showInHeader>
       <headerHorizontalAlign>Left</headerHorizontalAlign>
       <showInFooter>true</showInFooter>
       <extInfo xsi:type="form:LabelFieldExtInfo">
-        <width>30</width>
         <autoMaxWidth>true</autoMaxWidth>
         <autoMaxHeight>true</autoMaxHeight>
         <horizontalStretch>true</horizontalStretch>
@@ -125,7 +65,7 @@
       <id>6</id>
       <title>
         <key>ru</key>
-        <value>Имя пользователя</value>
+        <value>Имя отправителя</value>
       </title>
       <visible>true</visible>
       <enabled>true</enabled>
@@ -151,12 +91,11 @@
         <autoFill>true</autoFill>
       </contextMenu>
       <type>LabelField</type>
-      <editMode>Enter</editMode>
+      <editMode>Auto</editMode>
       <showInHeader>true</showInHeader>
       <headerHorizontalAlign>Left</headerHorizontalAlign>
       <showInFooter>true</showInFooter>
       <extInfo xsi:type="form:LabelFieldExtInfo">
-        <width>20</width>
         <autoMaxWidth>true</autoMaxWidth>
         <autoMaxHeight>true</autoMaxHeight>
       </extInfo>
@@ -192,12 +131,11 @@
         <autoFill>true</autoFill>
       </contextMenu>
       <type>LabelField</type>
-      <editMode>Enter</editMode>
+      <editMode>Auto</editMode>
       <showInHeader>true</showInHeader>
       <headerHorizontalAlign>Left</headerHorizontalAlign>
       <showInFooter>true</showInFooter>
       <extInfo xsi:type="form:LabelFieldExtInfo">
-        <width>20</width>
         <autoMaxWidth>true</autoMaxWidth>
         <autoMaxHeight>true</autoMaxHeight>
       </extInfo>
@@ -229,7 +167,7 @@
         <autoFill>true</autoFill>
       </contextMenu>
       <type>LabelField</type>
-      <editMode>Enter</editMode>
+      <editMode>Auto</editMode>
       <showInHeader>true</showInHeader>
       <headerHorizontalAlign>Left</headerHorizontalAlign>
       <showInFooter>true</showInFooter>
@@ -263,7 +201,7 @@
         <autoFill>true</autoFill>
       </contextMenu>
       <type>LabelField</type>
-      <editMode>Enter</editMode>
+      <editMode>Auto</editMode>
       <showInHeader>true</showInHeader>
       <headerHorizontalAlign>Left</headerHorizontalAlign>
       <showInFooter>true</showInFooter>
@@ -272,7 +210,6 @@
         <autoMaxHeight>true</autoMaxHeight>
       </extInfo>
     </items>
-    <commandBarLocation>None</commandBarLocation>
     <autoCommandBar>
       <name>СписокКоманднаяПанель</name>
       <id>3</id>
@@ -282,6 +219,10 @@
     <handlers>
       <event>OnActivateRow</event>
       <name>СписокПриАктивизацииСтроки</name>
+    </handlers>
+    <handlers>
+      <event>OnHover</event>
+      <name>СписокПриНаведении</name>
     </handlers>
     <searchStringAddition>
       <name>СписокСтрокаПоиска</name>
@@ -399,8 +340,8 @@
       <topLevelParent xsi:type="core:UndefinedValue"/>
       <showRoot>true</showRoot>
       <allowGettingCurrentRowURL>true</allowGettingCurrentRowURL>
-      <userSettingsGroup>ГруппаПользовательскихНастроек</userSettingsGroup>
     </extInfo>
+    <showCommandBarNeedDereferenced>true</showCommandBarNeedDereferenced>
   </items>
   <items xsi:type="form:FormGroup">
     <name>Отборы</name>
@@ -441,11 +382,13 @@
         <autoFill>true</autoFill>
       </contextMenu>
       <type>CheckBoxField</type>
-      <editMode>Enter</editMode>
+      <editMode>Auto</editMode>
       <showInHeader>true</showInHeader>
       <headerHorizontalAlign>Left</headerHorizontalAlign>
       <showInFooter>true</showInFooter>
-      <extInfo xsi:type="form:CheckBoxFieldExtInfo"/>
+      <extInfo xsi:type="form:CheckBoxFieldExtInfo">
+        <checkBoxType>Switcher</checkBoxType>
+      </extInfo>
     </items>
     <items xsi:type="form:FormField">
       <name>ПоказыватьНедействительные</name>
@@ -483,11 +426,13 @@
         <autoFill>true</autoFill>
       </contextMenu>
       <type>CheckBoxField</type>
-      <editMode>Enter</editMode>
+      <editMode>Auto</editMode>
       <showInHeader>true</showInHeader>
       <headerHorizontalAlign>Left</headerHorizontalAlign>
       <showInFooter>true</showInFooter>
-      <extInfo xsi:type="form:CheckBoxFieldExtInfo"/>
+      <extInfo xsi:type="form:CheckBoxFieldExtInfo">
+        <checkBoxType>Switcher</checkBoxType>
+      </extInfo>
     </items>
     <visible>true</visible>
     <enabled>true</enabled>
@@ -510,7 +455,7 @@
     </extendedTooltip>
     <type>UsualGroup</type>
     <extInfo xsi:type="form:UsualGroupExtInfo">
-      <group>HorizontalIfPossible</group>
+      <group>AutoScreenTypeSensitive</group>
       <showLeftMargin>true</showLeftMargin>
       <united>true</united>
       <throughAlign>Auto</throughAlign>
@@ -521,6 +466,7 @@
     <name>ФормаКоманднаяПанель</name>
     <id>-1</id>
     <horizontalAlign>Left</horizontalAlign>
+    <autoFill>true</autoFill>
   </autoCommandBar>
   <handlers>
     <event>OnCreateAtServer</event>
@@ -536,11 +482,6 @@
   <enabled>true</enabled>
   <showTitle>auto</showTitle>
   <showCloseButton>true</showCloseButton>
-  <mobileDeviceCommandBarContent>
-    <value xsi:type="core:StringValue">
-      <value>КоманднаяПанель</value>
-    </value>
-  </mobileDeviceCommandBarContent>
   <attributes>
     <name>Список</name>
     <id>1</id>

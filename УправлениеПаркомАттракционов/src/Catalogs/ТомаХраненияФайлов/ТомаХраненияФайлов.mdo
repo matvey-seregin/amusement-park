@@ -152,7 +152,7 @@
     <name>МаксимальныйРазмер</name>
     <synonym>
       <key>ru</key>
-      <value>Предел, МБ</value>
+      <value>Максимальный размер, МБ</value>
     </synonym>
     <type>
       <types>Number</types>
@@ -251,6 +251,57 @@
     <fullTextSearch>Use</fullTextSearch>
     <dataHistory>Use</dataHistory>
   </attributes>
+  <attributes uuid="7104fb23-acc0-40d1-8d09-a34d6ddc2956">
+    <name>ВидТомаХраненияФайлов</name>
+    <synonym>
+      <key>ru</key>
+      <value>Вид тома хранения файлов</value>
+    </synonym>
+    <type>
+      <types>EnumRef.ВидыХраненияФайлов</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="4d79a071-a752-4af1-8733-cb07f3bf4a0a">
+    <name>СпособХраненияФайлов</name>
+    <synonym>
+      <key>ru</key>
+      <value>Способ хранения файлов</value>
+    </synonym>
+    <type>
+      <types>EnumRef.СпособыХраненияФайлов</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="3a7392ab-48e3-475b-9857-d1f59c8c1990">
+    <name>ИмяХранилищаДвоичныхДанных</name>
+    <synonym>
+      <key>ru</key>
+      <value>Имя хранилища двоичных данных</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>80</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
   <forms uuid="db15f8eb-4736-4b47-9cee-3e6883f0888c">
     <name>ФормаЭлемента</name>
     <synonym>
@@ -290,4 +341,13 @@
       <value>Макет отчета</value>
     </synonym>
   </templates>
+  <commands uuid="a873e79e-78ca-4893-9267-8cb8bc2c8312">
+    <name>ТомаАрхивногоХранения</name>
+    <synonym>
+      <key>ru</key>
+      <value>Тома архивного хранения</value>
+    </synonym>
+    <group>NavigationPanelOrdinary</group>
+    <representation>Auto</representation>
+  </commands>
 </mdclass:Catalog>

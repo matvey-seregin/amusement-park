@@ -3,33 +3,6 @@
   <items xsi:type="form:FormGroup">
     <name>ГруппаОтборИЕще</name>
     <id>22</id>
-    <items xsi:type="form:Button">
-      <name>ФормаЗакрыть</name>
-      <id>20</id>
-      <visible>true</visible>
-      <enabled>true</enabled>
-      <userVisible>
-        <common>true</common>
-      </userVisible>
-      <extendedTooltip>
-        <name>ФормаЗакрытьРасширеннаяПодсказка</name>
-        <id>21</id>
-        <type>Label</type>
-        <autoMaxWidth>true</autoMaxWidth>
-        <autoMaxHeight>true</autoMaxHeight>
-        <extInfo xsi:type="form:LabelDecorationExtInfo">
-          <horizontalAlign>Left</horizontalAlign>
-        </extInfo>
-      </extendedTooltip>
-      <type>UsualButton</type>
-      <commandName>Form.StandardCommand.Close</commandName>
-      <representation>Auto</representation>
-      <defaultButton>true</defaultButton>
-      <autoMaxWidth>true</autoMaxWidth>
-      <autoMaxHeight>true</autoMaxHeight>
-      <placementArea>UserCmds</placementArea>
-      <representationInContextMenu>Auto</representationInContextMenu>
-    </items>
     <items xsi:type="form:FormField">
       <name>ИмяТаблицы</name>
       <id>17</id>
@@ -65,7 +38,7 @@
         <autoFill>true</autoFill>
       </contextMenu>
       <type>InputField</type>
-      <editMode>Enter</editMode>
+      <editMode>Auto</editMode>
       <showInHeader>true</showInHeader>
       <headerHorizontalAlign>Left</headerHorizontalAlign>
       <showInFooter>true</showInFooter>
@@ -78,34 +51,6 @@
         <typeDomainEnabled>true</typeDomainEnabled>
         <textEdit>true</textEdit>
         <textSize>Normal</textSize>
-      </extInfo>
-    </items>
-    <items xsi:type="form:FormGroup">
-      <name>КоманднаяПанель</name>
-      <id>24</id>
-      <visible>true</visible>
-      <enabled>true</enabled>
-      <userVisible>
-        <common>true</common>
-      </userVisible>
-      <title>
-        <key>ru</key>
-        <value>Командная панель</value>
-      </title>
-      <extendedTooltip>
-        <name>КоманднаяПанельРасширеннаяПодсказка</name>
-        <id>25</id>
-        <type>Label</type>
-        <autoMaxWidth>true</autoMaxWidth>
-        <autoMaxHeight>true</autoMaxHeight>
-        <extInfo xsi:type="form:LabelDecorationExtInfo">
-          <horizontalAlign>Left</horizontalAlign>
-        </extInfo>
-      </extendedTooltip>
-      <type>CommandBar</type>
-      <extInfo xsi:type="form:CommandBarExtInfo">
-        <horizontalAlign>Left</horizontalAlign>
-        <commandSource>Item.Список</commandSource>
       </extInfo>
     </items>
     <visible>true</visible>
@@ -167,9 +112,6 @@
     <autoMaxHeight>true</autoMaxHeight>
     <extInfo xsi:type="form:LabelDecorationExtInfo">
       <horizontalAlign>Left</horizontalAlign>
-      <backColor xsi:type="core:ColorRef">
-        <color>Style.ToolTipBackColor</color>
-      </backColor>
     </extInfo>
   </items>
   <items xsi:type="form:Table">
@@ -192,6 +134,7 @@
       <name>СписокКоманднаяПанель</name>
       <id>3</id>
       <horizontalAlign>Left</horizontalAlign>
+      <autoFill>true</autoFill>
     </autoCommandBar>
     <searchStringAddition>
       <name>СписокСтрокаПоиска</name>
@@ -285,7 +228,6 @@
     <autoMaxWidth>true</autoMaxWidth>
     <autoMaxHeight>true</autoMaxHeight>
     <autoMaxRowsCount>true</autoMaxRowsCount>
-    <selectionMode>MultiRow</selectionMode>
     <header>true</header>
     <headerHeight>1</headerHeight>
     <footerHeight>1</footerHeight>

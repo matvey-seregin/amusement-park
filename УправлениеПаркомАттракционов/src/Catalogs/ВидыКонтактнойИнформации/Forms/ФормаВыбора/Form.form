@@ -50,6 +50,8 @@
     </dataPath>
     <defaultItem>true</defaultItem>
     <titleLocation>None</titleLocation>
+    <excludedCommands>CreateFolder</excludedCommands>
+    <excludedCommands>MoveItem</excludedCommands>
     <items xsi:type="form:FormField">
       <name>Наименование</name>
       <id>16</id>
@@ -78,7 +80,7 @@
         <autoFill>true</autoFill>
       </contextMenu>
       <type>LabelField</type>
-      <editMode>Enter</editMode>
+      <editMode>Auto</editMode>
       <showInHeader>true</showInHeader>
       <headerHorizontalAlign>Left</headerHorizontalAlign>
       <showInFooter>true</showInFooter>
@@ -112,7 +114,7 @@
         <autoFill>true</autoFill>
       </contextMenu>
       <type>InputField</type>
-      <editMode>Enter</editMode>
+      <editMode>Auto</editMode>
       <showInHeader>true</showInHeader>
       <headerHorizontalAlign>Left</headerHorizontalAlign>
       <showInFooter>true</showInFooter>
@@ -126,11 +128,11 @@
         <textSize>Normal</textSize>
       </extInfo>
     </items>
-    <commandBarLocation>None</commandBarLocation>
     <autoCommandBar>
       <name>СписокКоманднаяПанель</name>
       <id>5</id>
       <horizontalAlign>Left</horizontalAlign>
+      <autoFill>true</autoFill>
     </autoCommandBar>
     <searchStringAddition>
       <name>СписокСтрокаПоиска</name>
@@ -260,7 +262,10 @@
       <allowGettingCurrentRowURL>true</allowGettingCurrentRowURL>
       <userSettingsGroup>СписокКомпоновщикНастроекПользовательскиеНастройки</userSettingsGroup>
     </extInfo>
+    <showCommandBarNeedDereferenced>true</showCommandBarNeedDereferenced>
   </items>
+  <commandBarLocation>Top</commandBarLocation>
+  <showCommandBar>true</showCommandBar>
   <autoCommandBar>
     <name>ФормаКоманднаяПанель</name>
     <id>-1</id>
@@ -273,26 +278,15 @@
   </handlers>
   <excludedCommands>Abort</excludedCommands>
   <excludedCommands>Cancel</excludedCommands>
-  <excludedCommands>ChangeHistory</excludedCommands>
-  <excludedCommands>Copy</excludedCommands>
   <excludedCommands>Create</excludedCommands>
-  <excludedCommands>CreateFolder</excludedCommands>
-  <excludedCommands>Delete</excludedCommands>
-  <excludedCommands>DynamicListStandardSettings</excludedCommands>
   <excludedCommands>Ignore</excludedCommands>
-  <excludedCommands>LevelDown</excludedCommands>
-  <excludedCommands>LevelUp</excludedCommands>
-  <excludedCommands>LoadDynamicListSettings</excludedCommands>
-  <excludedCommands>MoveItem</excludedCommands>
   <excludedCommands>No</excludedCommands>
   <excludedCommands>OK</excludedCommands>
   <excludedCommands>OpenFromMainServer</excludedCommands>
   <excludedCommands>OpenFromStandaloneServer</excludedCommands>
   <excludedCommands>RestoreValues</excludedCommands>
   <excludedCommands>Retry</excludedCommands>
-  <excludedCommands>SaveDynamicListSettings</excludedCommands>
   <excludedCommands>SaveValues</excludedCommands>
-  <excludedCommands>SetDeletionMark</excludedCommands>
   <excludedCommands>Yes</excludedCommands>
   <windowOpeningMode>LockOwner</windowOpeningMode>
   <saveWindowSettings>true</saveWindowSettings>

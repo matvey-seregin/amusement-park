@@ -30,7 +30,7 @@
         <autoFill>true</autoFill>
       </contextMenu>
       <type>InputField</type>
-      <editMode>Enter</editMode>
+      <editMode>Auto</editMode>
       <showInHeader>true</showInHeader>
       <headerHorizontalAlign>Left</headerHorizontalAlign>
       <showInFooter>true</showInFooter>
@@ -55,7 +55,6 @@
       <dataPath xsi:type="form:DataPath">
         <segments>ОбъектПрототип[0].Описание</segments>
       </dataPath>
-      <titleLocation>Left</titleLocation>
       <extendedTooltip>
         <name>Описание0РасширеннаяПодсказка</name>
         <id>10</id>
@@ -72,7 +71,7 @@
         <autoFill>true</autoFill>
       </contextMenu>
       <type>InputField</type>
-      <editMode>Enter</editMode>
+      <editMode>Auto</editMode>
       <showInHeader>true</showInHeader>
       <headerHorizontalAlign>Left</headerHorizontalAlign>
       <showInFooter>true</showInFooter>
@@ -149,20 +148,16 @@
         <id>46</id>
         <autoFill>true</autoFill>
       </contextMenu>
-      <type>InputField</type>
+      <type>LabelField</type>
       <readOnly>true</readOnly>
-      <editMode>Enter</editMode>
+      <editMode>Auto</editMode>
       <showInHeader>true</showInHeader>
       <headerHorizontalAlign>Left</headerHorizontalAlign>
       <showInFooter>true</showInFooter>
-      <extInfo xsi:type="form:InputFieldExtInfo">
+      <extInfo xsi:type="form:LabelFieldExtInfo">
         <autoMaxWidth>true</autoMaxWidth>
         <autoMaxHeight>true</autoMaxHeight>
-        <wrap>true</wrap>
-        <chooseType>true</chooseType>
-        <typeDomainEnabled>true</typeDomainEnabled>
-        <textEdit>true</textEdit>
-        <textSize>Normal</textSize>
+        <useCopy>true</useCopy>
       </extInfo>
     </items>
     <items xsi:type="form:FormField">
@@ -170,7 +165,7 @@
       <id>37</id>
       <title>
         <key>ru</key>
-        <value>Статус создана</value>
+        <value>Кто создал</value>
       </title>
       <visible>true</visible>
       <enabled>true</enabled>
@@ -180,7 +175,6 @@
       <dataPath xsi:type="form:DataPath">
         <segments>СтатусСоздана</segments>
       </dataPath>
-      <titleLocation>None</titleLocation>
       <extendedTooltip>
         <name>СтатусСозданаРасширеннаяПодсказка</name>
         <id>39</id>
@@ -197,7 +191,7 @@
         <autoFill>true</autoFill>
       </contextMenu>
       <type>LabelField</type>
-      <editMode>Enter</editMode>
+      <editMode>Auto</editMode>
       <showInHeader>true</showInHeader>
       <headerHorizontalAlign>Left</headerHorizontalAlign>
       <showInFooter>true</showInFooter>
@@ -267,20 +261,16 @@
         <id>51</id>
         <autoFill>true</autoFill>
       </contextMenu>
-      <type>InputField</type>
+      <type>LabelField</type>
       <readOnly>true</readOnly>
-      <editMode>Enter</editMode>
+      <editMode>Auto</editMode>
       <showInHeader>true</showInHeader>
       <headerHorizontalAlign>Left</headerHorizontalAlign>
       <showInFooter>true</showInFooter>
-      <extInfo xsi:type="form:InputFieldExtInfo">
+      <extInfo xsi:type="form:LabelFieldExtInfo">
         <autoMaxWidth>true</autoMaxWidth>
         <autoMaxHeight>true</autoMaxHeight>
-        <wrap>true</wrap>
-        <chooseType>true</chooseType>
-        <typeDomainEnabled>true</typeDomainEnabled>
-        <textEdit>true</textEdit>
-        <textSize>Normal</textSize>
+        <useCopy>true</useCopy>
       </extInfo>
     </items>
     <items xsi:type="form:FormField">
@@ -288,7 +278,7 @@
       <id>40</id>
       <title>
         <key>ru</key>
-        <value>Статус изменена</value>
+        <value>Кто изменил</value>
       </title>
       <visible>true</visible>
       <enabled>true</enabled>
@@ -298,7 +288,6 @@
       <dataPath xsi:type="form:DataPath">
         <segments>СтатусИзменена</segments>
       </dataPath>
-      <titleLocation>None</titleLocation>
       <extendedTooltip>
         <name>СтатусИзмененаРасширеннаяПодсказка</name>
         <id>42</id>
@@ -315,7 +304,7 @@
         <autoFill>true</autoFill>
       </contextMenu>
       <type>LabelField</type>
-      <editMode>Enter</editMode>
+      <editMode>Auto</editMode>
       <showInHeader>true</showInHeader>
       <headerHorizontalAlign>Left</headerHorizontalAlign>
       <showInFooter>true</showInFooter>
@@ -382,20 +371,16 @@
       <id>54</id>
       <autoFill>true</autoFill>
     </contextMenu>
-    <type>InputField</type>
+    <type>LabelField</type>
     <readOnly>true</readOnly>
-    <editMode>Enter</editMode>
+    <editMode>Auto</editMode>
     <showInHeader>true</showInHeader>
     <headerHorizontalAlign>Left</headerHorizontalAlign>
     <showInFooter>true</showInFooter>
-    <extInfo xsi:type="form:InputFieldExtInfo">
+    <extInfo xsi:type="form:LabelFieldExtInfo">
       <autoMaxWidth>true</autoMaxWidth>
       <autoMaxHeight>true</autoMaxHeight>
-      <wrap>true</wrap>
-      <chooseType>true</chooseType>
-      <typeDomainEnabled>true</typeDomainEnabled>
-      <textEdit>true</textEdit>
-      <textSize>Normal</textSize>
+      <hyperlink>true</hyperlink>
     </extInfo>
   </items>
   <autoCommandBar>
@@ -812,6 +797,7 @@
         <name>СтандартнаяЗаписать</name>
       </handler>
     </action>
+    <actionPurpose>Finish</actionPurpose>
     <currentRowUse>DontUse</currentRowUse>
     <selectedRowsUse>Auto</selectedRowsUse>
   </formCommands>
@@ -837,6 +823,7 @@
         <name>СтандартнаяЗаписатьИЗакрыть</name>
       </handler>
     </action>
+    <actionPurpose>Finish</actionPurpose>
     <currentRowUse>DontUse</currentRowUse>
     <selectedRowsUse>Auto</selectedRowsUse>
   </formCommands>

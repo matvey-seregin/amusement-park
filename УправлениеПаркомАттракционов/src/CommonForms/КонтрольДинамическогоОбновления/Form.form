@@ -34,9 +34,7 @@
         <id>11</id>
         <autoFill>true</autoFill>
       </contextMenu>
-      <width>4</width>
       <autoMaxWidth>true</autoMaxWidth>
-      <height>2</height>
       <autoMaxHeight>true</autoMaxHeight>
       <extInfo xsi:type="form:PictureDecorationExtInfo">
         <picture xsi:type="core:PictureRef">
@@ -115,7 +113,7 @@
         <type>UsualGroup</type>
         <extInfo xsi:type="form:UsualGroupExtInfo">
           <group>HorizontalIfPossible</group>
-          <representation>NormalSeparation</representation>
+          <representation>Auto</representation>
           <showLeftMargin>true</showLeftMargin>
           <united>true</united>
           <throughAlign>Auto</throughAlign>
@@ -130,7 +128,7 @@
           <id>26</id>
           <title>
             <key>ru</key>
-            <value>Вариант действия</value>
+            <value>Применить исправление</value>
           </title>
           <visible>true</visible>
           <enabled>true</enabled>
@@ -140,7 +138,6 @@
           <dataPath xsi:type="form:DataPath">
             <segments>ВариантДействия</segments>
           </dataPath>
-          <titleLocation>None</titleLocation>
           <handlers>
             <event>OnChange</event>
             <name>ВариантПерезапускПриИзменении</name>
@@ -161,79 +158,36 @@
             <autoFill>true</autoFill>
           </contextMenu>
           <type>RadioButtonField</type>
-          <editMode>Enter</editMode>
+          <editMode>Auto</editMode>
           <showInHeader>true</showInHeader>
           <headerHorizontalAlign>Left</headerHorizontalAlign>
           <showInFooter>true</showInFooter>
           <extInfo xsi:type="form:RadioButtonsFieldExtInfo">
+            <radioButtonsType>Tumbler</radioButtonsType>
             <choiceList>
               <presentation>
                 <key>ru</key>
-                <value>Применить исправление прямо сейчас (потребуется перезапуск)</value>
+                <value>Прямо сейчас</value>
               </presentation>
               <value xsi:type="core:NumberValue">
                 <value>0</value>
+              </value>
+            </choiceList>
+            <choiceList>
+              <presentation>
+                <key>ru</key>
+                <value>В указанное время</value>
+              </presentation>
+              <value xsi:type="core:NumberValue">
+                <value>1</value>
               </value>
             </choiceList>
             <orientation>Vertical</orientation>
           </extInfo>
         </items>
         <items xsi:type="form:FormGroup">
-          <name>ГруппаЗапланировать</name>
-          <id>35</id>
-          <items xsi:type="form:FormField">
-            <name>ВариантЗапланировать</name>
-            <id>29</id>
-            <title>
-              <key>ru</key>
-              <value>Вариант действия</value>
-            </title>
-            <visible>true</visible>
-            <enabled>true</enabled>
-            <userVisible>
-              <common>true</common>
-            </userVisible>
-            <dataPath xsi:type="form:DataPath">
-              <segments>ВариантДействия</segments>
-            </dataPath>
-            <titleLocation>None</titleLocation>
-            <handlers>
-              <event>OnChange</event>
-              <name>ВариантЗапланироватьПриИзменении</name>
-            </handlers>
-            <extendedTooltip>
-              <name>ВариантЗапланироватьРасширеннаяПодсказка</name>
-              <id>31</id>
-              <type>Label</type>
-              <autoMaxWidth>true</autoMaxWidth>
-              <autoMaxHeight>true</autoMaxHeight>
-              <extInfo xsi:type="form:LabelDecorationExtInfo">
-                <horizontalAlign>Left</horizontalAlign>
-              </extInfo>
-            </extendedTooltip>
-            <contextMenu>
-              <name>ВариантЗапланироватьКонтекстноеМеню</name>
-              <id>30</id>
-              <autoFill>true</autoFill>
-            </contextMenu>
-            <type>RadioButtonField</type>
-            <editMode>Enter</editMode>
-            <showInHeader>true</showInHeader>
-            <headerHorizontalAlign>Left</headerHorizontalAlign>
-            <showInFooter>true</showInFooter>
-            <extInfo xsi:type="form:RadioButtonsFieldExtInfo">
-              <choiceList>
-                <presentation>
-                  <key>ru</key>
-                  <value>Запланировать перезапуск на указанное время:</value>
-                </presentation>
-                <value xsi:type="core:NumberValue">
-                  <value>1</value>
-                </value>
-              </choiceList>
-              <orientation>Vertical</orientation>
-            </extInfo>
-          </items>
+          <name>ГруппаПримечание</name>
+          <id>47</id>
           <items xsi:type="form:FormField">
             <name>ВремяПерезапуска</name>
             <id>37</id>
@@ -241,7 +195,6 @@
               <key>ru</key>
               <value>Время перезапуска</value>
             </title>
-            <visible>true</visible>
             <enabled>true</enabled>
             <userVisible>
               <common>true</common>
@@ -266,7 +219,7 @@
               <autoFill>true</autoFill>
             </contextMenu>
             <type>InputField</type>
-            <editMode>Enter</editMode>
+            <editMode>Auto</editMode>
             <showInHeader>true</showInHeader>
             <headerHorizontalAlign>Left</headerHorizontalAlign>
             <showInFooter>true</showInFooter>
@@ -275,8 +228,7 @@
               <autoMaxWidth>true</autoMaxWidth>
               <autoMaxHeight>true</autoMaxHeight>
               <wrap>true</wrap>
-              <choiceButton>false</choiceButton>
-              <spinButton>true</spinButton>
+              <choiceButton>true</choiceButton>
               <editFormat>
                 <key>ru</key>
                 <value>ДФ=HH:mm</value>
@@ -294,11 +246,11 @@
           </userVisible>
           <title>
             <key>ru</key>
-            <value>Запланировать</value>
+            <value>Примечание</value>
           </title>
           <extendedTooltip>
-            <name>ГруппаЗапланироватьРасширеннаяПодсказка</name>
-            <id>36</id>
+            <name>ГруппаПримечаниеРасширеннаяПодсказка</name>
+            <id>48</id>
             <type>Label</type>
             <autoMaxWidth>true</autoMaxWidth>
             <autoMaxHeight>true</autoMaxHeight>
@@ -308,65 +260,13 @@
           </extendedTooltip>
           <type>UsualGroup</type>
           <extInfo xsi:type="form:UsualGroupExtInfo">
-            <group>AlwaysHorizontal</group>
+            <group>Auto</group>
+            <verticalAlign>Center</verticalAlign>
             <behavior>Auto</behavior>
             <showLeftMargin>true</showLeftMargin>
             <united>true</united>
             <throughAlign>Auto</throughAlign>
             <currentRowUse>Auto</currentRowUse>
-          </extInfo>
-        </items>
-        <items xsi:type="form:FormField">
-          <name>ВариантНапомнитьЗавтра</name>
-          <id>32</id>
-          <title>
-            <key>ru</key>
-            <value>Вариант действия</value>
-          </title>
-          <visible>true</visible>
-          <enabled>true</enabled>
-          <userVisible>
-            <common>true</common>
-          </userVisible>
-          <dataPath xsi:type="form:DataPath">
-            <segments>ВариантДействия</segments>
-          </dataPath>
-          <titleLocation>None</titleLocation>
-          <handlers>
-            <event>OnChange</event>
-            <name>ВариантНапомнитьЗавтраПриИзменении</name>
-          </handlers>
-          <extendedTooltip>
-            <name>ВариантНапомнитьЗавтраРасширеннаяПодсказка</name>
-            <id>34</id>
-            <type>Label</type>
-            <autoMaxWidth>true</autoMaxWidth>
-            <autoMaxHeight>true</autoMaxHeight>
-            <extInfo xsi:type="form:LabelDecorationExtInfo">
-              <horizontalAlign>Left</horizontalAlign>
-            </extInfo>
-          </extendedTooltip>
-          <contextMenu>
-            <name>ВариантНапомнитьЗавтраКонтекстноеМеню</name>
-            <id>33</id>
-            <autoFill>true</autoFill>
-          </contextMenu>
-          <type>RadioButtonField</type>
-          <editMode>Enter</editMode>
-          <showInHeader>true</showInHeader>
-          <headerHorizontalAlign>Left</headerHorizontalAlign>
-          <showInFooter>true</showInFooter>
-          <extInfo xsi:type="form:RadioButtonsFieldExtInfo">
-            <choiceList>
-              <presentation>
-                <key>ru</key>
-                <value>Напомнить завтра</value>
-              </presentation>
-              <value xsi:type="core:NumberValue">
-                <value>2</value>
-              </value>
-            </choiceList>
-            <orientation>Vertical</orientation>
           </extInfo>
         </items>
         <visible>true</visible>
@@ -390,8 +290,9 @@
         </extendedTooltip>
         <type>UsualGroup</type>
         <extInfo xsi:type="form:UsualGroupExtInfo">
-          <group>Vertical</group>
+          <group>AutoScreenTypeSensitive</group>
           <behavior>Auto</behavior>
+          <representation>Auto</representation>
           <showLeftMargin>true</showLeftMargin>
           <united>true</united>
           <throughAlign>Auto</throughAlign>
@@ -432,7 +333,7 @@
             <autoFill>true</autoFill>
           </contextMenu>
           <type>LabelField</type>
-          <editMode>Enter</editMode>
+          <editMode>Auto</editMode>
           <showInHeader>true</showInHeader>
           <headerHorizontalAlign>Left</headerHorizontalAlign>
           <showInFooter>true</showInFooter>
@@ -468,7 +369,7 @@
         <type>UsualGroup</type>
         <extInfo xsi:type="form:UsualGroupExtInfo">
           <group>HorizontalIfPossible</group>
-          <representation>NormalSeparation</representation>
+          <representation>Auto</representation>
           <showLeftMargin>true</showLeftMargin>
           <united>true</united>
           <throughAlign>Auto</throughAlign>
@@ -561,6 +462,36 @@
       <commandName>Form.Command.ВыполнитьДействие</commandName>
       <representation>Auto</representation>
       <defaultButton>true</defaultButton>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <placementArea>UserCmds</placementArea>
+      <representationInContextMenu>Auto</representationInContextMenu>
+    </items>
+    <items xsi:type="form:Button">
+      <name>ФормаНапомнитьЗавтра</name>
+      <id>55</id>
+      <title>
+        <key>ru</key>
+        <value>Напомнить завтра</value>
+      </title>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <extendedTooltip>
+        <name>ФормаНапомнитьЗавтраРасширеннаяПодсказка</name>
+        <id>56</id>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <commandName>Form.Command.НапомнитьЗавтра</commandName>
+      <buttonImportance>Normal</buttonImportance>
+      <representation>Auto</representation>
       <autoMaxWidth>true</autoMaxWidth>
       <autoMaxHeight>true</autoMaxHeight>
       <placementArea>UserCmds</placementArea>
@@ -765,6 +696,7 @@
         <name>БольшеНеНапоминать</name>
       </handler>
     </action>
+    <actionPurpose>Finish</actionPurpose>
     <currentRowUse>Auto</currentRowUse>
     <selectedRowsUse>Auto</selectedRowsUse>
   </formCommands>
@@ -783,6 +715,30 @@
         <name>ВыполнитьДействие</name>
       </handler>
     </action>
+    <actionPurpose>Finish</actionPurpose>
+    <currentRowUse>Auto</currentRowUse>
+    <selectedRowsUse>Auto</selectedRowsUse>
+  </formCommands>
+  <formCommands>
+    <name>НапомнитьЗавтра</name>
+    <title>
+      <key>ru</key>
+      <value>Напомнить завтра</value>
+    </title>
+    <id>1</id>
+    <toolTip>
+      <key>ru</key>
+      <value>Напомнить завтра</value>
+    </toolTip>
+    <use>
+      <common>true</common>
+    </use>
+    <action xsi:type="form:FormCommandHandlerContainer">
+      <handler>
+        <name>НапомнитьЗавтра</name>
+      </handler>
+    </action>
+    <actionPurpose>Finish</actionPurpose>
     <currentRowUse>Auto</currentRowUse>
     <selectedRowsUse>Auto</selectedRowsUse>
   </formCommands>

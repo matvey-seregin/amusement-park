@@ -6,7 +6,11 @@
     <displayImportance>VeryHigh</displayImportance>
     <items xsi:type="form:FormField">
       <name>ВариантСохранения</name>
-      <id>110</id>
+      <id>122</id>
+      <title>
+        <key>ru</key>
+        <value>Вариант сохранения</value>
+      </title>
       <visible>true</visible>
       <enabled>true</enabled>
       <userVisible>
@@ -22,7 +26,7 @@
       </handlers>
       <extendedTooltip>
         <name>ВариантСохраненияРасширеннаяПодсказка</name>
-        <id>112</id>
+        <id>124</id>
         <type>Label</type>
         <autoMaxWidth>true</autoMaxWidth>
         <autoMaxHeight>true</autoMaxHeight>
@@ -32,15 +36,16 @@
       </extendedTooltip>
       <contextMenu>
         <name>ВариантСохраненияКонтекстноеМеню</name>
-        <id>111</id>
+        <id>123</id>
         <autoFill>true</autoFill>
       </contextMenu>
       <type>RadioButtonField</type>
-      <editMode>Enter</editMode>
+      <editMode>Auto</editMode>
       <showInHeader>true</showInHeader>
       <headerHorizontalAlign>Left</headerHorizontalAlign>
       <showInFooter>true</showInFooter>
       <extInfo xsi:type="form:RadioButtonsFieldExtInfo">
+        <radioButtonsType>Tumbler</radioButtonsType>
         <choiceList>
           <presentation>
             <key>ru</key>
@@ -49,6 +54,9 @@
           <value xsi:type="core:StringValue">
             <value>СохранитьВПапку</value>
           </value>
+          <picture xsi:type="core:PictureRef">
+            <picture>CommonPicture.Скачать</picture>
+          </picture>
         </choiceList>
         <choiceList>
           <presentation>
@@ -58,6 +66,9 @@
           <value xsi:type="core:StringValue">
             <value>Присоединить</value>
           </value>
+          <picture xsi:type="core:PictureRef">
+            <picture>CommonPicture.Скрепка</picture>
+          </picture>
         </choiceList>
         <orientation>Vertical</orientation>
       </extInfo>
@@ -94,8 +105,7 @@
         <autoFill>true</autoFill>
       </contextMenu>
       <type>InputField</type>
-      <markRequiredComplete>true</markRequiredComplete>
-      <editMode>Enter</editMode>
+      <editMode>Auto</editMode>
       <showInHeader>true</showInHeader>
       <headerHorizontalAlign>Left</headerHorizontalAlign>
       <showInFooter>true</showInFooter>
@@ -177,8 +187,6 @@
       <excludedCommands>Pickup</excludedCommands>
       <excludedCommands>SearchEverywhere</excludedCommands>
       <excludedCommands>SearchHistory</excludedCommands>
-      <excludedCommands>SelectAll</excludedCommands>
-      <excludedCommands>ShowMultipleSelection</excludedCommands>
       <excludedCommands>SortListAsc</excludedCommands>
       <excludedCommands>SortListDesc</excludedCommands>
       <items xsi:type="form:FormField">
@@ -216,7 +224,9 @@
         <showInHeader>true</showInHeader>
         <headerHorizontalAlign>Left</headerHorizontalAlign>
         <showInFooter>true</showInFooter>
-        <extInfo xsi:type="form:CheckBoxFieldExtInfo"/>
+        <extInfo xsi:type="form:CheckBoxFieldExtInfo">
+          <checkBoxType>CheckBox</checkBoxType>
+        </extInfo>
       </items>
       <items xsi:type="form:FormField">
         <name>ВыбранныеФорматыСохраненияЗначение</name>
@@ -358,7 +368,6 @@
       <autoMaxWidth>true</autoMaxWidth>
       <autoMaxHeight>true</autoMaxHeight>
       <autoMaxRowsCount>true</autoMaxRowsCount>
-      <selectionMode>MultiRow</selectionMode>
       <headerHeight>1</headerHeight>
       <footerHeight>1</footerHeight>
       <horizontalScrollBar>AutoUse</horizontalScrollBar>
@@ -443,7 +452,7 @@
         <autoFill>true</autoFill>
       </contextMenu>
       <type>CheckBoxField</type>
-      <editMode>Enter</editMode>
+      <editMode>Auto</editMode>
       <showInHeader>true</showInHeader>
       <headerHorizontalAlign>Left</headerHorizontalAlign>
       <showInFooter>true</showInFooter>
@@ -486,7 +495,7 @@
         <autoFill>true</autoFill>
       </contextMenu>
       <type>CheckBoxField</type>
-      <editMode>Enter</editMode>
+      <editMode>Auto</editMode>
       <showInHeader>true</showInHeader>
       <headerHorizontalAlign>Left</headerHorizontalAlign>
       <showInFooter>true</showInFooter>
@@ -524,7 +533,7 @@
         <autoFill>true</autoFill>
       </contextMenu>
       <type>CheckBoxField</type>
-      <editMode>Enter</editMode>
+      <editMode>Auto</editMode>
       <showInHeader>true</showInHeader>
       <headerHorizontalAlign>Left</headerHorizontalAlign>
       <showInFooter>true</showInFooter>
@@ -709,6 +718,10 @@
   </attributes>
   <attributes>
     <name>ВариантСохранения</name>
+    <title>
+      <key>ru</key>
+      <value>Вариант сохранения</value>
+    </title>
     <id>8</id>
     <valueType>
       <types>String</types>
@@ -824,6 +837,7 @@
         <name>Сохранить</name>
       </handler>
     </action>
+    <actionPurpose>Finish</actionPurpose>
     <currentRowUse>DontUse</currentRowUse>
     <selectedRowsUse>Auto</selectedRowsUse>
   </formCommands>

@@ -32,6 +32,86 @@
       <currentRowUse>Auto</currentRowUse>
     </extInfo>
   </items>
+  <items xsi:type="form:FormField">
+    <name>АвтоматическаяОчисткаНенужныхФайлов</name>
+    <id>173</id>
+    <title>
+      <key>ru</key>
+      <value>Автоматическая очистка</value>
+    </title>
+    <visible>true</visible>
+    <enabled>true</enabled>
+    <userVisible>
+      <common>true</common>
+    </userVisible>
+    <dataPath xsi:type="form:DataPath">
+      <segments>АвтоматическаяОчисткаНенужныхФайлов</segments>
+    </dataPath>
+    <toolTipRepresentation>ShowBottom</toolTipRepresentation>
+    <handlers>
+      <event>OnChange</event>
+      <name>АвтоматическаяОчисткаНенужныхФайловПриИзменении</name>
+    </handlers>
+    <extendedTooltip>
+      <name>АвтоматическаяОчисткаНенужныхФайловРасширеннаяПодсказка</name>
+      <id>175</id>
+      <title>
+        <key>ru</key>
+        <value>&lt;link Ссылка>каждый  день, по дням недели [суббота, воскресенье ]; с 1:00:00 один раз в день, завершать после 7:00:00&lt;/></value>
+      </title>
+      <formatted>true</formatted>
+      <type>Label</type>
+      <autoMaxHeight>true</autoMaxHeight>
+      <extInfo xsi:type="form:LabelDecorationExtInfo">
+        <handlers>
+          <event>URLProcessing</event>
+          <name>АвтоматическаяОчисткаНенужныхФайловРасширеннаяПодсказкаОбработкаНавигационнойСсылки</name>
+        </handlers>
+        <horizontalAlign>Left</horizontalAlign>
+      </extInfo>
+    </extendedTooltip>
+    <contextMenu>
+      <name>АвтоматическаяОчисткаНенужныхФайловКонтекстноеМеню</name>
+      <id>174</id>
+      <autoFill>true</autoFill>
+    </contextMenu>
+    <type>RadioButtonField</type>
+    <editMode>Auto</editMode>
+    <showInHeader>true</showInHeader>
+    <headerHorizontalAlign>Left</headerHorizontalAlign>
+    <showInFooter>true</showInFooter>
+    <extInfo xsi:type="form:RadioButtonsFieldExtInfo">
+      <radioButtonsType>Tumbler</radioButtonsType>
+      <choiceList>
+        <presentation>
+          <key>ru</key>
+          <value>Не используется</value>
+        </presentation>
+        <value xsi:type="core:StringValue">
+          <value>НеИспользуется</value>
+        </value>
+      </choiceList>
+      <choiceList>
+        <presentation>
+          <key>ru</key>
+          <value>Удаленные и ненужные файлы</value>
+        </presentation>
+        <value xsi:type="core:StringValue">
+          <value>УдаленныеИНенужныеФайлы</value>
+        </value>
+      </choiceList>
+      <choiceList>
+        <presentation>
+          <key>ru</key>
+          <value>Только удаленные файлы</value>
+        </presentation>
+        <value xsi:type="core:StringValue">
+          <value>ТолькоУдаленныеФайлы</value>
+        </value>
+      </choiceList>
+      <orientation>Vertical</orientation>
+    </extInfo>
+  </items>
   <items xsi:type="form:Table">
     <name>ДеревоОбъектовМетаданных</name>
     <id>3</id>
@@ -47,6 +127,7 @@
     <dataPath xsi:type="form:DataPath">
       <segments>ДеревоОбъектовМетаданных</segments>
     </dataPath>
+    <defaultItem>true</defaultItem>
     <titleLocation>None</titleLocation>
     <excludedCommands>Change</excludedCommands>
     <excludedCommands>Copy</excludedCommands>
@@ -288,6 +369,7 @@
         <autoFill>true</autoFill>
       </contextMenu>
       <type>InputField</type>
+      <readOnly>true</readOnly>
       <editMode>Auto</editMode>
       <cellHyperlink>true</cellHyperlink>
       <showInHeader>true</showInHeader>
@@ -315,7 +397,415 @@
     <autoCommandBar>
       <name>ДеревоОбъектовМетаданныхКоманднаяПанель</name>
       <id>5</id>
+      <items xsi:type="form:FormGroup">
+        <name>ДействияСНастройками</name>
+        <id>86</id>
+        <items xsi:type="form:Button">
+          <name>ДеревоОбъектовМетаданныхДобавитьНастройкуОчистки</name>
+          <id>169</id>
+          <title>
+            <key>ru</key>
+            <value>Добавить</value>
+          </title>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <extendedTooltip>
+            <name>ДеревоОбъектовМетаданныхДобавитьНастройкуОчисткиРасширеннаяПодсказка</name>
+            <id>170</id>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <commandName>Form.Command.ДобавитьНастройкуОчистки</commandName>
+          <buttonImportance>Normal</buttonImportance>
+          <representation>Auto</representation>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <placementArea>UserCmds</placementArea>
+          <representationInContextMenu>Auto</representationInContextMenu>
+        </items>
+        <items xsi:type="form:Button">
+          <name>ФормаДобавить</name>
+          <id>112</id>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <extendedTooltip>
+            <name>ФормаДобавитьРасширеннаяПодсказка</name>
+            <id>113</id>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <commandName>Form.Item.ДеревоОбъектовМетаданных.StandardCommand.Add</commandName>
+          <buttonImportance>Normal</buttonImportance>
+          <representation>Auto</representation>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <placementArea>UserCmds</placementArea>
+          <representationInContextMenu>Auto</representationInContextMenu>
+        </items>
+        <items xsi:type="form:Button">
+          <name>ФормаУдалить</name>
+          <id>110</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <extendedTooltip>
+            <name>ФормаУдалитьРасширеннаяПодсказка</name>
+            <id>111</id>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <commandName>Form.Item.ДеревоОбъектовМетаданных.StandardCommand.Delete</commandName>
+          <buttonImportance>Normal</buttonImportance>
+          <representation>Auto</representation>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <placementArea>UserCmds</placementArea>
+          <representationInContextMenu>Auto</representationInContextMenu>
+          <locationInCommandBar>InCommandBarAndInAdditionalSubmenu</locationInCommandBar>
+        </items>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <title>
+          <key>ru</key>
+          <value>Настройки очистки</value>
+        </title>
+        <extendedTooltip>
+          <name>ДействияСНастройкамиРасширеннаяПодсказка</name>
+          <id>87</id>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <type>Popup</type>
+        <extInfo xsi:type="form:PopupGroupExtInfo">
+          <representation>Auto</representation>
+          <importance>Normal</importance>
+        </extInfo>
+      </items>
+      <items xsi:type="form:FormGroup">
+        <name>ДействиеГруппа</name>
+        <id>39</id>
+        <items xsi:type="form:Button">
+          <name>ФормаУстановитьДействиеОчиститьФайлыИВерсии</name>
+          <id>41</id>
+          <title>
+            <key>ru</key>
+            <value>Очистить файлы и версии</value>
+          </title>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <extendedTooltip>
+            <name>ФормаУстановитьДействиеОчиститьФайлыИВерсииРасширеннаяПодсказка</name>
+            <id>42</id>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <commandName>Form.Command.УстановитьДействиеОчиститьФайлыИВерсии</commandName>
+          <buttonImportance>Normal</buttonImportance>
+          <representation>Auto</representation>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <placementArea>UserCmds</placementArea>
+          <representationInContextMenu>Auto</representationInContextMenu>
+        </items>
+        <items xsi:type="form:Button">
+          <name>ФормаУстановитьДействиеОчиститьФайлы</name>
+          <id>43</id>
+          <title>
+            <key>ru</key>
+            <value>Очистить файлы</value>
+          </title>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <extendedTooltip>
+            <name>ФормаУстановитьДействиеОчиститьФайлыРасширеннаяПодсказка</name>
+            <id>44</id>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <commandName>Form.Command.УстановитьДействиеОчиститьФайлы</commandName>
+          <buttonImportance>Normal</buttonImportance>
+          <representation>Auto</representation>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <placementArea>UserCmds</placementArea>
+          <representationInContextMenu>Auto</representationInContextMenu>
+        </items>
+        <items xsi:type="form:Button">
+          <name>ФормаУстановитьДействиеОчиститьВерсии</name>
+          <id>45</id>
+          <title>
+            <key>ru</key>
+            <value>Очистить версии</value>
+          </title>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <extendedTooltip>
+            <name>ФормаУстановитьДействиеОчиститьВерсииРасширеннаяПодсказка</name>
+            <id>46</id>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <commandName>Form.Command.УстановитьДействиеОчиститьВерсии</commandName>
+          <buttonImportance>Normal</buttonImportance>
+          <representation>Auto</representation>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <placementArea>UserCmds</placementArea>
+          <representationInContextMenu>Auto</representationInContextMenu>
+        </items>
+        <items xsi:type="form:Button">
+          <name>ФормаУстановитьДействиеНеОчищать</name>
+          <id>47</id>
+          <title>
+            <key>ru</key>
+            <value>Не очищать</value>
+          </title>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <extendedTooltip>
+            <name>ФормаУстановитьДействиеНеОчищатьРасширеннаяПодсказка</name>
+            <id>48</id>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <commandName>Form.Command.УстановитьДействиеНеОчищать</commandName>
+          <buttonImportance>Normal</buttonImportance>
+          <representation>Auto</representation>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <placementArea>UserCmds</placementArea>
+          <representationInContextMenu>Auto</representationInContextMenu>
+        </items>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <title>
+          <key>ru</key>
+          <value>Установить действие</value>
+        </title>
+        <extendedTooltip>
+          <name>ДействиеГруппаРасширеннаяПодсказка</name>
+          <id>40</id>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <type>Popup</type>
+        <extInfo xsi:type="form:PopupGroupExtInfo">
+          <representation>Auto</representation>
+          <importance>Normal</importance>
+        </extInfo>
+      </items>
+      <items xsi:type="form:FormGroup">
+        <name>ПериодОчисткиГруппа</name>
+        <id>49</id>
+        <items xsi:type="form:Button">
+          <name>ФормаСтаршеМесяца</name>
+          <id>51</id>
+          <title>
+            <key>ru</key>
+            <value>Старше месяца</value>
+          </title>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <extendedTooltip>
+            <name>ФормаСтаршеМесяцаРасширеннаяПодсказка</name>
+            <id>52</id>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <commandName>Form.Command.СтаршеМесяца</commandName>
+          <buttonImportance>Normal</buttonImportance>
+          <representation>Auto</representation>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <placementArea>UserCmds</placementArea>
+          <representationInContextMenu>Auto</representationInContextMenu>
+        </items>
+        <items xsi:type="form:Button">
+          <name>ФормаСтаршеШестиМесяцев</name>
+          <id>53</id>
+          <title>
+            <key>ru</key>
+            <value>Старше шести месяцев</value>
+          </title>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <extendedTooltip>
+            <name>ФормаСтаршеШестиМесяцевРасширеннаяПодсказка</name>
+            <id>54</id>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <commandName>Form.Command.СтаршеШестиМесяцев</commandName>
+          <buttonImportance>Normal</buttonImportance>
+          <representation>Auto</representation>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <placementArea>UserCmds</placementArea>
+          <representationInContextMenu>Auto</representationInContextMenu>
+        </items>
+        <items xsi:type="form:Button">
+          <name>ФормаСтаршеГода</name>
+          <id>55</id>
+          <title>
+            <key>ru</key>
+            <value>Старше года</value>
+          </title>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <extendedTooltip>
+            <name>ФормаСтаршеГодаРасширеннаяПодсказка</name>
+            <id>56</id>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <commandName>Form.Command.СтаршеГода</commandName>
+          <buttonImportance>Normal</buttonImportance>
+          <representation>Auto</representation>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <placementArea>UserCmds</placementArea>
+          <representationInContextMenu>Auto</representationInContextMenu>
+        </items>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <title>
+          <key>ru</key>
+          <value>Установить период</value>
+        </title>
+        <extendedTooltip>
+          <name>ПериодОчисткиГруппаРасширеннаяПодсказка</name>
+          <id>50</id>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <type>Popup</type>
+        <extInfo xsi:type="form:PopupGroupExtInfo">
+          <representation>Auto</representation>
+          <importance>Normal</importance>
+        </extInfo>
+      </items>
+      <items xsi:type="form:FormGroup">
+        <name>ПодменюОтчеты</name>
+        <id>156</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <title>
+          <key>ru</key>
+          <value>Отчеты</value>
+        </title>
+        <extendedTooltip>
+          <name>ПодменюОтчетыРасширеннаяПодсказка</name>
+          <id>157</id>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <type>Popup</type>
+        <extInfo xsi:type="form:PopupGroupExtInfo">
+          <picture xsi:type="core:PictureRef">
+            <picture>CommonPicture.Отчеты</picture>
+          </picture>
+          <representation>PictureAndText</representation>
+          <importance>Normal</importance>
+        </extInfo>
+      </items>
       <horizontalAlign>Left</horizontalAlign>
+      <autoFill>true</autoFill>
     </autoCommandBar>
     <handlers>
       <event>Selection</event>
@@ -340,6 +830,10 @@
     <handlers>
       <event>BeforeRowChange</event>
       <name>ДеревоОбъектовМетаданныхПередНачаломИзменения</name>
+    </handlers>
+    <handlers>
+      <event>OnHover</event>
+      <name>ДеревоОбъектовМетаданныхПриНаведении</name>
     </handlers>
     <searchStringAddition>
       <name>ДеревоОбъектовМетаданныхСтрокаПоиска</name>
@@ -474,10 +968,13 @@
     <searchOnInput>Auto</searchOnInput>
     <initialListView>Auto</initialListView>
     <initialTreeView>ExpandAllLevels</initialTreeView>
+    <initialRowActivation>Activate</initialRowActivation>
     <horizontalStretch>true</horizontalStretch>
     <verticalStretch>true</verticalStretch>
     <enableStartDrag>true</enableStartDrag>
     <enableDrag>true</enableDrag>
+    <searchStringLocation>CommandBar</searchStringLocation>
+    <searchControlLocation>None</searchControlLocation>
     <currentRowUse>SelectionPresentationAndChoice</currentRowUse>
     <autoMaxCardHeight>true</autoMaxCardHeight>
   </items>
@@ -594,187 +1091,6 @@
         <name>ОчисткаНенужныхФайлов</name>
         <id>57</id>
         <items xsi:type="form:FormGroup">
-          <name>ОчисткаФайлов</name>
-          <id>90</id>
-          <items xsi:type="form:FormGroup">
-            <name>Очистка</name>
-            <id>92</id>
-            <items xsi:type="form:Button">
-              <name>Очистить</name>
-              <id>69</id>
-              <title>
-                <key>ru</key>
-                <value>Очистить</value>
-              </title>
-              <visible>true</visible>
-              <enabled>true</enabled>
-              <userVisible>
-                <common>true</common>
-              </userVisible>
-              <extendedTooltip>
-                <name>ОчиститьРасширеннаяПодсказка</name>
-                <id>70</id>
-                <type>Label</type>
-                <autoMaxWidth>true</autoMaxWidth>
-                <autoMaxHeight>true</autoMaxHeight>
-                <extInfo xsi:type="form:LabelDecorationExtInfo">
-                  <horizontalAlign>Left</horizontalAlign>
-                </extInfo>
-              </extendedTooltip>
-              <type>UsualButton</type>
-              <commandName>Form.Command.Очистить</commandName>
-              <buttonImportance>Normal</buttonImportance>
-              <representation>PictureAndText</representation>
-              <autoMaxWidth>true</autoMaxWidth>
-              <autoMaxHeight>true</autoMaxHeight>
-              <placementArea>UserCmds</placementArea>
-              <representationInContextMenu>Auto</representationInContextMenu>
-            </items>
-            <visible>true</visible>
-            <enabled>true</enabled>
-            <userVisible>
-              <common>true</common>
-            </userVisible>
-            <title>
-              <key>ru</key>
-              <value>Очистка</value>
-            </title>
-            <extendedTooltip>
-              <name>ОчисткаРасширеннаяПодсказка</name>
-              <id>93</id>
-              <type>Label</type>
-              <autoMaxWidth>true</autoMaxWidth>
-              <autoMaxHeight>true</autoMaxHeight>
-              <extInfo xsi:type="form:LabelDecorationExtInfo">
-                <horizontalAlign>Left</horizontalAlign>
-              </extInfo>
-            </extendedTooltip>
-            <type>Page</type>
-            <extInfo xsi:type="form:PageGroupExtInfo">
-              <group>Vertical</group>
-              <showTitle>auto</showTitle>
-              <scrollOnCompress>false</scrollOnCompress>
-            </extInfo>
-          </items>
-          <items xsi:type="form:FormGroup">
-            <name>СтатусФоновогоЗадания</name>
-            <id>94</id>
-            <items xsi:type="form:Decoration">
-              <name>ИнформацияОФоновомЗадании</name>
-              <id>96</id>
-              <title>
-                <key>ru</key>
-                <value>Выполняется очистка ненужных файлов...</value>
-              </title>
-              <visible>true</visible>
-              <enabled>true</enabled>
-              <userVisible>
-                <common>true</common>
-              </userVisible>
-              <extendedTooltip>
-                <name>ИнформацияОФоновомЗаданииРасширеннаяПодсказка</name>
-                <id>98</id>
-                <type>Label</type>
-                <autoMaxWidth>true</autoMaxWidth>
-                <autoMaxHeight>true</autoMaxHeight>
-                <extInfo xsi:type="form:LabelDecorationExtInfo">
-                  <horizontalAlign>Left</horizontalAlign>
-                </extInfo>
-              </extendedTooltip>
-              <contextMenu>
-                <name>ИнформацияОФоновомЗаданииКонтекстноеМеню</name>
-                <id>97</id>
-                <autoFill>true</autoFill>
-              </contextMenu>
-              <type>Label</type>
-              <autoMaxHeight>true</autoMaxHeight>
-              <extInfo xsi:type="form:LabelDecorationExtInfo">
-                <horizontalAlign>Left</horizontalAlign>
-              </extInfo>
-            </items>
-            <visible>true</visible>
-            <enabled>true</enabled>
-            <userVisible>
-              <common>true</common>
-            </userVisible>
-            <title>
-              <key>ru</key>
-              <value>Статус фонового задания</value>
-            </title>
-            <extendedTooltip>
-              <name>СтатусФоновогоЗаданияРасширеннаяПодсказка</name>
-              <id>95</id>
-              <type>Label</type>
-              <autoMaxWidth>true</autoMaxWidth>
-              <autoMaxHeight>true</autoMaxHeight>
-              <extInfo xsi:type="form:LabelDecorationExtInfo">
-                <horizontalAlign>Left</horizontalAlign>
-              </extInfo>
-            </extendedTooltip>
-            <type>Page</type>
-            <extInfo xsi:type="form:PageGroupExtInfo">
-              <group>Vertical</group>
-              <showTitle>auto</showTitle>
-              <scrollOnCompress>false</scrollOnCompress>
-            </extInfo>
-          </items>
-          <visible>true</visible>
-          <enabled>true</enabled>
-          <userVisible>
-            <common>true</common>
-          </userVisible>
-          <title>
-            <key>ru</key>
-            <value>Очистка файлов</value>
-          </title>
-          <horizontalStretch>true</horizontalStretch>
-          <extendedTooltip>
-            <name>ОчисткаФайловРасширеннаяПодсказка</name>
-            <id>91</id>
-            <type>Label</type>
-            <autoMaxWidth>true</autoMaxWidth>
-            <autoMaxHeight>true</autoMaxHeight>
-            <extInfo xsi:type="form:LabelDecorationExtInfo">
-              <horizontalAlign>Left</horizontalAlign>
-            </extInfo>
-          </extendedTooltip>
-          <type>Pages</type>
-          <extInfo xsi:type="form:PagesGroupExtInfo">
-            <currentRowUse>Auto</currentRowUse>
-          </extInfo>
-        </items>
-        <items xsi:type="form:Button">
-          <name>ОбновитьСведения</name>
-          <id>151</id>
-          <title>
-            <key>ru</key>
-            <value>Обновить</value>
-          </title>
-          <visible>true</visible>
-          <enabled>true</enabled>
-          <userVisible>
-            <common>true</common>
-          </userVisible>
-          <extendedTooltip>
-            <name>ОбновитьСведенияРасширеннаяПодсказка</name>
-            <id>152</id>
-            <type>Label</type>
-            <autoMaxWidth>true</autoMaxWidth>
-            <autoMaxHeight>true</autoMaxHeight>
-            <extInfo xsi:type="form:LabelDecorationExtInfo">
-              <horizontalAlign>Left</horizontalAlign>
-            </extInfo>
-          </extendedTooltip>
-          <type>UsualButton</type>
-          <commandName>Form.Command.ОбновитьСведения</commandName>
-          <buttonImportance>Normal</buttonImportance>
-          <representation>Auto</representation>
-          <autoMaxWidth>true</autoMaxWidth>
-          <autoMaxHeight>true</autoMaxHeight>
-          <placementArea>UserCmds</placementArea>
-          <representationInContextMenu>Auto</representationInContextMenu>
-        </items>
-        <items xsi:type="form:FormGroup">
           <name>ИнформацияОРазмереФайлов</name>
           <id>130</id>
           <items xsi:type="form:Button">
@@ -860,11 +1176,138 @@
           </extendedTooltip>
           <type>UsualGroup</type>
           <extInfo xsi:type="form:UsualGroupExtInfo">
-            <group>Vertical</group>
+            <group>AutoScreenTypeSensitive</group>
             <showLeftMargin>true</showLeftMargin>
             <united>true</united>
             <throughAlign>Auto</throughAlign>
             <currentRowUse>Auto</currentRowUse>
+          </extInfo>
+        </items>
+        <items xsi:type="form:FormGroup">
+          <name>ГруппаКоманды</name>
+          <id>178</id>
+          <items xsi:type="form:Button">
+            <name>ОбновитьСведения</name>
+            <id>151</id>
+            <title>
+              <key>ru</key>
+              <value>Обновить</value>
+            </title>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <extendedTooltip>
+              <name>ОбновитьСведенияРасширеннаяПодсказка</name>
+              <id>152</id>
+              <type>Label</type>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Left</horizontalAlign>
+              </extInfo>
+            </extendedTooltip>
+            <type>UsualButton</type>
+            <commandName>Form.Command.ОбновитьСведения</commandName>
+            <buttonImportance>Supplementary</buttonImportance>
+            <representation>Auto</representation>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <placementArea>UserCmds</placementArea>
+            <representationInContextMenu>Auto</representationInContextMenu>
+          </items>
+          <items xsi:type="form:Button">
+            <name>Очистить</name>
+            <id>69</id>
+            <title>
+              <key>ru</key>
+              <value>Очистить</value>
+            </title>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <extendedTooltip>
+              <name>ОчиститьРасширеннаяПодсказка</name>
+              <id>70</id>
+              <type>Label</type>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Left</horizontalAlign>
+              </extInfo>
+            </extendedTooltip>
+            <type>UsualButton</type>
+            <commandName>Form.Command.Очистить</commandName>
+            <buttonImportance>Supplementary</buttonImportance>
+            <representation>Picture</representation>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <placementArea>UserCmds</placementArea>
+            <representationInContextMenu>Auto</representationInContextMenu>
+          </items>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <title>
+            <key>ru</key>
+            <value>Команды</value>
+          </title>
+          <extendedTooltip>
+            <name>ГруппаКомандыРасширеннаяПодсказка</name>
+            <id>179</id>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <type>UsualGroup</type>
+          <extInfo xsi:type="form:UsualGroupExtInfo">
+            <group>AutoScreenTypeSensitive</group>
+            <horizontalSpacing>None</horizontalSpacing>
+            <behavior>Auto</behavior>
+            <showLeftMargin>true</showLeftMargin>
+            <united>true</united>
+            <throughAlign>Auto</throughAlign>
+            <currentRowUse>Auto</currentRowUse>
+          </extInfo>
+        </items>
+        <items xsi:type="form:Decoration">
+          <name>ИнформацияОФоновомЗадании</name>
+          <id>96</id>
+          <title>
+            <key>ru</key>
+            <value>Выполняется очистка ненужных файлов...</value>
+          </title>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <extendedTooltip>
+            <name>ИнформацияОФоновомЗаданииРасширеннаяПодсказка</name>
+            <id>98</id>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <contextMenu>
+            <name>ИнформацияОФоновомЗаданииКонтекстноеМеню</name>
+            <id>97</id>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <type>Label</type>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
           </extInfo>
         </items>
         <visible>true</visible>
@@ -889,7 +1332,7 @@
         </extendedTooltip>
         <type>UsualGroup</type>
         <extInfo xsi:type="form:UsualGroupExtInfo">
-          <group>HorizontalIfPossible</group>
+          <group>AutoScreenTypeSensitive</group>
           <verticalAlign>Center</verticalAlign>
           <representation>WeakSeparation</representation>
           <showLeftMargin>true</showLeftMargin>
@@ -952,663 +1395,9 @@
       <currentRowUse>Auto</currentRowUse>
     </extInfo>
   </items>
-  <items xsi:type="form:FormGroup">
-    <name>ОчисткаПоРасписанию</name>
-    <id>62</id>
-    <items xsi:type="form:FormGroup">
-      <name>НастройкиОчистки</name>
-      <id>64</id>
-      <items xsi:type="form:FormField">
-        <name>АвтоматическиОчищатьНенужныеФайлы</name>
-        <id>66</id>
-        <title>
-          <key>ru</key>
-          <value>Автоматически очищать ненужные файлы:</value>
-        </title>
-        <visible>true</visible>
-        <enabled>true</enabled>
-        <userVisible>
-          <common>true</common>
-        </userVisible>
-        <dataPath xsi:type="form:DataPath">
-          <segments>АвтоматическиОчищатьНенужныеФайлы</segments>
-        </dataPath>
-        <titleLocation>Right</titleLocation>
-        <handlers>
-          <event>OnChange</event>
-          <name>АвтоматическиОчищатьНенужныеФайлыПриИзменении</name>
-        </handlers>
-        <extendedTooltip>
-          <name>АвтоматическиОчищатьНенужныеФайлыРасширеннаяПодсказка</name>
-          <id>68</id>
-          <type>Label</type>
-          <autoMaxWidth>true</autoMaxWidth>
-          <autoMaxHeight>true</autoMaxHeight>
-          <extInfo xsi:type="form:LabelDecorationExtInfo">
-            <horizontalAlign>Left</horizontalAlign>
-          </extInfo>
-        </extendedTooltip>
-        <contextMenu>
-          <name>АвтоматическиОчищатьНенужныеФайлыКонтекстноеМеню</name>
-          <id>67</id>
-          <autoFill>true</autoFill>
-        </contextMenu>
-        <type>CheckBoxField</type>
-        <editMode>Enter</editMode>
-        <showInHeader>true</showInHeader>
-        <headerHorizontalAlign>Left</headerHorizontalAlign>
-        <showInFooter>true</showInFooter>
-        <extInfo xsi:type="form:CheckBoxFieldExtInfo"/>
-      </items>
-      <items xsi:type="form:FormField">
-        <name>РежимОчисткиФайлов</name>
-        <id>143</id>
-        <title>
-          <key>ru</key>
-          <value>Режим очистки файлов</value>
-        </title>
-        <visible>true</visible>
-        <enabled>true</enabled>
-        <userVisible>
-          <common>true</common>
-        </userVisible>
-        <dataPath xsi:type="form:DataPath">
-          <segments>РежимОчисткиФайлов</segments>
-        </dataPath>
-        <titleLocation>None</titleLocation>
-        <handlers>
-          <event>OnChange</event>
-          <name>РежимОчисткиФайловПриИзменении</name>
-        </handlers>
-        <extendedTooltip>
-          <name>РежимОчисткиФайловРасширеннаяПодсказка</name>
-          <id>145</id>
-          <type>Label</type>
-          <autoMaxWidth>true</autoMaxWidth>
-          <autoMaxHeight>true</autoMaxHeight>
-          <extInfo xsi:type="form:LabelDecorationExtInfo">
-            <horizontalAlign>Left</horizontalAlign>
-          </extInfo>
-        </extendedTooltip>
-        <contextMenu>
-          <name>РежимОчисткиФайловКонтекстноеМеню</name>
-          <id>144</id>
-          <autoFill>true</autoFill>
-        </contextMenu>
-        <type>InputField</type>
-        <editMode>Enter</editMode>
-        <showInHeader>true</showInHeader>
-        <headerHorizontalAlign>Left</headerHorizontalAlign>
-        <showInFooter>true</showInFooter>
-        <extInfo xsi:type="form:InputFieldExtInfo">
-          <width>20</width>
-          <autoMaxWidth>true</autoMaxWidth>
-          <autoMaxHeight>true</autoMaxHeight>
-          <horizontalStretch>false</horizontalStretch>
-          <wrap>true</wrap>
-          <listChoiceMode>true</listChoiceMode>
-          <chooseType>true</chooseType>
-          <typeDomainEnabled>true</typeDomainEnabled>
-          <textEdit>true</textEdit>
-          <choiceList>
-            <presentation>
-              <key>ru</key>
-              <value>Удаленные и ненужные файлы</value>
-            </presentation>
-            <value xsi:type="core:ReferenceValue">
-              <value>Enum.РежимыОчисткиФайлов.EnumValue.ОчищатьУдаленныеИНенужные</value>
-            </value>
-          </choiceList>
-          <choiceList>
-            <presentation>
-              <key>ru</key>
-              <value>Только удаленные файлы</value>
-            </presentation>
-            <value xsi:type="core:ReferenceValue">
-              <value>Enum.РежимыОчисткиФайлов.EnumValue.ОчищатьУдаленные</value>
-            </value>
-          </choiceList>
-          <textSize>Normal</textSize>
-        </extInfo>
-      </items>
-      <items xsi:type="form:Button">
-        <name>НастроитьРасписание</name>
-        <id>76</id>
-        <title>
-          <key>ru</key>
-          <value>настроить расписание</value>
-        </title>
-        <visible>true</visible>
-        <enabled>true</enabled>
-        <userVisible>
-          <common>true</common>
-        </userVisible>
-        <extendedTooltip>
-          <name>НастроитьРасписаниеРасширеннаяПодсказка</name>
-          <id>77</id>
-          <type>Label</type>
-          <autoMaxWidth>true</autoMaxWidth>
-          <autoMaxHeight>true</autoMaxHeight>
-          <extInfo xsi:type="form:LabelDecorationExtInfo">
-            <horizontalAlign>Left</horizontalAlign>
-          </extInfo>
-        </extendedTooltip>
-        <type>Hyperlink</type>
-        <commandName>Form.Command.НастроитьРасписание</commandName>
-        <buttonImportance>Normal</buttonImportance>
-        <representation>Auto</representation>
-        <autoMaxWidth>true</autoMaxWidth>
-        <autoMaxHeight>true</autoMaxHeight>
-        <placementArea>UserCmds</placementArea>
-        <representationInContextMenu>Auto</representationInContextMenu>
-      </items>
-      <visible>true</visible>
-      <enabled>true</enabled>
-      <userVisible>
-        <common>true</common>
-      </userVisible>
-      <title>
-        <key>ru</key>
-        <value>Настройки очистки</value>
-      </title>
-      <extendedTooltip>
-        <name>НастройкиОчисткиРасширеннаяПодсказка</name>
-        <id>65</id>
-        <type>Label</type>
-        <autoMaxWidth>true</autoMaxWidth>
-        <autoMaxHeight>true</autoMaxHeight>
-        <extInfo xsi:type="form:LabelDecorationExtInfo">
-          <horizontalAlign>Left</horizontalAlign>
-        </extInfo>
-      </extendedTooltip>
-      <type>UsualGroup</type>
-      <extInfo xsi:type="form:UsualGroupExtInfo">
-        <group>HorizontalIfPossible</group>
-        <showLeftMargin>true</showLeftMargin>
-        <united>true</united>
-        <throughAlign>Auto</throughAlign>
-        <currentRowUse>Auto</currentRowUse>
-      </extInfo>
-    </items>
-    <items xsi:type="form:Decoration">
-      <name>Расписание</name>
-      <id>71</id>
-      <title>
-        <key>ru</key>
-        <value>каждый  день, по дням недели [суббота, воскресенье ]; с 1:00:00 один раз в день, завершать после 7:00:00</value>
-      </title>
-      <visible>true</visible>
-      <enabled>true</enabled>
-      <userVisible>
-        <common>true</common>
-      </userVisible>
-      <extendedTooltip>
-        <name>РасписаниеРасширеннаяПодсказка</name>
-        <id>73</id>
-        <type>Label</type>
-        <autoMaxWidth>true</autoMaxWidth>
-        <autoMaxHeight>true</autoMaxHeight>
-        <extInfo xsi:type="form:LabelDecorationExtInfo">
-          <horizontalAlign>Left</horizontalAlign>
-        </extInfo>
-      </extendedTooltip>
-      <contextMenu>
-        <name>РасписаниеКонтекстноеМеню</name>
-        <id>72</id>
-        <autoFill>true</autoFill>
-      </contextMenu>
-      <type>Label</type>
-      <autoMaxHeight>true</autoMaxHeight>
-      <textColor xsi:type="core:ColorRef">
-        <color>Style.ПоясняющийТекст</color>
-      </textColor>
-      <extInfo xsi:type="form:LabelDecorationExtInfo">
-        <horizontalAlign>Left</horizontalAlign>
-        <verticalAlign>Top</verticalAlign>
-      </extInfo>
-    </items>
-    <visible>true</visible>
-    <enabled>true</enabled>
-    <userVisible>
-      <common>true</common>
-    </userVisible>
-    <title>
-      <key>ru</key>
-      <value>Очистка по расписанию</value>
-    </title>
-    <extendedTooltip>
-      <name>ОчисткаПоРасписаниюРасширеннаяПодсказка</name>
-      <id>63</id>
-      <type>Label</type>
-      <autoMaxWidth>true</autoMaxWidth>
-      <autoMaxHeight>true</autoMaxHeight>
-      <extInfo xsi:type="form:LabelDecorationExtInfo">
-        <horizontalAlign>Left</horizontalAlign>
-      </extInfo>
-    </extendedTooltip>
-    <type>UsualGroup</type>
-    <extInfo xsi:type="form:UsualGroupExtInfo">
-      <group>Vertical</group>
-      <representation>NormalSeparation</representation>
-      <showLeftMargin>true</showLeftMargin>
-      <united>true</united>
-      <throughAlign>Auto</throughAlign>
-      <currentRowUse>Auto</currentRowUse>
-    </extInfo>
-  </items>
   <autoCommandBar>
     <name>ФормаКоманднаяПанель</name>
     <id>-1</id>
-    <items xsi:type="form:FormGroup">
-      <name>ДействияСНастройками</name>
-      <id>86</id>
-      <items xsi:type="form:Button">
-        <name>ФормаДобавить</name>
-        <id>112</id>
-        <visible>true</visible>
-        <enabled>true</enabled>
-        <userVisible>
-          <common>true</common>
-        </userVisible>
-        <extendedTooltip>
-          <name>ФормаДобавитьРасширеннаяПодсказка</name>
-          <id>113</id>
-          <type>Label</type>
-          <autoMaxWidth>true</autoMaxWidth>
-          <autoMaxHeight>true</autoMaxHeight>
-          <extInfo xsi:type="form:LabelDecorationExtInfo">
-            <horizontalAlign>Left</horizontalAlign>
-          </extInfo>
-        </extendedTooltip>
-        <commandName>Form.Item.ДеревоОбъектовМетаданных.StandardCommand.Add</commandName>
-        <buttonImportance>Normal</buttonImportance>
-        <representation>Auto</representation>
-        <autoMaxWidth>true</autoMaxWidth>
-        <autoMaxHeight>true</autoMaxHeight>
-        <placementArea>UserCmds</placementArea>
-        <representationInContextMenu>Auto</representationInContextMenu>
-      </items>
-      <items xsi:type="form:Button">
-        <name>ФормаУдалить</name>
-        <id>110</id>
-        <visible>true</visible>
-        <enabled>true</enabled>
-        <userVisible>
-          <common>true</common>
-        </userVisible>
-        <extendedTooltip>
-          <name>ФормаУдалитьРасширеннаяПодсказка</name>
-          <id>111</id>
-          <type>Label</type>
-          <autoMaxWidth>true</autoMaxWidth>
-          <autoMaxHeight>true</autoMaxHeight>
-          <extInfo xsi:type="form:LabelDecorationExtInfo">
-            <horizontalAlign>Left</horizontalAlign>
-          </extInfo>
-        </extendedTooltip>
-        <commandName>Form.Item.ДеревоОбъектовМетаданных.StandardCommand.Delete</commandName>
-        <buttonImportance>Normal</buttonImportance>
-        <representation>Auto</representation>
-        <autoMaxWidth>true</autoMaxWidth>
-        <autoMaxHeight>true</autoMaxHeight>
-        <placementArea>UserCmds</placementArea>
-        <representationInContextMenu>Auto</representationInContextMenu>
-        <locationInCommandBar>InCommandBarAndInAdditionalSubmenu</locationInCommandBar>
-      </items>
-      <visible>true</visible>
-      <enabled>true</enabled>
-      <userVisible>
-        <common>true</common>
-      </userVisible>
-      <title>
-        <key>ru</key>
-        <value>Настройки очистки</value>
-      </title>
-      <extendedTooltip>
-        <name>ДействияСНастройкамиРасширеннаяПодсказка</name>
-        <id>87</id>
-        <type>Label</type>
-        <autoMaxWidth>true</autoMaxWidth>
-        <autoMaxHeight>true</autoMaxHeight>
-        <extInfo xsi:type="form:LabelDecorationExtInfo">
-          <horizontalAlign>Left</horizontalAlign>
-        </extInfo>
-      </extendedTooltip>
-      <type>Popup</type>
-      <extInfo xsi:type="form:PopupGroupExtInfo">
-        <representation>Auto</representation>
-        <importance>Normal</importance>
-      </extInfo>
-    </items>
-    <items xsi:type="form:FormGroup">
-      <name>ДействиеГруппа</name>
-      <id>39</id>
-      <items xsi:type="form:Button">
-        <name>ФормаУстановитьДействиеОчиститьФайлыИВерсии</name>
-        <id>41</id>
-        <title>
-          <key>ru</key>
-          <value>Очистить файлы и версии</value>
-        </title>
-        <visible>true</visible>
-        <enabled>true</enabled>
-        <userVisible>
-          <common>true</common>
-        </userVisible>
-        <extendedTooltip>
-          <name>ФормаУстановитьДействиеОчиститьФайлыИВерсииРасширеннаяПодсказка</name>
-          <id>42</id>
-          <type>Label</type>
-          <autoMaxWidth>true</autoMaxWidth>
-          <autoMaxHeight>true</autoMaxHeight>
-          <extInfo xsi:type="form:LabelDecorationExtInfo">
-            <horizontalAlign>Left</horizontalAlign>
-          </extInfo>
-        </extendedTooltip>
-        <commandName>Form.Command.УстановитьДействиеОчиститьФайлыИВерсии</commandName>
-        <buttonImportance>Normal</buttonImportance>
-        <representation>Auto</representation>
-        <autoMaxWidth>true</autoMaxWidth>
-        <autoMaxHeight>true</autoMaxHeight>
-        <placementArea>UserCmds</placementArea>
-        <representationInContextMenu>Auto</representationInContextMenu>
-      </items>
-      <items xsi:type="form:Button">
-        <name>ФормаУстановитьДействиеОчиститьФайлы</name>
-        <id>43</id>
-        <title>
-          <key>ru</key>
-          <value>Очистить файлы</value>
-        </title>
-        <visible>true</visible>
-        <enabled>true</enabled>
-        <userVisible>
-          <common>true</common>
-        </userVisible>
-        <extendedTooltip>
-          <name>ФормаУстановитьДействиеОчиститьФайлыРасширеннаяПодсказка</name>
-          <id>44</id>
-          <type>Label</type>
-          <autoMaxWidth>true</autoMaxWidth>
-          <autoMaxHeight>true</autoMaxHeight>
-          <extInfo xsi:type="form:LabelDecorationExtInfo">
-            <horizontalAlign>Left</horizontalAlign>
-          </extInfo>
-        </extendedTooltip>
-        <commandName>Form.Command.УстановитьДействиеОчиститьФайлы</commandName>
-        <buttonImportance>Normal</buttonImportance>
-        <representation>Auto</representation>
-        <autoMaxWidth>true</autoMaxWidth>
-        <autoMaxHeight>true</autoMaxHeight>
-        <placementArea>UserCmds</placementArea>
-        <representationInContextMenu>Auto</representationInContextMenu>
-      </items>
-      <items xsi:type="form:Button">
-        <name>ФормаУстановитьДействиеОчиститьВерсии</name>
-        <id>45</id>
-        <title>
-          <key>ru</key>
-          <value>Очистить версии</value>
-        </title>
-        <visible>true</visible>
-        <enabled>true</enabled>
-        <userVisible>
-          <common>true</common>
-        </userVisible>
-        <extendedTooltip>
-          <name>ФормаУстановитьДействиеОчиститьВерсииРасширеннаяПодсказка</name>
-          <id>46</id>
-          <type>Label</type>
-          <autoMaxWidth>true</autoMaxWidth>
-          <autoMaxHeight>true</autoMaxHeight>
-          <extInfo xsi:type="form:LabelDecorationExtInfo">
-            <horizontalAlign>Left</horizontalAlign>
-          </extInfo>
-        </extendedTooltip>
-        <commandName>Form.Command.УстановитьДействиеОчиститьВерсии</commandName>
-        <buttonImportance>Normal</buttonImportance>
-        <representation>Auto</representation>
-        <autoMaxWidth>true</autoMaxWidth>
-        <autoMaxHeight>true</autoMaxHeight>
-        <placementArea>UserCmds</placementArea>
-        <representationInContextMenu>Auto</representationInContextMenu>
-      </items>
-      <items xsi:type="form:Button">
-        <name>ФормаУстановитьДействиеНеОчищать</name>
-        <id>47</id>
-        <title>
-          <key>ru</key>
-          <value>Не очищать</value>
-        </title>
-        <visible>true</visible>
-        <enabled>true</enabled>
-        <userVisible>
-          <common>true</common>
-        </userVisible>
-        <extendedTooltip>
-          <name>ФормаУстановитьДействиеНеОчищатьРасширеннаяПодсказка</name>
-          <id>48</id>
-          <type>Label</type>
-          <autoMaxWidth>true</autoMaxWidth>
-          <autoMaxHeight>true</autoMaxHeight>
-          <extInfo xsi:type="form:LabelDecorationExtInfo">
-            <horizontalAlign>Left</horizontalAlign>
-          </extInfo>
-        </extendedTooltip>
-        <commandName>Form.Command.УстановитьДействиеНеОчищать</commandName>
-        <buttonImportance>Normal</buttonImportance>
-        <representation>Auto</representation>
-        <autoMaxWidth>true</autoMaxWidth>
-        <autoMaxHeight>true</autoMaxHeight>
-        <placementArea>UserCmds</placementArea>
-        <representationInContextMenu>Auto</representationInContextMenu>
-      </items>
-      <visible>true</visible>
-      <enabled>true</enabled>
-      <userVisible>
-        <common>true</common>
-      </userVisible>
-      <title>
-        <key>ru</key>
-        <value>Установить действие</value>
-      </title>
-      <extendedTooltip>
-        <name>ДействиеГруппаРасширеннаяПодсказка</name>
-        <id>40</id>
-        <type>Label</type>
-        <autoMaxWidth>true</autoMaxWidth>
-        <autoMaxHeight>true</autoMaxHeight>
-        <extInfo xsi:type="form:LabelDecorationExtInfo">
-          <horizontalAlign>Left</horizontalAlign>
-        </extInfo>
-      </extendedTooltip>
-      <type>Popup</type>
-      <extInfo xsi:type="form:PopupGroupExtInfo">
-        <representation>Auto</representation>
-        <importance>Normal</importance>
-      </extInfo>
-    </items>
-    <items xsi:type="form:FormGroup">
-      <name>ПериодОчисткиГруппа</name>
-      <id>49</id>
-      <items xsi:type="form:Button">
-        <name>ФормаСтаршеМесяца</name>
-        <id>51</id>
-        <title>
-          <key>ru</key>
-          <value>Старше месяца</value>
-        </title>
-        <visible>true</visible>
-        <enabled>true</enabled>
-        <userVisible>
-          <common>true</common>
-        </userVisible>
-        <extendedTooltip>
-          <name>ФормаСтаршеМесяцаРасширеннаяПодсказка</name>
-          <id>52</id>
-          <type>Label</type>
-          <autoMaxWidth>true</autoMaxWidth>
-          <autoMaxHeight>true</autoMaxHeight>
-          <extInfo xsi:type="form:LabelDecorationExtInfo">
-            <horizontalAlign>Left</horizontalAlign>
-          </extInfo>
-        </extendedTooltip>
-        <commandName>Form.Command.СтаршеМесяца</commandName>
-        <buttonImportance>Normal</buttonImportance>
-        <representation>Auto</representation>
-        <autoMaxWidth>true</autoMaxWidth>
-        <autoMaxHeight>true</autoMaxHeight>
-        <placementArea>UserCmds</placementArea>
-        <representationInContextMenu>Auto</representationInContextMenu>
-      </items>
-      <items xsi:type="form:Button">
-        <name>ФормаСтаршеШестиМесяцев</name>
-        <id>53</id>
-        <title>
-          <key>ru</key>
-          <value>Старше шести месяцев</value>
-        </title>
-        <visible>true</visible>
-        <enabled>true</enabled>
-        <userVisible>
-          <common>true</common>
-        </userVisible>
-        <extendedTooltip>
-          <name>ФормаСтаршеШестиМесяцевРасширеннаяПодсказка</name>
-          <id>54</id>
-          <type>Label</type>
-          <autoMaxWidth>true</autoMaxWidth>
-          <autoMaxHeight>true</autoMaxHeight>
-          <extInfo xsi:type="form:LabelDecorationExtInfo">
-            <horizontalAlign>Left</horizontalAlign>
-          </extInfo>
-        </extendedTooltip>
-        <commandName>Form.Command.СтаршеШестиМесяцев</commandName>
-        <buttonImportance>Normal</buttonImportance>
-        <representation>Auto</representation>
-        <autoMaxWidth>true</autoMaxWidth>
-        <autoMaxHeight>true</autoMaxHeight>
-        <placementArea>UserCmds</placementArea>
-        <representationInContextMenu>Auto</representationInContextMenu>
-      </items>
-      <items xsi:type="form:Button">
-        <name>ФормаСтаршеГода</name>
-        <id>55</id>
-        <title>
-          <key>ru</key>
-          <value>Старше года</value>
-        </title>
-        <visible>true</visible>
-        <enabled>true</enabled>
-        <userVisible>
-          <common>true</common>
-        </userVisible>
-        <extendedTooltip>
-          <name>ФормаСтаршеГодаРасширеннаяПодсказка</name>
-          <id>56</id>
-          <type>Label</type>
-          <autoMaxWidth>true</autoMaxWidth>
-          <autoMaxHeight>true</autoMaxHeight>
-          <extInfo xsi:type="form:LabelDecorationExtInfo">
-            <horizontalAlign>Left</horizontalAlign>
-          </extInfo>
-        </extendedTooltip>
-        <commandName>Form.Command.СтаршеГода</commandName>
-        <buttonImportance>Normal</buttonImportance>
-        <representation>Auto</representation>
-        <autoMaxWidth>true</autoMaxWidth>
-        <autoMaxHeight>true</autoMaxHeight>
-        <placementArea>UserCmds</placementArea>
-        <representationInContextMenu>Auto</representationInContextMenu>
-      </items>
-      <visible>true</visible>
-      <enabled>true</enabled>
-      <userVisible>
-        <common>true</common>
-      </userVisible>
-      <title>
-        <key>ru</key>
-        <value>Установить период</value>
-      </title>
-      <extendedTooltip>
-        <name>ПериодОчисткиГруппаРасширеннаяПодсказка</name>
-        <id>50</id>
-        <type>Label</type>
-        <autoMaxWidth>true</autoMaxWidth>
-        <autoMaxHeight>true</autoMaxHeight>
-        <extInfo xsi:type="form:LabelDecorationExtInfo">
-          <horizontalAlign>Left</horizontalAlign>
-        </extInfo>
-      </extendedTooltip>
-      <type>Popup</type>
-      <extInfo xsi:type="form:PopupGroupExtInfo">
-        <representation>Auto</representation>
-        <importance>Normal</importance>
-      </extInfo>
-    </items>
-    <items xsi:type="form:FormGroup">
-      <name>ПодменюОтчеты</name>
-      <id>156</id>
-      <visible>true</visible>
-      <enabled>true</enabled>
-      <userVisible>
-        <common>true</common>
-      </userVisible>
-      <title>
-        <key>ru</key>
-        <value>Отчеты</value>
-      </title>
-      <extendedTooltip>
-        <name>ПодменюОтчетыРасширеннаяПодсказка</name>
-        <id>157</id>
-        <type>Label</type>
-        <autoMaxWidth>true</autoMaxWidth>
-        <autoMaxHeight>true</autoMaxHeight>
-        <extInfo xsi:type="form:LabelDecorationExtInfo">
-          <horizontalAlign>Left</horizontalAlign>
-        </extInfo>
-      </extendedTooltip>
-      <type>Popup</type>
-      <extInfo xsi:type="form:PopupGroupExtInfo">
-        <picture xsi:type="core:PictureRef">
-          <picture>CommonPicture.Отчеты</picture>
-        </picture>
-        <representation>PictureAndText</representation>
-        <importance>Normal</importance>
-      </extInfo>
-    </items>
-    <items xsi:type="form:Addition">
-      <title>
-        <key>ru</key>
-        <value>Поиск</value>
-      </title>
-      <visible>true</visible>
-      <enabled>true</enabled>
-      <userVisible>
-        <common>true</common>
-      </userVisible>
-      <name>СтрокаПоиска</name>
-      <id>153</id>
-      <extendedTooltip>
-        <name>СтрокаПоискаРасширеннаяПодсказка</name>
-        <id>155</id>
-        <type>Label</type>
-        <autoMaxWidth>true</autoMaxWidth>
-        <autoMaxHeight>true</autoMaxHeight>
-        <extInfo xsi:type="form:LabelDecorationExtInfo">
-          <horizontalAlign>Left</horizontalAlign>
-        </extInfo>
-      </extendedTooltip>
-      <contextMenu>
-        <name>СтрокаПоискаКонтекстноеМеню</name>
-        <id>154</id>
-        <autoFill>true</autoFill>
-      </contextMenu>
-      <source>ДеревоОбъектовМетаданных</source>
-      <extInfo xsi:type="form:SearchStringAdditionExtInfo">
-        <autoMaxWidth>true</autoMaxWidth>
-      </extInfo>
-    </items>
     <horizontalAlign>Left</horizontalAlign>
     <autoFill>true</autoFill>
   </autoCommandBar>
@@ -1625,8 +1414,8 @@
     <name>ПриСозданииНаСервере</name>
   </handlers>
   <windowOpeningMode>DontBlock</windowOpeningMode>
+  <windowViewMode>InMainWindow</windowViewMode>
   <saveWindowSettings>true</saveWindowSettings>
-  <autoTitle>true</autoTitle>
   <autoUrl>true</autoUrl>
   <group>Vertical</group>
   <autoFillCheck>true</autoFillCheck>
@@ -1812,10 +1601,6 @@
   </attributes>
   <attributes>
     <name>АвтоматическиОчищатьНенужныеФайлы</name>
-    <title>
-      <key>ru</key>
-      <value>Автоматически очищать ненужные файлы:</value>
-    </title>
     <id>4</id>
     <valueType>
       <types>Boolean</types>
@@ -1893,10 +1678,6 @@
   </attributes>
   <attributes>
     <name>РежимОчисткиФайлов</name>
-    <title>
-      <key>ru</key>
-      <value>Режим очистки файлов</value>
-    </title>
     <id>10</id>
     <valueType>
       <types>EnumRef.РежимыОчисткиФайлов</types>
@@ -1922,10 +1703,15 @@
     </edit>
   </attributes>
   <attributes>
-    <name>Список</name>
+    <name>АвтоматическаяОчисткаНенужныхФайлов</name>
+    <title>
+      <key>ru</key>
+      <value>Автоматическая очистка</value>
+    </title>
     <id>12</id>
     <valueType>
-      <types>DynamicList</types>
+      <types>String</types>
+      <stringQualifiers/>
     </valueType>
     <view>
       <common>true</common>
@@ -1933,14 +1719,19 @@
     <edit>
       <common>true</common>
     </edit>
-    <main>true</main>
-    <extInfo xsi:type="form:DynamicListExtInfo">
-      <mainTable>InformationRegister.НастройкиОчисткиФайлов</mainTable>
-      <dynamicDataRead>true</dynamicDataRead>
-      <autoFillAvailableFields>true</autoFillAvailableFields>
-      <autoSaveUserSettings>true</autoSaveUserSettings>
-      <getInvisibleFieldPresentations>true</getInvisibleFieldPresentations>
-    </extInfo>
+  </attributes>
+  <attributes>
+    <name>РазделениеВключено</name>
+    <id>13</id>
+    <valueType>
+      <types>Boolean</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
   </attributes>
   <formCommands>
     <name>УстановитьДействиеОчиститьФайлыИВерсии</name>
@@ -1961,8 +1752,9 @@
         <name>УстановитьДействиеОчиститьФайлыИВерсии</name>
       </handler>
     </action>
-    <currentRowUse>DontUse</currentRowUse>
-    <selectedRowsUse>Auto</selectedRowsUse>
+    <associatedTableElementId xsi:type="core:StringValue">
+      <value>ДеревоОбъектовМетаданных</value>
+    </associatedTableElementId>
   </formCommands>
   <formCommands>
     <name>УстановитьДействиеОчиститьФайлы</name>
@@ -1983,8 +1775,9 @@
         <name>УстановитьДействиеОчиститьФайлы</name>
       </handler>
     </action>
-    <currentRowUse>DontUse</currentRowUse>
-    <selectedRowsUse>Auto</selectedRowsUse>
+    <associatedTableElementId xsi:type="core:StringValue">
+      <value>ДеревоОбъектовМетаданных</value>
+    </associatedTableElementId>
   </formCommands>
   <formCommands>
     <name>УстановитьДействиеОчиститьВерсии</name>
@@ -2005,8 +1798,9 @@
         <name>УстановитьДействиеОчиститьВерсии</name>
       </handler>
     </action>
-    <currentRowUse>DontUse</currentRowUse>
-    <selectedRowsUse>Auto</selectedRowsUse>
+    <associatedTableElementId xsi:type="core:StringValue">
+      <value>ДеревоОбъектовМетаданных</value>
+    </associatedTableElementId>
   </formCommands>
   <formCommands>
     <name>УстановитьДействиеНеОчищать</name>
@@ -2027,8 +1821,9 @@
         <name>УстановитьДействиеНеОчищать</name>
       </handler>
     </action>
-    <currentRowUse>DontUse</currentRowUse>
-    <selectedRowsUse>Auto</selectedRowsUse>
+    <associatedTableElementId xsi:type="core:StringValue">
+      <value>ДеревоОбъектовМетаданных</value>
+    </associatedTableElementId>
   </formCommands>
   <formCommands>
     <name>СтаршеМесяца</name>
@@ -2049,8 +1844,9 @@
         <name>СтаршеМесяца</name>
       </handler>
     </action>
-    <currentRowUse>DontUse</currentRowUse>
-    <selectedRowsUse>Auto</selectedRowsUse>
+    <associatedTableElementId xsi:type="core:StringValue">
+      <value>ДеревоОбъектовМетаданных</value>
+    </associatedTableElementId>
   </formCommands>
   <formCommands>
     <name>СтаршеШестиМесяцев</name>
@@ -2071,8 +1867,9 @@
         <name>СтаршеШестиМесяцев</name>
       </handler>
     </action>
-    <currentRowUse>DontUse</currentRowUse>
-    <selectedRowsUse>Auto</selectedRowsUse>
+    <associatedTableElementId xsi:type="core:StringValue">
+      <value>ДеревоОбъектовМетаданных</value>
+    </associatedTableElementId>
   </formCommands>
   <formCommands>
     <name>СтаршеГода</name>
@@ -2093,8 +1890,9 @@
         <name>СтаршеГода</name>
       </handler>
     </action>
-    <currentRowUse>DontUse</currentRowUse>
-    <selectedRowsUse>Auto</selectedRowsUse>
+    <associatedTableElementId xsi:type="core:StringValue">
+      <value>ДеревоОбъектовМетаданных</value>
+    </associatedTableElementId>
   </formCommands>
   <formCommands>
     <name>Очистить</name>
@@ -2138,28 +1936,6 @@
     <action xsi:type="form:FormCommandHandlerContainer">
       <handler>
         <name>ОбъемНенужныхФайлов</name>
-      </handler>
-    </action>
-    <currentRowUse>DontUse</currentRowUse>
-    <selectedRowsUse>Auto</selectedRowsUse>
-  </formCommands>
-  <formCommands>
-    <name>НастроитьРасписание</name>
-    <title>
-      <key>ru</key>
-      <value>настроить расписание</value>
-    </title>
-    <id>11</id>
-    <toolTip>
-      <key>ru</key>
-      <value>Настроить расписание</value>
-    </toolTip>
-    <use>
-      <common>true</common>
-    </use>
-    <action xsi:type="form:FormCommandHandlerContainer">
-      <handler>
-        <name>НастроитьРасписание</name>
       </handler>
     </action>
     <currentRowUse>DontUse</currentRowUse>
@@ -2235,9 +2011,32 @@
     <currentRowUse>Auto</currentRowUse>
     <selectedRowsUse>Auto</selectedRowsUse>
   </formCommands>
+  <formCommands>
+    <name>ДобавитьНастройкуОчистки</name>
+    <title>
+      <key>ru</key>
+      <value>Добавить</value>
+    </title>
+    <id>1</id>
+    <toolTip>
+      <key>ru</key>
+      <value>Добавить настройку очистки</value>
+    </toolTip>
+    <use>
+      <common>true</common>
+    </use>
+    <action xsi:type="form:FormCommandHandlerContainer">
+      <handler>
+        <name>ДобавитьНастройкуОчистки</name>
+      </handler>
+    </action>
+    <associatedTableElementId xsi:type="core:StringValue">
+      <value>ДеревоОбъектовМетаданных</value>
+    </associatedTableElementId>
+    <selectedRowsUse>DontUse</selectedRowsUse>
+  </formCommands>
   <commandInterface>
     <navigationPanel/>
     <commandBar/>
   </commandInterface>
-  <extInfo xsi:type="form:DynamicListFormExtInfo"/>
 </form:Form>

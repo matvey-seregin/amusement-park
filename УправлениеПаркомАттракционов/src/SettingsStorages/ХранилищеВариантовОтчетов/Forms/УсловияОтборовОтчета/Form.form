@@ -29,7 +29,6 @@
     <excludedCommands>MoveDown</excludedCommands>
     <excludedCommands>MoveUp</excludedCommands>
     <excludedCommands>OutputList</excludedCommands>
-    <excludedCommands>SelectAll</excludedCommands>
     <excludedCommands>SortListAsc</excludedCommands>
     <excludedCommands>SortListDesc</excludedCommands>
     <excludedCommands>Tree</excludedCommands>
@@ -219,14 +218,12 @@
       <name>ОтборыКонтекстноеМеню</name>
       <id>29</id>
     </contextMenu>
-    <representation>Tree</representation>
     <changeRowSet>true</changeRowSet>
     <autoMaxWidth>true</autoMaxWidth>
     <autoMaxHeight>true</autoMaxHeight>
     <autoMaxRowsCount>true</autoMaxRowsCount>
     <choiceMode>true</choiceMode>
     <rowInputMode>AfterCurrentRow</rowInputMode>
-    <selectionMode>MultiRow</selectionMode>
     <header>true</header>
     <headerHeight>1</headerHeight>
     <footerHeight>1</footerHeight>
@@ -246,15 +243,17 @@
     <enableDrag>true</enableDrag>
     <autoMaxCardHeight>true</autoMaxCardHeight>
   </items>
-  <items xsi:type="form:FormGroup">
-    <name>ГруппаКоманднаяПанель</name>
-    <id>47</id>
+  <commandBarLocation>Bottom</commandBarLocation>
+  <showCommandBar>true</showCommandBar>
+  <autoCommandBar>
+    <name>ФормаКоманднаяПанель</name>
+    <id>-1</id>
     <items xsi:type="form:Button">
-      <name>ФормаВыбрать</name>
+      <name>ФормаПрименить</name>
       <id>26</id>
       <title>
         <key>ru</key>
-        <value>ОК</value>
+        <value>Применить</value>
       </title>
       <visible>true</visible>
       <enabled>true</enabled>
@@ -262,7 +261,7 @@
         <common>true</common>
       </userVisible>
       <extendedTooltip>
-        <name>ФормаВыбратьРасширеннаяПодсказка</name>
+        <name>ФормаПрименитьРасширеннаяПодсказка</name>
         <id>27</id>
         <type>Label</type>
         <autoMaxWidth>true</autoMaxWidth>
@@ -271,35 +270,9 @@
           <horizontalAlign>Left</horizontalAlign>
         </extInfo>
       </extendedTooltip>
-      <commandName>Form.Command.Выбрать</commandName>
+      <commandName>Form.Command.Применить</commandName>
       <representation>Auto</representation>
       <defaultButton>true</defaultButton>
-      <autoMaxWidth>true</autoMaxWidth>
-      <autoMaxHeight>true</autoMaxHeight>
-      <placementArea>UserCmds</placementArea>
-      <representationInContextMenu>Auto</representationInContextMenu>
-    </items>
-    <items xsi:type="form:Button">
-      <name>Отмена</name>
-      <id>49</id>
-      <visible>true</visible>
-      <enabled>true</enabled>
-      <userVisible>
-        <common>true</common>
-      </userVisible>
-      <extendedTooltip>
-        <name>ОтменаРасширеннаяПодсказка</name>
-        <id>50</id>
-        <type>Label</type>
-        <autoMaxWidth>true</autoMaxWidth>
-        <autoMaxHeight>true</autoMaxHeight>
-        <extInfo xsi:type="form:LabelDecorationExtInfo">
-          <horizontalAlign>Left</horizontalAlign>
-        </extInfo>
-      </extendedTooltip>
-      <commandName>Form.StandardCommand.Cancel</commandName>
-      <buttonImportance>Normal</buttonImportance>
-      <representation>Auto</representation>
       <autoMaxWidth>true</autoMaxWidth>
       <autoMaxHeight>true</autoMaxHeight>
       <placementArea>UserCmds</placementArea>
@@ -331,34 +304,7 @@
       <placementArea>UserCmds</placementArea>
       <representationInContextMenu>Auto</representationInContextMenu>
     </items>
-    <visible>true</visible>
-    <enabled>true</enabled>
-    <userVisible>
-      <common>true</common>
-    </userVisible>
-    <title>
-      <key>ru</key>
-      <value>Командная панель</value>
-    </title>
-    <extendedTooltip>
-      <name>ГруппаКоманднаяПанельРасширеннаяПодсказка</name>
-      <id>48</id>
-      <type>Label</type>
-      <autoMaxWidth>true</autoMaxWidth>
-      <autoMaxHeight>true</autoMaxHeight>
-      <extInfo xsi:type="form:LabelDecorationExtInfo">
-        <horizontalAlign>Left</horizontalAlign>
-      </extInfo>
-    </extendedTooltip>
-    <type>CommandBar</type>
-    <extInfo xsi:type="form:CommandBarExtInfo">
-      <horizontalAlign>Right</horizontalAlign>
-    </extInfo>
-  </items>
-  <autoCommandBar>
-    <name>ФормаКоманднаяПанель</name>
-    <id>-1</id>
-    <horizontalAlign>Left</horizontalAlign>
+    <horizontalAlign>Right</horizontalAlign>
   </autoCommandBar>
   <handlers>
     <event>OnCreateAtServer</event>
@@ -580,24 +526,25 @@
     </columns>
   </attributes>
   <formCommands>
-    <name>Выбрать</name>
+    <name>Применить</name>
     <title>
       <key>ru</key>
-      <value>ОК</value>
+      <value>Применить</value>
     </title>
     <id>1</id>
     <toolTip>
       <key>ru</key>
-      <value>Выбрать</value>
+      <value>Применить</value>
     </toolTip>
     <use>
       <common>true</common>
     </use>
     <action xsi:type="form:FormCommandHandlerContainer">
       <handler>
-        <name>Выбрать</name>
+        <name>Применить</name>
       </handler>
     </action>
+    <actionPurpose>Finish</actionPurpose>
     <currentRowUse>DontUse</currentRowUse>
     <selectedRowsUse>Auto</selectedRowsUse>
   </formCommands>

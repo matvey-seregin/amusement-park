@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<form:Form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:form="http://g5.1c.ru/v8/dt/form">
+<form:Form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:form="http://g5.1c.ru/v8/dt/form" xmlns:schema="http://g5.1c.ru/v8/dt/data-composition-system/schema">
   <title>
     <key>ru</key>
     <value>Файлы в томе</value>
@@ -35,7 +35,7 @@
       <autoFill>true</autoFill>
     </contextMenu>
     <type>InputField</type>
-    <editMode>Enter</editMode>
+    <editMode>Auto</editMode>
     <showInHeader>true</showInHeader>
     <headerHorizontalAlign>Left</headerHorizontalAlign>
     <showInFooter>true</showInFooter>
@@ -85,34 +85,6 @@
       <currentRowUse>Auto</currentRowUse>
     </extInfo>
   </items>
-  <items xsi:type="form:FormGroup">
-    <name>КоманднаяПанель</name>
-    <id>32</id>
-    <visible>true</visible>
-    <enabled>true</enabled>
-    <userVisible>
-      <common>true</common>
-    </userVisible>
-    <title>
-      <key>ru</key>
-      <value>Командная панель</value>
-    </title>
-    <extendedTooltip>
-      <name>КоманднаяПанельРасширеннаяПодсказка</name>
-      <id>33</id>
-      <type>Label</type>
-      <autoMaxWidth>true</autoMaxWidth>
-      <autoMaxHeight>true</autoMaxHeight>
-      <extInfo xsi:type="form:LabelDecorationExtInfo">
-        <horizontalAlign>Left</horizontalAlign>
-      </extInfo>
-    </extendedTooltip>
-    <type>CommandBar</type>
-    <extInfo xsi:type="form:CommandBarExtInfo">
-      <horizontalAlign>Left</horizontalAlign>
-      <commandSource>Form</commandSource>
-    </extInfo>
-  </items>
   <items xsi:type="form:Table">
     <name>Список</name>
     <id>11</id>
@@ -132,11 +104,51 @@
     <excludedCommands>CancelSearch</excludedCommands>
     <excludedCommands>Find</excludedCommands>
     <items xsi:type="form:FormField">
+      <name>СписокНаименованиеФайла</name>
+      <id>56</id>
+      <title>
+        <key>ru</key>
+        <value>Имя файла</value>
+      </title>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <dataPath xsi:type="form:DataPath">
+        <segments>Список.НаименованиеФайла</segments>
+      </dataPath>
+      <extendedTooltip>
+        <name>СписокНаименованиеФайлаРасширеннаяПодсказка</name>
+        <id>58</id>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <contextMenu>
+        <name>СписокНаименованиеФайлаКонтекстноеМеню</name>
+        <id>57</id>
+        <autoFill>true</autoFill>
+      </contextMenu>
+      <type>LabelField</type>
+      <editMode>Enter</editMode>
+      <showInHeader>true</showInHeader>
+      <headerHorizontalAlign>Left</headerHorizontalAlign>
+      <showInFooter>true</showInFooter>
+      <extInfo xsi:type="form:LabelFieldExtInfo">
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+      </extInfo>
+    </items>
+    <items xsi:type="form:FormField">
       <name>СписокПутьКФайлу</name>
       <id>18</id>
       <title>
         <key>ru</key>
-        <value>Путь к файлу в томе</value>
+        <value>Путь</value>
       </title>
       <visible>true</visible>
       <enabled>true</enabled>
@@ -166,7 +178,7 @@
         <autoFill>true</autoFill>
       </contextMenu>
       <type>LabelField</type>
-      <editMode>Enter</editMode>
+      <editMode>Auto</editMode>
       <showInHeader>true</showInHeader>
       <headerHorizontalAlign>Left</headerHorizontalAlign>
       <showInFooter>true</showInFooter>
@@ -207,7 +219,7 @@
         <autoFill>true</autoFill>
       </contextMenu>
       <type>LabelField</type>
-      <editMode>Enter</editMode>
+      <editMode>Auto</editMode>
       <showInHeader>true</showInHeader>
       <headerHorizontalAlign>Left</headerHorizontalAlign>
       <showInFooter>true</showInFooter>
@@ -248,7 +260,7 @@
         <autoFill>true</autoFill>
       </contextMenu>
       <type>LabelField</type>
-      <editMode>Enter</editMode>
+      <editMode>Auto</editMode>
       <showInHeader>true</showInHeader>
       <headerHorizontalAlign>Left</headerHorizontalAlign>
       <showInFooter>true</showInFooter>
@@ -287,7 +299,7 @@
         <autoFill>true</autoFill>
       </contextMenu>
       <type>LabelField</type>
-      <editMode>Enter</editMode>
+      <editMode>Auto</editMode>
       <showInHeader>true</showInHeader>
       <headerHorizontalAlign>Left</headerHorizontalAlign>
       <showInFooter>true</showInFooter>
@@ -297,10 +309,13 @@
         <autoMaxHeight>true</autoMaxHeight>
       </extInfo>
     </items>
+    <commandBarLocation>Top</commandBarLocation>
+    <showCommandBar>true</showCommandBar>
     <autoCommandBar>
       <name>СписокКоманднаяПанель</name>
       <id>13</id>
       <horizontalAlign>Left</horizontalAlign>
+      <autoFill>true</autoFill>
     </autoCommandBar>
     <handlers>
       <event>Selection</event>
@@ -400,7 +415,6 @@
     <height>8</height>
     <autoMaxHeight>true</autoMaxHeight>
     <autoMaxRowsCount>true</autoMaxRowsCount>
-    <selectionMode>MultiRow</selectionMode>
     <header>true</header>
     <headerHeight>1</headerHeight>
     <footerHeight>1</footerHeight>
@@ -454,11 +468,6 @@
   <enabled>true</enabled>
   <showTitle>auto</showTitle>
   <showCloseButton>true</showCloseButton>
-  <mobileDeviceCommandBarContent>
-    <value xsi:type="core:StringValue">
-      <value>КоманднаяПанель</value>
-    </value>
-  </mobileDeviceCommandBarContent>
   <attributes>
     <name>ИменаХранилищФайлов</name>
     <id>2</id>
@@ -550,7 +559,8 @@
 	ВЫРАЗИТЬ(&quot;&quot; КАК СТРОКА) КАК ПутьКФайлу,
 	ВЫРАЗИТЬ(0 КАК ЧИСЛО(10, 0)) КАК Размер,
 	ЗНАЧЕНИЕ(Справочник.Пользователи.ПустаяСсылка) КАК Автор,
-	ЛОЖЬ КАК ЭтоПрисоединенныеФайлы
+	ЛОЖЬ КАК ЭтоПрисоединенныеФайлы,
+	ВЫРАЗИТЬ(&quot;&quot; КАК СТРОКА) КАК НаименованиеФайла
 ИЗ
 	Справочник.ТомаХраненияФайлов КАК ХранилищеФайловПереопределяемый</queryText>
       <mainTable>Catalog.ТомаХраненияФайлов</mainTable>
@@ -559,6 +569,138 @@
       <customQuery>true</customQuery>
       <autoSaveUserSettings>true</autoSaveUserSettings>
       <getInvisibleFieldPresentations>true</getInvisibleFieldPresentations>
+      <fields xsi:type="schema:DataCompositionSchemaDataSetField">
+        <dataPath>Код</dataPath>
+        <field>Код</field>
+      </fields>
+      <fields xsi:type="schema:DataCompositionSchemaDataSetField">
+        <dataPath>СпособХраненияФайлов</dataPath>
+        <field>СпособХраненияФайлов</field>
+      </fields>
+      <fields xsi:type="schema:DataCompositionSchemaDataSetField">
+        <dataPath>ВидТомаХраненияФайлов</dataPath>
+        <field>ВидТомаХраненияФайлов</field>
+      </fields>
+      <fields xsi:type="schema:DataCompositionSchemaDataSetField">
+        <dataPath>Комментарий</dataPath>
+        <field>Комментарий</field>
+      </fields>
+      <fields xsi:type="schema:DataCompositionSchemaDataSetField">
+        <dataPath>ПорядокЗаполнения</dataPath>
+        <field>ПорядокЗаполнения</field>
+      </fields>
+      <fields xsi:type="schema:DataCompositionSchemaDataSetField">
+        <dataPath>ВремяПоследнейОчисткиФайлов</dataPath>
+        <field>ВремяПоследнейОчисткиФайлов</field>
+      </fields>
+      <fields xsi:type="schema:DataCompositionSchemaDataSetField">
+        <dataPath>МаксимальныйРазмер</dataPath>
+        <field>МаксимальныйРазмер</field>
+      </fields>
+      <fields xsi:type="schema:DataCompositionSchemaDataSetField">
+        <dataPath>ПутьКФайлу</dataPath>
+        <field>ПутьКФайлу</field>
+        <title>
+          <localValue>
+            <content>
+              <key>ru</key>
+              <value>Путь к файлу</value>
+            </content>
+          </localValue>
+        </title>
+      </fields>
+      <fields xsi:type="schema:DataCompositionSchemaDataSetField">
+        <dataPath>ПолныйПутьLinux</dataPath>
+        <field>ПолныйПутьLinux</field>
+      </fields>
+      <fields xsi:type="schema:DataCompositionSchemaDataSetField">
+        <dataPath>ПолныйПутьWindows</dataPath>
+        <field>ПолныйПутьWindows</field>
+      </fields>
+      <fields xsi:type="schema:DataCompositionSchemaDataSetField">
+        <dataPath>ИмяХранилищаДвоичныхДанных</dataPath>
+        <field>ИмяХранилищаДвоичныхДанных</field>
+      </fields>
+      <fields xsi:type="schema:DataCompositionSchemaDataSetField">
+        <dataPath>Предопределенный</dataPath>
+        <field>Предопределенный</field>
+      </fields>
+      <fields xsi:type="schema:DataCompositionSchemaDataSetField">
+        <dataPath>Ссылка</dataPath>
+        <field>Ссылка</field>
+      </fields>
+      <fields xsi:type="schema:DataCompositionSchemaDataSetField">
+        <dataPath>ИмяПредопределенныхДанных</dataPath>
+        <field>ИмяПредопределенныхДанных</field>
+      </fields>
+      <fields xsi:type="schema:DataCompositionSchemaDataSetField">
+        <dataPath>Наименование</dataPath>
+        <field>Наименование</field>
+      </fields>
+      <fields xsi:type="schema:DataCompositionSchemaDataSetField">
+        <dataPath>ИндексКартинки</dataPath>
+        <field>ИндексКартинки</field>
+        <title>
+          <localValue>
+            <content>
+              <key>ru</key>
+              <value>Индекс картинки</value>
+            </content>
+          </localValue>
+        </title>
+      </fields>
+      <fields xsi:type="schema:DataCompositionSchemaDataSetField">
+        <dataPath>Размер</dataPath>
+        <field>Размер</field>
+        <title>
+          <localValue>
+            <content>
+              <key>ru</key>
+              <value>Размер</value>
+            </content>
+          </localValue>
+        </title>
+      </fields>
+      <fields xsi:type="schema:DataCompositionSchemaDataSetField">
+        <dataPath>Автор</dataPath>
+        <field>Автор</field>
+        <title>
+          <localValue>
+            <content>
+              <key>ru</key>
+              <value>Автор</value>
+            </content>
+          </localValue>
+        </title>
+      </fields>
+      <fields xsi:type="schema:DataCompositionSchemaDataSetField">
+        <dataPath>ЭтоПрисоединенныеФайлы</dataPath>
+        <field>ЭтоПрисоединенныеФайлы</field>
+        <title>
+          <localValue>
+            <content>
+              <key>ru</key>
+              <value>Это присоединенные файлы</value>
+            </content>
+          </localValue>
+        </title>
+      </fields>
+      <fields xsi:type="schema:DataCompositionSchemaDataSetField">
+        <dataPath>ПометкаУдаления</dataPath>
+        <field>ПометкаУдаления</field>
+      </fields>
+      <fields xsi:type="schema:DataCompositionSchemaDataSetField">
+        <dataPath>НаименованиеФайла</dataPath>
+        <field>НаименованиеФайла</field>
+        <title>
+          <localValue>
+            <content>
+              <key>ru</key>
+              <value>Наименование файла</value>
+            </content>
+          </localValue>
+        </title>
+      </fields>
     </extInfo>
   </attributes>
   <parameters>

@@ -19,8 +19,9 @@
         <name>ЗначокПредупрежденияРасширеннаяПодсказка</name>
         <id>3</id>
         <type>Label</type>
-        <autoMaxWidth>true</autoMaxWidth>
+        <maxWidth>50</maxWidth>
         <autoMaxHeight>true</autoMaxHeight>
+        <horizontalStretch>true</horizontalStretch>
         <extInfo xsi:type="form:LabelDecorationExtInfo">
           <horizontalAlign>Left</horizontalAlign>
         </extInfo>
@@ -40,7 +41,7 @@
     </items>
     <items xsi:type="form:Decoration">
       <name>ТекстПредупреждения</name>
-      <id>6</id>
+      <id>33</id>
       <title>
         <key>ru</key>
         <value>Была отменена связь с главным узлом &quot;%1&quot; распределенной информационной базы.</value>
@@ -50,10 +51,9 @@
       <userVisible>
         <common>true</common>
       </userVisible>
-      <toolTipRepresentation>Button</toolTipRepresentation>
       <extendedTooltip>
         <name>ТекстПредупрежденияРасширеннаяПодсказка</name>
-        <id>8</id>
+        <id>35</id>
         <type>Label</type>
         <autoMaxWidth>true</autoMaxWidth>
         <autoMaxHeight>true</autoMaxHeight>
@@ -63,13 +63,11 @@
       </extendedTooltip>
       <contextMenu>
         <name>ТекстПредупрежденияКонтекстноеМеню</name>
-        <id>7</id>
+        <id>34</id>
         <autoFill>true</autoFill>
       </contextMenu>
       <type>Label</type>
-      <width>46</width>
-      <autoMaxWidth>true</autoMaxWidth>
-      <height>2</height>
+      <maxWidth>50</maxWidth>
       <autoMaxHeight>true</autoMaxHeight>
       <extInfo xsi:type="form:LabelDecorationExtInfo">
         <horizontalAlign>Left</horizontalAlign>
@@ -84,7 +82,6 @@
       <key>ru</key>
       <value>Предупреждение</value>
     </title>
-    <height>2</height>
     <extendedTooltip>
       <name>ГруппаПредупреждениеРасширеннаяПодсказка</name>
       <id>5</id>
@@ -98,6 +95,7 @@
     <type>UsualGroup</type>
     <extInfo xsi:type="form:UsualGroupExtInfo">
       <group>HorizontalIfPossible</group>
+      <verticalAlign>Center</verticalAlign>
       <showLeftMargin>true</showLeftMargin>
       <united>true</united>
       <throughAlign>Auto</throughAlign>
@@ -141,9 +139,11 @@
       <horizontalAlign>Left</horizontalAlign>
     </extInfo>
   </items>
-  <items xsi:type="form:FormGroup">
-    <name>Команды</name>
-    <id>12</id>
+  <commandBarLocation>Bottom</commandBarLocation>
+  <showCommandBar>true</showCommandBar>
+  <autoCommandBar>
+    <name>ФормаКоманднаяПанель</name>
+    <id>-1</id>
     <items xsi:type="form:Button">
       <name>Восстановить</name>
       <id>16</id>
@@ -261,34 +261,7 @@
       <placementArea>UserCmds</placementArea>
       <representationInContextMenu>Auto</representationInContextMenu>
     </items>
-    <visible>true</visible>
-    <enabled>true</enabled>
-    <userVisible>
-      <common>true</common>
-    </userVisible>
-    <title>
-      <key>ru</key>
-      <value>Команды</value>
-    </title>
-    <extendedTooltip>
-      <name>КомандыРасширеннаяПодсказка</name>
-      <id>13</id>
-      <type>Label</type>
-      <autoMaxWidth>true</autoMaxWidth>
-      <autoMaxHeight>true</autoMaxHeight>
-      <extInfo xsi:type="form:LabelDecorationExtInfo">
-        <horizontalAlign>Left</horizontalAlign>
-      </extInfo>
-    </extendedTooltip>
-    <type>CommandBar</type>
-    <extInfo xsi:type="form:CommandBarExtInfo">
-      <horizontalAlign>Right</horizontalAlign>
-    </extInfo>
-  </items>
-  <autoCommandBar>
-    <name>ФормаКоманднаяПанель</name>
-    <id>-1</id>
-    <horizontalAlign>Left</horizontalAlign>
+    <horizontalAlign>Right</horizontalAlign>
   </autoCommandBar>
   <handlers>
     <event>OnCreateAtServer</event>
@@ -332,6 +305,7 @@
         <name>Восстановить</name>
       </handler>
     </action>
+    <actionPurpose>Finish</actionPurpose>
     <currentRowUse>DontUse</currentRowUse>
     <selectedRowsUse>Auto</selectedRowsUse>
   </formCommands>
@@ -350,6 +324,7 @@
         <name>Отключить</name>
       </handler>
     </action>
+    <actionPurpose>Finish</actionPurpose>
     <currentRowUse>DontUse</currentRowUse>
     <selectedRowsUse>Auto</selectedRowsUse>
   </formCommands>
@@ -372,6 +347,7 @@
         <name>ЗавершитьРаботу</name>
       </handler>
     </action>
+    <actionPurpose>Finish</actionPurpose>
     <currentRowUse>DontUse</currentRowUse>
     <selectedRowsUse>Auto</selectedRowsUse>
   </formCommands>

@@ -3,38 +3,6 @@
   <items xsi:type="form:FormGroup">
     <name>КоманднаяПанель</name>
     <id>36</id>
-    <items xsi:type="form:Button">
-      <name>Выбрать</name>
-      <id>13</id>
-      <title>
-        <key>ru</key>
-        <value>Выбрать</value>
-      </title>
-      <visible>true</visible>
-      <enabled>true</enabled>
-      <userVisible>
-        <common>true</common>
-      </userVisible>
-      <skipOnInput>false</skipOnInput>
-      <extendedTooltip>
-        <name>ВыбратьРасширеннаяПодсказка</name>
-        <id>16</id>
-        <type>Label</type>
-        <autoMaxWidth>true</autoMaxWidth>
-        <autoMaxHeight>true</autoMaxHeight>
-        <extInfo xsi:type="form:LabelDecorationExtInfo">
-          <horizontalAlign>Left</horizontalAlign>
-        </extInfo>
-      </extendedTooltip>
-      <type>UsualButton</type>
-      <commandName>Form.Command.Выбрать</commandName>
-      <representation>Auto</representation>
-      <defaultButton>true</defaultButton>
-      <autoMaxWidth>true</autoMaxWidth>
-      <autoMaxHeight>true</autoMaxHeight>
-      <placementArea>UserCmds</placementArea>
-      <representationInContextMenu>Auto</representationInContextMenu>
-    </items>
     <items xsi:type="form:FormField">
       <name>СпособГруппировкиОбъектов</name>
       <id>33</id>
@@ -71,11 +39,12 @@
         <autoFill>true</autoFill>
       </contextMenu>
       <type>RadioButtonField</type>
-      <editMode>Enter</editMode>
+      <editMode>Auto</editMode>
       <showInHeader>true</showInHeader>
       <headerHorizontalAlign>Left</headerHorizontalAlign>
       <showInFooter>true</showInFooter>
       <extInfo xsi:type="form:RadioButtonsFieldExtInfo">
+        <radioButtonsType>Tumbler</radioButtonsType>
         <choiceList>
           <presentation>
             <key>ru</key>
@@ -152,7 +121,6 @@
     <excludedCommands>List</excludedCommands>
     <excludedCommands>MoveDown</excludedCommands>
     <excludedCommands>MoveUp</excludedCommands>
-    <excludedCommands>SelectAll</excludedCommands>
     <excludedCommands>SortListAsc</excludedCommands>
     <excludedCommands>SortListDesc</excludedCommands>
     <excludedCommands>Tree</excludedCommands>
@@ -195,7 +163,7 @@
           <autoFill>true</autoFill>
         </contextMenu>
         <type>CheckBoxField</type>
-        <editMode>Enter</editMode>
+        <editMode>Auto</editMode>
         <showInHeader>true</showInHeader>
         <headerHorizontalAlign>Left</headerHorizontalAlign>
         <showInFooter>true</showInFooter>
@@ -235,7 +203,7 @@
           <autoFill>true</autoFill>
         </contextMenu>
         <type>PictureField</type>
-        <editMode>Enter</editMode>
+        <editMode>Auto</editMode>
         <showInHeader>true</showInHeader>
         <headerHorizontalAlign>Left</headerHorizontalAlign>
         <showInFooter>true</showInFooter>
@@ -281,7 +249,7 @@
         </contextMenu>
         <type>InputField</type>
         <readOnly>true</readOnly>
-        <editMode>Enter</editMode>
+        <editMode>Auto</editMode>
         <showInHeader>true</showInHeader>
         <headerHorizontalAlign>Left</headerHorizontalAlign>
         <showInFooter>true</showInFooter>
@@ -422,7 +390,6 @@
     <autoMaxWidth>true</autoMaxWidth>
     <autoMaxHeight>true</autoMaxHeight>
     <autoMaxRowsCount>true</autoMaxRowsCount>
-    <selectionMode>MultiRow</selectionMode>
     <headerHeight>1</headerHeight>
     <footerHeight>1</footerHeight>
     <horizontalScrollBar>AutoUse</horizontalScrollBar>
@@ -443,6 +410,37 @@
   <autoCommandBar>
     <name>ФормаКоманднаяПанель</name>
     <id>-1</id>
+    <items xsi:type="form:Button">
+      <name>Выбрать</name>
+      <id>13</id>
+      <title>
+        <key>ru</key>
+        <value>Выбрать</value>
+      </title>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <skipOnInput>false</skipOnInput>
+      <extendedTooltip>
+        <name>ВыбратьРасширеннаяПодсказка</name>
+        <id>16</id>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <commandName>Form.Command.Выбрать</commandName>
+      <representation>Auto</representation>
+      <defaultButton>true</defaultButton>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <placementArea>UserCmds</placementArea>
+      <representationInContextMenu>Auto</representationInContextMenu>
+    </items>
     <horizontalAlign>Left</horizontalAlign>
   </autoCommandBar>
   <handlers>
@@ -923,6 +921,7 @@
         <name>ВыбратьВыполнить</name>
       </handler>
     </action>
+    <actionPurpose>Finish</actionPurpose>
     <currentRowUse>DontUse</currentRowUse>
     <selectedRowsUse>Auto</selectedRowsUse>
   </formCommands>

@@ -338,7 +338,7 @@
       <autoFill>true</autoFill>
     </contextMenu>
     <type>InputField</type>
-    <editMode>Enter</editMode>
+    <editMode>Auto</editMode>
     <showInHeader>true</showInHeader>
     <headerHorizontalAlign>Left</headerHorizontalAlign>
     <showInFooter>true</showInFooter>
@@ -351,9 +351,6 @@
       <chooseType>true</chooseType>
       <typeDomainEnabled>true</typeDomainEnabled>
       <textEdit>true</textEdit>
-      <borderColor xsi:type="core:ColorRef">
-        <color>Style.BorderColor</color>
-      </borderColor>
       <textSize>Normal</textSize>
     </extInfo>
   </items>
@@ -389,16 +386,18 @@
       <autoFill>true</autoFill>
     </contextMenu>
     <type>CheckBoxField</type>
-    <editMode>Enter</editMode>
+    <editMode>Auto</editMode>
     <showInHeader>true</showInHeader>
     <headerHorizontalAlign>Left</headerHorizontalAlign>
     <showInFooter>true</showInFooter>
     <footerHorizontalAlign>Left</footerHorizontalAlign>
     <extInfo xsi:type="form:CheckBoxFieldExtInfo"/>
   </items>
-  <items xsi:type="form:FormGroup">
-    <name>ОсновнаяКоманднаяПанель</name>
-    <id>1</id>
+  <commandBarLocation>Bottom</commandBarLocation>
+  <showCommandBar>true</showCommandBar>
+  <autoCommandBar>
+    <name>ФормаКоманднаяПанель</name>
+    <id>-1</id>
     <items xsi:type="form:Button">
       <name>ЗакончитьРедактирование</name>
       <id>4</id>
@@ -431,9 +430,6 @@
       <textColor xsi:type="core:ColorRef">
         <color>Style.ButtonTextColor</color>
       </textColor>
-      <backColor xsi:type="core:ColorRef">
-        <color>Style.ButtonBackColor</color>
-      </backColor>
       <borderColor xsi:type="core:ColorRef">
         <color>Style.BorderColor</color>
       </borderColor>
@@ -467,45 +463,12 @@
       <textColor xsi:type="core:ColorRef">
         <color>Style.ButtonTextColor</color>
       </textColor>
-      <backColor xsi:type="core:ColorRef">
-        <color>Style.ButtonBackColor</color>
-      </backColor>
       <borderColor xsi:type="core:ColorRef">
         <color>Style.BorderColor</color>
       </borderColor>
       <representationInContextMenu>Auto</representationInContextMenu>
     </items>
-    <visible>true</visible>
-    <enabled>true</enabled>
-    <userVisible>
-      <common>true</common>
-    </userVisible>
-    <title>
-      <key>ru</key>
-      <value>Основная командная панель</value>
-    </title>
-    <extendedTooltip>
-      <name>ОсновнаяКоманднаяПанельРасширеннаяПодсказка</name>
-      <id>53</id>
-      <type>Label</type>
-      <autoMaxWidth>true</autoMaxWidth>
-      <autoMaxHeight>true</autoMaxHeight>
-      <extInfo xsi:type="form:LabelDecorationExtInfo">
-        <horizontalAlign>Left</horizontalAlign>
-      </extInfo>
-    </extendedTooltip>
-    <type>CommandBar</type>
-    <extInfo xsi:type="form:CommandBarExtInfo">
-      <horizontalAlign>Right</horizontalAlign>
-      <commandSource>Form</commandSource>
-    </extInfo>
-  </items>
-  <commandBarLocation>None</commandBarLocation>
-  <showCommandBar>false</showCommandBar>
-  <autoCommandBar>
-    <name>ФормаКоманднаяПанель</name>
-    <id>-1</id>
-    <horizontalAlign>Left</horizontalAlign>
+    <horizontalAlign>Right</horizontalAlign>
     <autoFill>true</autoFill>
   </autoCommandBar>
   <handlers>
@@ -524,11 +487,6 @@
   <enabled>true</enabled>
   <showTitle>auto</showTitle>
   <showCloseButton>true</showCloseButton>
-  <mobileDeviceCommandBarContent>
-    <value xsi:type="core:StringValue">
-      <value>ОсновнаяКоманднаяПанель</value>
-    </value>
-  </mobileDeviceCommandBarContent>
   <attributes>
     <name>Объект</name>
     <id>1</id>
@@ -732,6 +690,7 @@
         <name>ЗакончитьРедактирование</name>
       </handler>
     </action>
+    <actionPurpose>Finish</actionPurpose>
     <currentRowUse>DontUse</currentRowUse>
     <selectedRowsUse>Auto</selectedRowsUse>
   </formCommands>

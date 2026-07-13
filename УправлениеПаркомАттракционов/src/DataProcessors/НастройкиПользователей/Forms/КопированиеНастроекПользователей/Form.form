@@ -2,176 +2,215 @@
 <form:Form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:form="http://g5.1c.ru/v8/dt/form">
   <title>
     <key>ru</key>
-    <value>Копирование настроек пользователей</value>
+    <value>Копирование настроек</value>
   </title>
-  <items xsi:type="form:FormField">
-    <name>ПользовательСсылка</name>
-    <id>1</id>
-    <title>
-      <key>ru</key>
-      <value>Скопировать настройки от пользователя</value>
-    </title>
-    <visible>true</visible>
-    <enabled>true</enabled>
-    <userVisible>
-      <common>true</common>
-    </userVisible>
-    <dataPath xsi:type="form:DataPath">
-      <segments>ПользовательСсылка</segments>
-    </dataPath>
-    <titleLocation>Top</titleLocation>
-    <toolTip>
-      <key>ru</key>
-      <value>Пользователь, настройки которого требуется скопировать</value>
-    </toolTip>
-    <handlers>
-      <event>OnChange</event>
-      <name>ПользовательСсылкаПриИзменении</name>
-    </handlers>
-    <extendedTooltip>
-      <name>ПользовательСсылкаРасширеннаяПодсказка</name>
-      <id>72</id>
-      <type>Label</type>
-      <autoMaxWidth>true</autoMaxWidth>
-      <autoMaxHeight>true</autoMaxHeight>
-      <extInfo xsi:type="form:LabelDecorationExtInfo">
-        <horizontalAlign>Left</horizontalAlign>
-      </extInfo>
-    </extendedTooltip>
-    <contextMenu>
-      <name>ПользовательСсылкаКонтекстноеМеню</name>
-      <id>2</id>
-      <autoFill>true</autoFill>
-    </contextMenu>
-    <type>InputField</type>
-    <markRequiredComplete>true</markRequiredComplete>
-    <editMode>Enter</editMode>
-    <showInHeader>true</showInHeader>
-    <headerHorizontalAlign>Left</headerHorizontalAlign>
-    <showInFooter>true</showInFooter>
-    <extInfo xsi:type="form:InputFieldExtInfo">
+  <items xsi:type="form:FormGroup">
+    <name>ГруппаОсновное</name>
+    <id>89</id>
+    <items xsi:type="form:FormField">
+      <name>ПользовательСсылка</name>
+      <id>1</id>
+      <title>
+        <key>ru</key>
+        <value>Скопировать настройки от пользователя</value>
+      </title>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <dataPath xsi:type="form:DataPath">
+        <segments>ПользовательСсылка</segments>
+      </dataPath>
+      <titleLocation>Top</titleLocation>
+      <toolTip>
+        <key>ru</key>
+        <value>Пользователь, настройки которого требуется скопировать</value>
+      </toolTip>
       <handlers>
-        <event>StartChoice</event>
-        <name>ПользовательНачалоВыбора</name>
+        <event>OnChange</event>
+        <name>ПользовательСсылкаПриИзменении</name>
       </handlers>
-      <width>35</width>
-      <autoMaxWidth>true</autoMaxWidth>
-      <autoMaxHeight>true</autoMaxHeight>
-      <horizontalStretch>false</horizontalStretch>
-      <wrap>true</wrap>
-      <autoMarkIncomplete>true</autoMarkIncomplete>
-      <chooseType>true</chooseType>
-      <typeDomainEnabled>true</typeDomainEnabled>
-      <textSize>Normal</textSize>
-    </extInfo>
-  </items>
-  <items xsi:type="form:FormGroup">
-    <name>ГруппаКомуКопировать</name>
-    <id>28</id>
-    <items xsi:type="form:FormGroup">
-      <name>ГруппаВыбратьПользователей</name>
-      <id>29</id>
-      <items xsi:type="form:FormField">
-        <name>ПереключательКомуКопироватьНастройки</name>
-        <id>3</id>
-        <title>
-          <key>ru</key>
-          <value>Кому скопировать</value>
-        </title>
-        <visible>true</visible>
-        <enabled>true</enabled>
-        <userVisible>
-          <common>true</common>
-        </userVisible>
-        <dataPath xsi:type="form:DataPath">
-          <segments>ПереключательКомуКопироватьНастройки</segments>
-        </dataPath>
-        <titleLocation>None</titleLocation>
-        <handlers>
-          <event>OnChange</event>
-          <name>ПереключательКомуКопироватьНастройкиПриИзменении</name>
-        </handlers>
-        <extendedTooltip>
-          <name>ПереключательКомуКопироватьНастройкиРасширеннаяПодсказка</name>
-          <id>74</id>
-          <type>Label</type>
-          <autoMaxWidth>true</autoMaxWidth>
-          <autoMaxHeight>true</autoMaxHeight>
-          <extInfo xsi:type="form:LabelDecorationExtInfo">
-            <horizontalAlign>Left</horizontalAlign>
-          </extInfo>
-        </extendedTooltip>
-        <contextMenu>
-          <name>ПереключательКомуКопироватьНастройкиКонтекстноеМеню</name>
-          <id>4</id>
-          <autoFill>true</autoFill>
-        </contextMenu>
-        <type>RadioButtonField</type>
-        <editMode>Enter</editMode>
-        <showInHeader>true</showInHeader>
-        <headerHorizontalAlign>Left</headerHorizontalAlign>
-        <showInFooter>true</showInFooter>
-        <extInfo xsi:type="form:RadioButtonsFieldExtInfo">
-          <columnsCount>1</columnsCount>
-          <choiceList>
-            <presentation>
-              <key>ru</key>
-              <value>Выбранным пользователям:</value>
-            </presentation>
-            <value xsi:type="core:StringValue">
-              <value>ВыбраннымПользователям</value>
-            </value>
-          </choiceList>
-          <choiceList>
-            <presentation>
-              <key>ru</key>
-              <value>Всем пользователям</value>
-            </presentation>
-            <value xsi:type="core:StringValue">
-              <value>ВсемПользователям</value>
-            </value>
-          </choiceList>
-          <orientation>Vertical</orientation>
-        </extInfo>
-      </items>
-      <items xsi:type="form:Decoration">
-        <name>ВыбратьПользователей</name>
-        <id>58</id>
-        <title>
-          <key>ru</key>
-          <value>Выбрать</value>
-        </title>
-        <visible>true</visible>
-        <enabled>true</enabled>
-        <userVisible>
-          <common>true</common>
-        </userVisible>
-        <extendedTooltip>
-          <name>ВыбратьПользователейРасширеннаяПодсказка</name>
-          <id>76</id>
-          <type>Label</type>
-          <autoMaxWidth>true</autoMaxWidth>
-          <autoMaxHeight>true</autoMaxHeight>
-          <extInfo xsi:type="form:LabelDecorationExtInfo">
-            <horizontalAlign>Left</horizontalAlign>
-          </extInfo>
-        </extendedTooltip>
-        <contextMenu>
-          <name>ВыбратьПользователейКонтекстноеМеню</name>
-          <id>59</id>
-          <autoFill>true</autoFill>
-        </contextMenu>
+      <extendedTooltip>
+        <name>ПользовательСсылкаРасширеннаяПодсказка</name>
+        <id>72</id>
         <type>Label</type>
-        <maxWidth>28</maxWidth>
-        <maxHeight>1</maxHeight>
-        <verticalStretch>false</verticalStretch>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
         <extInfo xsi:type="form:LabelDecorationExtInfo">
-          <handlers>
-            <event>Click</event>
-            <name>ВыбратьПользователей</name>
-          </handlers>
-          <hyperlink>true</hyperlink>
           <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <contextMenu>
+        <name>ПользовательСсылкаКонтекстноеМеню</name>
+        <id>2</id>
+        <autoFill>true</autoFill>
+      </contextMenu>
+      <type>InputField</type>
+      <editMode>Auto</editMode>
+      <showInHeader>true</showInHeader>
+      <headerHorizontalAlign>Left</headerHorizontalAlign>
+      <showInFooter>true</showInFooter>
+      <extInfo xsi:type="form:InputFieldExtInfo">
+        <handlers>
+          <event>StartChoice</event>
+          <name>ПользовательНачалоВыбора</name>
+        </handlers>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <wrap>true</wrap>
+        <autoMarkIncomplete>true</autoMarkIncomplete>
+        <chooseType>true</chooseType>
+        <typeDomainEnabled>true</typeDomainEnabled>
+        <textSize>Normal</textSize>
+      </extInfo>
+    </items>
+    <items xsi:type="form:FormGroup">
+      <name>ГруппаКомуКопировать</name>
+      <id>28</id>
+      <items xsi:type="form:FormGroup">
+        <name>ГруппаВыбратьПользователей</name>
+        <id>29</id>
+        <items xsi:type="form:FormField">
+          <name>ПереключательКомуКопироватьНастройки</name>
+          <id>3</id>
+          <title>
+            <key>ru</key>
+            <value>Кому скопировать</value>
+          </title>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <dataPath xsi:type="form:DataPath">
+            <segments>ПереключательКомуКопироватьНастройки</segments>
+          </dataPath>
+          <handlers>
+            <event>OnChange</event>
+            <name>ПереключательКомуКопироватьНастройкиПриИзменении</name>
+          </handlers>
+          <extendedTooltip>
+            <name>ПереключательКомуКопироватьНастройкиРасширеннаяПодсказка</name>
+            <id>74</id>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <contextMenu>
+            <name>ПереключательКомуКопироватьНастройкиКонтекстноеМеню</name>
+            <id>4</id>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <type>RadioButtonField</type>
+          <editMode>Auto</editMode>
+          <showInHeader>true</showInHeader>
+          <headerHorizontalAlign>Left</headerHorizontalAlign>
+          <showInFooter>true</showInFooter>
+          <extInfo xsi:type="form:RadioButtonsFieldExtInfo">
+            <radioButtonsType>Tumbler</radioButtonsType>
+            <columnsCount>1</columnsCount>
+            <choiceList>
+              <presentation>
+                <key>ru</key>
+                <value>Выбранным пользователям</value>
+              </presentation>
+              <value xsi:type="core:StringValue">
+                <value>ВыбраннымПользователям</value>
+              </value>
+            </choiceList>
+            <choiceList>
+              <presentation>
+                <key>ru</key>
+                <value>Всем пользователям</value>
+              </presentation>
+              <value xsi:type="core:StringValue">
+                <value>ВсемПользователям</value>
+              </value>
+            </choiceList>
+            <horizontalStretch>true</horizontalStretch>
+            <orientation>Vertical</orientation>
+          </extInfo>
+        </items>
+        <items xsi:type="form:FormField">
+          <name>ВыбранныеПользователи</name>
+          <id>85</id>
+          <title>
+            <key>ru</key>
+            <value>Выбранные пользователи</value>
+          </title>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <dataPath xsi:type="form:DataPath">
+            <segments>ВыбранныеПользователи</segments>
+          </dataPath>
+          <extendedTooltip>
+            <name>ВыбранныеПользователиРасширеннаяПодсказка</name>
+            <id>87</id>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <contextMenu>
+            <name>ВыбранныеПользователиКонтекстноеМеню</name>
+            <id>86</id>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <type>InputField</type>
+          <editMode>Auto</editMode>
+          <showInHeader>true</showInHeader>
+          <headerHorizontalAlign>Left</headerHorizontalAlign>
+          <showInFooter>true</showInFooter>
+          <extInfo xsi:type="form:InputFieldExtInfo">
+            <handlers>
+              <event>StartChoice</event>
+              <name>ВыбранныеПользователи1НачалоВыбора</name>
+            </handlers>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <wrap>true</wrap>
+            <extendedEditMultipleValues>true</extendedEditMultipleValues>
+            <chooseType>true</chooseType>
+            <typeDomainEnabled>true</typeDomainEnabled>
+            <textEdit>true</textEdit>
+            <textSize>Normal</textSize>
+          </extInfo>
+        </items>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <title>
+          <key>ru</key>
+          <value>Выбрать пользователей</value>
+        </title>
+        <extendedTooltip>
+          <name>ГруппаВыбратьПользователейРасширеннаяПодсказка</name>
+          <id>75</id>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <type>UsualGroup</type>
+        <extInfo xsi:type="form:UsualGroupExtInfo">
+          <group>Vertical</group>
+          <showLeftMargin>true</showLeftMargin>
+          <united>true</united>
+          <throughAlign>Auto</throughAlign>
+          <currentRowUse>Auto</currentRowUse>
         </extInfo>
       </items>
       <visible>true</visible>
@@ -181,11 +220,11 @@
       </userVisible>
       <title>
         <key>ru</key>
-        <value>Выбрать пользователей</value>
+        <value>Кому копировать:</value>
       </title>
       <extendedTooltip>
-        <name>ГруппаВыбратьПользователейРасширеннаяПодсказка</name>
-        <id>75</id>
+        <name>ГруппаКомуКопироватьРасширеннаяПодсказка</name>
+        <id>73</id>
         <type>Label</type>
         <autoMaxWidth>true</autoMaxWidth>
         <autoMaxHeight>true</autoMaxHeight>
@@ -195,7 +234,179 @@
       </extendedTooltip>
       <type>UsualGroup</type>
       <extInfo xsi:type="form:UsualGroupExtInfo">
-        <group>HorizontalIfPossible</group>
+        <group>Auto</group>
+        <representation>Auto</representation>
+        <showAsCard>true</showAsCard>
+        <showLeftMargin>true</showLeftMargin>
+        <united>true</united>
+        <throughAlign>Auto</throughAlign>
+        <currentRowUse>Auto</currentRowUse>
+      </extInfo>
+    </items>
+    <items xsi:type="form:FormGroup">
+      <name>ГруппаКопируемыеНастройки</name>
+      <id>13</id>
+      <items xsi:type="form:FormGroup">
+        <name>ГруппаВыбрать</name>
+        <id>64</id>
+        <items xsi:type="form:FormField">
+          <name>ПереключательКопируемыеНастройки</name>
+          <id>62</id>
+          <title>
+            <key>ru</key>
+            <value>Что копировать</value>
+          </title>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <dataPath xsi:type="form:DataPath">
+            <segments>ПереключательКопируемыеНастройки</segments>
+          </dataPath>
+          <handlers>
+            <event>OnChange</event>
+            <name>ПереключательКопируемыеНастройкиПриИзменении</name>
+          </handlers>
+          <extendedTooltip>
+            <name>ПереключательКопируемыеНастройкиРасширеннаяПодсказка</name>
+            <id>78</id>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <contextMenu>
+            <name>ПереключательКопируемыеНастройкиКонтекстноеМеню</name>
+            <id>63</id>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <type>RadioButtonField</type>
+          <editMode>Auto</editMode>
+          <showInHeader>true</showInHeader>
+          <headerHorizontalAlign>Left</headerHorizontalAlign>
+          <showInFooter>true</showInFooter>
+          <extInfo xsi:type="form:RadioButtonsFieldExtInfo">
+            <radioButtonsType>Tumbler</radioButtonsType>
+            <columnsCount>1</columnsCount>
+            <choiceList>
+              <presentation>
+                <key>ru</key>
+                <value>Все настройки</value>
+              </presentation>
+              <value xsi:type="core:StringValue">
+                <value>СкопироватьВсе</value>
+              </value>
+            </choiceList>
+            <choiceList>
+              <presentation>
+                <key>ru</key>
+                <value>Отдельные настройки</value>
+              </presentation>
+              <value xsi:type="core:StringValue">
+                <value>СкопироватьОтдельные</value>
+              </value>
+            </choiceList>
+            <horizontalStretch>true</horizontalStretch>
+            <orientation>Vertical</orientation>
+          </extInfo>
+        </items>
+        <items xsi:type="form:Decoration">
+          <name>ВыбратьНастройки</name>
+          <id>60</id>
+          <title>
+            <key>ru</key>
+            <value>Выбрать настройки</value>
+          </title>
+          <visible>true</visible>
+          <enabled>false</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <extendedTooltip>
+            <name>ВыбратьНастройкиРасширеннаяПодсказка</name>
+            <id>81</id>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <contextMenu>
+            <name>ВыбратьНастройкиКонтекстноеМеню</name>
+            <id>61</id>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <verticalStretch>false</verticalStretch>
+          <groupVerticalAlign>Bottom</groupVerticalAlign>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <handlers>
+              <event>Click</event>
+              <name>ВыбратьНастройки</name>
+            </handlers>
+            <hyperlink>true</hyperlink>
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </items>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <title>
+          <key>ru</key>
+          <value>Выбрать</value>
+        </title>
+        <verticalStretch>true</verticalStretch>
+        <extendedTooltip>
+          <name>ГруппаВыбратьРасширеннаяПодсказка</name>
+          <id>79</id>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <type>UsualGroup</type>
+        <extInfo xsi:type="form:UsualGroupExtInfo">
+          <group>Vertical</group>
+          <showLeftMargin>true</showLeftMargin>
+          <united>true</united>
+          <throughAlign>Auto</throughAlign>
+          <currentRowUse>Auto</currentRowUse>
+        </extInfo>
+      </items>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <title>
+        <key>ru</key>
+        <value>Что копировать:</value>
+      </title>
+      <extendedTooltip>
+        <name>ГруппаКопируемыеНастройкиРасширеннаяПодсказка</name>
+        <id>77</id>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <type>UsualGroup</type>
+      <extInfo xsi:type="form:UsualGroupExtInfo">
+        <group>Auto</group>
+        <representation>Auto</representation>
+        <showAsCard>true</showAsCard>
         <showLeftMargin>true</showLeftMargin>
         <united>true</united>
         <throughAlign>Auto</throughAlign>
@@ -209,11 +420,12 @@
     </userVisible>
     <title>
       <key>ru</key>
-      <value>Кому копировать:</value>
+      <value>Основное</value>
     </title>
+    <horizontalStretch>false</horizontalStretch>
     <extendedTooltip>
-      <name>ГруппаКомуКопироватьРасширеннаяПодсказка</name>
-      <id>73</id>
+      <name>ГруппаОсновноеРасширеннаяПодсказка</name>
+      <id>90</id>
       <type>Label</type>
       <autoMaxWidth>true</autoMaxWidth>
       <autoMaxHeight>true</autoMaxHeight>
@@ -223,180 +435,10 @@
     </extendedTooltip>
     <type>UsualGroup</type>
     <extInfo xsi:type="form:UsualGroupExtInfo">
-      <group>HorizontalIfPossible</group>
-      <representation>NormalSeparation</representation>
+      <group>Vertical</group>
+      <behavior>Auto</behavior>
       <showLeftMargin>true</showLeftMargin>
       <united>true</united>
-      <showTitle>auto</showTitle>
-      <throughAlign>Auto</throughAlign>
-      <currentRowUse>Auto</currentRowUse>
-    </extInfo>
-  </items>
-  <items xsi:type="form:FormGroup">
-    <name>ГруппаКопируемыеНастройки</name>
-    <id>13</id>
-    <items xsi:type="form:FormGroup">
-      <name>ГруппаВыбрать</name>
-      <id>64</id>
-      <items xsi:type="form:FormField">
-        <name>ПереключательКопируемыеНастройки</name>
-        <id>62</id>
-        <title>
-          <key>ru</key>
-          <value>Копируемые настройки</value>
-        </title>
-        <visible>true</visible>
-        <enabled>true</enabled>
-        <userVisible>
-          <common>true</common>
-        </userVisible>
-        <dataPath xsi:type="form:DataPath">
-          <segments>ПереключательКопируемыеНастройки</segments>
-        </dataPath>
-        <titleLocation>None</titleLocation>
-        <handlers>
-          <event>OnChange</event>
-          <name>ПереключательКопируемыеНастройкиПриИзменении</name>
-        </handlers>
-        <extendedTooltip>
-          <name>ПереключательКопируемыеНастройкиРасширеннаяПодсказка</name>
-          <id>78</id>
-          <type>Label</type>
-          <autoMaxWidth>true</autoMaxWidth>
-          <autoMaxHeight>true</autoMaxHeight>
-          <extInfo xsi:type="form:LabelDecorationExtInfo">
-            <horizontalAlign>Left</horizontalAlign>
-          </extInfo>
-        </extendedTooltip>
-        <contextMenu>
-          <name>ПереключательКопируемыеНастройкиКонтекстноеМеню</name>
-          <id>63</id>
-          <autoFill>true</autoFill>
-        </contextMenu>
-        <type>RadioButtonField</type>
-        <editMode>Enter</editMode>
-        <showInHeader>true</showInHeader>
-        <headerHorizontalAlign>Left</headerHorizontalAlign>
-        <showInFooter>true</showInFooter>
-        <extInfo xsi:type="form:RadioButtonsFieldExtInfo">
-          <columnsCount>1</columnsCount>
-          <choiceList>
-            <presentation>
-              <key>ru</key>
-              <value>Все настройки</value>
-            </presentation>
-            <value xsi:type="core:StringValue">
-              <value>СкопироватьВсе</value>
-            </value>
-          </choiceList>
-          <choiceList>
-            <presentation>
-              <key>ru</key>
-              <value>Отдельные настройки:</value>
-            </presentation>
-            <value xsi:type="core:StringValue">
-              <value>СкопироватьОтдельные</value>
-            </value>
-          </choiceList>
-          <orientation>Vertical</orientation>
-        </extInfo>
-      </items>
-      <items xsi:type="form:Decoration">
-        <name>ВыбратьНастройки</name>
-        <id>60</id>
-        <title>
-          <key>ru</key>
-          <value>Выбрать</value>
-        </title>
-        <visible>true</visible>
-        <enabled>false</enabled>
-        <userVisible>
-          <common>true</common>
-        </userVisible>
-        <extendedTooltip>
-          <name>ВыбратьНастройкиРасширеннаяПодсказка</name>
-          <id>81</id>
-          <type>Label</type>
-          <autoMaxWidth>true</autoMaxWidth>
-          <autoMaxHeight>true</autoMaxHeight>
-          <extInfo xsi:type="form:LabelDecorationExtInfo">
-            <horizontalAlign>Left</horizontalAlign>
-          </extInfo>
-        </extendedTooltip>
-        <contextMenu>
-          <name>ВыбратьНастройкиКонтекстноеМеню</name>
-          <id>61</id>
-          <autoFill>true</autoFill>
-        </contextMenu>
-        <type>Label</type>
-        <maxWidth>32</maxWidth>
-        <maxHeight>1</maxHeight>
-        <verticalStretch>false</verticalStretch>
-        <groupVerticalAlign>Bottom</groupVerticalAlign>
-        <extInfo xsi:type="form:LabelDecorationExtInfo">
-          <handlers>
-            <event>Click</event>
-            <name>ВыбратьНастройки</name>
-          </handlers>
-          <hyperlink>true</hyperlink>
-          <horizontalAlign>Left</horizontalAlign>
-        </extInfo>
-      </items>
-      <visible>true</visible>
-      <enabled>true</enabled>
-      <userVisible>
-        <common>true</common>
-      </userVisible>
-      <title>
-        <key>ru</key>
-        <value>Выбрать</value>
-      </title>
-      <verticalStretch>true</verticalStretch>
-      <extendedTooltip>
-        <name>ГруппаВыбратьРасширеннаяПодсказка</name>
-        <id>79</id>
-        <type>Label</type>
-        <autoMaxWidth>true</autoMaxWidth>
-        <autoMaxHeight>true</autoMaxHeight>
-        <extInfo xsi:type="form:LabelDecorationExtInfo">
-          <horizontalAlign>Left</horizontalAlign>
-        </extInfo>
-      </extendedTooltip>
-      <type>UsualGroup</type>
-      <extInfo xsi:type="form:UsualGroupExtInfo">
-        <group>HorizontalIfPossible</group>
-        <showLeftMargin>true</showLeftMargin>
-        <united>true</united>
-        <throughAlign>Auto</throughAlign>
-        <currentRowUse>Auto</currentRowUse>
-      </extInfo>
-    </items>
-    <visible>true</visible>
-    <enabled>true</enabled>
-    <userVisible>
-      <common>true</common>
-    </userVisible>
-    <title>
-      <key>ru</key>
-      <value>Что копировать:</value>
-    </title>
-    <extendedTooltip>
-      <name>ГруппаКопируемыеНастройкиРасширеннаяПодсказка</name>
-      <id>77</id>
-      <type>Label</type>
-      <autoMaxWidth>true</autoMaxWidth>
-      <autoMaxHeight>true</autoMaxHeight>
-      <extInfo xsi:type="form:LabelDecorationExtInfo">
-        <horizontalAlign>Left</horizontalAlign>
-      </extInfo>
-    </extendedTooltip>
-    <type>UsualGroup</type>
-    <extInfo xsi:type="form:UsualGroupExtInfo">
-      <group>HorizontalIfPossible</group>
-      <representation>NormalSeparation</representation>
-      <showLeftMargin>true</showLeftMargin>
-      <united>true</united>
-      <showTitle>auto</showTitle>
       <throughAlign>Auto</throughAlign>
       <currentRowUse>Auto</currentRowUse>
     </extInfo>
@@ -461,31 +503,6 @@
       <commandName>Form.Command.Скопировать</commandName>
       <buttonImportance>Normal</buttonImportance>
       <representation>Auto</representation>
-      <autoMaxWidth>true</autoMaxWidth>
-      <autoMaxHeight>true</autoMaxHeight>
-      <placementArea>UserCmds</placementArea>
-      <representationInContextMenu>Auto</representationInContextMenu>
-    </items>
-    <items xsi:type="form:Button">
-      <name>ФормаЗакрыть</name>
-      <id>56</id>
-      <visible>true</visible>
-      <enabled>true</enabled>
-      <userVisible>
-        <common>true</common>
-      </userVisible>
-      <extendedTooltip>
-        <name>ФормаЗакрытьРасширеннаяПодсказка</name>
-        <id>71</id>
-        <type>Label</type>
-        <autoMaxWidth>true</autoMaxWidth>
-        <autoMaxHeight>true</autoMaxHeight>
-        <extInfo xsi:type="form:LabelDecorationExtInfo">
-          <horizontalAlign>Left</horizontalAlign>
-        </extInfo>
-      </extendedTooltip>
-      <commandName>Form.StandardCommand.Close</commandName>
-      <buttonImportance>Normal</buttonImportance>
       <autoMaxWidth>true</autoMaxWidth>
       <autoMaxHeight>true</autoMaxHeight>
       <placementArea>UserCmds</placementArea>
@@ -577,17 +594,6 @@
     <valueType>
       <types>Boolean</types>
     </valueType>
-    <view>
-      <common>true</common>
-    </view>
-    <edit>
-      <common>true</common>
-    </edit>
-  </attributes>
-  <attributes>
-    <name>ПользователиПолучателиНастроек</name>
-    <id>6</id>
-    <valueType/>
     <view>
       <common>true</common>
     </view>
@@ -746,6 +752,29 @@
       <common>true</common>
     </edit>
   </attributes>
+  <attributes>
+    <name>ВыбранныеПользователи</name>
+    <title>
+      <key>ru</key>
+      <value>Выбранные пользователи</value>
+    </title>
+    <id>17</id>
+    <valueType>
+      <types>ValueList</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+    <extInfo xsi:type="form:ValueListExtInfo">
+      <itemValueType>
+        <types>CatalogRef.ВнешниеПользователи</types>
+        <types>CatalogRef.Пользователи</types>
+      </itemValueType>
+    </extInfo>
+  </attributes>
   <formCommands>
     <name>Скопировать</name>
     <title>
@@ -765,6 +794,7 @@
         <name>Скопировать</name>
       </handler>
     </action>
+    <actionPurpose>Finish</actionPurpose>
     <currentRowUse>DontUse</currentRowUse>
     <selectedRowsUse>Auto</selectedRowsUse>
   </formCommands>
@@ -787,6 +817,7 @@
         <name>Скопировать</name>
       </handler>
     </action>
+    <actionPurpose>Finish</actionPurpose>
     <currentRowUse>DontUse</currentRowUse>
     <selectedRowsUse>Auto</selectedRowsUse>
   </formCommands>

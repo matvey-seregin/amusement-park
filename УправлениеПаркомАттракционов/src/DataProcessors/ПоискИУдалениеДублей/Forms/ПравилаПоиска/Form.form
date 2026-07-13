@@ -15,7 +15,20 @@
     <dataPath xsi:type="form:DataPath">
       <segments>ПравилаПоиска</segments>
     </dataPath>
-    <titleLocation>Top</titleLocation>
+    <titleLocation>None</titleLocation>
+    <excludedCommands>Add</excludedCommands>
+    <excludedCommands>Change</excludedCommands>
+    <excludedCommands>ClearTableMarksAppearance</excludedCommands>
+    <excludedCommands>Copy</excludedCommands>
+    <excludedCommands>Delete</excludedCommands>
+    <excludedCommands>EndEdit</excludedCommands>
+    <excludedCommands>FindByCurrentValue</excludedCommands>
+    <excludedCommands>MoveDown</excludedCommands>
+    <excludedCommands>MoveUp</excludedCommands>
+    <excludedCommands>SearchHistory</excludedCommands>
+    <excludedCommands>ShowRowRearrangement</excludedCommands>
+    <excludedCommands>SortListAsc</excludedCommands>
+    <excludedCommands>SortListDesc</excludedCommands>
     <items xsi:type="form:FormGroup">
       <name>ПравилаПоискаГруппаОсновное</name>
       <id>46</id>
@@ -59,7 +72,9 @@
         <showInHeader>true</showInHeader>
         <headerHorizontalAlign>Left</headerHorizontalAlign>
         <showInFooter>true</showInFooter>
-        <extInfo xsi:type="form:CheckBoxFieldExtInfo"/>
+        <extInfo xsi:type="form:CheckBoxFieldExtInfo">
+          <checkBoxType>CheckBox</checkBoxType>
+        </extInfo>
       </items>
       <items xsi:type="form:FormField">
         <name>ПравилаПоискаПредставлениеРеквизита</name>
@@ -164,7 +179,7 @@
       </contextMenu>
       <type>InputField</type>
       <readOnly>true</readOnly>
-      <editMode>Enter</editMode>
+      <editMode>Auto</editMode>
       <showInHeader>true</showInHeader>
       <headerHorizontalAlign>Left</headerHorizontalAlign>
       <showInFooter>true</showInFooter>
@@ -194,6 +209,7 @@
       </extInfo>
     </items>
     <commandBarLocation>None</commandBarLocation>
+    <showCommandBar>false</showCommandBar>
     <autoCommandBar>
       <name>ПравилаПоискаКоманднаяПанель</name>
       <id>22</id>
@@ -346,7 +362,7 @@
       <autoFill>true</autoFill>
     </contextMenu>
     <type>CheckBoxField</type>
-    <editMode>Enter</editMode>
+    <editMode>Auto</editMode>
     <showInHeader>true</showInHeader>
     <headerHorizontalAlign>Left</headerHorizontalAlign>
     <showInFooter>true</showInFooter>
@@ -391,7 +407,7 @@
         <autoFill>true</autoFill>
       </contextMenu>
       <type>CheckBoxField</type>
-      <editMode>Enter</editMode>
+      <editMode>Auto</editMode>
       <showInHeader>true</showInHeader>
       <headerHorizontalAlign>Left</headerHorizontalAlign>
       <showInFooter>true</showInFooter>
@@ -430,7 +446,7 @@
       </contextMenu>
       <type>LabelField</type>
       <verticalAlign>Top</verticalAlign>
-      <editMode>Enter</editMode>
+      <editMode>Auto</editMode>
       <showInHeader>true</showInHeader>
       <headerHorizontalAlign>Left</headerHorizontalAlign>
       <showInFooter>true</showInFooter>
@@ -481,77 +497,21 @@
   <autoCommandBar>
     <name>ФормаКоманднаяПанель</name>
     <id>-1</id>
-    <items xsi:type="form:FormGroup">
-      <name>ГруппаСкрытоНаМобильномКлиенте</name>
-      <id>51</id>
-      <items xsi:type="form:Button">
-        <name>ЗавершитьРедактирование</name>
-        <id>12</id>
-        <title>
-          <key>ru</key>
-          <value>ОК</value>
-        </title>
-        <visible>true</visible>
-        <enabled>true</enabled>
-        <userVisible>
-          <common>true</common>
-        </userVisible>
-        <extendedTooltip>
-          <name>ЗавершитьРедактированиеРасширеннаяПодсказка</name>
-          <id>13</id>
-          <type>Label</type>
-          <autoMaxWidth>true</autoMaxWidth>
-          <autoMaxHeight>true</autoMaxHeight>
-          <extInfo xsi:type="form:LabelDecorationExtInfo">
-            <horizontalAlign>Left</horizontalAlign>
-          </extInfo>
-        </extendedTooltip>
-        <commandName>Form.Command.ЗавершитьРедактирование</commandName>
-        <representation>Auto</representation>
-        <defaultButton>true</defaultButton>
-        <autoMaxWidth>true</autoMaxWidth>
-        <autoMaxHeight>true</autoMaxHeight>
-        <placementArea>UserCmds</placementArea>
-        <representationInContextMenu>Auto</representationInContextMenu>
-      </items>
-      <items xsi:type="form:Button">
-        <name>ФормаОтмена</name>
-        <id>16</id>
-        <visible>true</visible>
-        <enabled>true</enabled>
-        <userVisible>
-          <common>true</common>
-        </userVisible>
-        <extendedTooltip>
-          <name>ФормаОтменаРасширеннаяПодсказка</name>
-          <id>17</id>
-          <type>Label</type>
-          <autoMaxWidth>true</autoMaxWidth>
-          <autoMaxHeight>true</autoMaxHeight>
-          <extInfo xsi:type="form:LabelDecorationExtInfo">
-            <horizontalAlign>Left</horizontalAlign>
-          </extInfo>
-        </extendedTooltip>
-        <commandName>Form.StandardCommand.Cancel</commandName>
-        <buttonImportance>Normal</buttonImportance>
-        <representation>Auto</representation>
-        <autoMaxWidth>true</autoMaxWidth>
-        <autoMaxHeight>true</autoMaxHeight>
-        <placementArea>UserCmds</placementArea>
-        <representationInContextMenu>Auto</representationInContextMenu>
-      </items>
+    <items xsi:type="form:Button">
+      <name>ЗавершитьРедактирование</name>
+      <id>12</id>
+      <title>
+        <key>ru</key>
+        <value>Применить</value>
+      </title>
       <visible>true</visible>
       <enabled>true</enabled>
       <userVisible>
         <common>true</common>
       </userVisible>
-      <title>
-        <key>ru</key>
-        <value>Скрыто на мобильном клиенте</value>
-      </title>
       <extendedTooltip>
-        <name>ГруппаСкрытоНаМобильномКлиентеРасширеннаяПодсказка</name>
-        <id>52</id>
+        <name>ЗавершитьРедактированиеРасширеннаяПодсказка</name>
+        <id>13</id>
         <type>Label</type>
         <autoMaxWidth>true</autoMaxWidth>
         <autoMaxHeight>true</autoMaxHeight>
@@ -559,61 +519,16 @@
           <horizontalAlign>Left</horizontalAlign>
         </extInfo>
       </extendedTooltip>
-      <extInfo xsi:type="form:ButtonGroupExtInfo">
-        <representation>Usual</representation>
-      </extInfo>
-    </items>
-    <items xsi:type="form:FormGroup">
-      <name>ФормаГруппаСправка</name>
-      <id>14</id>
-      <items xsi:type="form:Button">
-        <name>ФормаСправка</name>
-        <id>18</id>
-        <visible>true</visible>
-        <enabled>true</enabled>
-        <userVisible>
-          <common>true</common>
-        </userVisible>
-        <extendedTooltip>
-          <name>ФормаСправкаРасширеннаяПодсказка</name>
-          <id>19</id>
-          <type>Label</type>
-          <autoMaxWidth>true</autoMaxWidth>
-          <autoMaxHeight>true</autoMaxHeight>
-          <extInfo xsi:type="form:LabelDecorationExtInfo">
-            <horizontalAlign>Left</horizontalAlign>
-          </extInfo>
-        </extendedTooltip>
-        <commandName>Form.StandardCommand.Help</commandName>
-        <buttonImportance>Normal</buttonImportance>
-        <representation>Auto</representation>
-        <autoMaxWidth>true</autoMaxWidth>
-        <autoMaxHeight>true</autoMaxHeight>
-        <placementArea>UserCmds</placementArea>
-        <representationInContextMenu>Auto</representationInContextMenu>
-      </items>
-      <visible>true</visible>
-      <enabled>true</enabled>
-      <userVisible>
-        <common>true</common>
-      </userVisible>
-      <title>
-        <key>ru</key>
-        <value>Форма группа справка</value>
-      </title>
-      <extendedTooltip>
-        <name>ФормаГруппаСправкаРасширеннаяПодсказка</name>
-        <id>15</id>
-        <type>Label</type>
-        <autoMaxWidth>true</autoMaxWidth>
-        <autoMaxHeight>true</autoMaxHeight>
-        <extInfo xsi:type="form:LabelDecorationExtInfo">
-          <horizontalAlign>Left</horizontalAlign>
-        </extInfo>
-      </extendedTooltip>
-      <extInfo xsi:type="form:ButtonGroupExtInfo"/>
+      <commandName>Form.Command.ЗавершитьРедактирование</commandName>
+      <representation>Auto</representation>
+      <defaultButton>true</defaultButton>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <placementArea>UserCmds</placementArea>
+      <representationInContextMenu>Auto</representationInContextMenu>
     </items>
     <horizontalAlign>Right</horizontalAlign>
+    <autoFill>true</autoFill>
   </autoCommandBar>
   <handlers>
     <event>BeforeClose</event>
@@ -852,13 +767,9 @@
     <name>ЗавершитьРедактирование</name>
     <title>
       <key>ru</key>
-      <value>ОК</value>
+      <value>Применить</value>
     </title>
     <id>1</id>
-    <toolTip>
-      <key>ru</key>
-      <value>Завершить редактирование</value>
-    </toolTip>
     <use>
       <common>true</common>
     </use>
@@ -867,6 +778,7 @@
         <name>ЗавершитьРедактирование</name>
       </handler>
     </action>
+    <actionPurpose>Finish</actionPurpose>
     <currentRowUse>DontUse</currentRowUse>
     <selectedRowsUse>Auto</selectedRowsUse>
   </formCommands>

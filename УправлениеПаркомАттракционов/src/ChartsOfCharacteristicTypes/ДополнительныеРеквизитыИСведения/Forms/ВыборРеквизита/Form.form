@@ -31,8 +31,6 @@
     <excludedCommands>MoveDown</excludedCommands>
     <excludedCommands>MoveUp</excludedCommands>
     <excludedCommands>OutputList</excludedCommands>
-    <excludedCommands>SelectAll</excludedCommands>
-    <excludedCommands>ShowMultipleSelection</excludedCommands>
     <excludedCommands>ShowRowRearrangement</excludedCommands>
     <excludedCommands>SortListAsc</excludedCommands>
     <excludedCommands>SortListDesc</excludedCommands>
@@ -180,7 +178,6 @@
     <autoMaxWidth>true</autoMaxWidth>
     <autoMaxHeight>true</autoMaxHeight>
     <autoMaxRowsCount>true</autoMaxRowsCount>
-    <selectionMode>MultiRow</selectionMode>
     <headerHeight>1</headerHeight>
     <footerHeight>1</footerHeight>
     <horizontalScrollBar>AutoUse</horizontalScrollBar>
@@ -236,36 +233,6 @@
       <commandName>Form.Command.КомандаВыбрать</commandName>
       <representation>Auto</representation>
       <defaultButton>true</defaultButton>
-      <autoMaxWidth>true</autoMaxWidth>
-      <autoMaxHeight>true</autoMaxHeight>
-      <placementArea>UserCmds</placementArea>
-      <representationInContextMenu>Auto</representationInContextMenu>
-    </items>
-    <items xsi:type="form:Button">
-      <name>ФормаКомандаОтмена</name>
-      <id>19</id>
-      <title>
-        <key>ru</key>
-        <value>Отмена</value>
-      </title>
-      <visible>true</visible>
-      <enabled>true</enabled>
-      <userVisible>
-        <common>true</common>
-      </userVisible>
-      <extendedTooltip>
-        <name>ФормаКомандаОтменаРасширеннаяПодсказка</name>
-        <id>20</id>
-        <type>Label</type>
-        <autoMaxWidth>true</autoMaxWidth>
-        <autoMaxHeight>true</autoMaxHeight>
-        <extInfo xsi:type="form:LabelDecorationExtInfo">
-          <horizontalAlign>Left</horizontalAlign>
-        </extInfo>
-      </extendedTooltip>
-      <commandName>Form.Command.КомандаОтмена</commandName>
-      <buttonImportance>Normal</buttonImportance>
-      <representation>Auto</representation>
       <autoMaxWidth>true</autoMaxWidth>
       <autoMaxHeight>true</autoMaxHeight>
       <placementArea>UserCmds</placementArea>
@@ -395,28 +362,7 @@
         <name>КомандаВыбрать</name>
       </handler>
     </action>
-    <currentRowUse>DontUse</currentRowUse>
-    <selectedRowsUse>Auto</selectedRowsUse>
-  </formCommands>
-  <formCommands>
-    <name>КомандаОтмена</name>
-    <title>
-      <key>ru</key>
-      <value>Отмена</value>
-    </title>
-    <id>2</id>
-    <toolTip>
-      <key>ru</key>
-      <value>Команда отмена</value>
-    </toolTip>
-    <use>
-      <common>true</common>
-    </use>
-    <action xsi:type="form:FormCommandHandlerContainer">
-      <handler>
-        <name>КомандаОтмена</name>
-      </handler>
-    </action>
+    <actionPurpose>Finish</actionPurpose>
     <currentRowUse>DontUse</currentRowUse>
     <selectedRowsUse>Auto</selectedRowsUse>
   </formCommands>

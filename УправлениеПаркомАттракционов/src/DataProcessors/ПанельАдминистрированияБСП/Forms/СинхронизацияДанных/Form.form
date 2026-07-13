@@ -38,34 +38,8 @@
       </extInfo>
     </items>
     <items xsi:type="form:FormGroup">
-      <name>ГруппаСправка</name>
-      <id>2002</id>
-      <items xsi:type="form:Button">
-        <name>Справка</name>
-        <id>2003</id>
-        <visible>true</visible>
-        <enabled>true</enabled>
-        <userVisible>
-          <common>true</common>
-        </userVisible>
-        <extendedTooltip>
-          <name>СправкаРасширеннаяПодсказка</name>
-          <id>2017</id>
-          <type>Label</type>
-          <autoMaxWidth>true</autoMaxWidth>
-          <autoMaxHeight>true</autoMaxHeight>
-          <extInfo xsi:type="form:LabelDecorationExtInfo">
-            <horizontalAlign>Left</horizontalAlign>
-          </extInfo>
-        </extendedTooltip>
-        <commandName>Form.StandardCommand.Help</commandName>
-        <buttonImportance>Normal</buttonImportance>
-        <representation>Auto</representation>
-        <autoMaxWidth>true</autoMaxWidth>
-        <autoMaxHeight>true</autoMaxHeight>
-        <placementArea>UserCmds</placementArea>
-        <representationInContextMenu>Auto</representationInContextMenu>
-      </items>
+      <name>ГруппаСправкаТакси</name>
+      <id>2097</id>
       <visible>true</visible>
       <enabled>true</enabled>
       <userVisible>
@@ -76,8 +50,8 @@
         <value>Справка</value>
       </title>
       <extendedTooltip>
-        <name>ГруппаСправкаРасширеннаяПодсказка</name>
-        <id>2016</id>
+        <name>ГруппаСправкаТаксиРасширеннаяПодсказка</name>
+        <id>2098</id>
         <type>Label</type>
         <autoMaxWidth>true</autoMaxWidth>
         <autoMaxHeight>true</autoMaxHeight>
@@ -161,11 +135,13 @@
           <autoFill>true</autoFill>
         </contextMenu>
         <type>CheckBoxField</type>
-        <editMode>Enter</editMode>
+        <editMode>Auto</editMode>
         <showInHeader>true</showInHeader>
         <headerHorizontalAlign>Left</headerHorizontalAlign>
         <showInFooter>true</showInFooter>
-        <extInfo xsi:type="form:CheckBoxFieldExtInfo"/>
+        <extInfo xsi:type="form:CheckBoxFieldExtInfo">
+          <checkBoxType>Switcher</checkBoxType>
+        </extInfo>
       </items>
       <visible>true</visible>
       <enabled>true</enabled>
@@ -287,7 +263,7 @@
     </extendedTooltip>
     <type>UsualGroup</type>
     <extInfo xsi:type="form:UsualGroupExtInfo">
-      <group>HorizontalIfPossible</group>
+      <group>AutoScreenTypeSensitive</group>
       <showLeftMargin>true</showLeftMargin>
       <united>true</united>
       <slaveItemsWidth>Equal</slaveItemsWidth>
@@ -342,11 +318,13 @@
           <autoFill>true</autoFill>
         </contextMenu>
         <type>CheckBoxField</type>
-        <editMode>Enter</editMode>
+        <editMode>Auto</editMode>
         <showInHeader>true</showInHeader>
         <headerHorizontalAlign>Left</headerHorizontalAlign>
         <showInFooter>true</showInFooter>
-        <extInfo xsi:type="form:CheckBoxFieldExtInfo"/>
+        <extInfo xsi:type="form:CheckBoxFieldExtInfo">
+          <checkBoxType>Switcher</checkBoxType>
+        </extInfo>
       </items>
       <items xsi:type="form:Button">
         <name>НастроитьДатыЗапретаЗагрузки</name>
@@ -657,11 +635,13 @@
             <autoFill>true</autoFill>
           </contextMenu>
           <type>CheckBoxField</type>
-          <editMode>Enter</editMode>
+          <editMode>Auto</editMode>
           <showInHeader>true</showInHeader>
           <headerHorizontalAlign>Left</headerHorizontalAlign>
           <showInFooter>true</showInFooter>
-          <extInfo xsi:type="form:CheckBoxFieldExtInfo"/>
+          <extInfo xsi:type="form:CheckBoxFieldExtInfo">
+            <checkBoxType>Switcher</checkBoxType>
+          </extInfo>
         </items>
         <items xsi:type="form:Button">
           <name>СеансыОбменов</name>
@@ -779,7 +759,7 @@
     </extendedTooltip>
     <type>UsualGroup</type>
     <extInfo xsi:type="form:UsualGroupExtInfo">
-      <group>HorizontalIfPossible</group>
+      <group>AutoScreenTypeSensitive</group>
       <representation>NormalSeparation</representation>
       <showLeftMargin>true</showLeftMargin>
       <united>true</united>
@@ -819,13 +799,15 @@
       </contextMenu>
       <type>InputField</type>
       <readOnly>true</readOnly>
-      <editMode>Enter</editMode>
+      <editMode>Auto</editMode>
       <showInHeader>true</showInHeader>
       <headerHorizontalAlign>Left</headerHorizontalAlign>
       <showInFooter>true</showInFooter>
       <extInfo xsi:type="form:InputFieldExtInfo">
+        <width>23</width>
         <autoMaxWidth>true</autoMaxWidth>
         <autoMaxHeight>true</autoMaxHeight>
+        <horizontalStretch>false</horizontalStretch>
         <wrap>true</wrap>
         <chooseType>true</chooseType>
         <typeDomainEnabled>true</typeDomainEnabled>
@@ -875,7 +857,6 @@
       <value>Префикс узла распределенной информационной базы</value>
     </title>
     <toolTipRepresentation>ShowBottom</toolTipRepresentation>
-    <width>43</width>
     <extendedTooltip>
       <name>ГруппаПрефиксУзлаРаспределеннойИнформационнойБазыРасширеннаяПодсказка</name>
       <id>2033</id>
@@ -930,7 +911,7 @@
         <autoFill>true</autoFill>
       </contextMenu>
       <type>InputField</type>
-      <editMode>Enter</editMode>
+      <editMode>Auto</editMode>
       <showInHeader>true</showInHeader>
       <headerHorizontalAlign>Left</headerHorizontalAlign>
       <showInFooter>true</showInFooter>
@@ -976,7 +957,7 @@
         <autoFill>true</autoFill>
       </contextMenu>
       <type>InputField</type>
-      <editMode>Enter</editMode>
+      <editMode>Auto</editMode>
       <showInHeader>true</showInHeader>
       <headerHorizontalAlign>Left</headerHorizontalAlign>
       <showInFooter>true</showInFooter>
@@ -997,9 +978,10 @@
     </userVisible>
     <title>
       <key>ru</key>
-      <value>Каталог временных файлов кластера серверов 1С:Предприятие:</value>
+      <value>Каталог временных файлов кластера 1С:Предприятие:</value>
     </title>
     <toolTipRepresentation>ShowBottom</toolTipRepresentation>
+    <width>43</width>
     <extendedTooltip>
       <name>ГруппаВременныеКаталогиКластераСерверовРасширеннаяПодсказка</name>
       <id>2041</id>
@@ -1068,6 +1050,7 @@
       <key>ru</key>
       <value>Интерфейс o data</value>
     </title>
+    <width>43</width>
     <extendedTooltip>
       <name>ГруппаИнтерфейсODataРасширеннаяПодсказка</name>
       <id>2077</id>
@@ -1091,6 +1074,32 @@
   <autoCommandBar>
     <name>ФормаКоманднаяПанель</name>
     <id>-1</id>
+    <items xsi:type="form:Button">
+      <name>Справка</name>
+      <id>2003</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <extendedTooltip>
+        <name>СправкаРасширеннаяПодсказка</name>
+        <id>2017</id>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <commandName>Form.StandardCommand.Help</commandName>
+      <buttonImportance>Normal</buttonImportance>
+      <representation>Auto</representation>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <placementArea>UserCmds</placementArea>
+      <representationInContextMenu>Auto</representationInContextMenu>
+    </items>
     <horizontalAlign>Left</horizontalAlign>
   </autoCommandBar>
   <handlers>

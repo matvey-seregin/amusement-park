@@ -358,11 +358,11 @@
         <textSize>Normal</textSize>
       </extInfo>
     </items>
-    <commandBarLocation>None</commandBarLocation>
     <autoCommandBar>
       <name>СписокКоманднаяПанель</name>
       <id>5</id>
       <horizontalAlign>Left</horizontalAlign>
+      <autoFill>true</autoFill>
     </autoCommandBar>
     <handlers>
       <event>Selection</event>
@@ -371,6 +371,10 @@
     <handlers>
       <event>OnActivateRow</event>
       <name>СписокПриАктивизацииСтроки</name>
+    </handlers>
+    <handlers>
+      <event>OnHover</event>
+      <name>СписокПриНаведении</name>
     </handlers>
     <searchStringAddition>
       <name>СписокСтрокаПоиска</name>
@@ -494,6 +498,7 @@
       <allowGettingCurrentRowURL>true</allowGettingCurrentRowURL>
       <userSettingsGroup>СписокКомпоновщикНастроекПользовательскиеНастройки</userSettingsGroup>
     </extInfo>
+    <showCommandBarNeedDereferenced>true</showCommandBarNeedDereferenced>
   </items>
   <autoCommandBar>
     <name>ФормаКоманднаяПанель</name>

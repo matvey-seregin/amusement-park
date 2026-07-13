@@ -483,214 +483,39 @@
     <fillValue xsi:type="core:UndefinedValue"/>
     <dataHistory>Use</dataHistory>
   </attributes>
-  <tabularSections uuid="ab1bcabf-ffb0-4914-8ad0-b94b5aaeab1d">
-    <producedTypes>
-      <objectType typeId="5da3d5eb-b33d-49ee-a0c7-e7bce043d7d7" valueTypeId="1349a0c3-4a9d-460c-8f72-0d86cc51d6f4"/>
-      <rowType typeId="204f0716-62ac-492f-ac0f-9b6e774a82f7" valueTypeId="9239b454-c752-4814-943c-3d448fdcce59"/>
-    </producedTypes>
-    <name>УдалитьЭлектронныеПодписи</name>
+  <attributes uuid="d970abc7-4437-4fc4-87d1-bab2ddde8884">
+    <name>ДатаПереносаВАрхив</name>
     <synonym>
       <key>ru</key>
-      <value>(не используется) Электронные подписи</value>
+      <value>Дата переноса в архив</value>
     </synonym>
-    <standardAttributes>
-      <dataHistory>Use</dataHistory>
-      <name>LineNumber</name>
-      <fillValue xsi:type="core:UndefinedValue"/>
-      <fullTextSearch>Use</fullTextSearch>
-      <minValue xsi:type="core:UndefinedValue"/>
-      <maxValue xsi:type="core:UndefinedValue"/>
-    </standardAttributes>
-    <attributes uuid="c5478d09-c8d3-4cc6-878e-27656ecc8409">
-      <name>ДатаПодписи</name>
-      <synonym>
-        <key>ru</key>
-        <value>Дата подписи</value>
-      </synonym>
-      <type>
-        <types>Date</types>
-        <dateQualifiers/>
-      </type>
-      <toolTip>
-        <key>ru</key>
-        <value>Дата установки подписи</value>
-      </toolTip>
-      <minValue xsi:type="core:UndefinedValue"/>
-      <maxValue xsi:type="core:UndefinedValue"/>
-      <dataHistory>Use</dataHistory>
-      <fullTextSearch>Use</fullTextSearch>
-    </attributes>
-    <attributes uuid="01b97d2f-40b9-4f12-8bc5-ab75fd160b7c">
-      <name>ИмяФайлаПодписи</name>
-      <synonym>
-        <key>ru</key>
-        <value>Имя файла подписи</value>
-      </synonym>
-      <type>
-        <types>String</types>
-        <stringQualifiers>
-          <length>260</length>
-        </stringQualifiers>
-      </type>
-      <toolTip>
-        <key>ru</key>
-        <value>Имя файла подписи (служебное поле)</value>
-      </toolTip>
-      <minValue xsi:type="core:UndefinedValue"/>
-      <maxValue xsi:type="core:UndefinedValue"/>
-      <dataHistory>Use</dataHistory>
-      <fullTextSearch>Use</fullTextSearch>
-    </attributes>
-    <attributes uuid="75974146-5b1a-412c-b7d5-1575704bbdab">
-      <name>Комментарий</name>
-      <synonym>
-        <key>ru</key>
-        <value>Комментарий</value>
-      </synonym>
-      <type>
-        <types>String</types>
-        <stringQualifiers/>
-      </type>
-      <toolTip>
-        <key>ru</key>
-        <value>Комментарий к подписи</value>
-      </toolTip>
-      <minValue xsi:type="core:UndefinedValue"/>
-      <maxValue xsi:type="core:UndefinedValue"/>
-      <dataHistory>Use</dataHistory>
-      <fullTextSearch>Use</fullTextSearch>
-    </attributes>
-    <attributes uuid="949f87cb-258c-4b6b-95ee-8a7491a4b64e">
-      <name>КомуВыданСертификат</name>
-      <synonym>
-        <key>ru</key>
-        <value>Кому выдан сертификат</value>
-      </synonym>
-      <type>
-        <types>String</types>
-        <stringQualifiers/>
-      </type>
-      <toolTip>
-        <key>ru</key>
-        <value>Владелец сертификата (фамилия имя, организация, должность)</value>
-      </toolTip>
-      <minValue xsi:type="core:UndefinedValue"/>
-      <maxValue xsi:type="core:UndefinedValue"/>
-      <dataHistory>Use</dataHistory>
-      <fullTextSearch>Use</fullTextSearch>
-    </attributes>
-    <attributes uuid="8a348012-99dc-4dc9-8bec-0df3caf4cdc5">
-      <name>Отпечаток</name>
-      <synonym>
-        <key>ru</key>
-        <value>Отпечаток</value>
-      </synonym>
-      <type>
-        <types>String</types>
-        <stringQualifiers>
-          <length>28</length>
-        </stringQualifiers>
-      </type>
-      <toolTip>
-        <key>ru</key>
-        <value>Отпечаток сертификата (служебное поле)</value>
-      </toolTip>
-      <minValue xsi:type="core:UndefinedValue"/>
-      <maxValue xsi:type="core:UndefinedValue"/>
-      <dataHistory>Use</dataHistory>
-    </attributes>
-    <attributes uuid="5c089988-5381-41ed-9f05-f85db46b8d94">
-      <name>Подпись</name>
-      <synonym>
-        <key>ru</key>
-        <value>Подпись</value>
-      </synonym>
-      <type>
-        <types>ValueStorage</types>
-      </type>
-      <toolTip>
-        <key>ru</key>
-        <value>Двоичные данные подписи (служебное поле)</value>
-      </toolTip>
-      <minValue xsi:type="core:UndefinedValue"/>
-      <maxValue xsi:type="core:UndefinedValue"/>
-      <dataHistory>Use</dataHistory>
-      <fullTextSearch>Use</fullTextSearch>
-    </attributes>
-    <attributes uuid="85a36352-1569-4ce4-aeba-477db524c36d">
-      <name>УстановившийПодпись</name>
-      <synonym>
-        <key>ru</key>
-        <value>Установивший подпись</value>
-      </synonym>
-      <type>
-        <types>CatalogRef.Пользователи</types>
-      </type>
-      <toolTip>
-        <key>ru</key>
-        <value>Пользователь, установивший подпись</value>
-      </toolTip>
-      <minValue xsi:type="core:UndefinedValue"/>
-      <maxValue xsi:type="core:UndefinedValue"/>
-      <dataHistory>Use</dataHistory>
-      <fullTextSearch>Use</fullTextSearch>
-    </attributes>
-    <attributes uuid="ebfb6f80-88f5-4046-8ae7-e11a7b0c1beb">
-      <name>Сертификат</name>
-      <synonym>
-        <key>ru</key>
-        <value>Сертификат</value>
-      </synonym>
-      <type>
-        <types>ValueStorage</types>
-      </type>
-      <toolTip>
-        <key>ru</key>
-        <value>Двоичные данные сертификата (служебное поле)</value>
-      </toolTip>
-      <minValue xsi:type="core:UndefinedValue"/>
-      <maxValue xsi:type="core:UndefinedValue"/>
-      <dataHistory>Use</dataHistory>
-      <fullTextSearch>Use</fullTextSearch>
-    </attributes>
-    <attributes uuid="d99991b8-3a81-4e18-b0ad-05fc3e3a199b">
-      <name>ДатаПроверкиПодписи</name>
-      <synonym>
-        <key>ru</key>
-        <value>Дата проверки подписи</value>
-      </synonym>
-      <type>
-        <types>Date</types>
-        <dateQualifiers/>
-      </type>
-      <toolTip>
-        <key>ru</key>
-        <value>Дата последней проверки подписи.</value>
-      </toolTip>
-      <minValue xsi:type="core:UndefinedValue"/>
-      <maxValue xsi:type="core:UndefinedValue"/>
-      <dataHistory>Use</dataHistory>
-      <fullTextSearch>Use</fullTextSearch>
-    </attributes>
-    <attributes uuid="dd383422-dddb-4a81-9326-015fd345b5c1">
-      <name>ПодписьВерна</name>
-      <synonym>
-        <key>ru</key>
-        <value>Подпись верна</value>
-      </synonym>
-      <type>
-        <types>Boolean</types>
-      </type>
-      <toolTip>
-        <key>ru</key>
-        <value>Результат последней проверки подписи.</value>
-      </toolTip>
-      <minValue xsi:type="core:UndefinedValue"/>
-      <maxValue xsi:type="core:UndefinedValue"/>
-      <dataHistory>Use</dataHistory>
-      <fullTextSearch>Use</fullTextSearch>
-    </attributes>
-  </tabularSections>
+    <type>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="ee83328e-91d2-4022-b1d3-d7d137098ee9">
+    <name>УсловноПеренесенВАрхив</name>
+    <synonym>
+      <key>ru</key>
+      <value>Условно перенесен в архив</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
   <forms uuid="b2e656c1-f4ff-4d95-b066-4ee11ce4dea8">
     <name>ФормаСписка</name>
     <synonym>

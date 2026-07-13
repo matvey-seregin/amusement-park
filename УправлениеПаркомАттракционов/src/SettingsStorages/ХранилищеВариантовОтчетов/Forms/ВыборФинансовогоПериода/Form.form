@@ -35,7 +35,7 @@
         <type>UsualButton</type>
         <commandName>Form.Command.ПерейтиНаГодНазад</commandName>
         <buttonImportance>Normal</buttonImportance>
-        <representation>Auto</representation>
+        <representation>Picture</representation>
         <width>6</width>
         <autoMaxWidth>true</autoMaxWidth>
         <autoMaxHeight>true</autoMaxHeight>
@@ -43,6 +43,9 @@
         <font xsi:type="core:FontRef">
           <font>Style.LargeTextFont</font>
         </font>
+        <picture xsi:type="core:PictureRef">
+          <picture>StdPicture.GoBack</picture>
+        </picture>
         <representationInContextMenu>Auto</representationInContextMenu>
         <shapeRepresentation>WhenActive</shapeRepresentation>
       </items>
@@ -143,7 +146,7 @@
       </contextMenu>
       <type>LabelField</type>
       <horizontalAlign>Center</horizontalAlign>
-      <editMode>Enter</editMode>
+      <editMode>Auto</editMode>
       <showInHeader>true</showInHeader>
       <headerHorizontalAlign>Left</headerHorizontalAlign>
       <showInFooter>true</showInFooter>
@@ -181,7 +184,7 @@
       <type>UsualButton</type>
       <commandName>Form.Command.ПерейтиНаГодВперед</commandName>
       <buttonImportance>Normal</buttonImportance>
-      <representation>Auto</representation>
+      <representation>Picture</representation>
       <width>6</width>
       <autoMaxWidth>true</autoMaxWidth>
       <autoMaxHeight>true</autoMaxHeight>
@@ -189,6 +192,9 @@
       <font xsi:type="core:FontRef">
         <font>Style.LargeTextFont</font>
       </font>
+      <picture xsi:type="core:PictureRef">
+        <picture>StdPicture.GoForward</picture>
+      </picture>
       <representationInContextMenu>Auto</representationInContextMenu>
       <shapeRepresentation>WhenActive</shapeRepresentation>
     </items>
@@ -350,6 +356,7 @@
         </extendedTooltip>
         <type>UsualGroup</type>
         <extInfo xsi:type="form:UsualGroupExtInfo">
+          <group>AlwaysHorizontal</group>
           <showLeftMargin>true</showLeftMargin>
           <throughAlign>Auto</throughAlign>
           <currentRowUse>Auto</currentRowUse>
@@ -478,6 +485,7 @@
         </extendedTooltip>
         <type>UsualGroup</type>
         <extInfo xsi:type="form:UsualGroupExtInfo">
+          <group>AlwaysHorizontal</group>
           <showLeftMargin>true</showLeftMargin>
           <throughAlign>Auto</throughAlign>
           <currentRowUse>Auto</currentRowUse>
@@ -606,6 +614,7 @@
         </extendedTooltip>
         <type>UsualGroup</type>
         <extInfo xsi:type="form:UsualGroupExtInfo">
+          <group>AlwaysHorizontal</group>
           <showLeftMargin>true</showLeftMargin>
           <throughAlign>Auto</throughAlign>
           <currentRowUse>Auto</currentRowUse>
@@ -734,6 +743,7 @@
         </extendedTooltip>
         <type>UsualGroup</type>
         <extInfo xsi:type="form:UsualGroupExtInfo">
+          <group>AlwaysHorizontal</group>
           <showLeftMargin>true</showLeftMargin>
           <throughAlign>Auto</throughAlign>
           <currentRowUse>Auto</currentRowUse>
@@ -762,6 +772,7 @@
       <type>UsualGroup</type>
       <extInfo xsi:type="form:UsualGroupExtInfo">
         <group>Vertical</group>
+        <showAsCard>true</showAsCard>
         <showLeftMargin>true</showLeftMargin>
         <united>true</united>
         <throughAlign>Auto</throughAlign>
@@ -801,9 +812,6 @@
         <autoMaxHeight>true</autoMaxHeight>
         <horizontalStretch>true</horizontalStretch>
         <placementArea>UserCmds</placementArea>
-        <backColor xsi:type="core:ColorRef">
-          <color>Style.ИтогиФонГруппы</color>
-        </backColor>
         <representationInContextMenu>Auto</representationInContextMenu>
         <shapeRepresentation>WhenActive</shapeRepresentation>
       </items>
@@ -837,9 +845,6 @@
         <autoMaxHeight>true</autoMaxHeight>
         <horizontalStretch>true</horizontalStretch>
         <placementArea>UserCmds</placementArea>
-        <backColor xsi:type="core:ColorRef">
-          <color>Style.ИтогиФонГруппы</color>
-        </backColor>
         <representationInContextMenu>Auto</representationInContextMenu>
         <shapeRepresentation>WhenActive</shapeRepresentation>
       </items>
@@ -873,9 +878,6 @@
         <autoMaxHeight>true</autoMaxHeight>
         <horizontalStretch>true</horizontalStretch>
         <placementArea>UserCmds</placementArea>
-        <backColor xsi:type="core:ColorRef">
-          <color>Style.ИтогиФонГруппы</color>
-        </backColor>
         <representationInContextMenu>Auto</representationInContextMenu>
         <shapeRepresentation>WhenActive</shapeRepresentation>
       </items>
@@ -909,9 +911,6 @@
         <autoMaxHeight>true</autoMaxHeight>
         <horizontalStretch>true</horizontalStretch>
         <placementArea>UserCmds</placementArea>
-        <backColor xsi:type="core:ColorRef">
-          <color>Style.ИтогиФонГруппы</color>
-        </backColor>
         <representationInContextMenu>Auto</representationInContextMenu>
         <shapeRepresentation>WhenActive</shapeRepresentation>
       </items>
@@ -938,7 +937,8 @@
       <type>UsualGroup</type>
       <extInfo xsi:type="form:UsualGroupExtInfo">
         <group>Vertical</group>
-        <representation>StrongSeparation</representation>
+        <representation>WeakSeparation</representation>
+        <showAsCard>true</showAsCard>
         <showLeftMargin>true</showLeftMargin>
         <united>true</united>
         <throughAlign>Auto</throughAlign>
@@ -1104,6 +1104,7 @@
       <extInfo xsi:type="form:UsualGroupExtInfo">
         <group>Vertical</group>
         <representation>StrongSeparation</representation>
+        <showAsCard>true</showAsCard>
         <showLeftMargin>true</showLeftMargin>
         <united>true</united>
         <throughAlign>Auto</throughAlign>
@@ -1139,7 +1140,7 @@
   </items>
   <items xsi:type="form:FormGroup">
     <name>ГруппаОчиститьПериод</name>
-    <id>193</id>
+    <id>198</id>
     <items xsi:type="form:Button">
       <name>ОчиститьПериод</name>
       <id>189</id>
@@ -1197,7 +1198,7 @@
       <type>UsualButton</type>
       <commandName>Form.Command.ПерейтиКСтандартномуВариантуПериода</commandName>
       <buttonImportance>Normal</buttonImportance>
-      <representation>Auto</representation>
+      <representation>Picture</representation>
       <autoMaxWidth>true</autoMaxWidth>
       <autoMaxHeight>true</autoMaxHeight>
       <placementArea>UserCmds</placementArea>
@@ -1215,7 +1216,7 @@
     </title>
     <extendedTooltip>
       <name>ГруппаОчиститьПериодРасширеннаяПодсказка</name>
-      <id>194</id>
+      <id>199</id>
       <type>Label</type>
       <autoMaxWidth>true</autoMaxWidth>
       <autoMaxHeight>true</autoMaxHeight>
@@ -1226,20 +1227,42 @@
     <type>UsualGroup</type>
     <extInfo xsi:type="form:UsualGroupExtInfo">
       <group>AlwaysHorizontal</group>
-      <horizontalAlign>Center</horizontalAlign>
       <showLeftMargin>true</showLeftMargin>
       <united>true</united>
       <throughAlign>Auto</throughAlign>
       <currentRowUse>Auto</currentRowUse>
     </extInfo>
   </items>
-  <commandBarLocation>None</commandBarLocation>
-  <showCommandBar>false</showCommandBar>
   <autoCommandBar>
     <name>ФормаКоманднаяПанель</name>
     <id>-1</id>
+    <items xsi:type="form:Button">
+      <name>ФормаСправка</name>
+      <id>200</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <extendedTooltip>
+        <name>ФормаСправкаРасширеннаяПодсказка</name>
+        <id>201</id>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <commandName>Form.StandardCommand.Help</commandName>
+      <buttonImportance>Normal</buttonImportance>
+      <representation>Auto</representation>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <placementArea>UserCmds</placementArea>
+      <representationInContextMenu>Auto</representationInContextMenu>
+    </items>
     <horizontalAlign>Left</horizontalAlign>
-    <autoFill>true</autoFill>
   </autoCommandBar>
   <handlers>
     <event>OnCreateAtServer</event>
@@ -1880,6 +1903,7 @@
         <name>ОчиститьПериод</name>
       </handler>
     </action>
+    <actionPurpose>Finish</actionPurpose>
     <currentRowUse>Auto</currentRowUse>
     <selectedRowsUse>Auto</selectedRowsUse>
   </formCommands>
@@ -1897,11 +1921,15 @@
     <use>
       <common>true</common>
     </use>
+    <picture xsi:type="core:PictureRef">
+      <picture>StdPicture.Calendar</picture>
+    </picture>
     <action xsi:type="form:FormCommandHandlerContainer">
       <handler>
         <name>ПерейтиКСтандартномуВариантуПериода</name>
       </handler>
     </action>
+    <actionPurpose>Finish</actionPurpose>
     <representation>Picture</representation>
     <currentRowUse>Auto</currentRowUse>
     <selectedRowsUse>Auto</selectedRowsUse>

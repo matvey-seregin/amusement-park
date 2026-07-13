@@ -35,7 +35,7 @@
       <autoFill>true</autoFill>
     </contextMenu>
     <type>RadioButtonField</type>
-    <editMode>Enter</editMode>
+    <editMode>Auto</editMode>
     <showInHeader>true</showInHeader>
     <headerHorizontalAlign>Left</headerHorizontalAlign>
     <showInFooter>true</showInFooter>
@@ -97,7 +97,7 @@
       <autoFill>true</autoFill>
     </contextMenu>
     <type>InputField</type>
-    <editMode>Enter</editMode>
+    <editMode>Auto</editMode>
     <showInHeader>true</showInHeader>
     <headerHorizontalAlign>Left</headerHorizontalAlign>
     <showInFooter>true</showInFooter>
@@ -117,8 +117,8 @@
     <id>14</id>
     <title>
       <key>ru</key>
-      <value>Анонимное использование сервиса имеет &lt;link http://www.morpher.ru/ws3/#limitations>ограничения&lt;/>.
-Получить токен можно в &lt;link http://www.morpher.ru/My/Token.aspx>личном кабинете&lt;/> после регистрации.
+      <value>Анонимное использование сервиса имеет &lt;link https://www.morpher.ru/ws3/#limitations>ограничения&lt;/>.
+Получить токен можно в &lt;link https://www.morpher.ru/My/Token.aspx>личном кабинете&lt;/> после регистрации.
 </value>
     </title>
     <visible>true</visible>
@@ -145,9 +145,6 @@
     <type>Label</type>
     <autoMaxWidth>true</autoMaxWidth>
     <autoMaxHeight>true</autoMaxHeight>
-    <textColor xsi:type="core:ColorRef">
-      <color>Style.ПоясняющийТекст</color>
-    </textColor>
     <extInfo xsi:type="form:LabelDecorationExtInfo">
       <horizontalAlign>Left</horizontalAlign>
     </extInfo>
@@ -162,7 +159,7 @@
       <id>10</id>
       <title>
         <key>ru</key>
-        <value>ОК</value>
+        <value>Записать и закрыть</value>
       </title>
       <visible>true</visible>
       <enabled>true</enabled>
@@ -179,35 +176,9 @@
           <horizontalAlign>Left</horizontalAlign>
         </extInfo>
       </extendedTooltip>
-      <commandName>Form.Command.ОК</commandName>
+      <commandName>Form.Command.ЗаписатьИЗакрыть</commandName>
       <representation>Auto</representation>
       <defaultButton>true</defaultButton>
-      <autoMaxWidth>true</autoMaxWidth>
-      <autoMaxHeight>true</autoMaxHeight>
-      <placementArea>UserCmds</placementArea>
-      <representationInContextMenu>Auto</representationInContextMenu>
-    </items>
-    <items xsi:type="form:Button">
-      <name>ФормаКнопкаОтмена</name>
-      <id>12</id>
-      <visible>true</visible>
-      <enabled>true</enabled>
-      <userVisible>
-        <common>true</common>
-      </userVisible>
-      <extendedTooltip>
-        <name>ФормаКнопкаОтменаРасширеннаяПодсказка</name>
-        <id>13</id>
-        <type>Label</type>
-        <autoMaxWidth>true</autoMaxWidth>
-        <autoMaxHeight>true</autoMaxHeight>
-        <extInfo xsi:type="form:LabelDecorationExtInfo">
-          <horizontalAlign>Left</horizontalAlign>
-        </extInfo>
-      </extendedTooltip>
-      <commandName>Form.StandardCommand.Cancel</commandName>
-      <buttonImportance>Normal</buttonImportance>
-      <representation>Auto</representation>
       <autoMaxWidth>true</autoMaxWidth>
       <autoMaxHeight>true</autoMaxHeight>
       <placementArea>UserCmds</placementArea>
@@ -283,24 +254,25 @@
     </edit>
   </attributes>
   <formCommands>
-    <name>ОК</name>
+    <name>ЗаписатьИЗакрыть</name>
     <title>
       <key>ru</key>
-      <value>ОК</value>
+      <value>Записать и закрыть</value>
     </title>
     <id>1</id>
     <toolTip>
       <key>ru</key>
-      <value>ОК</value>
+      <value>Записать и закрыть</value>
     </toolTip>
     <use>
       <common>true</common>
     </use>
     <action xsi:type="form:FormCommandHandlerContainer">
       <handler>
-        <name>ОК</name>
+        <name>ЗаписатьИЗакрыть</name>
       </handler>
     </action>
+    <actionPurpose>Finish</actionPurpose>
     <currentRowUse>DontUse</currentRowUse>
     <selectedRowsUse>Auto</selectedRowsUse>
   </formCommands>

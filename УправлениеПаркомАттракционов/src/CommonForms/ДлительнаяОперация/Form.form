@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <form:Form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:form="http://g5.1c.ru/v8/dt/form">
+  <title>
+    <key>ru</key>
+    <value>Длительная операция</value>
+  </title>
   <items xsi:type="form:FormGroup">
     <name>СообщениеОперации</name>
     <id>24</id>
@@ -203,8 +207,6 @@
       <currentRowUse>Auto</currentRowUse>
     </extInfo>
   </items>
-  <commandBarLocation>Bottom</commandBarLocation>
-  <showCommandBar>true</showCommandBar>
   <autoCommandBar>
     <name>ФормаКоманднаяПанель</name>
     <id>-1</id>
@@ -213,7 +215,7 @@
       <id>16</id>
       <title>
         <key>ru</key>
-        <value>Отмена</value>
+        <value>Отменить</value>
       </title>
       <visible>true</visible>
       <enabled>true</enabled>
@@ -238,7 +240,7 @@
       <placementArea>UserCmds</placementArea>
       <representationInContextMenu>Auto</representationInContextMenu>
     </items>
-    <horizontalAlign>Right</horizontalAlign>
+    <horizontalAlign>Left</horizontalAlign>
   </autoCommandBar>
   <handlers>
     <event>OnOpen</event>
@@ -267,7 +269,7 @@
   <excludedCommands>Yes</excludedCommands>
   <windowOpeningMode>LockOwner</windowOpeningMode>
   <saveWindowSettings>true</saveWindowSettings>
-  <group>HorizontalIfPossible</group>
+  <group>AutoScreenTypeSensitive</group>
   <enabled>true</enabled>
   <showTitle>auto</showTitle>
   <showCloseButton>true</showCloseButton>
@@ -344,6 +346,7 @@
         <name>ОтменитьИЗакрыть</name>
       </handler>
     </action>
+    <actionPurpose>Finish</actionPurpose>
     <currentRowUse>Auto</currentRowUse>
     <selectedRowsUse>Auto</selectedRowsUse>
   </formCommands>

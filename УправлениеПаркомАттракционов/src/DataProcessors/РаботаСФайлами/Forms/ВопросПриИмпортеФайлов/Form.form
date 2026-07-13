@@ -4,48 +4,6 @@
     <key>ru</key>
     <value>Предупреждение при импорте файлов</value>
   </title>
-  <items xsi:type="form:FormField">
-    <name>Сообщение</name>
-    <id>14</id>
-    <title>
-      <key>ru</key>
-      <value>Сообщение</value>
-    </title>
-    <visible>true</visible>
-    <enabled>true</enabled>
-    <userVisible>
-      <common>true</common>
-    </userVisible>
-    <dataPath xsi:type="form:DataPath">
-      <segments>Сообщение</segments>
-    </dataPath>
-    <titleLocation>None</titleLocation>
-    <extendedTooltip>
-      <name>СообщениеРасширеннаяПодсказка</name>
-      <id>24</id>
-      <type>Label</type>
-      <autoMaxWidth>true</autoMaxWidth>
-      <autoMaxHeight>true</autoMaxHeight>
-      <extInfo xsi:type="form:LabelDecorationExtInfo">
-        <horizontalAlign>Left</horizontalAlign>
-      </extInfo>
-    </extendedTooltip>
-    <contextMenu>
-      <name>СообщениеКонтекстноеМеню</name>
-      <id>15</id>
-      <autoFill>true</autoFill>
-    </contextMenu>
-    <type>LabelField</type>
-    <editMode>Enter</editMode>
-    <showInHeader>true</showInHeader>
-    <headerHorizontalAlign>Left</headerHorizontalAlign>
-    <showInFooter>true</showInFooter>
-    <extInfo xsi:type="form:LabelFieldExtInfo">
-      <height>3</height>
-      <autoMaxHeight>true</autoMaxHeight>
-      <verticalStretch>false</verticalStretch>
-    </extInfo>
-  </items>
   <items xsi:type="form:Table">
     <name>ФайлыБольшие</name>
     <id>4</id>
@@ -94,7 +52,7 @@
         <autoFill>true</autoFill>
       </contextMenu>
       <type>InputField</type>
-      <editMode>Enter</editMode>
+      <editMode>Auto</editMode>
       <showInHeader>true</showInHeader>
       <headerHorizontalAlign>Left</headerHorizontalAlign>
       <showInFooter>true</showInFooter>
@@ -315,34 +273,8 @@
       <placementArea>UserCmds</placementArea>
       <representationInContextMenu>Auto</representationInContextMenu>
     </items>
-    <items xsi:type="form:Button">
-      <name>Справка</name>
-      <id>20</id>
-      <visible>true</visible>
-      <enabled>true</enabled>
-      <userVisible>
-        <common>true</common>
-      </userVisible>
-      <skipOnInput>false</skipOnInput>
-      <extendedTooltip>
-        <name>СправкаРасширеннаяПодсказка</name>
-        <id>23</id>
-        <type>Label</type>
-        <autoMaxWidth>true</autoMaxWidth>
-        <autoMaxHeight>true</autoMaxHeight>
-        <extInfo xsi:type="form:LabelDecorationExtInfo">
-          <horizontalAlign>Left</horizontalAlign>
-        </extInfo>
-      </extendedTooltip>
-      <commandName>Form.StandardCommand.Help</commandName>
-      <buttonImportance>Normal</buttonImportance>
-      <representation>Auto</representation>
-      <autoMaxWidth>true</autoMaxWidth>
-      <autoMaxHeight>true</autoMaxHeight>
-      <placementArea>UserCmds</placementArea>
-      <representationInContextMenu>Auto</representationInContextMenu>
-    </items>
     <horizontalAlign>Right</horizontalAlign>
+    <autoFill>true</autoFill>
   </autoCommandBar>
   <handlers>
     <event>OnCreateAtServer</event>
@@ -379,10 +311,6 @@
   </attributes>
   <attributes>
     <name>Сообщение</name>
-    <title>
-      <key>ru</key>
-      <value>Сообщение</value>
-    </title>
     <id>1</id>
     <valueType>
       <types>String</types>

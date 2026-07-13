@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="efd6be72-f98e-4baf-8166-f9f401d547a7">
+  <producedTypes>
+    <selectionType typeId="a5aac4a3-2957-4cbc-870f-159a27b960b5" valueTypeId="979996a9-2563-445c-ac38-aa37b34ea87d"/>
+    <listType typeId="5197a7f5-6cfc-4cbb-9762-7a56594a9080" valueTypeId="a4c57979-012a-42cd-b3c8-5f81be51c8ce"/>
+    <managerType typeId="bce0364b-10e4-4a99-b8b0-29b33be212a0" valueTypeId="afa5c4f7-ece3-4699-8600-71919f870295"/>
+    <recordSetType typeId="e7930663-6ac5-4502-8cc8-62494d142684" valueTypeId="2394371b-3d9a-49c0-a8cf-5ce827902be9"/>
+    <recordKeyType typeId="e92d6f4c-d7f0-4e80-b278-606f522b5292" valueTypeId="b4da147c-d9f5-471a-b9f0-3c0af05ead88"/>
+    <recordType typeId="3269b102-8714-49ee-b191-844311ee82db" valueTypeId="880cbada-8076-425c-9c0b-0bc624204908"/>
+    <recordManagerType typeId="61c8cb42-c3eb-455b-a872-8d0abc9c3d40" valueTypeId="cc0eb420-3e53-4d52-89f4-56c4282cfe49"/>
+  </producedTypes>
+  <name>СведенияОХраненииДедуплицированныхФайлов</name>
+  <synonym>
+    <key>ru</key>
+    <value>Сведения о хранении дедуплицированных файлов</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="0627989d-55de-4335-943f-4be63f7a06d6">
+    <name>ТипХраненияФайла</name>
+    <synonym>
+      <key>ru</key>
+      <value>Тип хранения файла</value>
+    </synonym>
+    <type>
+      <types>EnumRef.ТипыХраненияФайлов</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="661fccba-ae03-4762-92d6-e1507973ffb3">
+    <name>Том</name>
+    <synonym>
+      <key>ru</key>
+      <value>Том</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ТомаХраненияФайлов</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="394abb13-7fe8-4b00-a8e0-ae3941cdb385">
+    <name>ХранилищеДвоичныхДанных</name>
+    <synonym>
+      <key>ru</key>
+      <value>Хранилище двоичных данных</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ХранилищеДвоичныхДанных</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="f58eb52e-2767-4d4f-93d7-922f1d293c4f">
+    <name>ВидХраненияФайлов</name>
+    <synonym>
+      <key>ru</key>
+      <value>Вид хранения файлов</value>
+    </synonym>
+    <type>
+      <types>EnumRef.ВидыХраненияФайлов</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

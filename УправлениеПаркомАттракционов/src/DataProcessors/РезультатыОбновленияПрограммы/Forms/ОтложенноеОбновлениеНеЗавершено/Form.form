@@ -54,11 +54,17 @@
       <userVisible>
         <common>true</common>
       </userVisible>
+      <toolTipRepresentation>ShowBottom</toolTipRepresentation>
       <extendedTooltip>
         <name>СообщениеРасширеннаяПодсказка</name>
         <id>8</id>
+        <title>
+          <key>ru</key>
+          <value>Посмотреть статус выполнения дополнительных процедур обработки данных
+можно в разделе &lt;b>Администрирование - Обслуживание&lt;/>.</value>
+        </title>
+        <formatted>true</formatted>
         <type>Label</type>
-        <autoMaxWidth>true</autoMaxWidth>
         <autoMaxHeight>true</autoMaxHeight>
         <extInfo xsi:type="form:LabelDecorationExtInfo">
           <horizontalAlign>Left</horizontalAlign>
@@ -104,165 +110,67 @@
       <currentRowUse>Auto</currentRowUse>
     </extInfo>
   </items>
-  <items xsi:type="form:FormGroup">
-    <name>ГруппаПояснение</name>
-    <id>16</id>
-    <items xsi:type="form:Decoration">
-      <name>Подсказка</name>
-      <id>13</id>
-      <title>
-        <key>ru</key>
-        <value>Посмотреть статус выполнения дополнительных процедур обработки данных
-можно в разделе &lt;b>Администрирование &lt;/>- &lt;b>Обслуживание&lt;/>.</value>
-      </title>
-      <visible>true</visible>
-      <enabled>true</enabled>
-      <userVisible>
-        <common>true</common>
-      </userVisible>
-      <extendedTooltip>
-        <name>ПодсказкаРасширеннаяПодсказка</name>
-        <id>15</id>
-        <type>Label</type>
-        <autoMaxWidth>true</autoMaxWidth>
-        <autoMaxHeight>true</autoMaxHeight>
-        <extInfo xsi:type="form:LabelDecorationExtInfo">
-          <horizontalAlign>Left</horizontalAlign>
-        </extInfo>
-      </extendedTooltip>
-      <contextMenu>
-        <name>ПодсказкаКонтекстноеМеню</name>
-        <id>14</id>
-        <autoFill>true</autoFill>
-      </contextMenu>
-      <formatted>true</formatted>
-      <type>Label</type>
-      <textColor xsi:type="core:ColorRef">
-        <color>Style.ПоясняющийТекст</color>
-      </textColor>
-      <extInfo xsi:type="form:LabelDecorationExtInfo">
-        <horizontalAlign>Left</horizontalAlign>
-      </extInfo>
-    </items>
-    <items xsi:type="form:FormGroup">
-      <name>КоманднаяПанель</name>
-      <id>18</id>
-      <items xsi:type="form:Button">
-        <name>ФормаЗавершить</name>
-        <id>11</id>
-        <title>
-          <key>ru</key>
-          <value>Завершить работу</value>
-        </title>
-        <visible>true</visible>
-        <enabled>true</enabled>
-        <userVisible>
-          <common>true</common>
-        </userVisible>
-        <extendedTooltip>
-          <name>ФормаЗавершитьРасширеннаяПодсказка</name>
-          <id>12</id>
-          <type>Label</type>
-          <autoMaxWidth>true</autoMaxWidth>
-          <autoMaxHeight>true</autoMaxHeight>
-          <extInfo xsi:type="form:LabelDecorationExtInfo">
-            <horizontalAlign>Left</horizontalAlign>
-          </extInfo>
-        </extendedTooltip>
-        <commandName>Form.Command.Завершить</commandName>
-        <representation>Auto</representation>
-        <defaultButton>true</defaultButton>
-        <placementArea>UserCmds</placementArea>
-        <representationInContextMenu>Auto</representationInContextMenu>
-      </items>
-      <items xsi:type="form:Button">
-        <name>ФормаПродолжить</name>
-        <id>9</id>
-        <title>
-          <key>ru</key>
-          <value>Продолжить</value>
-        </title>
-        <visible>true</visible>
-        <enabled>true</enabled>
-        <userVisible>
-          <common>true</common>
-        </userVisible>
-        <extendedTooltip>
-          <name>ФормаПродолжитьРасширеннаяПодсказка</name>
-          <id>10</id>
-          <type>Label</type>
-          <autoMaxWidth>true</autoMaxWidth>
-          <autoMaxHeight>true</autoMaxHeight>
-          <extInfo xsi:type="form:LabelDecorationExtInfo">
-            <horizontalAlign>Left</horizontalAlign>
-          </extInfo>
-        </extendedTooltip>
-        <commandName>Form.Command.ПродолжитьОбновление</commandName>
-        <buttonImportance>Normal</buttonImportance>
-        <representation>Auto</representation>
-        <placementArea>UserCmds</placementArea>
-        <representationInContextMenu>Auto</representationInContextMenu>
-      </items>
-      <visible>true</visible>
-      <enabled>true</enabled>
-      <userVisible>
-        <common>true</common>
-      </userVisible>
-      <title>
-        <key>ru</key>
-        <value>Командная панель</value>
-      </title>
-      <groupVerticalAlign>Bottom</groupVerticalAlign>
-      <extendedTooltip>
-        <name>КоманднаяПанельРасширеннаяПодсказка</name>
-        <id>19</id>
-        <type>Label</type>
-        <autoMaxWidth>true</autoMaxWidth>
-        <autoMaxHeight>true</autoMaxHeight>
-        <extInfo xsi:type="form:LabelDecorationExtInfo">
-          <horizontalAlign>Left</horizontalAlign>
-        </extInfo>
-      </extendedTooltip>
-      <type>CommandBar</type>
-      <extInfo xsi:type="form:CommandBarExtInfo">
-        <horizontalAlign>Right</horizontalAlign>
-        <commandSource>Form</commandSource>
-      </extInfo>
-    </items>
-    <visible>true</visible>
-    <enabled>true</enabled>
-    <userVisible>
-      <common>true</common>
-    </userVisible>
-    <title>
-      <key>ru</key>
-      <value>Пояснение</value>
-    </title>
-    <extendedTooltip>
-      <name>ГруппаПояснениеРасширеннаяПодсказка</name>
-      <id>17</id>
-      <type>Label</type>
-      <autoMaxWidth>true</autoMaxWidth>
-      <autoMaxHeight>true</autoMaxHeight>
-      <extInfo xsi:type="form:LabelDecorationExtInfo">
-        <horizontalAlign>Left</horizontalAlign>
-      </extInfo>
-    </extendedTooltip>
-    <type>UsualGroup</type>
-    <extInfo xsi:type="form:UsualGroupExtInfo">
-      <group>HorizontalIfPossible</group>
-      <representation>NormalSeparation</representation>
-      <showLeftMargin>true</showLeftMargin>
-      <united>true</united>
-      <throughAlign>Auto</throughAlign>
-      <currentRowUse>Auto</currentRowUse>
-    </extInfo>
-  </items>
-  <commandBarLocation>None</commandBarLocation>
-  <showCommandBar>false</showCommandBar>
+  <commandBarLocation>Bottom</commandBarLocation>
+  <showCommandBar>true</showCommandBar>
   <autoCommandBar>
     <name>ФормаКоманднаяПанель</name>
     <id>-1</id>
+    <items xsi:type="form:Button">
+      <name>ФормаЗавершить</name>
+      <id>11</id>
+      <title>
+        <key>ru</key>
+        <value>Завершить работу</value>
+      </title>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <extendedTooltip>
+        <name>ФормаЗавершитьРасширеннаяПодсказка</name>
+        <id>12</id>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <commandName>Form.Command.Завершить</commandName>
+      <representation>Auto</representation>
+      <defaultButton>true</defaultButton>
+      <placementArea>UserCmds</placementArea>
+      <representationInContextMenu>Auto</representationInContextMenu>
+    </items>
+    <items xsi:type="form:Button">
+      <name>ФормаПродолжить</name>
+      <id>9</id>
+      <title>
+        <key>ru</key>
+        <value>Продолжить</value>
+      </title>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <extendedTooltip>
+        <name>ФормаПродолжитьРасширеннаяПодсказка</name>
+        <id>10</id>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <commandName>Form.Command.ПродолжитьОбновление</commandName>
+      <buttonImportance>Normal</buttonImportance>
+      <representation>Auto</representation>
+      <placementArea>UserCmds</placementArea>
+      <representationInContextMenu>Auto</representationInContextMenu>
+    </items>
     <horizontalAlign>Right</horizontalAlign>
   </autoCommandBar>
   <handlers>
@@ -323,6 +231,7 @@
         <name>Завершить</name>
       </handler>
     </action>
+    <actionPurpose>Finish</actionPurpose>
     <currentRowUse>DontUse</currentRowUse>
     <selectedRowsUse>Auto</selectedRowsUse>
   </formCommands>
@@ -345,6 +254,7 @@
         <name>ПродолжитьОбновление</name>
       </handler>
     </action>
+    <actionPurpose>Finish</actionPurpose>
     <currentRowUse>DontUse</currentRowUse>
     <selectedRowsUse>Auto</selectedRowsUse>
   </formCommands>

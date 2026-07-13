@@ -56,7 +56,7 @@
         <segments>Папки</segments>
       </dataPath>
       <skipOnInput>false</skipOnInput>
-      <titleLocation>Top</titleLocation>
+      <titleLocation>None</titleLocation>
       <items xsi:type="form:FormGroup">
         <name>КартинкаИНаименованиеПапок</name>
         <id>36</id>
@@ -91,7 +91,7 @@
             <autoFill>true</autoFill>
           </contextMenu>
           <type>PictureField</type>
-          <editMode>Enter</editMode>
+          <editMode>Auto</editMode>
           <showInHeader>true</showInHeader>
           <headerHorizontalAlign>Left</headerHorizontalAlign>
           <showInFooter>true</showInFooter>
@@ -140,7 +140,7 @@
             <autoFill>true</autoFill>
           </contextMenu>
           <type>InputField</type>
-          <editMode>Enter</editMode>
+          <editMode>Auto</editMode>
           <showInHeader>true</showInHeader>
           <headerHorizontalAlign>Left</headerHorizontalAlign>
           <showInFooter>true</showInFooter>
@@ -208,7 +208,7 @@
           <autoFill>true</autoFill>
         </contextMenu>
         <type>LabelField</type>
-        <editMode>Enter</editMode>
+        <editMode>Auto</editMode>
         <showInHeader>true</showInHeader>
         <headerHorizontalAlign>Left</headerHorizontalAlign>
         <showInFooter>true</showInFooter>
@@ -318,7 +318,7 @@
       <readOnly>true</readOnly>
       <changeRowSet>true</changeRowSet>
       <changeRowOrder>true</changeRowOrder>
-      <width>22</width>
+      <width>30</width>
       <autoMaxWidth>true</autoMaxWidth>
       <autoMaxHeight>true</autoMaxHeight>
       <autoMaxRowsCount>true</autoMaxRowsCount>
@@ -403,7 +403,7 @@
             <autoFill>true</autoFill>
           </contextMenu>
           <type>PictureField</type>
-          <editMode>Enter</editMode>
+          <editMode>Auto</editMode>
           <showInHeader>true</showInHeader>
           <headerHorizontalAlign>Left</headerHorizontalAlign>
           <showInFooter>true</showInFooter>
@@ -455,7 +455,7 @@
             <autoFill>true</autoFill>
           </contextMenu>
           <type>InputField</type>
-          <editMode>Enter</editMode>
+          <editMode>Auto</editMode>
           <autoCellHeight>true</autoCellHeight>
           <showInHeader>true</showInHeader>
           <headerHorizontalAlign>Left</headerHorizontalAlign>
@@ -502,7 +502,7 @@
             <autoFill>true</autoFill>
           </contextMenu>
           <type>InputField</type>
-          <editMode>Enter</editMode>
+          <editMode>Auto</editMode>
           <autoCellHeight>true</autoCellHeight>
           <showInHeader>true</showInHeader>
           <headerHorizontalAlign>Left</headerHorizontalAlign>
@@ -572,7 +572,7 @@
           <autoFill>true</autoFill>
         </contextMenu>
         <type>InputField</type>
-        <editMode>Enter</editMode>
+        <editMode>Auto</editMode>
         <showInHeader>true</showInHeader>
         <headerHorizontalAlign>Left</headerHorizontalAlign>
         <showInFooter>true</showInFooter>
@@ -619,7 +619,7 @@
           <autoFill>true</autoFill>
         </contextMenu>
         <type>InputField</type>
-        <editMode>Enter</editMode>
+        <editMode>Auto</editMode>
         <showInHeader>true</showInHeader>
         <headerHorizontalAlign>Left</headerHorizontalAlign>
         <showInFooter>true</showInFooter>
@@ -664,7 +664,7 @@
           <autoFill>true</autoFill>
         </contextMenu>
         <type>LabelField</type>
-        <editMode>Enter</editMode>
+        <editMode>Auto</editMode>
         <showInHeader>true</showInHeader>
         <headerHorizontalAlign>Left</headerHorizontalAlign>
         <showInFooter>true</showInFooter>
@@ -675,6 +675,7 @@
         </extInfo>
       </items>
       <commandBarLocation>None</commandBarLocation>
+      <showCommandBar>false</showCommandBar>
       <autoCommandBar>
         <name>СписокКоманднаяПанель</name>
         <id>4</id>
@@ -774,7 +775,7 @@
       <readOnly>true</readOnly>
       <changeRowSet>true</changeRowSet>
       <changeRowOrder>true</changeRowOrder>
-      <width>65</width>
+      <width>70</width>
       <autoMaxWidth>true</autoMaxWidth>
       <autoMaxHeight>true</autoMaxHeight>
       <autoMaxRowsCount>true</autoMaxRowsCount>
@@ -833,7 +834,7 @@
     </extendedTooltip>
     <type>UsualGroup</type>
     <extInfo xsi:type="form:UsualGroupExtInfo">
-      <group>HorizontalIfPossible</group>
+      <group>AutoScreenTypeSensitive</group>
       <showLeftMargin>true</showLeftMargin>
       <united>true</united>
       <throughAlign>Auto</throughAlign>
@@ -843,61 +844,8 @@
   <autoCommandBar>
     <name>ФормаКоманднаяПанель</name>
     <id>-1</id>
-    <items xsi:type="form:Button">
-      <name>Выбрать</name>
-      <id>39</id>
-      <visible>true</visible>
-      <enabled>true</enabled>
-      <userVisible>
-        <common>true</common>
-      </userVisible>
-      <skipOnInput>false</skipOnInput>
-      <extendedTooltip>
-        <name>ВыбратьРасширеннаяПодсказка</name>
-        <id>43</id>
-        <type>Label</type>
-        <autoMaxWidth>true</autoMaxWidth>
-        <autoMaxHeight>true</autoMaxHeight>
-        <extInfo xsi:type="form:LabelDecorationExtInfo">
-          <horizontalAlign>Left</horizontalAlign>
-        </extInfo>
-      </extendedTooltip>
-      <commandName>Form.StandardCommand.Choose</commandName>
-      <representation>Auto</representation>
-      <defaultButton>true</defaultButton>
-      <autoMaxWidth>true</autoMaxWidth>
-      <autoMaxHeight>true</autoMaxHeight>
-      <placementArea>UserCmds</placementArea>
-      <representationInContextMenu>Auto</representationInContextMenu>
-    </items>
-    <items xsi:type="form:Button">
-      <name>Справка</name>
-      <id>40</id>
-      <visible>true</visible>
-      <enabled>true</enabled>
-      <userVisible>
-        <common>true</common>
-      </userVisible>
-      <skipOnInput>false</skipOnInput>
-      <extendedTooltip>
-        <name>СправкаРасширеннаяПодсказка</name>
-        <id>44</id>
-        <type>Label</type>
-        <autoMaxWidth>true</autoMaxWidth>
-        <autoMaxHeight>true</autoMaxHeight>
-        <extInfo xsi:type="form:LabelDecorationExtInfo">
-          <horizontalAlign>Left</horizontalAlign>
-        </extInfo>
-      </extendedTooltip>
-      <commandName>Form.StandardCommand.Help</commandName>
-      <buttonImportance>Normal</buttonImportance>
-      <representation>Auto</representation>
-      <autoMaxWidth>true</autoMaxWidth>
-      <autoMaxHeight>true</autoMaxHeight>
-      <placementArea>UserCmds</placementArea>
-      <representationInContextMenu>Auto</representationInContextMenu>
-    </items>
     <horizontalAlign>Left</horizontalAlign>
+    <autoFill>true</autoFill>
   </autoCommandBar>
   <handlers>
     <event>OnOpen</event>
@@ -907,17 +855,8 @@
     <event>OnCreateAtServer</event>
     <name>ПриСозданииНаСервере</name>
   </handlers>
-  <excludedCommands>CancelSearch</excludedCommands>
-  <excludedCommands>Change</excludedCommands>
-  <excludedCommands>Copy</excludedCommands>
   <excludedCommands>Create</excludedCommands>
   <excludedCommands>CustomizeForm</excludedCommands>
-  <excludedCommands>Delete</excludedCommands>
-  <excludedCommands>Find</excludedCommands>
-  <excludedCommands>ListSettings</excludedCommands>
-  <excludedCommands>OutputList</excludedCommands>
-  <excludedCommands>Refresh</excludedCommands>
-  <excludedCommands>SetDeletionMark</excludedCommands>
   <windowOpeningMode>LockOwner</windowOpeningMode>
   <saveWindowSettings>true</saveWindowSettings>
   <autoUrl>true</autoUrl>

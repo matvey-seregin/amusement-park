@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <form:Form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:form="http://g5.1c.ru/v8/dt/form">
+  <title>
+    <key>ru</key>
+    <value>Разрешение редактирования реквизитов</value>
+  </title>
   <items xsi:type="form:FormGroup">
     <name>Страницы</name>
     <id>33</id>
@@ -8,13 +12,13 @@
       <id>35</id>
       <items xsi:type="form:FormGroup">
         <name>Команды</name>
-        <id>47</id>
+        <id>49</id>
         <items xsi:type="form:Button">
-          <name>ФормаРазрешитьРедактирование</name>
-          <id>1</id>
+          <name>ФормаУстановитьФлажки</name>
+          <id>27</id>
           <title>
             <key>ru</key>
-            <value>Разрешить редактирование</value>
+            <value>Включить все</value>
           </title>
           <visible>true</visible>
           <enabled>true</enabled>
@@ -22,8 +26,8 @@
             <common>true</common>
           </userVisible>
           <extendedTooltip>
-            <name>ФормаРазрешитьРедактированиеРасширеннаяПодсказка</name>
-            <id>18</id>
+            <name>ФормаУстановитьФлажкиРасширеннаяПодсказка</name>
+            <id>28</id>
             <type>Label</type>
             <autoMaxWidth>true</autoMaxWidth>
             <autoMaxHeight>true</autoMaxHeight>
@@ -31,21 +35,20 @@
               <horizontalAlign>Left</horizontalAlign>
             </extInfo>
           </extendedTooltip>
-          <type>UsualButton</type>
-          <commandName>Form.Command.РазрешитьРедактирование</commandName>
-          <representation>Auto</representation>
-          <defaultButton>true</defaultButton>
+          <commandName>Form.Command.УстановитьФлажки</commandName>
+          <buttonImportance>Supplementary</buttonImportance>
+          <representation>PictureAndText</representation>
           <autoMaxWidth>true</autoMaxWidth>
           <autoMaxHeight>true</autoMaxHeight>
           <placementArea>UserCmds</placementArea>
           <representationInContextMenu>Auto</representationInContextMenu>
         </items>
         <items xsi:type="form:Button">
-          <name>ФормаПроверитьИспользование</name>
-          <id>25</id>
+          <name>ФормаСнятьФлажки</name>
+          <id>29</id>
           <title>
             <key>ru</key>
-            <value>Проверить использование</value>
+            <value>Выключить все</value>
           </title>
           <visible>true</visible>
           <enabled>true</enabled>
@@ -53,8 +56,8 @@
             <common>true</common>
           </userVisible>
           <extendedTooltip>
-            <name>ФормаПроверитьИспользованиеРасширеннаяПодсказка</name>
-            <id>26</id>
+            <name>ФормаСнятьФлажкиРасширеннаяПодсказка</name>
+            <id>30</id>
             <type>Label</type>
             <autoMaxWidth>true</autoMaxWidth>
             <autoMaxHeight>true</autoMaxHeight>
@@ -62,127 +65,13 @@
               <horizontalAlign>Left</horizontalAlign>
             </extInfo>
           </extendedTooltip>
-          <type>UsualButton</type>
-          <commandName>Form.Command.ПроверитьИспользование</commandName>
-          <buttonImportance>Normal</buttonImportance>
-          <representation>Auto</representation>
+          <commandName>Form.Command.СнятьФлажки</commandName>
+          <buttonImportance>Supplementary</buttonImportance>
+          <representation>PictureAndText</representation>
           <autoMaxWidth>true</autoMaxWidth>
           <autoMaxHeight>true</autoMaxHeight>
           <placementArea>UserCmds</placementArea>
           <representationInContextMenu>Auto</representationInContextMenu>
-        </items>
-        <items xsi:type="form:FormGroup">
-          <name>ДополнительныеКоманды</name>
-          <id>31</id>
-          <items xsi:type="form:FormGroup">
-            <name>Флажки</name>
-            <id>45</id>
-            <items xsi:type="form:Button">
-              <name>ФормаУстановитьФлажки</name>
-              <id>27</id>
-              <title>
-                <key>ru</key>
-                <value>Установить флажки</value>
-              </title>
-              <visible>true</visible>
-              <enabled>true</enabled>
-              <userVisible>
-                <common>true</common>
-              </userVisible>
-              <extendedTooltip>
-                <name>ФормаУстановитьФлажкиРасширеннаяПодсказка</name>
-                <id>28</id>
-                <type>Label</type>
-                <autoMaxWidth>true</autoMaxWidth>
-                <autoMaxHeight>true</autoMaxHeight>
-                <extInfo xsi:type="form:LabelDecorationExtInfo">
-                  <horizontalAlign>Left</horizontalAlign>
-                </extInfo>
-              </extendedTooltip>
-              <commandName>Form.Command.УстановитьФлажки</commandName>
-              <buttonImportance>Normal</buttonImportance>
-              <representation>Auto</representation>
-              <autoMaxWidth>true</autoMaxWidth>
-              <autoMaxHeight>true</autoMaxHeight>
-              <placementArea>UserCmds</placementArea>
-              <representationInContextMenu>Auto</representationInContextMenu>
-            </items>
-            <items xsi:type="form:Button">
-              <name>ФормаСнятьФлажки</name>
-              <id>29</id>
-              <title>
-                <key>ru</key>
-                <value>Снять флажки</value>
-              </title>
-              <visible>true</visible>
-              <enabled>true</enabled>
-              <userVisible>
-                <common>true</common>
-              </userVisible>
-              <extendedTooltip>
-                <name>ФормаСнятьФлажкиРасширеннаяПодсказка</name>
-                <id>30</id>
-                <type>Label</type>
-                <autoMaxWidth>true</autoMaxWidth>
-                <autoMaxHeight>true</autoMaxHeight>
-                <extInfo xsi:type="form:LabelDecorationExtInfo">
-                  <horizontalAlign>Left</horizontalAlign>
-                </extInfo>
-              </extendedTooltip>
-              <commandName>Form.Command.СнятьФлажки</commandName>
-              <buttonImportance>Normal</buttonImportance>
-              <representation>Auto</representation>
-              <autoMaxWidth>true</autoMaxWidth>
-              <autoMaxHeight>true</autoMaxHeight>
-              <placementArea>UserCmds</placementArea>
-              <representationInContextMenu>Auto</representationInContextMenu>
-            </items>
-            <visible>true</visible>
-            <enabled>true</enabled>
-            <userVisible>
-              <common>true</common>
-            </userVisible>
-            <title>
-              <key>ru</key>
-              <value>Флажки</value>
-            </title>
-            <extendedTooltip>
-              <name>ФлажкиРасширеннаяПодсказка</name>
-              <id>46</id>
-              <type>Label</type>
-              <autoMaxWidth>true</autoMaxWidth>
-              <autoMaxHeight>true</autoMaxHeight>
-              <extInfo xsi:type="form:LabelDecorationExtInfo">
-                <horizontalAlign>Left</horizontalAlign>
-              </extInfo>
-            </extendedTooltip>
-            <extInfo xsi:type="form:ButtonGroupExtInfo">
-              <representation>Compact</representation>
-            </extInfo>
-          </items>
-          <visible>true</visible>
-          <enabled>true</enabled>
-          <userVisible>
-            <common>true</common>
-          </userVisible>
-          <title>
-            <key>ru</key>
-            <value>Дополнительные команды</value>
-          </title>
-          <extendedTooltip>
-            <name>ДополнительныеКомандыРасширеннаяПодсказка</name>
-            <id>32</id>
-            <type>Label</type>
-            <autoMaxWidth>true</autoMaxWidth>
-            <autoMaxHeight>true</autoMaxHeight>
-            <extInfo xsi:type="form:LabelDecorationExtInfo">
-              <horizontalAlign>Left</horizontalAlign>
-            </extInfo>
-          </extendedTooltip>
-          <type>CommandBar</type>
-          <extInfo xsi:type="form:CommandBarExtInfo">
-            <horizontalAlign>Left</horizontalAlign>
-          </extInfo>
         </items>
         <visible>true</visible>
         <enabled>true</enabled>
@@ -195,7 +84,7 @@
         </title>
         <extendedTooltip>
           <name>КомандыРасширеннаяПодсказка</name>
-          <id>48</id>
+          <id>50</id>
           <type>Label</type>
           <autoMaxWidth>true</autoMaxWidth>
           <autoMaxHeight>true</autoMaxHeight>
@@ -203,14 +92,10 @@
             <horizontalAlign>Left</horizontalAlign>
           </extInfo>
         </extendedTooltip>
-        <type>UsualGroup</type>
-        <extInfo xsi:type="form:UsualGroupExtInfo">
-          <group>HorizontalIfPossible</group>
-          <behavior>Auto</behavior>
-          <showLeftMargin>true</showLeftMargin>
-          <united>true</united>
-          <throughAlign>Auto</throughAlign>
-          <currentRowUse>Auto</currentRowUse>
+        <type>CommandBar</type>
+        <extInfo xsi:type="form:CommandBarExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+          <appearanceMode>CommandBar</appearanceMode>
         </extInfo>
       </items>
       <visible>true</visible>
@@ -362,7 +247,37 @@
   <autoCommandBar>
     <name>ФормаКоманднаяПанель</name>
     <id>-1</id>
-    <horizontalAlign>Right</horizontalAlign>
+    <items xsi:type="form:Button">
+      <name>ФормаРазрешитьРедактирование</name>
+      <id>1</id>
+      <title>
+        <key>ru</key>
+        <value>Разрешить</value>
+      </title>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <extendedTooltip>
+        <name>ФормаРазрешитьРедактированиеРасширеннаяПодсказка</name>
+        <id>18</id>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <commandName>Form.Command.РазрешитьРедактирование</commandName>
+      <representation>Auto</representation>
+      <defaultButton>true</defaultButton>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <placementArea>UserCmds</placementArea>
+      <representationInContextMenu>Auto</representationInContextMenu>
+    </items>
+    <horizontalAlign>Left</horizontalAlign>
   </autoCommandBar>
   <handlers>
     <event>OnOpen</event>
@@ -374,7 +289,6 @@
   </handlers>
   <windowOpeningMode>LockOwner</windowOpeningMode>
   <saveWindowSettings>true</saveWindowSettings>
-  <autoTitle>true</autoTitle>
   <autoUrl>true</autoUrl>
   <group>Vertical</group>
   <autoFillCheck>true</autoFillCheck>
@@ -448,6 +362,20 @@
       <common>true</common>
     </edit>
   </attributes>
+  <attributes>
+    <name>ЗаголовокНадписи</name>
+    <id>1</id>
+    <valueType>
+      <types>String</types>
+      <stringQualifiers/>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
   <formCommands>
     <name>РазрешитьРедактирование</name>
     <title>
@@ -463,7 +391,8 @@
         <name>РазрешитьРедактирование</name>
       </handler>
     </action>
-    <currentRowUse>DontUse</currentRowUse>
+    <actionPurpose>Finish</actionPurpose>
+    <currentRowUse>Auto</currentRowUse>
     <selectedRowsUse>Auto</selectedRowsUse>
   </formCommands>
   <formCommands>
@@ -475,14 +404,14 @@
     <id>2</id>
     <toolTip>
       <key>ru</key>
-      <value>Проверить использование объекта в базе данных и убедиться, что не будет рассогласования данных при изменении реквизитов</value>
+      <value>Проверить использование объекта в базе данных и убедится, что не будет рассогласования данных при изменении реквизитов</value>
     </toolTip>
     <use>
       <common>true</common>
     </use>
     <action xsi:type="form:FormCommandHandlerContainer">
       <handler>
-        <name>Проверить</name>
+        <name>ПроверитьИспользование</name>
       </handler>
     </action>
     <currentRowUse>Auto</currentRowUse>
@@ -499,7 +428,7 @@
       <common>true</common>
     </use>
     <picture xsi:type="core:PictureRef">
-      <picture>StdPicture.CheckAll</picture>
+      <picture>CommonPicture.УстановитьВсе</picture>
     </picture>
     <action xsi:type="form:FormCommandHandlerContainer">
       <handler>
@@ -521,13 +450,14 @@
       <common>true</common>
     </use>
     <picture xsi:type="core:PictureRef">
-      <picture>StdPicture.UncheckAll</picture>
+      <picture>CommonPicture.СнятьВсе</picture>
     </picture>
     <action xsi:type="form:FormCommandHandlerContainer">
       <handler>
         <name>СнятьФлажки</name>
       </handler>
     </action>
+    <representation>Picture</representation>
     <currentRowUse>Auto</currentRowUse>
     <selectedRowsUse>Auto</selectedRowsUse>
   </formCommands>

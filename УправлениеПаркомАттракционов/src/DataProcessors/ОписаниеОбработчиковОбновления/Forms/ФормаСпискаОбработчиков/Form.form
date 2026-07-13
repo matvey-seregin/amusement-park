@@ -21,7 +21,6 @@
         <dataPath xsi:type="form:DataPath">
           <segments>Объект.КаталогSRC</segments>
         </dataPath>
-        <titleLocation>Left</titleLocation>
         <extendedTooltip>
           <name>КаталогSRCРасширеннаяПодсказка</name>
           <id>77</id>
@@ -38,8 +37,7 @@
           <autoFill>true</autoFill>
         </contextMenu>
         <type>InputField</type>
-        <markRequiredComplete>true</markRequiredComplete>
-        <editMode>Enter</editMode>
+        <editMode>Auto</editMode>
         <showInHeader>true</showInHeader>
         <headerHorizontalAlign>Left</headerHorizontalAlign>
         <showInFooter>true</showInFooter>
@@ -82,7 +80,6 @@
         <dataPath xsi:type="form:DataPath">
           <segments>КаталогФайловОшибок</segments>
         </dataPath>
-        <titleLocation>Left</titleLocation>
         <extendedTooltip>
           <name>КаталогФайловОшибокРасширеннаяПодсказка</name>
           <id>176</id>
@@ -99,8 +96,7 @@
           <autoFill>true</autoFill>
         </contextMenu>
         <type>InputField</type>
-        <markRequiredComplete>true</markRequiredComplete>
-        <editMode>Enter</editMode>
+        <editMode>Auto</editMode>
         <showInHeader>true</showInHeader>
         <headerHorizontalAlign>Left</headerHorizontalAlign>
         <showInFooter>true</showInFooter>
@@ -186,6 +182,7 @@
         <value>Загружать описание обработчиков из &lt;?>; Сохранять в &lt;?>;</value>
       </collapsedRepresentationTitle>
       <collapsed>true</collapsed>
+      <representation>Auto</representation>
       <showLeftMargin>true</showLeftMargin>
       <united>true</united>
       <showTitle>auto</showTitle>
@@ -227,7 +224,7 @@
         <autoFill>true</autoFill>
       </contextMenu>
       <type>InputField</type>
-      <editMode>Enter</editMode>
+      <editMode>Auto</editMode>
       <showInHeader>true</showInHeader>
       <headerHorizontalAlign>Left</headerHorizontalAlign>
       <showInFooter>true</showInFooter>
@@ -236,7 +233,6 @@
           <event>ChoiceProcessing</event>
           <name>ПодсистемаОбработкаВыбора</name>
         </handlers>
-        <width>15</width>
         <autoMaxWidth>true</autoMaxWidth>
         <autoMaxHeight>true</autoMaxHeight>
         <wrap>true</wrap>
@@ -282,7 +278,7 @@
         <autoFill>true</autoFill>
       </contextMenu>
       <type>InputField</type>
-      <editMode>Enter</editMode>
+      <editMode>Auto</editMode>
       <showInHeader>true</showInHeader>
       <headerHorizontalAlign>Left</headerHorizontalAlign>
       <showInFooter>true</showInFooter>
@@ -336,7 +332,7 @@
         <autoFill>true</autoFill>
       </contextMenu>
       <type>InputField</type>
-      <editMode>Enter</editMode>
+      <editMode>Auto</editMode>
       <showInHeader>true</showInHeader>
       <headerHorizontalAlign>Left</headerHorizontalAlign>
       <showInFooter>true</showInFooter>
@@ -386,97 +382,6 @@
   <items xsi:type="form:FormGroup">
     <name>ГруппаКомандыТаблицы</name>
     <id>156</id>
-    <items xsi:type="form:Button">
-      <name>ОбработчикиОбновленияДобавить</name>
-      <id>158</id>
-      <visible>true</visible>
-      <enabled>true</enabled>
-      <userVisible>
-        <common>true</common>
-      </userVisible>
-      <extendedTooltip>
-        <name>ОбработчикиОбновленияДобавитьРасширеннаяПодсказка</name>
-        <id>159</id>
-        <type>Label</type>
-        <autoMaxWidth>true</autoMaxWidth>
-        <autoMaxHeight>true</autoMaxHeight>
-        <extInfo xsi:type="form:LabelDecorationExtInfo">
-          <horizontalAlign>Left</horizontalAlign>
-        </extInfo>
-      </extendedTooltip>
-      <type>UsualButton</type>
-      <commandName>Form.Item.ОбработчикиОбновления.StandardCommand.Add</commandName>
-      <buttonImportance>Normal</buttonImportance>
-      <representation>Auto</representation>
-      <width>9</width>
-      <autoMaxWidth>true</autoMaxWidth>
-      <autoMaxHeight>true</autoMaxHeight>
-      <placementArea>UserCmds</placementArea>
-      <representationInContextMenu>Auto</representationInContextMenu>
-    </items>
-    <items xsi:type="form:Button">
-      <name>ОбработчикиОбновленияСкопировать</name>
-      <id>154</id>
-      <visible>true</visible>
-      <enabled>true</enabled>
-      <userVisible>
-        <common>true</common>
-      </userVisible>
-      <extendedTooltip>
-        <name>ОбработчикиОбновленияСкопироватьРасширеннаяПодсказка</name>
-        <id>155</id>
-        <type>Label</type>
-        <autoMaxWidth>true</autoMaxWidth>
-        <autoMaxHeight>true</autoMaxHeight>
-        <extInfo xsi:type="form:LabelDecorationExtInfo">
-          <horizontalAlign>Left</horizontalAlign>
-        </extInfo>
-      </extendedTooltip>
-      <type>UsualButton</type>
-      <commandName>Form.Item.ОбработчикиОбновления.StandardCommand.Copy</commandName>
-      <buttonImportance>Normal</buttonImportance>
-      <representation>Picture</representation>
-      <width>3</width>
-      <autoMaxWidth>true</autoMaxWidth>
-      <autoMaxHeight>true</autoMaxHeight>
-      <placementArea>UserCmds</placementArea>
-      <picture xsi:type="core:PictureRef">
-        <picture>StdPicture.CloneObject</picture>
-      </picture>
-      <representationInContextMenu>Auto</representationInContextMenu>
-      <locationInCommandBar>InCommandBarAndInAdditionalSubmenu</locationInCommandBar>
-    </items>
-    <items xsi:type="form:Button">
-      <name>УстановитьНомерСборкиОбработчикам</name>
-      <id>216</id>
-      <title>
-        <key>ru</key>
-        <value>Установить номер сборки</value>
-      </title>
-      <visible>true</visible>
-      <enabled>true</enabled>
-      <userVisible>
-        <common>true</common>
-      </userVisible>
-      <extendedTooltip>
-        <name>УстановитьНомерСборкиОбработчикамРасширеннаяПодсказка</name>
-        <id>217</id>
-        <type>Label</type>
-        <autoMaxWidth>true</autoMaxWidth>
-        <autoMaxHeight>true</autoMaxHeight>
-        <extInfo xsi:type="form:LabelDecorationExtInfo">
-          <horizontalAlign>Left</horizontalAlign>
-        </extInfo>
-      </extendedTooltip>
-      <type>UsualButton</type>
-      <commandName>Form.Command.УстановитьНомерСборкиОбработчикам</commandName>
-      <buttonImportance>Normal</buttonImportance>
-      <representation>Auto</representation>
-      <autoMaxWidth>true</autoMaxWidth>
-      <autoMaxHeight>true</autoMaxHeight>
-      <placementArea>UserCmds</placementArea>
-      <representationInContextMenu>Auto</representationInContextMenu>
-    </items>
     <items xsi:type="form:Decoration">
       <name>Декорация1</name>
       <id>169</id>
@@ -1461,9 +1366,7 @@
           <id>47</id>
           <visible>true</visible>
           <enabled>true</enabled>
-          <userVisible>
-            <common>true</common>
-          </userVisible>
+          <userVisible/>
           <dataPath xsi:type="form:DataPath">
             <segments>Объект.ОбработчикиОбновления.Комментарий</segments>
           </dataPath>
@@ -1503,9 +1406,7 @@
           <id>50</id>
           <visible>true</visible>
           <enabled>true</enabled>
-          <userVisible>
-            <common>true</common>
-          </userVisible>
+          <userVisible/>
           <dataPath xsi:type="form:DataPath">
             <segments>Объект.ОбработчикиОбновления.Идентификатор</segments>
           </dataPath>
@@ -1982,6 +1883,36 @@
         <autoCommandBar>
           <name>ОбработчикиОбновленияКоманднаяПанель</name>
           <id>3</id>
+          <items xsi:type="form:Button">
+            <name>УстановитьНомерСборкиОбработчикам</name>
+            <id>216</id>
+            <title>
+              <key>ru</key>
+              <value>Установить номер сборки</value>
+            </title>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <extendedTooltip>
+              <name>УстановитьНомерСборкиОбработчикамРасширеннаяПодсказка</name>
+              <id>217</id>
+              <type>Label</type>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Left</horizontalAlign>
+              </extInfo>
+            </extendedTooltip>
+            <commandName>Form.Command.УстановитьНомерСборкиОбработчикам</commandName>
+            <buttonImportance>Normal</buttonImportance>
+            <representation>Auto</representation>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <placementArea>UserCmds</placementArea>
+            <representationInContextMenu>Auto</representationInContextMenu>
+          </items>
           <horizontalAlign>Left</horizontalAlign>
         </autoCommandBar>
         <handlers>
@@ -2270,6 +2201,7 @@
         <verticalStretch>true</verticalStretch>
         <enableStartDrag>true</enableStartDrag>
         <enableDrag>true</enableDrag>
+        <searchStringLocation>Top</searchStringLocation>
         <viewStatusLocation>Top</viewStatusLocation>
         <autoMaxCardHeight>true</autoMaxCardHeight>
         <rowFilter xsi:type="core:UndefinedValue"/>
@@ -2327,6 +2259,35 @@
   <autoCommandBar>
     <name>ФормаКоманднаяПанель</name>
     <id>-1</id>
+    <items xsi:type="form:Button">
+      <name>ФормаДобавитьСтроку</name>
+      <id>321</id>
+      <title>
+        <key>ru</key>
+        <value>Добавить</value>
+      </title>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <extendedTooltip>
+        <name>ФормаДобавитьСтрокуРасширеннаяПодсказка</name>
+        <id>322</id>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <commandName>Form.Command.ДобавитьСтроку</commandName>
+      <buttonImportance>Normal</buttonImportance>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <placementArea>UserCmds</placementArea>
+      <representationInContextMenu>Auto</representationInContextMenu>
+    </items>
     <items xsi:type="form:Button">
       <name>ЗагрузитьОбработчики</name>
       <id>98</id>
@@ -3730,8 +3691,9 @@
         <name>УстановитьНомерСборкиОбработчикам</name>
       </handler>
     </action>
-    <currentRowUse>Auto</currentRowUse>
-    <selectedRowsUse>Auto</selectedRowsUse>
+    <associatedTableElementId xsi:type="core:StringValue">
+      <value>ОбработчикиОбновления</value>
+    </associatedTableElementId>
   </formCommands>
   <formCommands>
     <name>ПоказатьПриоритетыКонфликтыОбработчика</name>
@@ -3941,6 +3903,32 @@
         <name>УстановитьАвтоПорядок</name>
       </handler>
     </action>
+    <currentRowUse>Auto</currentRowUse>
+    <selectedRowsUse>Auto</selectedRowsUse>
+  </formCommands>
+  <formCommands>
+    <name>ДобавитьСтроку</name>
+    <title>
+      <key>ru</key>
+      <value>Добавить</value>
+    </title>
+    <id>10</id>
+    <toolTip>
+      <key>ru</key>
+      <value>Добавить строку</value>
+    </toolTip>
+    <use>
+      <common>true</common>
+    </use>
+    <picture xsi:type="core:PictureRef">
+      <picture>StdPicture.CreateListItem</picture>
+    </picture>
+    <action xsi:type="form:FormCommandHandlerContainer">
+      <handler>
+        <name>ДобавитьСтроку</name>
+      </handler>
+    </action>
+    <actionPurpose>Create</actionPurpose>
     <currentRowUse>Auto</currentRowUse>
     <selectedRowsUse>Auto</selectedRowsUse>
   </formCommands>

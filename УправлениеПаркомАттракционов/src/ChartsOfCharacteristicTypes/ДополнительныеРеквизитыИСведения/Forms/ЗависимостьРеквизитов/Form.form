@@ -22,8 +22,6 @@
     <excludedCommands>EndEdit</excludedCommands>
     <excludedCommands>MoveDown</excludedCommands>
     <excludedCommands>MoveUp</excludedCommands>
-    <excludedCommands>SelectAll</excludedCommands>
-    <excludedCommands>ShowMultipleSelection</excludedCommands>
     <excludedCommands>ShowRowRearrangement</excludedCommands>
     <excludedCommands>SortListAsc</excludedCommands>
     <excludedCommands>SortListDesc</excludedCommands>
@@ -70,7 +68,6 @@
         <autoMaxWidth>true</autoMaxWidth>
         <autoMaxHeight>true</autoMaxHeight>
         <wrap>true</wrap>
-        <choiceButton>true</choiceButton>
         <clearButton>true</clearButton>
         <chooseType>true</chooseType>
         <typeDomainEnabled>true</typeDomainEnabled>
@@ -232,7 +229,7 @@
       <id>7</id>
       <items xsi:type="form:Button">
         <name>ЗависимостиРеквизитовДобавитьУсловие</name>
-        <id>34</id>
+        <id>56</id>
         <title>
           <key>ru</key>
           <value>Добавить условие</value>
@@ -244,7 +241,7 @@
         </userVisible>
         <extendedTooltip>
           <name>ЗависимостиРеквизитовДобавитьУсловиеРасширеннаяПодсказка</name>
-          <id>35</id>
+          <id>57</id>
           <type>Label</type>
           <autoMaxWidth>true</autoMaxWidth>
           <autoMaxHeight>true</autoMaxHeight>
@@ -263,6 +260,7 @@
       <items xsi:type="form:Button">
         <name>ЗависимостиРеквизитовУдалитьУсловие</name>
         <id>29</id>
+        <displayImportance>VeryHigh</displayImportance>
         <title>
           <key>ru</key>
           <value>Удалить условие</value>
@@ -395,7 +393,6 @@
     <maxWidth>80</maxWidth>
     <autoMaxHeight>true</autoMaxHeight>
     <autoMaxRowsCount>true</autoMaxRowsCount>
-    <selectionMode>MultiRow</selectionMode>
     <header>true</header>
     <headerHeight>1</headerHeight>
     <footerHeight>1</footerHeight>
@@ -424,7 +421,7 @@
       <id>3</id>
       <title>
         <key>ru</key>
-        <value>ОК</value>
+        <value>Применить</value>
       </title>
       <visible>true</visible>
       <enabled>true</enabled>
@@ -444,36 +441,6 @@
       <commandName>Form.Command.КомандаОк</commandName>
       <representation>Auto</representation>
       <defaultButton>true</defaultButton>
-      <autoMaxWidth>true</autoMaxWidth>
-      <autoMaxHeight>true</autoMaxHeight>
-      <placementArea>UserCmds</placementArea>
-      <representationInContextMenu>Auto</representationInContextMenu>
-    </items>
-    <items xsi:type="form:Button">
-      <name>ФормаКомандаОтмена</name>
-      <id>1</id>
-      <title>
-        <key>ru</key>
-        <value>Отмена</value>
-      </title>
-      <visible>true</visible>
-      <enabled>true</enabled>
-      <userVisible>
-        <common>true</common>
-      </userVisible>
-      <extendedTooltip>
-        <name>ФормаКомандаОтменаРасширеннаяПодсказка</name>
-        <id>2</id>
-        <type>Label</type>
-        <autoMaxWidth>true</autoMaxWidth>
-        <autoMaxHeight>true</autoMaxHeight>
-        <extInfo xsi:type="form:LabelDecorationExtInfo">
-          <horizontalAlign>Left</horizontalAlign>
-        </extInfo>
-      </extendedTooltip>
-      <commandName>Form.Command.КомандаОтмена</commandName>
-      <buttonImportance>Normal</buttonImportance>
-      <representation>Auto</representation>
       <autoMaxWidth>true</autoMaxWidth>
       <autoMaxHeight>true</autoMaxHeight>
       <placementArea>UserCmds</placementArea>
@@ -730,6 +697,7 @@
         <name>КомандаОк</name>
       </handler>
     </action>
+    <actionPurpose>Finish</actionPurpose>
     <currentRowUse>DontUse</currentRowUse>
     <selectedRowsUse>Auto</selectedRowsUse>
   </formCommands>
@@ -752,6 +720,7 @@
         <name>КомандаОтмена</name>
       </handler>
     </action>
+    <actionPurpose>Finish</actionPurpose>
     <currentRowUse>DontUse</currentRowUse>
     <selectedRowsUse>Auto</selectedRowsUse>
   </formCommands>
@@ -769,11 +738,15 @@
     <use>
       <common>true</common>
     </use>
+    <picture xsi:type="core:PictureRef">
+      <picture>StdPicture.CreateListItem</picture>
+    </picture>
     <action xsi:type="form:FormCommandHandlerContainer">
       <handler>
         <name>ДобавитьУсловие</name>
       </handler>
     </action>
+    <representation>TextPicture</representation>
     <currentRowUse>DontUse</currentRowUse>
     <selectedRowsUse>Auto</selectedRowsUse>
   </formCommands>

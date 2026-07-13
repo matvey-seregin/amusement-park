@@ -71,7 +71,7 @@
     </type>
     <toolTip>
       <key>ru</key>
-      <value>Дата фактического запрета изменения данных</value>
+      <value>Дата фактического запрета изменения данных, если не заполнен реквизит Описание даты запрета, в противном случае 02.02.3999 (признак вычисляемой относительной даты запрета)</value>
     </toolTip>
     <minValue xsi:type="core:UndefinedValue"/>
     <maxValue xsi:type="core:UndefinedValue"/>
@@ -85,7 +85,6 @@
       <key>ru</key>
       <value>Описание даты запрета</value>
     </synonym>
-    <comment>Описание относительной даты запрета, используемое для вычисления даты запрета на текущую дату</comment>
     <type>
       <types>String</types>
       <stringQualifiers>
@@ -108,7 +107,6 @@
       <key>ru</key>
       <value>Комментарий</value>
     </synonym>
-    <comment>Комментарий к отдельной настройке запрета по пользователю/группу пользователей</comment>
     <type>
       <types>String</types>
       <stringQualifiers>
@@ -196,21 +194,22 @@
     <fillValue xsi:type="core:UndefinedValue"/>
     <master>true</master>
     <mainFilter>true</mainFilter>
+    <typeReductionMode>DeleteData</typeReductionMode>
   </dimensions>
-  <forms uuid="0ce6e252-8d6e-4bfe-b8cc-daf3434fa51e">
-    <name>ФормаСписка</name>
-    <synonym>
-      <key>ru</key>
-      <value>Форма списка</value>
-    </synonym>
-    <usePurposes>PersonalComputer</usePurposes>
-    <usePurposes>MobileDevice</usePurposes>
-  </forms>
   <forms uuid="aa9513b4-f575-4030-a7f9-ac09aa319e98">
     <name>ФормаЗаписи</name>
     <synonym>
       <key>ru</key>
       <value>Форма записи</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="0ce6e252-8d6e-4bfe-b8cc-daf3434fa51e">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
     </synonym>
     <usePurposes>PersonalComputer</usePurposes>
     <usePurposes>MobileDevice</usePurposes>

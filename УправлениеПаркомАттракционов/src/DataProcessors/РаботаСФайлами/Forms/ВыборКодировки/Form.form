@@ -1,5 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <form:Form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:form="http://g5.1c.ru/v8/dt/form">
+  <items xsi:type="form:FormField">
+    <name>ПоказыватьТолькоОсновныеКодировки</name>
+    <id>8</id>
+    <title>
+      <key>ru</key>
+      <value>Показывать только основные кодировки</value>
+    </title>
+    <visible>true</visible>
+    <enabled>true</enabled>
+    <userVisible>
+      <common>true</common>
+    </userVisible>
+    <dataPath xsi:type="form:DataPath">
+      <segments>ПоказыватьТолькоОсновныеКодировки</segments>
+    </dataPath>
+    <titleLocation>Right</titleLocation>
+    <handlers>
+      <event>OnChange</event>
+      <name>ПоказыватьТолькоОсновныеКодировкиПриИзменении</name>
+    </handlers>
+    <extendedTooltip>
+      <name>ПоказыватьТолькоОсновныеКодировкиРасширеннаяПодсказка</name>
+      <id>13</id>
+      <type>Label</type>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <extInfo xsi:type="form:LabelDecorationExtInfo">
+        <horizontalAlign>Left</horizontalAlign>
+      </extInfo>
+    </extendedTooltip>
+    <contextMenu>
+      <name>ПоказыватьТолькоОсновныеКодировкиКонтекстноеМеню</name>
+      <id>9</id>
+      <autoFill>true</autoFill>
+    </contextMenu>
+    <type>CheckBoxField</type>
+    <editMode>Auto</editMode>
+    <showInHeader>true</showInHeader>
+    <headerHorizontalAlign>Left</headerHorizontalAlign>
+    <showInFooter>true</showInFooter>
+    <extInfo xsi:type="form:CheckBoxFieldExtInfo">
+      <checkBoxType>Switcher</checkBoxType>
+    </extInfo>
+  </items>
   <items xsi:type="form:Table">
     <name>СписокКодировок</name>
     <id>1</id>
@@ -186,48 +230,6 @@
     <searchControlLocation>None</searchControlLocation>
     <autoMaxCardHeight>true</autoMaxCardHeight>
   </items>
-  <items xsi:type="form:FormField">
-    <name>ПоказыватьТолькоОсновныеКодировки</name>
-    <id>8</id>
-    <title>
-      <key>ru</key>
-      <value>Показывать только основные кодировки</value>
-    </title>
-    <visible>true</visible>
-    <enabled>true</enabled>
-    <userVisible>
-      <common>true</common>
-    </userVisible>
-    <dataPath xsi:type="form:DataPath">
-      <segments>ПоказыватьТолькоОсновныеКодировки</segments>
-    </dataPath>
-    <titleLocation>Right</titleLocation>
-    <handlers>
-      <event>OnChange</event>
-      <name>ПоказыватьТолькоОсновныеКодировкиПриИзменении</name>
-    </handlers>
-    <extendedTooltip>
-      <name>ПоказыватьТолькоОсновныеКодировкиРасширеннаяПодсказка</name>
-      <id>13</id>
-      <type>Label</type>
-      <autoMaxWidth>true</autoMaxWidth>
-      <autoMaxHeight>true</autoMaxHeight>
-      <extInfo xsi:type="form:LabelDecorationExtInfo">
-        <horizontalAlign>Left</horizontalAlign>
-      </extInfo>
-    </extendedTooltip>
-    <contextMenu>
-      <name>ПоказыватьТолькоОсновныеКодировкиКонтекстноеМеню</name>
-      <id>9</id>
-      <autoFill>true</autoFill>
-    </contextMenu>
-    <type>CheckBoxField</type>
-    <editMode>Enter</editMode>
-    <showInHeader>true</showInHeader>
-    <headerHorizontalAlign>Left</headerHorizontalAlign>
-    <showInFooter>true</showInFooter>
-    <extInfo xsi:type="form:CheckBoxFieldExtInfo"/>
-  </items>
   <commandBarLocation>Bottom</commandBarLocation>
   <showCommandBar>true</showCommandBar>
   <autoCommandBar>
@@ -349,6 +351,7 @@
         <name>ВыбратьКодировку</name>
       </handler>
     </action>
+    <actionPurpose>Finish</actionPurpose>
     <currentRowUse>DontUse</currentRowUse>
     <selectedRowsUse>Auto</selectedRowsUse>
   </formCommands>

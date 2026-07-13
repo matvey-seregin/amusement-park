@@ -4,109 +4,79 @@
     <key>ru</key>
     <value>Обновление доступа (ручное управление)</value>
   </title>
-  <items xsi:type="form:FormGroup">
-    <name>ГруппаОбновлениеДоступаКОбъекту</name>
-    <id>4</id>
-    <items xsi:type="form:FormField">
-      <name>ОбъектОбновленияДоступа</name>
-      <id>43</id>
-      <title>
-        <key>ru</key>
-        <value>Объект</value>
-      </title>
-      <visible>true</visible>
-      <enabled>true</enabled>
-      <userVisible>
-        <common>true</common>
-      </userVisible>
-      <dataPath xsi:type="form:DataPath">
-        <segments>ОбъектОбновленияДоступа</segments>
-      </dataPath>
-      <titleLocation>None</titleLocation>
-      <extendedTooltip>
-        <name>ОбъектОбновленияДоступаРасширеннаяПодсказка</name>
-        <id>45</id>
-        <type>Label</type>
-        <autoMaxWidth>true</autoMaxWidth>
-        <autoMaxHeight>true</autoMaxHeight>
-        <extInfo xsi:type="form:LabelDecorationExtInfo">
-          <horizontalAlign>Left</horizontalAlign>
-        </extInfo>
-      </extendedTooltip>
-      <contextMenu>
-        <name>ОбъектОбновленияДоступаКонтекстноеМеню</name>
-        <id>44</id>
-        <autoFill>true</autoFill>
-      </contextMenu>
-      <type>InputField</type>
-      <editMode>Enter</editMode>
-      <showInHeader>true</showInHeader>
-      <headerHorizontalAlign>Left</headerHorizontalAlign>
-      <showInFooter>true</showInFooter>
-      <extInfo xsi:type="form:InputFieldExtInfo">
-        <handlers>
-          <event>StartChoice</event>
-          <name>ОбъектОбновленияДоступаНачалоВыбора</name>
-        </handlers>
-        <autoMaxHeight>true</autoMaxHeight>
-        <wrap>true</wrap>
-        <chooseType>true</chooseType>
-        <typeDomainEnabled>true</typeDomainEnabled>
-        <textEdit>true</textEdit>
-        <textSize>Normal</textSize>
-        <typeLink>
-          <linkItem>1</linkItem>
-          <datapath xsi:type="form:DataPath">
-            <segments>Items.СпискиДляОбновления.CurrentData.Value</segments>
-          </datapath>
-        </typeLink>
+  <items xsi:type="form:FormField">
+    <name>ОбновлениеДоступаЭлементовСписка</name>
+    <id>82</id>
+    <title>
+      <key>ru</key>
+      <value>Вариант обновления доступа</value>
+    </title>
+    <visible>true</visible>
+    <enabled>true</enabled>
+    <userVisible>
+      <common>true</common>
+    </userVisible>
+    <dataPath xsi:type="form:DataPath">
+      <segments>ОбновлениеДоступаЭлементовСписка</segments>
+    </dataPath>
+    <titleLocation>None</titleLocation>
+    <handlers>
+      <event>OnChange</event>
+      <name>ОбновлениеДоступаЭлементовСпискаПриИзменении</name>
+    </handlers>
+    <extendedTooltip>
+      <name>ОбновлениеДоступаЭлементовСпискаРасширеннаяПодсказка</name>
+      <id>84</id>
+      <type>Label</type>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <extInfo xsi:type="form:LabelDecorationExtInfo">
+        <horizontalAlign>Left</horizontalAlign>
       </extInfo>
-    </items>
+    </extendedTooltip>
+    <contextMenu>
+      <name>ОбновлениеДоступаЭлементовСпискаКонтекстноеМеню</name>
+      <id>83</id>
+      <autoFill>true</autoFill>
+    </contextMenu>
+    <type>CheckBoxField</type>
+    <editMode>Auto</editMode>
+    <showInHeader>true</showInHeader>
+    <headerHorizontalAlign>Left</headerHorizontalAlign>
+    <showInFooter>true</showInFooter>
+    <extInfo xsi:type="form:CheckBoxFieldExtInfo">
+      <checkBoxType>Tumbler</checkBoxType>
+      <editFormat>
+        <key>ru</key>
+        <value>БЛ='Один объект'; БИ='Все элементы списков'</value>
+      </editFormat>
+    </extInfo>
+  </items>
+  <items xsi:type="form:FormGroup">
+    <name>Страницы</name>
+    <id>86</id>
     <items xsi:type="form:FormGroup">
-      <name>ГоризонтальнаяГруппа</name>
-      <id>48</id>
-      <items xsi:type="form:Button">
-        <name>ОбновитьДоступКОбъекту</name>
-        <id>9</id>
+      <name>СтраницаОбновлениеДоступаКОбъекту</name>
+      <id>4</id>
+      <items xsi:type="form:FormField">
+        <name>ОбъектОбновленияДоступа</name>
+        <id>43</id>
         <title>
           <key>ru</key>
-          <value>Обновить доступ</value>
+          <value>Объект</value>
         </title>
         <visible>true</visible>
         <enabled>true</enabled>
         <userVisible>
           <common>true</common>
         </userVisible>
+        <dataPath xsi:type="form:DataPath">
+          <segments>ОбъектОбновленияДоступа</segments>
+        </dataPath>
+        <titleLocation>None</titleLocation>
         <extendedTooltip>
-          <name>ОбновитьДоступКОбъектуРасширеннаяПодсказка</name>
-          <id>10</id>
-          <type>Label</type>
-          <autoMaxWidth>true</autoMaxWidth>
-          <autoMaxHeight>true</autoMaxHeight>
-          <extInfo xsi:type="form:LabelDecorationExtInfo">
-            <horizontalAlign>Left</horizontalAlign>
-          </extInfo>
-        </extendedTooltip>
-        <type>UsualButton</type>
-        <commandName>Form.Command.ОбновитьДоступКОбъекту</commandName>
-        <buttonImportance>Normal</buttonImportance>
-        <representation>Auto</representation>
-        <autoMaxWidth>true</autoMaxWidth>
-        <autoMaxHeight>true</autoMaxHeight>
-        <placementArea>UserCmds</placementArea>
-        <representationInContextMenu>Auto</representationInContextMenu>
-      </items>
-      <items xsi:type="form:Decoration">
-        <name>ГоризонтальныйОтступ</name>
-        <id>50</id>
-        <visible>true</visible>
-        <enabled>true</enabled>
-        <userVisible>
-          <common>true</common>
-        </userVisible>
-        <extendedTooltip>
-          <name>ГоризонтальныйОтступРасширеннаяПодсказка</name>
-          <id>52</id>
+          <name>ОбъектОбновленияДоступаРасширеннаяПодсказка</name>
+          <id>45</id>
           <type>Label</type>
           <autoMaxWidth>true</autoMaxWidth>
           <autoMaxHeight>true</autoMaxHeight>
@@ -115,16 +85,32 @@
           </extInfo>
         </extendedTooltip>
         <contextMenu>
-          <name>ГоризонтальныйОтступКонтекстноеМеню</name>
-          <id>51</id>
+          <name>ОбъектОбновленияДоступаКонтекстноеМеню</name>
+          <id>44</id>
           <autoFill>true</autoFill>
         </contextMenu>
-        <type>Label</type>
-        <width>2</width>
-        <autoMaxWidth>true</autoMaxWidth>
-        <autoMaxHeight>true</autoMaxHeight>
-        <extInfo xsi:type="form:LabelDecorationExtInfo">
-          <horizontalAlign>Left</horizontalAlign>
+        <type>InputField</type>
+        <editMode>Auto</editMode>
+        <showInHeader>true</showInHeader>
+        <headerHorizontalAlign>Left</headerHorizontalAlign>
+        <showInFooter>true</showInFooter>
+        <extInfo xsi:type="form:InputFieldExtInfo">
+          <handlers>
+            <event>StartChoice</event>
+            <name>ОбъектОбновленияДоступаНачалоВыбора</name>
+          </handlers>
+          <autoMaxHeight>true</autoMaxHeight>
+          <wrap>true</wrap>
+          <chooseType>true</chooseType>
+          <typeDomainEnabled>true</typeDomainEnabled>
+          <textEdit>true</textEdit>
+          <textSize>Normal</textSize>
+          <typeLink>
+            <linkItem>1</linkItem>
+            <datapath xsi:type="form:DataPath">
+              <segments>Items.СпискиДляОбновления.CurrentData.Value</segments>
+            </datapath>
+          </typeLink>
         </extInfo>
       </items>
       <items xsi:type="form:Button">
@@ -132,7 +118,7 @@
         <id>46</id>
         <title>
           <key>ru</key>
-          <value>Показать доступ ...</value>
+          <value>Показать доступ</value>
         </title>
         <enabled>true</enabled>
         <userVisible>
@@ -164,11 +150,11 @@
       </userVisible>
       <title>
         <key>ru</key>
-        <value>Горизонтальная группа</value>
+        <value>Страница обновление доступа к объекту</value>
       </title>
       <extendedTooltip>
-        <name>ГоризонтальнаяГруппаРасширеннаяПодсказка</name>
-        <id>49</id>
+        <name>СтраницаОбновлениеДоступаКОбъектуРасширеннаяПодсказка</name>
+        <id>5</id>
         <type>Label</type>
         <autoMaxWidth>true</autoMaxWidth>
         <autoMaxHeight>true</autoMaxHeight>
@@ -176,162 +162,42 @@
           <horizontalAlign>Left</horizontalAlign>
         </extInfo>
       </extendedTooltip>
-      <type>UsualGroup</type>
-      <extInfo xsi:type="form:UsualGroupExtInfo">
-        <group>HorizontalIfPossible</group>
-        <showLeftMargin>true</showLeftMargin>
-        <united>true</united>
-        <throughAlign>Auto</throughAlign>
-        <currentRowUse>Auto</currentRowUse>
+      <type>Page</type>
+      <extInfo xsi:type="form:PageGroupExtInfo">
+        <group>Vertical</group>
+        <showTitle>auto</showTitle>
+        <scrollOnCompress>true</scrollOnCompress>
       </extInfo>
     </items>
-    <visible>true</visible>
-    <enabled>true</enabled>
-    <userVisible>
-      <common>true</common>
-    </userVisible>
-    <title>
-      <key>ru</key>
-      <value>1. Обновление доступа к объекту</value>
-    </title>
-    <extendedTooltip>
-      <name>ГруппаОбновлениеДоступаКОбъектуРасширеннаяПодсказка</name>
-      <id>5</id>
-      <type>Label</type>
-      <autoMaxWidth>true</autoMaxWidth>
-      <autoMaxHeight>true</autoMaxHeight>
-      <extInfo xsi:type="form:LabelDecorationExtInfo">
-        <horizontalAlign>Left</horizontalAlign>
-      </extInfo>
-    </extendedTooltip>
-    <type>UsualGroup</type>
-    <extInfo xsi:type="form:UsualGroupExtInfo">
-      <group>Vertical</group>
-      <representation>NormalSeparation</representation>
-      <showLeftMargin>true</showLeftMargin>
-      <united>true</united>
-      <showTitle>auto</showTitle>
-      <throughAlign>Auto</throughAlign>
-      <currentRowUse>Auto</currentRowUse>
-    </extInfo>
-  </items>
-  <items xsi:type="form:FormGroup">
-    <name>ГруппаПланированиеОбновлениеДоступа</name>
-    <id>11</id>
-    <items xsi:type="form:Table">
-      <name>СпискиДляОбновления</name>
-      <id>18</id>
-      <title>
-        <key>ru</key>
-        <value>Списки для обновления</value>
-      </title>
-      <visible>true</visible>
-      <enabled>true</enabled>
-      <userVisible>
-        <common>true</common>
-      </userVisible>
-      <dataPath xsi:type="form:DataPath">
-        <segments>СпискиДляОбновления</segments>
-      </dataPath>
-      <titleLocation>None</titleLocation>
-      <items xsi:type="form:FormGroup">
-        <name>СпискиДляОбновленияГруппа</name>
-        <id>53</id>
-        <items xsi:type="form:FormField">
-          <name>СпискиДляОбновленияПометка</name>
-          <id>34</id>
-          <title>
-            <key>ru</key>
-            <value>Пометка</value>
-          </title>
-          <visible>true</visible>
-          <enabled>true</enabled>
-          <userVisible>
-            <common>true</common>
-          </userVisible>
-          <dataPath xsi:type="form:DataPath">
-            <segments>СпискиДляОбновления.Check</segments>
-          </dataPath>
-          <extendedTooltip>
-            <name>СпискиДляОбновленияПометкаРасширеннаяПодсказка</name>
-            <id>36</id>
-            <type>Label</type>
-            <autoMaxWidth>true</autoMaxWidth>
-            <autoMaxHeight>true</autoMaxHeight>
-            <extInfo xsi:type="form:LabelDecorationExtInfo">
-              <horizontalAlign>Left</horizontalAlign>
-            </extInfo>
-          </extendedTooltip>
-          <contextMenu>
-            <name>СпискиДляОбновленияПометкаКонтекстноеМеню</name>
-            <id>35</id>
-            <autoFill>true</autoFill>
-          </contextMenu>
-          <type>CheckBoxField</type>
-          <editMode>Auto</editMode>
-          <showInHeader>true</showInHeader>
-          <headerHorizontalAlign>Left</headerHorizontalAlign>
-          <showInFooter>true</showInFooter>
-          <extInfo xsi:type="form:CheckBoxFieldExtInfo"/>
-        </items>
-        <items xsi:type="form:FormField">
-          <name>СпискиДляОбновленияПредставление</name>
-          <id>31</id>
-          <title>
-            <key>ru</key>
-            <value>Представление</value>
-          </title>
-          <visible>true</visible>
-          <enabled>true</enabled>
-          <userVisible>
-            <common>true</common>
-          </userVisible>
-          <dataPath xsi:type="form:DataPath">
-            <segments>СпискиДляОбновления.Presentation</segments>
-          </dataPath>
-          <extendedTooltip>
-            <name>СпискиДляОбновленияПредставлениеРасширеннаяПодсказка</name>
-            <id>33</id>
-            <type>Label</type>
-            <autoMaxWidth>true</autoMaxWidth>
-            <autoMaxHeight>true</autoMaxHeight>
-            <extInfo xsi:type="form:LabelDecorationExtInfo">
-              <horizontalAlign>Left</horizontalAlign>
-            </extInfo>
-          </extendedTooltip>
-          <contextMenu>
-            <name>СпискиДляОбновленияПредставлениеКонтекстноеМеню</name>
-            <id>32</id>
-            <autoFill>true</autoFill>
-          </contextMenu>
-          <type>InputField</type>
-          <readOnly>true</readOnly>
-          <editMode>Auto</editMode>
-          <showInHeader>true</showInHeader>
-          <headerHorizontalAlign>Left</headerHorizontalAlign>
-          <showInFooter>true</showInFooter>
-          <extInfo xsi:type="form:InputFieldExtInfo">
-            <autoMaxWidth>true</autoMaxWidth>
-            <autoMaxHeight>true</autoMaxHeight>
-            <wrap>true</wrap>
-            <chooseType>true</chooseType>
-            <typeDomainEnabled>true</typeDomainEnabled>
-            <textEdit>true</textEdit>
-            <textSize>Normal</textSize>
-          </extInfo>
-        </items>
+    <items xsi:type="form:FormGroup">
+      <name>СтраницаПланированиеОбновлениеДоступа</name>
+      <id>11</id>
+      <items xsi:type="form:FormField">
+        <name>ОбновитьКлючиДоступаКЭлементамДанных</name>
+        <id>58</id>
+        <title>
+          <key>ru</key>
+          <value>Обновить ключи доступа к элементам данных</value>
+        </title>
         <visible>true</visible>
         <enabled>true</enabled>
         <userVisible>
           <common>true</common>
         </userVisible>
-        <title>
+        <dataPath xsi:type="form:DataPath">
+          <segments>ОбновитьКлючиДоступаКЭлементамДанных</segments>
+        </dataPath>
+        <titleLocation>Right</titleLocation>
+        <toolTip>
           <key>ru</key>
-          <value>Списки для обновления группа</value>
-        </title>
+          <value>Это обработка элементов данных:
+выбор запросом порций объектов или отборов записей регистров,
+у которых устарели ключи доступа, и замена их ключей доступа на новые.</value>
+        </toolTip>
+        <toolTipRepresentation>Button</toolTipRepresentation>
         <extendedTooltip>
-          <name>СпискиДляОбновленияГруппаРасширеннаяПодсказка</name>
-          <id>54</id>
+          <name>ОбновитьКлючиДоступаКЭлементамДанныхРасширеннаяПодсказка</name>
+          <id>60</id>
           <type>Label</type>
           <autoMaxWidth>true</autoMaxWidth>
           <autoMaxHeight>true</autoMaxHeight>
@@ -339,22 +205,251 @@
             <horizontalAlign>Left</horizontalAlign>
           </extInfo>
         </extendedTooltip>
-        <type>ColumnGroup</type>
-        <extInfo xsi:type="form:ColumnGroupExtInfo">
-          <group>InCell</group>
-          <showTitle>auto</showTitle>
-          <showInCard>true</showInCard>
-        </extInfo>
+        <contextMenu>
+          <name>ОбновитьКлючиДоступаКЭлементамДанныхКонтекстноеМеню</name>
+          <id>59</id>
+          <autoFill>true</autoFill>
+        </contextMenu>
+        <type>CheckBoxField</type>
+        <editMode>Auto</editMode>
+        <showInHeader>true</showInHeader>
+        <headerHorizontalAlign>Left</headerHorizontalAlign>
+        <showInFooter>true</showInFooter>
+        <extInfo xsi:type="form:CheckBoxFieldExtInfo"/>
       </items>
-      <autoCommandBar>
-        <name>СпискиДляОбновленияКоманднаяПанель</name>
-        <id>20</id>
+      <items xsi:type="form:FormField">
+        <name>ОбновитьПраваНаКлючиДоступа</name>
+        <id>61</id>
+        <title>
+          <key>ru</key>
+          <value>Обновить права на ключи доступа</value>
+        </title>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <dataPath xsi:type="form:DataPath">
+          <segments>ОбновитьПраваНаКлючиДоступа</segments>
+        </dataPath>
+        <titleLocation>Right</titleLocation>
+        <toolTip>
+          <key>ru</key>
+          <value>Это обработка ключей доступа:
+выбор запросом порций ранее созданных ключей доступа списка,
+расчет прав групп доступа, прав пользователей, прав внешних пользователей и
+обновление прав в регистрах, если права в регистрах отличаются от рассчитанных прав.</value>
+        </toolTip>
+        <toolTipRepresentation>Button</toolTipRepresentation>
+        <extendedTooltip>
+          <name>ОбновитьПраваНаКлючиДоступаРасширеннаяПодсказка</name>
+          <id>63</id>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <contextMenu>
+          <name>ОбновитьПраваНаКлючиДоступаКонтекстноеМеню</name>
+          <id>62</id>
+          <autoFill>true</autoFill>
+        </contextMenu>
+        <type>CheckBoxField</type>
+        <editMode>Auto</editMode>
+        <showInHeader>true</showInHeader>
+        <headerHorizontalAlign>Left</headerHorizontalAlign>
+        <showInFooter>true</showInFooter>
+        <extInfo xsi:type="form:CheckBoxFieldExtInfo"/>
+      </items>
+      <items xsi:type="form:FormField">
+        <name>УдалитьУстаревшиеСлужебныеДанные</name>
+        <id>64</id>
+        <title>
+          <key>ru</key>
+          <value>Удалить устаревшие служебные данные</value>
+        </title>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <dataPath xsi:type="form:DataPath">
+          <segments>УдалитьУстаревшиеСлужебныеДанные</segments>
+        </dataPath>
+        <titleLocation>Right</titleLocation>
+        <toolTipRepresentation>Button</toolTipRepresentation>
+        <extendedTooltip>
+          <name>УдалитьУстаревшиеСлужебныеДанныеРасширеннаяПодсказка</name>
+          <id>66</id>
+          <title>
+            <key>ru</key>
+            <value>Это обработка устаревших:
+- выбор запросом порций устаревших элементов данных и удаление,
+- выбор запросом порций неиспользуемых ключей доступа и установка отсрочки устаревания,
+- выбор запросом порций устаревших ключей доступа и удаление,
+- выбор запросом порций устаревших наборов групп доступа и удаление.</value>
+          </title>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <contextMenu>
+          <name>УдалитьУстаревшиеСлужебныеДанныеКонтекстноеМеню</name>
+          <id>65</id>
+          <autoFill>true</autoFill>
+        </contextMenu>
+        <type>CheckBoxField</type>
+        <editMode>Auto</editMode>
+        <showInHeader>true</showInHeader>
+        <headerHorizontalAlign>Left</headerHorizontalAlign>
+        <showInFooter>true</showInFooter>
+        <extInfo xsi:type="form:CheckBoxFieldExtInfo"/>
+      </items>
+      <items xsi:type="form:Table">
+        <name>СпискиДляОбновления</name>
+        <id>18</id>
+        <title>
+          <key>ru</key>
+          <value>Списки для обновления</value>
+        </title>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <dataPath xsi:type="form:DataPath">
+          <segments>СпискиДляОбновления</segments>
+        </dataPath>
+        <titleLocation>None</titleLocation>
+        <excludedCommands>Change</excludedCommands>
+        <excludedCommands>EndEdit</excludedCommands>
+        <excludedCommands>Pickup</excludedCommands>
         <items xsi:type="form:FormGroup">
-          <name>СпискиДляОбновленияГруппаКомандФлажки</name>
-          <id>70</id>
+          <name>СпискиДляОбновленияГруппа</name>
+          <id>53</id>
+          <items xsi:type="form:FormField">
+            <name>СпискиДляОбновленияПометка</name>
+            <id>34</id>
+            <title>
+              <key>ru</key>
+              <value>Пометка</value>
+            </title>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <dataPath xsi:type="form:DataPath">
+              <segments>СпискиДляОбновления.Check</segments>
+            </dataPath>
+            <extendedTooltip>
+              <name>СпискиДляОбновленияПометкаРасширеннаяПодсказка</name>
+              <id>36</id>
+              <type>Label</type>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Left</horizontalAlign>
+              </extInfo>
+            </extendedTooltip>
+            <contextMenu>
+              <name>СпискиДляОбновленияПометкаКонтекстноеМеню</name>
+              <id>35</id>
+              <autoFill>true</autoFill>
+            </contextMenu>
+            <type>CheckBoxField</type>
+            <editMode>Auto</editMode>
+            <showInHeader>true</showInHeader>
+            <headerHorizontalAlign>Left</headerHorizontalAlign>
+            <showInFooter>true</showInFooter>
+            <extInfo xsi:type="form:CheckBoxFieldExtInfo">
+              <checkBoxType>CheckBox</checkBoxType>
+            </extInfo>
+          </items>
+          <items xsi:type="form:FormField">
+            <name>СпискиДляОбновленияПредставление</name>
+            <id>31</id>
+            <title>
+              <key>ru</key>
+              <value>Представление</value>
+            </title>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <dataPath xsi:type="form:DataPath">
+              <segments>СпискиДляОбновления.Presentation</segments>
+            </dataPath>
+            <extendedTooltip>
+              <name>СпискиДляОбновленияПредставлениеРасширеннаяПодсказка</name>
+              <id>33</id>
+              <type>Label</type>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Left</horizontalAlign>
+              </extInfo>
+            </extendedTooltip>
+            <contextMenu>
+              <name>СпискиДляОбновленияПредставлениеКонтекстноеМеню</name>
+              <id>32</id>
+              <autoFill>true</autoFill>
+            </contextMenu>
+            <type>InputField</type>
+            <readOnly>true</readOnly>
+            <editMode>Auto</editMode>
+            <showInHeader>true</showInHeader>
+            <headerHorizontalAlign>Left</headerHorizontalAlign>
+            <showInFooter>true</showInFooter>
+            <extInfo xsi:type="form:InputFieldExtInfo">
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <wrap>true</wrap>
+              <chooseType>true</chooseType>
+              <typeDomainEnabled>true</typeDomainEnabled>
+              <textEdit>true</textEdit>
+              <textSize>Normal</textSize>
+            </extInfo>
+          </items>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <title>
+            <key>ru</key>
+            <value>Списки для обновления группа</value>
+          </title>
+          <extendedTooltip>
+            <name>СпискиДляОбновленияГруппаРасширеннаяПодсказка</name>
+            <id>54</id>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <type>ColumnGroup</type>
+          <extInfo xsi:type="form:ColumnGroupExtInfo">
+            <group>InCell</group>
+            <showTitle>auto</showTitle>
+            <showInCard>true</showInCard>
+          </extInfo>
+        </items>
+        <autoCommandBar>
+          <name>СпискиДляОбновленияКоманднаяПанель</name>
+          <id>20</id>
           <items xsi:type="form:Button">
             <name>СпискиДляОбновленияУстановитьФлажки</name>
             <id>39</id>
+            <displayImportance>High</displayImportance>
             <visible>true</visible>
             <enabled>true</enabled>
             <userVisible>
@@ -382,6 +477,7 @@
           <items xsi:type="form:Button">
             <name>СпискиДляОбновленияСнятьФлажки</name>
             <id>41</id>
+            <displayImportance>High</displayImportance>
             <visible>true</visible>
             <enabled>true</enabled>
             <userVisible>
@@ -406,44 +502,15 @@
             <representationInContextMenu>Auto</representationInContextMenu>
             <locationInCommandBar>InCommandBarAndInAdditionalSubmenu</locationInCommandBar>
           </items>
-          <visible>true</visible>
-          <enabled>true</enabled>
-          <userVisible>
-            <common>true</common>
-          </userVisible>
-          <title>
-            <key>ru</key>
-            <value>Списки для обновления группа команд флажки</value>
-          </title>
+          <horizontalAlign>Left</horizontalAlign>
+          <autoFill>true</autoFill>
+        </autoCommandBar>
+        <searchStringAddition>
+          <name>СпискиДляОбновленияСтрокаПоиска</name>
+          <id>22</id>
           <extendedTooltip>
-            <name>СпискиДляОбновленияГруппаКомандФлажкиРасширеннаяПодсказка</name>
-            <id>71</id>
-            <type>Label</type>
-            <autoMaxWidth>true</autoMaxWidth>
-            <autoMaxHeight>true</autoMaxHeight>
-            <extInfo xsi:type="form:LabelDecorationExtInfo">
-              <horizontalAlign>Left</horizontalAlign>
-            </extInfo>
-          </extendedTooltip>
-          <extInfo xsi:type="form:ButtonGroupExtInfo">
-            <representation>Compact</representation>
-          </extInfo>
-        </items>
-        <items xsi:type="form:Addition">
-          <title>
-            <key>ru</key>
-            <value>Поиск</value>
-          </title>
-          <visible>true</visible>
-          <enabled>true</enabled>
-          <userVisible>
-            <common>true</common>
-          </userVisible>
-          <name>СтрокаПоиск</name>
-          <id>67</id>
-          <extendedTooltip>
-            <name>СтрокаПоискРасширеннаяПодсказка</name>
-            <id>69</id>
+            <name>СпискиДляОбновленияСтрокаПоискаРасширеннаяПодсказка</name>
+            <id>24</id>
             <type>Label</type>
             <autoMaxWidth>true</autoMaxWidth>
             <autoMaxHeight>true</autoMaxHeight>
@@ -452,23 +519,66 @@
             </extInfo>
           </extendedTooltip>
           <contextMenu>
-            <name>СтрокаПоискКонтекстноеМеню</name>
-            <id>68</id>
+            <name>СпискиДляОбновленияСтрокаПоискаКонтекстноеМеню</name>
+            <id>23</id>
             <autoFill>true</autoFill>
           </contextMenu>
           <source>СпискиДляОбновления</source>
           <extInfo xsi:type="form:SearchStringAdditionExtInfo">
             <autoMaxWidth>true</autoMaxWidth>
           </extInfo>
-        </items>
-        <horizontalAlign>Left</horizontalAlign>
-      </autoCommandBar>
-      <searchStringAddition>
-        <name>СпискиДляОбновленияСтрокаПоиска</name>
-        <id>22</id>
+        </searchStringAddition>
+        <viewStatusAddition>
+          <name>СпискиДляОбновленияСостояниеПросмотра</name>
+          <id>25</id>
+          <extendedTooltip>
+            <name>СпискиДляОбновленияСостояниеПросмотраРасширеннаяПодсказка</name>
+            <id>27</id>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <contextMenu>
+            <name>СпискиДляОбновленияСостояниеПросмотраКонтекстноеМеню</name>
+            <id>26</id>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <type>ViewStatusAddition</type>
+          <source>СпискиДляОбновления</source>
+          <extInfo xsi:type="form:ViewStatusAdditionExtInfo">
+            <autoMaxWidth>true</autoMaxWidth>
+          </extInfo>
+        </viewStatusAddition>
+        <searchControlAddition>
+          <name>СпискиДляОбновленияУправлениеПоиском</name>
+          <id>28</id>
+          <extendedTooltip>
+            <name>СпискиДляОбновленияУправлениеПоискомРасширеннаяПодсказка</name>
+            <id>30</id>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <contextMenu>
+            <name>СпискиДляОбновленияУправлениеПоискомКонтекстноеМеню</name>
+            <id>29</id>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <type>SearchControlAddition</type>
+          <source>СпискиДляОбновления</source>
+          <extInfo xsi:type="form:SearchControlAdditionExtInfo">
+            <autoMaxWidth>true</autoMaxWidth>
+          </extInfo>
+        </searchControlAddition>
         <extendedTooltip>
-          <name>СпискиДляОбновленияСтрокаПоискаРасширеннаяПодсказка</name>
-          <id>24</id>
+          <name>СпискиДляОбновленияРасширеннаяПодсказка</name>
+          <id>21</id>
           <type>Label</type>
           <autoMaxWidth>true</autoMaxWidth>
           <autoMaxHeight>true</autoMaxHeight>
@@ -477,66 +587,47 @@
           </extInfo>
         </extendedTooltip>
         <contextMenu>
-          <name>СпискиДляОбновленияСтрокаПоискаКонтекстноеМеню</name>
-          <id>23</id>
+          <name>СпискиДляОбновленияКонтекстноеМеню</name>
+          <id>19</id>
           <autoFill>true</autoFill>
         </contextMenu>
-        <source>СпискиДляОбновления</source>
-        <extInfo xsi:type="form:SearchStringAdditionExtInfo">
-          <autoMaxWidth>true</autoMaxWidth>
-        </extInfo>
-      </searchStringAddition>
-      <viewStatusAddition>
-        <name>СпискиДляОбновленияСостояниеПросмотра</name>
-        <id>25</id>
-        <extendedTooltip>
-          <name>СпискиДляОбновленияСостояниеПросмотраРасширеннаяПодсказка</name>
-          <id>27</id>
-          <type>Label</type>
-          <autoMaxWidth>true</autoMaxWidth>
-          <autoMaxHeight>true</autoMaxHeight>
-          <extInfo xsi:type="form:LabelDecorationExtInfo">
-            <horizontalAlign>Left</horizontalAlign>
-          </extInfo>
-        </extendedTooltip>
-        <contextMenu>
-          <name>СпискиДляОбновленияСостояниеПросмотраКонтекстноеМеню</name>
-          <id>26</id>
-          <autoFill>true</autoFill>
-        </contextMenu>
-        <type>ViewStatusAddition</type>
-        <source>СпискиДляОбновления</source>
-        <extInfo xsi:type="form:ViewStatusAdditionExtInfo">
-          <autoMaxWidth>true</autoMaxWidth>
-        </extInfo>
-      </viewStatusAddition>
-      <searchControlAddition>
-        <name>СпискиДляОбновленияУправлениеПоиском</name>
-        <id>28</id>
-        <extendedTooltip>
-          <name>СпискиДляОбновленияУправлениеПоискомРасширеннаяПодсказка</name>
-          <id>30</id>
-          <type>Label</type>
-          <autoMaxWidth>true</autoMaxWidth>
-          <autoMaxHeight>true</autoMaxHeight>
-          <extInfo xsi:type="form:LabelDecorationExtInfo">
-            <horizontalAlign>Left</horizontalAlign>
-          </extInfo>
-        </extendedTooltip>
-        <contextMenu>
-          <name>СпискиДляОбновленияУправлениеПоискомКонтекстноеМеню</name>
-          <id>29</id>
-          <autoFill>true</autoFill>
-        </contextMenu>
-        <type>SearchControlAddition</type>
-        <source>СпискиДляОбновления</source>
-        <extInfo xsi:type="form:SearchControlAdditionExtInfo">
-          <autoMaxWidth>true</autoMaxWidth>
-        </extInfo>
-      </searchControlAddition>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <heightInTableRows>4</heightInTableRows>
+        <autoMaxRowsCount>true</autoMaxRowsCount>
+        <headerHeight>1</headerHeight>
+        <footerHeight>1</footerHeight>
+        <horizontalScrollBar>AutoUse</horizontalScrollBar>
+        <verticalScrollBar>AutoUse</verticalScrollBar>
+        <horizontalLines>true</horizontalLines>
+        <verticalLines>true</verticalLines>
+        <horizontalLinesBWA>false</horizontalLinesBWA>
+        <verticalLinesBWA>false</verticalLinesBWA>
+        <useAlternationRowColorBWA>false</useAlternationRowColorBWA>
+        <autoInsertNewRow>true</autoInsertNewRow>
+        <searchOnInput>Auto</searchOnInput>
+        <initialListView>Auto</initialListView>
+        <horizontalStretch>true</horizontalStretch>
+        <verticalStretch>true</verticalStretch>
+        <rowPictureDataPath xsi:type="form:DataPath">
+          <segments>СпискиДляОбновления.Picture</segments>
+        </rowPictureDataPath>
+        <searchStringLocation>CommandBar</searchStringLocation>
+        <autoMaxCardHeight>true</autoMaxCardHeight>
+        <showCommandBarNeedDereferenced>true</showCommandBarNeedDereferenced>
+      </items>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <title>
+        <key>ru</key>
+        <value>Страница планирование обновление доступа</value>
+      </title>
       <extendedTooltip>
-        <name>СпискиДляОбновленияРасширеннаяПодсказка</name>
-        <id>21</id>
+        <name>СтраницаПланированиеОбновлениеДоступаРасширеннаяПодсказка</name>
+        <id>12</id>
         <type>Label</type>
         <autoMaxWidth>true</autoMaxWidth>
         <autoMaxHeight>true</autoMaxHeight>
@@ -544,60 +635,55 @@
           <horizontalAlign>Left</horizontalAlign>
         </extInfo>
       </extendedTooltip>
-      <contextMenu>
-        <name>СпискиДляОбновленияКонтекстноеМеню</name>
-        <id>19</id>
-        <autoFill>true</autoFill>
-      </contextMenu>
+      <type>Page</type>
+      <extInfo xsi:type="form:PageGroupExtInfo">
+        <group>Vertical</group>
+        <showTitle>auto</showTitle>
+        <scrollOnCompress>true</scrollOnCompress>
+      </extInfo>
+    </items>
+    <visible>true</visible>
+    <enabled>true</enabled>
+    <userVisible>
+      <common>true</common>
+    </userVisible>
+    <title>
+      <key>ru</key>
+      <value>Страницы</value>
+    </title>
+    <extendedTooltip>
+      <name>СтраницыРасширеннаяПодсказка</name>
+      <id>87</id>
+      <type>Label</type>
       <autoMaxWidth>true</autoMaxWidth>
       <autoMaxHeight>true</autoMaxHeight>
-      <autoMaxRowsCount>true</autoMaxRowsCount>
-      <selectionMode>MultiRow</selectionMode>
-      <headerHeight>1</headerHeight>
-      <footerHeight>1</footerHeight>
-      <horizontalScrollBar>AutoUse</horizontalScrollBar>
-      <verticalScrollBar>AutoUse</verticalScrollBar>
-      <horizontalLines>true</horizontalLines>
-      <verticalLines>true</verticalLines>
-      <horizontalLinesBWA>false</horizontalLinesBWA>
-      <verticalLinesBWA>false</verticalLinesBWA>
-      <useAlternationRowColorBWA>false</useAlternationRowColorBWA>
-      <autoInsertNewRow>true</autoInsertNewRow>
-      <searchOnInput>Auto</searchOnInput>
-      <initialListView>Auto</initialListView>
-      <horizontalStretch>true</horizontalStretch>
-      <verticalStretch>true</verticalStretch>
-      <rowPictureDataPath xsi:type="form:DataPath">
-        <segments>СпискиДляОбновления.Picture</segments>
-      </rowPictureDataPath>
-      <autoMaxCardHeight>true</autoMaxCardHeight>
-    </items>
-    <items xsi:type="form:FormField">
-      <name>ОбновитьКлючиДоступаКЭлементамДанных</name>
-      <id>58</id>
+      <extInfo xsi:type="form:LabelDecorationExtInfo">
+        <horizontalAlign>Left</horizontalAlign>
+      </extInfo>
+    </extendedTooltip>
+    <type>Pages</type>
+    <extInfo xsi:type="form:PagesGroupExtInfo">
+      <currentRowUse>Auto</currentRowUse>
+    </extInfo>
+  </items>
+  <autoCommandBar>
+    <name>ФормаКоманднаяПанель</name>
+    <id>-1</id>
+    <items xsi:type="form:Button">
+      <name>ОбновитьДоступКОбъекту</name>
+      <id>9</id>
       <title>
         <key>ru</key>
-        <value>Обновить ключи доступа к элементам данных</value>
+        <value>Обновить доступ</value>
       </title>
       <visible>true</visible>
       <enabled>true</enabled>
       <userVisible>
         <common>true</common>
       </userVisible>
-      <dataPath xsi:type="form:DataPath">
-        <segments>ОбновитьКлючиДоступаКЭлементамДанных</segments>
-      </dataPath>
-      <titleLocation>Right</titleLocation>
-      <toolTip>
-        <key>ru</key>
-        <value>Это обработка элементов данных:
-выбор запросом порций объектов или отборов записей регистров,
-у которых устарели ключи доступа, и замена их ключей доступа на новые.</value>
-      </toolTip>
-      <toolTipRepresentation>Button</toolTipRepresentation>
       <extendedTooltip>
-        <name>ОбновитьКлючиДоступаКЭлементамДанныхРасширеннаяПодсказка</name>
-        <id>60</id>
+        <name>ОбновитьДоступКОбъектуРасширеннаяПодсказка</name>
+        <id>10</id>
         <type>Label</type>
         <autoMaxWidth>true</autoMaxWidth>
         <autoMaxHeight>true</autoMaxHeight>
@@ -605,110 +691,13 @@
           <horizontalAlign>Left</horizontalAlign>
         </extInfo>
       </extendedTooltip>
-      <contextMenu>
-        <name>ОбновитьКлючиДоступаКЭлементамДанныхКонтекстноеМеню</name>
-        <id>59</id>
-        <autoFill>true</autoFill>
-      </contextMenu>
-      <type>CheckBoxField</type>
-      <editMode>Enter</editMode>
-      <showInHeader>true</showInHeader>
-      <headerHorizontalAlign>Left</headerHorizontalAlign>
-      <showInFooter>true</showInFooter>
-      <extInfo xsi:type="form:CheckBoxFieldExtInfo"/>
-    </items>
-    <items xsi:type="form:FormField">
-      <name>ОбновитьПраваНаКлючиДоступа</name>
-      <id>61</id>
-      <title>
-        <key>ru</key>
-        <value>Обновить права на ключи доступа</value>
-      </title>
-      <visible>true</visible>
-      <enabled>true</enabled>
-      <userVisible>
-        <common>true</common>
-      </userVisible>
-      <dataPath xsi:type="form:DataPath">
-        <segments>ОбновитьПраваНаКлючиДоступа</segments>
-      </dataPath>
-      <titleLocation>Right</titleLocation>
-      <toolTip>
-        <key>ru</key>
-        <value>Это обработка ключей доступа:
-выбор запросом порций ранее созданных ключей доступа списка,
-расчет прав групп доступа, прав пользователей, прав внешних пользователей и
-обновление прав в регистрах, если права в регистрах отличаются от рассчитанных прав.</value>
-      </toolTip>
-      <toolTipRepresentation>Button</toolTipRepresentation>
-      <extendedTooltip>
-        <name>ОбновитьПраваНаКлючиДоступаРасширеннаяПодсказка</name>
-        <id>63</id>
-        <type>Label</type>
-        <autoMaxWidth>true</autoMaxWidth>
-        <autoMaxHeight>true</autoMaxHeight>
-        <extInfo xsi:type="form:LabelDecorationExtInfo">
-          <horizontalAlign>Left</horizontalAlign>
-        </extInfo>
-      </extendedTooltip>
-      <contextMenu>
-        <name>ОбновитьПраваНаКлючиДоступаКонтекстноеМеню</name>
-        <id>62</id>
-        <autoFill>true</autoFill>
-      </contextMenu>
-      <type>CheckBoxField</type>
-      <editMode>Enter</editMode>
-      <showInHeader>true</showInHeader>
-      <headerHorizontalAlign>Left</headerHorizontalAlign>
-      <showInFooter>true</showInFooter>
-      <extInfo xsi:type="form:CheckBoxFieldExtInfo"/>
-    </items>
-    <items xsi:type="form:FormField">
-      <name>УдалитьУстаревшиеСлужебныеДанные</name>
-      <id>64</id>
-      <title>
-        <key>ru</key>
-        <value>Удалить устаревшие служебные данные</value>
-      </title>
-      <visible>true</visible>
-      <enabled>true</enabled>
-      <userVisible>
-        <common>true</common>
-      </userVisible>
-      <dataPath xsi:type="form:DataPath">
-        <segments>УдалитьУстаревшиеСлужебныеДанные</segments>
-      </dataPath>
-      <titleLocation>Right</titleLocation>
-      <toolTipRepresentation>Button</toolTipRepresentation>
-      <extendedTooltip>
-        <name>УдалитьУстаревшиеСлужебныеДанныеРасширеннаяПодсказка</name>
-        <id>66</id>
-        <title>
-          <key>ru</key>
-          <value>Это обработка устаревших:
-- выбор запросом порций устаревших элементов данных и удаление,
-- выбор запросом порций неиспользуемых ключей доступа и установка отсрочки устаревания,
-- выбор запросом порций устаревших ключей доступа и удаление,
-- выбор запросом порций устаревших наборов групп доступа и удаление.</value>
-        </title>
-        <type>Label</type>
-        <autoMaxWidth>true</autoMaxWidth>
-        <autoMaxHeight>true</autoMaxHeight>
-        <extInfo xsi:type="form:LabelDecorationExtInfo">
-          <horizontalAlign>Left</horizontalAlign>
-        </extInfo>
-      </extendedTooltip>
-      <contextMenu>
-        <name>УдалитьУстаревшиеСлужебныеДанныеКонтекстноеМеню</name>
-        <id>65</id>
-        <autoFill>true</autoFill>
-      </contextMenu>
-      <type>CheckBoxField</type>
-      <editMode>Enter</editMode>
-      <showInHeader>true</showInHeader>
-      <headerHorizontalAlign>Left</headerHorizontalAlign>
-      <showInFooter>true</showInFooter>
-      <extInfo xsi:type="form:CheckBoxFieldExtInfo"/>
+      <commandName>Form.Command.ОбновитьДоступКОбъекту</commandName>
+      <buttonImportance>Normal</buttonImportance>
+      <representation>Auto</representation>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <placementArea>UserCmds</placementArea>
+      <representationInContextMenu>Auto</representationInContextMenu>
     </items>
     <items xsi:type="form:Button">
       <name>ЗапланироватьОбновлениеДоступаСписков</name>
@@ -732,7 +721,6 @@
           <horizontalAlign>Left</horizontalAlign>
         </extInfo>
       </extendedTooltip>
-      <type>UsualButton</type>
       <commandName>Form.Command.ЗапланироватьОбновлениеДоступаСписков</commandName>
       <buttonImportance>Normal</buttonImportance>
       <representation>Auto</representation>
@@ -741,41 +729,13 @@
       <placementArea>UserCmds</placementArea>
       <representationInContextMenu>Auto</representationInContextMenu>
     </items>
-    <visible>true</visible>
-    <enabled>true</enabled>
-    <userVisible>
-      <common>true</common>
-    </userVisible>
-    <title>
-      <key>ru</key>
-      <value>2. Обновление доступа ко всем элементам списков</value>
-    </title>
-    <extendedTooltip>
-      <name>ГруппаПланированиеОбновлениеДоступаРасширеннаяПодсказка</name>
-      <id>12</id>
-      <type>Label</type>
-      <autoMaxWidth>true</autoMaxWidth>
-      <autoMaxHeight>true</autoMaxHeight>
-      <extInfo xsi:type="form:LabelDecorationExtInfo">
-        <horizontalAlign>Left</horizontalAlign>
-      </extInfo>
-    </extendedTooltip>
-    <type>UsualGroup</type>
-    <extInfo xsi:type="form:UsualGroupExtInfo">
-      <group>Vertical</group>
-      <representation>NormalSeparation</representation>
-      <showLeftMargin>true</showLeftMargin>
-      <united>true</united>
-      <showTitle>auto</showTitle>
-      <throughAlign>Auto</throughAlign>
-      <currentRowUse>Auto</currentRowUse>
-    </extInfo>
-  </items>
-  <autoCommandBar>
-    <name>ФормаКоманднаяПанель</name>
-    <id>-1</id>
     <horizontalAlign>Left</horizontalAlign>
+    <autoFill>true</autoFill>
   </autoCommandBar>
+  <handlers>
+    <event>OnOpen</event>
+    <name>ПриОткрытии</name>
+  </handlers>
   <handlers>
     <event>OnCreateAtServer</event>
     <name>ПриСозданииНаСервере</name>
@@ -787,6 +747,7 @@
   <autoFillCheck>true</autoFillCheck>
   <allowFormCustomize>true</allowFormCustomize>
   <enabled>true</enabled>
+  <verticalScroll>UseIfNecessary</verticalScroll>
   <showTitle>auto</showTitle>
   <showCloseButton>true</showCloseButton>
   <attributes>
@@ -929,6 +890,34 @@
       <common>true</common>
     </edit>
   </attributes>
+  <attributes>
+    <name>ОбновлениеДоступаЭлементовСписка</name>
+    <title>
+      <key>ru</key>
+      <value>Обновление доступа элементов списка</value>
+    </title>
+    <id>11</id>
+    <valueType>
+      <types>Boolean</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>ВерсииОграниченийСписков</name>
+    <id>2</id>
+    <valueType/>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
   <formCommands>
     <name>ОбновитьДоступКОбъекту</name>
     <title>
@@ -948,7 +937,8 @@
         <name>ОбновитьДоступКОбъекту</name>
       </handler>
     </action>
-    <currentRowUse>DontUse</currentRowUse>
+    <actionPurpose>Finish</actionPurpose>
+    <currentRowUse>Auto</currentRowUse>
     <selectedRowsUse>Auto</selectedRowsUse>
   </formCommands>
   <formCommands>
@@ -971,6 +961,7 @@
         <name>ЗапланироватьОбновлениеДоступаСписков</name>
       </handler>
     </action>
+    <actionPurpose>Finish</actionPurpose>
     <currentRowUse>DontUse</currentRowUse>
     <selectedRowsUse>Auto</selectedRowsUse>
   </formCommands>

@@ -31,7 +31,7 @@
       <autoFill>true</autoFill>
     </contextMenu>
     <type>InputField</type>
-    <editMode>Enter</editMode>
+    <editMode>Auto</editMode>
     <showInHeader>true</showInHeader>
     <headerHorizontalAlign>Left</headerHorizontalAlign>
     <showInFooter>true</showInFooter>
@@ -76,7 +76,7 @@
       <autoFill>true</autoFill>
     </contextMenu>
     <type>InputField</type>
-    <editMode>Enter</editMode>
+    <editMode>Auto</editMode>
     <showInHeader>true</showInHeader>
     <headerHorizontalAlign>Left</headerHorizontalAlign>
     <showInFooter>true</showInFooter>
@@ -96,11 +96,11 @@
     <name>ФормаКоманднаяПанель</name>
     <id>-1</id>
     <items xsi:type="form:Button">
-      <name>ФормаКнопкаОк</name>
+      <name>ФормаКнопкаСохранить</name>
       <id>7</id>
       <title>
         <key>ru</key>
-        <value>ОК</value>
+        <value>Сохранить</value>
       </title>
       <visible>true</visible>
       <enabled>true</enabled>
@@ -108,7 +108,7 @@
         <common>true</common>
       </userVisible>
       <extendedTooltip>
-        <name>ФормаКнопкаОкРасширеннаяПодсказка</name>
+        <name>ФормаКнопкаСохранитьРасширеннаяПодсказка</name>
         <id>8</id>
         <type>Label</type>
         <autoMaxWidth>true</autoMaxWidth>
@@ -117,7 +117,7 @@
           <horizontalAlign>Left</horizontalAlign>
         </extInfo>
       </extendedTooltip>
-      <commandName>Form.Command.КнопкаОк</commandName>
+      <commandName>Form.Command.КнопкаСохранить</commandName>
       <defaultButton>true</defaultButton>
       <autoMaxWidth>true</autoMaxWidth>
       <autoMaxHeight>true</autoMaxHeight>
@@ -125,36 +125,6 @@
       <picture xsi:type="core:PictureRef">
         <picture>StdPicture.WriteAndClose</picture>
       </picture>
-      <representationInContextMenu>Auto</representationInContextMenu>
-    </items>
-    <items xsi:type="form:Button">
-      <name>ФормаКнопкаОтмена</name>
-      <id>9</id>
-      <title>
-        <key>ru</key>
-        <value>Отмена</value>
-      </title>
-      <visible>true</visible>
-      <enabled>true</enabled>
-      <userVisible>
-        <common>true</common>
-      </userVisible>
-      <extendedTooltip>
-        <name>ФормаКнопкаОтменаРасширеннаяПодсказка</name>
-        <id>10</id>
-        <type>Label</type>
-        <autoMaxWidth>true</autoMaxWidth>
-        <autoMaxHeight>true</autoMaxHeight>
-        <extInfo xsi:type="form:LabelDecorationExtInfo">
-          <horizontalAlign>Left</horizontalAlign>
-        </extInfo>
-      </extendedTooltip>
-      <commandName>Form.Command.КнопкаОтмена</commandName>
-      <buttonImportance>Normal</buttonImportance>
-      <representation>Auto</representation>
-      <autoMaxWidth>true</autoMaxWidth>
-      <autoMaxHeight>true</autoMaxHeight>
-      <placementArea>UserCmds</placementArea>
       <representationInContextMenu>Auto</representationInContextMenu>
     </items>
     <horizontalAlign>Right</horizontalAlign>
@@ -255,10 +225,10 @@
     </edit>
   </attributes>
   <formCommands>
-    <name>КнопкаОк</name>
+    <name>КнопкаСохранить</name>
     <title>
       <key>ru</key>
-      <value>ОК</value>
+      <value>Сохранить</value>
     </title>
     <id>1</id>
     <toolTip>
@@ -270,27 +240,10 @@
     </use>
     <action xsi:type="form:FormCommandHandlerContainer">
       <handler>
-        <name>КнопкаОк</name>
+        <name>КнопкаСохранить</name>
       </handler>
     </action>
-    <currentRowUse>DontUse</currentRowUse>
-    <selectedRowsUse>Auto</selectedRowsUse>
-  </formCommands>
-  <formCommands>
-    <name>КнопкаОтмена</name>
-    <title>
-      <key>ru</key>
-      <value>Отмена</value>
-    </title>
-    <id>2</id>
-    <use>
-      <common>true</common>
-    </use>
-    <action xsi:type="form:FormCommandHandlerContainer">
-      <handler>
-        <name>КнопкаОтмена</name>
-      </handler>
-    </action>
+    <actionPurpose>Finish</actionPurpose>
     <currentRowUse>DontUse</currentRowUse>
     <selectedRowsUse>Auto</selectedRowsUse>
   </formCommands>

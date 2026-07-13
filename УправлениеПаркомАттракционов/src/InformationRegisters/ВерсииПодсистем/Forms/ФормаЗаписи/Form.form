@@ -27,7 +27,7 @@
       <autoFill>true</autoFill>
     </contextMenu>
     <type>InputField</type>
-    <editMode>Enter</editMode>
+    <editMode>Auto</editMode>
     <showInHeader>true</showInHeader>
     <headerHorizontalAlign>Left</headerHorizontalAlign>
     <showInFooter>true</showInFooter>
@@ -41,27 +41,24 @@
       <textSize>Normal</textSize>
     </extInfo>
   </items>
-  <items xsi:type="form:FormGroup">
-    <name>ГруппаВерсия</name>
-    <id>13</id>
-    <items xsi:type="form:FormField">
-      <name>Версия</name>
-      <id>4</id>
-      <visible>true</visible>
-      <enabled>true</enabled>
-      <userVisible>
-        <common>true</common>
-      </userVisible>
-      <dataPath xsi:type="form:DataPath">
-        <segments>Запись.Версия</segments>
-      </dataPath>
-      <toolTipRepresentation>Button</toolTipRepresentation>
-      <extendedTooltip>
-        <name>ВерсияРасширеннаяПодсказка</name>
-        <id>6</id>
-        <title>
-          <key>ru</key>
-          <value>&lt;b>{Р|РР}.{П|ПП}.{З|ЗЗ}.{С|СС} &lt;/>
+  <items xsi:type="form:FormField">
+    <name>Версия</name>
+    <id>4</id>
+    <visible>true</visible>
+    <enabled>true</enabled>
+    <userVisible>
+      <common>true</common>
+    </userVisible>
+    <dataPath xsi:type="form:DataPath">
+      <segments>Запись.Версия</segments>
+    </dataPath>
+    <toolTipRepresentation>Button</toolTipRepresentation>
+    <extendedTooltip>
+      <name>ВерсияРасширеннаяПодсказка</name>
+      <id>6</id>
+      <title>
+        <key>ru</key>
+        <value>&lt;b>{Р|РР}.{П|ПП}.{З|ЗЗ}.{С|СС} &lt;/>
 
 где: 
 &lt;b>Р&lt;/> - номер редакции (минимум 1 цифра, может занимать и больше разрядов); 
@@ -72,83 +69,9 @@
 Пример:
 &lt;b>1.6.4.7&lt;/> – 7-я сборка, 4-й версии, редакции 1.6
 
-Подробнее см. &lt;link http://its.1c.ru/db/v8std#content:2149184132:hdoc>Нумерация редакций и версий&lt;/></value>
-        </title>
-        <formatted>true</formatted>
-        <type>Label</type>
-        <autoMaxWidth>true</autoMaxWidth>
-        <autoMaxHeight>true</autoMaxHeight>
-        <extInfo xsi:type="form:LabelDecorationExtInfo">
-          <horizontalAlign>Left</horizontalAlign>
-        </extInfo>
-      </extendedTooltip>
-      <contextMenu>
-        <name>ВерсияКонтекстноеМеню</name>
-        <id>5</id>
-        <autoFill>true</autoFill>
-      </contextMenu>
-      <type>InputField</type>
-      <editMode>Enter</editMode>
-      <showInHeader>true</showInHeader>
-      <headerHorizontalAlign>Left</headerHorizontalAlign>
-      <showInFooter>true</showInFooter>
-      <extInfo xsi:type="form:InputFieldExtInfo">
-        <autoMaxWidth>true</autoMaxWidth>
-        <autoMaxHeight>true</autoMaxHeight>
-        <horizontalStretch>false</horizontalStretch>
-        <wrap>true</wrap>
-        <chooseType>true</chooseType>
-        <typeDomainEnabled>true</typeDomainEnabled>
-        <textEdit>true</textEdit>
-        <textSize>Normal</textSize>
-      </extInfo>
-    </items>
-    <items xsi:type="form:FormField">
-      <name>ЭтоОсновнаяКонфигурация</name>
-      <id>7</id>
-      <visible>true</visible>
-      <enabled>true</enabled>
-      <userVisible>
-        <common>true</common>
-      </userVisible>
-      <dataPath xsi:type="form:DataPath">
-        <segments>Запись.ЭтоОсновнаяКонфигурация</segments>
-      </dataPath>
-      <titleLocation>Right</titleLocation>
-      <extendedTooltip>
-        <name>ЭтоОсновнаяКонфигурацияРасширеннаяПодсказка</name>
-        <id>9</id>
-        <type>Label</type>
-        <autoMaxWidth>true</autoMaxWidth>
-        <autoMaxHeight>true</autoMaxHeight>
-        <extInfo xsi:type="form:LabelDecorationExtInfo">
-          <horizontalAlign>Left</horizontalAlign>
-        </extInfo>
-      </extendedTooltip>
-      <contextMenu>
-        <name>ЭтоОсновнаяКонфигурацияКонтекстноеМеню</name>
-        <id>8</id>
-        <autoFill>true</autoFill>
-      </contextMenu>
-      <type>CheckBoxField</type>
-      <editMode>Enter</editMode>
-      <showInHeader>true</showInHeader>
-      <headerHorizontalAlign>Left</headerHorizontalAlign>
-      <showInFooter>true</showInFooter>
-      <extInfo xsi:type="form:CheckBoxFieldExtInfo"/>
-    </items>
-    <visible>true</visible>
-    <enabled>true</enabled>
-    <userVisible>
-      <common>true</common>
-    </userVisible>
-    <title>
-      <key>ru</key>
-      <value>Версия</value>
-    </title>
-    <extendedTooltip>
-      <name>ГруппаВерсияРасширеннаяПодсказка</name>
-      <id>14</id>
+Подробнее см. &lt;link https://its.1c.ru/db/v8std#content:2149184132:hdoc>Нумерация редакций и версий&lt;/></value>
+      </title>
+      <formatted>true</formatted>
       <type>Label</type>
       <autoMaxWidth>true</autoMaxWidth>
       <autoMaxHeight>true</autoMaxHeight>
@@ -156,13 +79,60 @@
         <horizontalAlign>Left</horizontalAlign>
       </extInfo>
     </extendedTooltip>
-    <type>UsualGroup</type>
-    <extInfo xsi:type="form:UsualGroupExtInfo">
-      <group>HorizontalIfPossible</group>
-      <showLeftMargin>true</showLeftMargin>
-      <united>true</united>
-      <throughAlign>Auto</throughAlign>
-      <currentRowUse>Auto</currentRowUse>
+    <contextMenu>
+      <name>ВерсияКонтекстноеМеню</name>
+      <id>5</id>
+      <autoFill>true</autoFill>
+    </contextMenu>
+    <type>InputField</type>
+    <editMode>Auto</editMode>
+    <showInHeader>true</showInHeader>
+    <headerHorizontalAlign>Left</headerHorizontalAlign>
+    <showInFooter>true</showInFooter>
+    <extInfo xsi:type="form:InputFieldExtInfo">
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <wrap>true</wrap>
+      <chooseType>true</chooseType>
+      <typeDomainEnabled>true</typeDomainEnabled>
+      <textEdit>true</textEdit>
+      <textSize>Normal</textSize>
+    </extInfo>
+  </items>
+  <items xsi:type="form:FormField">
+    <name>ЭтоОсновнаяКонфигурация</name>
+    <id>7</id>
+    <visible>true</visible>
+    <enabled>true</enabled>
+    <userVisible>
+      <common>true</common>
+    </userVisible>
+    <dataPath xsi:type="form:DataPath">
+      <segments>Запись.ЭтоОсновнаяКонфигурация</segments>
+    </dataPath>
+    <titleLocation>Right</titleLocation>
+    <extendedTooltip>
+      <name>ЭтоОсновнаяКонфигурацияРасширеннаяПодсказка</name>
+      <id>9</id>
+      <type>Label</type>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <extInfo xsi:type="form:LabelDecorationExtInfo">
+        <horizontalAlign>Left</horizontalAlign>
+      </extInfo>
+    </extendedTooltip>
+    <contextMenu>
+      <name>ЭтоОсновнаяКонфигурацияКонтекстноеМеню</name>
+      <id>8</id>
+      <autoFill>true</autoFill>
+    </contextMenu>
+    <type>CheckBoxField</type>
+    <editMode>Auto</editMode>
+    <showInHeader>true</showInHeader>
+    <headerHorizontalAlign>Left</headerHorizontalAlign>
+    <showInFooter>true</showInFooter>
+    <extInfo xsi:type="form:CheckBoxFieldExtInfo">
+      <checkBoxType>CheckBox</checkBoxType>
     </extInfo>
   </items>
   <items xsi:type="form:FormField">
@@ -193,11 +163,13 @@
       <autoFill>true</autoFill>
     </contextMenu>
     <type>CheckBoxField</type>
-    <editMode>Enter</editMode>
+    <editMode>Auto</editMode>
     <showInHeader>true</showInHeader>
     <headerHorizontalAlign>Left</headerHorizontalAlign>
     <showInFooter>true</showInFooter>
-    <extInfo xsi:type="form:CheckBoxFieldExtInfo"/>
+    <extInfo xsi:type="form:CheckBoxFieldExtInfo">
+      <checkBoxType>CheckBox</checkBoxType>
+    </extInfo>
   </items>
   <autoCommandBar>
     <name>ФормаКоманднаяПанель</name>

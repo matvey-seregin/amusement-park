@@ -5,7 +5,7 @@
     <value>Настройки использования профилей безопасности</value>
   </title>
   <items xsi:type="form:FormGroup">
-    <name>ГруппаЗаголовок</name>
+    <name>ГруппаЗаголовокТакси</name>
     <id>1580</id>
     <items xsi:type="form:Decoration">
       <name>ОписаниеРаздела</name>
@@ -35,6 +35,7 @@
         <autoFill>true</autoFill>
       </contextMenu>
       <type>Label</type>
+      <maxWidth>78</maxWidth>
       <autoMaxHeight>true</autoMaxHeight>
       <extInfo xsi:type="form:LabelDecorationExtInfo">
         <horizontalAlign>Left</horizontalAlign>
@@ -42,34 +43,8 @@
       </extInfo>
     </items>
     <items xsi:type="form:FormGroup">
-      <name>ГруппаСправка</name>
+      <name>ГруппаСправкаТакси</name>
       <id>1583</id>
-      <items xsi:type="form:Button">
-        <name>Справка</name>
-        <id>1584</id>
-        <visible>true</visible>
-        <enabled>true</enabled>
-        <userVisible>
-          <common>true</common>
-        </userVisible>
-        <extendedTooltip>
-          <name>СправкаРасширеннаяПодсказка</name>
-          <id>1604</id>
-          <type>Label</type>
-          <autoMaxWidth>true</autoMaxWidth>
-          <autoMaxHeight>true</autoMaxHeight>
-          <extInfo xsi:type="form:LabelDecorationExtInfo">
-            <horizontalAlign>Left</horizontalAlign>
-          </extInfo>
-        </extendedTooltip>
-        <commandName>Form.StandardCommand.Help</commandName>
-        <buttonImportance>Normal</buttonImportance>
-        <representation>Auto</representation>
-        <autoMaxWidth>true</autoMaxWidth>
-        <autoMaxHeight>true</autoMaxHeight>
-        <placementArea>UserCmds</placementArea>
-        <representationInContextMenu>Auto</representationInContextMenu>
-      </items>
       <visible>true</visible>
       <enabled>true</enabled>
       <userVisible>
@@ -80,7 +55,7 @@
         <value>Справка</value>
       </title>
       <extendedTooltip>
-        <name>ГруппаСправкаРасширеннаяПодсказка</name>
+        <name>ГруппаСправкаТаксиРасширеннаяПодсказка</name>
         <id>1603</id>
         <type>Label</type>
         <autoMaxWidth>true</autoMaxWidth>
@@ -104,7 +79,7 @@
       <value>Заголовок</value>
     </title>
     <extendedTooltip>
-      <name>ГруппаЗаголовокРасширеннаяПодсказка</name>
+      <name>ГруппаЗаголовокТаксиРасширеннаяПодсказка</name>
       <id>1600</id>
       <type>Label</type>
       <autoMaxWidth>true</autoMaxWidth>
@@ -115,7 +90,7 @@
     </extendedTooltip>
     <type>UsualGroup</type>
     <extInfo xsi:type="form:UsualGroupExtInfo">
-      <group>HorizontalIfPossible</group>
+      <group>AutoScreenTypeSensitive</group>
       <showLeftMargin>true</showLeftMargin>
       <united>true</united>
       <throughAlign>Auto</throughAlign>
@@ -123,437 +98,34 @@
     </extInfo>
   </items>
   <items xsi:type="form:FormGroup">
-    <name>ГруппаПрофилиБезопасности</name>
-    <id>1605</id>
+    <name>БезопасностьКолонки</name>
+    <id>1607</id>
     <items xsi:type="form:FormGroup">
-      <name>ГруппаБезопасностьКолонки</name>
-      <id>1607</id>
-      <items xsi:type="form:FormGroup">
-        <name>ГруппаПрофилиБезопасностиКолонкиЛевая</name>
-        <id>1609</id>
-        <items xsi:type="form:FormGroup">
-          <name>ГруппаРежимИспользованияПрофилейБезопасности</name>
-          <id>1611</id>
-          <items xsi:type="form:FormField">
-            <name>РежимИспользованияПрофилейБезопасности</name>
-            <id>1613</id>
-            <title>
-              <key>ru</key>
-              <value>Режим использования профилей безопасности</value>
-            </title>
-            <visible>true</visible>
-            <enabled>true</enabled>
-            <userVisible>
-              <common>true</common>
-            </userVisible>
-            <dataPath xsi:type="form:DataPath">
-              <segments>РежимИспользованияПрофилейБезопасности</segments>
-            </dataPath>
-            <titleLocation>Top</titleLocation>
-            <handlers>
-              <event>OnChange</event>
-              <name>РежимИспользованияПрофилейБезопасностиПриИзменении</name>
-            </handlers>
-            <extendedTooltip>
-              <name>РежимИспользованияПрофилейБезопасностиРасширеннаяПодсказка</name>
-              <id>1615</id>
-              <type>Label</type>
-              <autoMaxWidth>true</autoMaxWidth>
-              <autoMaxHeight>true</autoMaxHeight>
-              <extInfo xsi:type="form:LabelDecorationExtInfo">
-                <horizontalAlign>Left</horizontalAlign>
-              </extInfo>
-            </extendedTooltip>
-            <contextMenu>
-              <name>РежимИспользованияПрофилейБезопасностиКонтекстноеМеню</name>
-              <id>1614</id>
-              <autoFill>true</autoFill>
-            </contextMenu>
-            <type>RadioButtonField</type>
-            <verticalAlign>Center</verticalAlign>
-            <editMode>Enter</editMode>
-            <showInHeader>true</showInHeader>
-            <headerHorizontalAlign>Left</headerHorizontalAlign>
-            <showInFooter>true</showInFooter>
-            <extInfo xsi:type="form:RadioButtonsFieldExtInfo">
-              <radioButtonsType>RadioButtons</radioButtonsType>
-              <choiceList>
-                <presentation>
-                  <key>ru</key>
-                  <value>Профили безопасности не используются для данной информационной базы</value>
-                </presentation>
-                <value xsi:type="core:NumberValue">
-                  <value>0</value>
-                </value>
-              </choiceList>
-              <choiceList>
-                <presentation>
-                  <key>ru</key>
-                  <value>Профили безопасности для данной информационной базы настраиваются администратором в консоли кластера</value>
-                </presentation>
-                <value xsi:type="core:NumberValue">
-                  <value>1</value>
-                </value>
-              </choiceList>
-              <choiceList>
-                <presentation>
-                  <key>ru</key>
-                  <value>Предлагать автоматически настраивать разрешения в профилях безопасности при необходимости (непосредственно из приложения)</value>
-                </presentation>
-                <value xsi:type="core:NumberValue">
-                  <value>2</value>
-                </value>
-              </choiceList>
-              <orientation>Vertical</orientation>
-            </extInfo>
-          </items>
-          <visible>true</visible>
-          <enabled>true</enabled>
-          <userVisible>
-            <common>true</common>
-          </userVisible>
-          <title>
-            <key>ru</key>
-            <value>Режим использования профилей безопасности</value>
-          </title>
-          <extendedTooltip>
-            <name>ГруппаРежимИспользованияПрофилейБезопасностиРасширеннаяПодсказка</name>
-            <id>1612</id>
-            <type>Label</type>
-            <autoMaxWidth>true</autoMaxWidth>
-            <autoMaxHeight>true</autoMaxHeight>
-            <extInfo xsi:type="form:LabelDecorationExtInfo">
-              <horizontalAlign>Left</horizontalAlign>
-            </extInfo>
-          </extendedTooltip>
-          <type>UsualGroup</type>
-          <extInfo xsi:type="form:UsualGroupExtInfo">
-            <group>Vertical</group>
-            <showLeftMargin>true</showLeftMargin>
-            <united>true</united>
-            <throughAlign>Auto</throughAlign>
-            <currentRowUse>Auto</currentRowUse>
-          </extInfo>
-        </items>
-        <visible>true</visible>
-        <enabled>true</enabled>
-        <userVisible>
-          <common>true</common>
-        </userVisible>
+      <name>БезопасностьЛеваяКолонка</name>
+      <id>1609</id>
+      <items xsi:type="form:FormField">
+        <name>РежимИспользованияПрофилейБезопасности</name>
+        <id>1613</id>
         <title>
           <key>ru</key>
-          <value>Профили безопасности колонки левая</value>
-        </title>
-        <extendedTooltip>
-          <name>ГруппаПрофилиБезопасностиКолонкиЛеваяРасширеннаяПодсказка</name>
-          <id>1610</id>
-          <type>Label</type>
-          <autoMaxWidth>true</autoMaxWidth>
-          <autoMaxHeight>true</autoMaxHeight>
-          <extInfo xsi:type="form:LabelDecorationExtInfo">
-            <horizontalAlign>Left</horizontalAlign>
-          </extInfo>
-        </extendedTooltip>
-        <type>UsualGroup</type>
-        <extInfo xsi:type="form:UsualGroupExtInfo">
-          <group>Vertical</group>
-          <showLeftMargin>true</showLeftMargin>
-          <united>true</united>
-          <throughAlign>Auto</throughAlign>
-          <currentRowUse>Auto</currentRowUse>
-        </extInfo>
-      </items>
-      <items xsi:type="form:FormGroup">
-        <name>ГруппаПрофилиБезопасностиКолонкаПравая</name>
-        <id>1619</id>
-        <items xsi:type="form:FormGroup">
-          <name>ГруппаТребуемыеРазрешения</name>
-          <id>1621</id>
-          <items xsi:type="form:Button">
-            <name>ТребуемыеРазрешения</name>
-            <id>1623</id>
-            <title>
-              <key>ru</key>
-              <value>Требуемые разрешения</value>
-            </title>
-            <visible>true</visible>
-            <enabled>true</enabled>
-            <userVisible>
-              <common>true</common>
-            </userVisible>
-            <extendedTooltip>
-              <name>ТребуемыеРазрешенияРасширеннаяПодсказка</name>
-              <id>1624</id>
-              <type>Label</type>
-              <autoMaxWidth>true</autoMaxWidth>
-              <autoMaxHeight>true</autoMaxHeight>
-              <extInfo xsi:type="form:LabelDecorationExtInfo">
-                <horizontalAlign>Left</horizontalAlign>
-              </extInfo>
-            </extendedTooltip>
-            <type>Hyperlink</type>
-            <commandName>Form.Command.ТребуемыеРазрешения</commandName>
-            <buttonImportance>Normal</buttonImportance>
-            <representation>Auto</representation>
-            <autoMaxWidth>true</autoMaxWidth>
-            <autoMaxHeight>true</autoMaxHeight>
-            <placementArea>UserCmds</placementArea>
-            <representationInContextMenu>Auto</representationInContextMenu>
-          </items>
-          <items xsi:type="form:Decoration">
-            <name>ПояснениеТребуемыеРазрешения</name>
-            <id>1625</id>
-            <title>
-              <key>ru</key>
-              <value>Разрешения на использование внешних ресурсов, которые должны быть разрешены в профилях безопасности для корректной работы приложения.</value>
-            </title>
-            <visible>true</visible>
-            <enabled>true</enabled>
-            <userVisible>
-              <common>true</common>
-            </userVisible>
-            <extendedTooltip>
-              <name>ПояснениеТребуемыеРазрешенияРасширеннаяПодсказка</name>
-              <id>1627</id>
-              <type>Label</type>
-              <autoMaxWidth>true</autoMaxWidth>
-              <autoMaxHeight>true</autoMaxHeight>
-              <extInfo xsi:type="form:LabelDecorationExtInfo">
-                <horizontalAlign>Left</horizontalAlign>
-              </extInfo>
-            </extendedTooltip>
-            <contextMenu>
-              <name>ПояснениеТребуемыеРазрешенияКонтекстноеМеню</name>
-              <id>1626</id>
-              <autoFill>true</autoFill>
-            </contextMenu>
-            <type>Label</type>
-            <autoMaxHeight>true</autoMaxHeight>
-            <textColor xsi:type="core:ColorRef">
-              <color>Style.ПоясняющийТекст</color>
-            </textColor>
-            <extInfo xsi:type="form:LabelDecorationExtInfo">
-              <horizontalAlign>Left</horizontalAlign>
-              <verticalAlign>Top</verticalAlign>
-            </extInfo>
-          </items>
-          <visible>true</visible>
-          <enabled>true</enabled>
-          <userVisible>
-            <common>true</common>
-          </userVisible>
-          <title>
-            <key>ru</key>
-            <value>Требуемые разрешения</value>
-          </title>
-          <extendedTooltip>
-            <name>ГруппаТребуемыеРазрешенияРасширеннаяПодсказка</name>
-            <id>1622</id>
-            <type>Label</type>
-            <autoMaxWidth>true</autoMaxWidth>
-            <autoMaxHeight>true</autoMaxHeight>
-            <extInfo xsi:type="form:LabelDecorationExtInfo">
-              <horizontalAlign>Left</horizontalAlign>
-            </extInfo>
-          </extendedTooltip>
-          <type>UsualGroup</type>
-          <extInfo xsi:type="form:UsualGroupExtInfo">
-            <group>Vertical</group>
-            <showLeftMargin>true</showLeftMargin>
-            <united>true</united>
-            <throughAlign>Auto</throughAlign>
-            <currentRowUse>Auto</currentRowUse>
-          </extInfo>
-        </items>
-        <items xsi:type="form:FormGroup">
-          <name>ГруппаПрофильБезопасностиИнформационнойБазы</name>
-          <id>1628</id>
-          <items xsi:type="form:FormField">
-            <name>ПрофильБезопасностиИнформационнойБазы</name>
-            <id>1630</id>
-            <visible>true</visible>
-            <enabled>true</enabled>
-            <userVisible>
-              <common>true</common>
-            </userVisible>
-            <dataPath xsi:type="form:DataPath">
-              <segments>НаборКонстант.ПрофильБезопасностиИнформационнойБазы</segments>
-            </dataPath>
-            <titleLocation>Top</titleLocation>
-            <handlers>
-              <event>OnChange</event>
-              <name>ПрофильБезопасностиИнформационнойБазыПриИзменении</name>
-            </handlers>
-            <extendedTooltip>
-              <name>ПрофильБезопасностиИнформационнойБазыРасширеннаяПодсказка</name>
-              <id>1632</id>
-              <type>Label</type>
-              <autoMaxWidth>true</autoMaxWidth>
-              <autoMaxHeight>true</autoMaxHeight>
-              <extInfo xsi:type="form:LabelDecorationExtInfo">
-                <horizontalAlign>Left</horizontalAlign>
-              </extInfo>
-            </extendedTooltip>
-            <contextMenu>
-              <name>ПрофильБезопасностиИнформационнойБазыКонтекстноеМеню</name>
-              <id>1631</id>
-              <autoFill>true</autoFill>
-            </contextMenu>
-            <type>InputField</type>
-            <editMode>Enter</editMode>
-            <showInHeader>true</showInHeader>
-            <headerHorizontalAlign>Left</headerHorizontalAlign>
-            <showInFooter>true</showInFooter>
-            <extInfo xsi:type="form:InputFieldExtInfo">
-              <autoMaxWidth>true</autoMaxWidth>
-              <autoMaxHeight>true</autoMaxHeight>
-              <wrap>true</wrap>
-              <chooseType>true</chooseType>
-              <typeDomainEnabled>true</typeDomainEnabled>
-              <textEdit>true</textEdit>
-              <textSize>Normal</textSize>
-            </extInfo>
-          </items>
-          <items xsi:type="form:Decoration">
-            <name>ПояснениеПрофильБезопасностиИнформационнойБазы</name>
-            <id>1633</id>
-            <title>
-              <key>ru</key>
-              <value>Имя профиля безопасности (в кластере серверов 1С:Предприятия), использующегося в качестве профиля безопасности для информационной базы.</value>
-            </title>
-            <visible>true</visible>
-            <enabled>true</enabled>
-            <userVisible>
-              <common>true</common>
-            </userVisible>
-            <extendedTooltip>
-              <name>ПояснениеПрофильБезопасностиИнформационнойБазыРасширеннаяПодсказка</name>
-              <id>1635</id>
-              <type>Label</type>
-              <autoMaxWidth>true</autoMaxWidth>
-              <autoMaxHeight>true</autoMaxHeight>
-              <extInfo xsi:type="form:LabelDecorationExtInfo">
-                <horizontalAlign>Left</horizontalAlign>
-              </extInfo>
-            </extendedTooltip>
-            <contextMenu>
-              <name>ПояснениеПрофильБезопасностиИнформационнойБазыКонтекстноеМеню</name>
-              <id>1634</id>
-              <autoFill>true</autoFill>
-            </contextMenu>
-            <type>Label</type>
-            <autoMaxHeight>true</autoMaxHeight>
-            <textColor xsi:type="core:ColorRef">
-              <color>Style.ПоясняющийТекст</color>
-            </textColor>
-            <extInfo xsi:type="form:LabelDecorationExtInfo">
-              <horizontalAlign>Left</horizontalAlign>
-              <verticalAlign>Top</verticalAlign>
-            </extInfo>
-          </items>
-          <visible>true</visible>
-          <enabled>true</enabled>
-          <userVisible>
-            <common>true</common>
-          </userVisible>
-          <title>
-            <key>ru</key>
-            <value>Профиль безопасности информационной базы</value>
-          </title>
-          <extendedTooltip>
-            <name>ГруппаПрофильБезопасностиИнформационнойБазыРасширеннаяПодсказка</name>
-            <id>1629</id>
-            <type>Label</type>
-            <autoMaxWidth>true</autoMaxWidth>
-            <autoMaxHeight>true</autoMaxHeight>
-            <extInfo xsi:type="form:LabelDecorationExtInfo">
-              <horizontalAlign>Left</horizontalAlign>
-            </extInfo>
-          </extendedTooltip>
-          <type>UsualGroup</type>
-          <extInfo xsi:type="form:UsualGroupExtInfo">
-            <group>Vertical</group>
-            <showLeftMargin>true</showLeftMargin>
-            <united>true</united>
-            <throughAlign>Auto</throughAlign>
-            <currentRowUse>Auto</currentRowUse>
-          </extInfo>
-        </items>
-        <visible>true</visible>
-        <enabled>true</enabled>
-        <userVisible>
-          <common>true</common>
-        </userVisible>
-        <title>
-          <key>ru</key>
-          <value>Профили безопасности колонка правая</value>
-        </title>
-        <extendedTooltip>
-          <name>ГруппаПрофилиБезопасностиКолонкаПраваяРасширеннаяПодсказка</name>
-          <id>1620</id>
-          <type>Label</type>
-          <autoMaxWidth>true</autoMaxWidth>
-          <autoMaxHeight>true</autoMaxHeight>
-          <extInfo xsi:type="form:LabelDecorationExtInfo">
-            <horizontalAlign>Left</horizontalAlign>
-          </extInfo>
-        </extendedTooltip>
-        <type>UsualGroup</type>
-        <extInfo xsi:type="form:UsualGroupExtInfo">
-          <group>Vertical</group>
-          <showLeftMargin>true</showLeftMargin>
-          <united>true</united>
-          <throughAlign>Auto</throughAlign>
-          <currentRowUse>Auto</currentRowUse>
-        </extInfo>
-      </items>
-      <visible>true</visible>
-      <enabled>true</enabled>
-      <userVisible>
-        <common>true</common>
-      </userVisible>
-      <title>
-        <key>ru</key>
-        <value>Безопасность колонки</value>
-      </title>
-      <extendedTooltip>
-        <name>ГруппаБезопасностьКолонкиРасширеннаяПодсказка</name>
-        <id>1608</id>
-        <type>Label</type>
-        <autoMaxWidth>true</autoMaxWidth>
-        <autoMaxHeight>true</autoMaxHeight>
-        <extInfo xsi:type="form:LabelDecorationExtInfo">
-          <horizontalAlign>Left</horizontalAlign>
-        </extInfo>
-      </extendedTooltip>
-      <type>UsualGroup</type>
-      <extInfo xsi:type="form:UsualGroupExtInfo">
-        <group>HorizontalIfPossible</group>
-        <showLeftMargin>true</showLeftMargin>
-        <united>true</united>
-        <slaveItemsWidth>Equal</slaveItemsWidth>
-        <throughAlign>Auto</throughAlign>
-        <currentRowUse>Auto</currentRowUse>
-      </extInfo>
-    </items>
-    <items xsi:type="form:FormGroup">
-      <name>ГруппаПояснениеОЛицензииКОРП</name>
-      <id>1645</id>
-      <items xsi:type="form:Decoration">
-        <name>ДекорацияПояснениеОЛицензииКОРП</name>
-        <id>1647</id>
-        <title>
-          <key>ru</key>
-          <value>Декорация пояснение о лицензии КОРП</value>
+          <value>Режим использования профилей безопасности</value>
         </title>
         <visible>true</visible>
         <enabled>true</enabled>
         <userVisible>
           <common>true</common>
         </userVisible>
+        <dataPath xsi:type="form:DataPath">
+          <segments>РежимИспользованияПрофилейБезопасности</segments>
+        </dataPath>
+        <titleLocation>Top</titleLocation>
+        <handlers>
+          <event>OnChange</event>
+          <name>РежимИспользованияПрофилейБезопасностиПриИзменении</name>
+        </handlers>
         <extendedTooltip>
-          <name>ДекорацияПояснениеОЛицензииКОРПРасширеннаяПодсказка</name>
-          <id>1649</id>
+          <name>РежимИспользованияПрофилейБезопасностиРасширеннаяПодсказка</name>
+          <id>1615</id>
           <type>Label</type>
           <autoMaxWidth>true</autoMaxWidth>
           <autoMaxHeight>true</autoMaxHeight>
@@ -562,24 +134,88 @@
           </extInfo>
         </extendedTooltip>
         <contextMenu>
-          <name>ДекорацияПояснениеОЛицензииКОРПКонтекстноеМеню</name>
-          <id>1648</id>
+          <name>РежимИспользованияПрофилейБезопасностиКонтекстноеМеню</name>
+          <id>1614</id>
           <autoFill>true</autoFill>
         </contextMenu>
-        <autoMaxWidth>true</autoMaxWidth>
-        <autoMaxHeight>true</autoMaxHeight>
-        <extInfo xsi:type="form:PictureDecorationExtInfo">
-          <picture xsi:type="core:PictureRef">
-            <picture>CommonPicture.ИнформацияПоНедоступнымПолям</picture>
-          </picture>
+        <type>RadioButtonField</type>
+        <verticalAlign>Center</verticalAlign>
+        <editMode>Auto</editMode>
+        <showInHeader>true</showInHeader>
+        <headerHorizontalAlign>Left</headerHorizontalAlign>
+        <showInFooter>true</showInFooter>
+        <extInfo xsi:type="form:RadioButtonsFieldExtInfo">
+          <radioButtonsType>RadioButtons</radioButtonsType>
+          <choiceList>
+            <presentation>
+              <key>ru</key>
+              <value>Профили безопасности не используются для данной информационной базы</value>
+            </presentation>
+            <value xsi:type="core:NumberValue">
+              <value>0</value>
+            </value>
+          </choiceList>
+          <choiceList>
+            <presentation>
+              <key>ru</key>
+              <value>Профили безопасности для данной информационной базы настраиваются администратором в консоли кластера</value>
+            </presentation>
+            <value xsi:type="core:NumberValue">
+              <value>1</value>
+            </value>
+          </choiceList>
+          <choiceList>
+            <presentation>
+              <key>ru</key>
+              <value>Предлагать автоматически настраивать разрешения в профилях безопасности при необходимости (непосредственно из приложения)</value>
+            </presentation>
+            <value xsi:type="core:NumberValue">
+              <value>2</value>
+            </value>
+          </choiceList>
+          <orientation>Vertical</orientation>
         </extInfo>
       </items>
-      <items xsi:type="form:Decoration">
-        <name>ПояснениеОЛицензииКОРП</name>
-        <id>1650</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <title>
+        <key>ru</key>
+        <value>Левая колонка</value>
+      </title>
+      <width>43</width>
+      <horizontalStretch>false</horizontalStretch>
+      <extendedTooltip>
+        <name>БезопасностьЛеваяКолонкаРасширеннаяПодсказка</name>
+        <id>1610</id>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <type>UsualGroup</type>
+      <extInfo xsi:type="form:UsualGroupExtInfo">
+        <group>Vertical</group>
+        <behavior>Auto</behavior>
+        <showLeftMargin>true</showLeftMargin>
+        <united>true</united>
+        <throughAlign>Auto</throughAlign>
+        <currentRowUse>Auto</currentRowUse>
+      </extInfo>
+    </items>
+    <items xsi:type="form:FormGroup">
+      <name>БезопасностьПраваяКолонка</name>
+      <id>1619</id>
+      <items xsi:type="form:Button">
+        <name>ТребуемыеРазрешения</name>
+        <id>1623</id>
         <title>
           <key>ru</key>
-          <value>Использование профилей безопасности предоставляется только при наличии версии КОРП клиентских и серверных лицензий для платформы &quot;1С:Предприятие 8&quot;.</value>
+          <value>Требуемые разрешения</value>
         </title>
         <visible>true</visible>
         <enabled>true</enabled>
@@ -587,8 +223,49 @@
           <common>true</common>
         </userVisible>
         <extendedTooltip>
-          <name>ПояснениеОЛицензииКОРПРасширеннаяПодсказка</name>
-          <id>1652</id>
+          <name>ТребуемыеРазрешенияРасширеннаяПодсказка</name>
+          <id>1624</id>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <type>Hyperlink</type>
+        <commandName>Form.Command.ТребуемыеРазрешения</commandName>
+        <buttonImportance>Normal</buttonImportance>
+        <representation>Auto</representation>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <placementArea>UserCmds</placementArea>
+        <toolTipRepresentation>ShowBottom</toolTipRepresentation>
+        <representationInContextMenu>Auto</representationInContextMenu>
+      </items>
+      <items xsi:type="form:FormField">
+        <name>ПрофильБезопасностиИнформационнойБазы</name>
+        <id>1630</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <dataPath xsi:type="form:DataPath">
+          <segments>НаборКонстант.ПрофильБезопасностиИнформационнойБазы</segments>
+        </dataPath>
+        <titleLocation>Top</titleLocation>
+        <toolTip>
+          <key>ru</key>
+          <value>Имя профиля безопасности (в кластере серверов 1С:Предприятия), использующегося в качестве профиля безопасности для информационной базы.</value>
+        </toolTip>
+        <toolTipRepresentation>ShowBottom</toolTipRepresentation>
+        <handlers>
+          <event>OnChange</event>
+          <name>ПрофильБезопасностиИнформационнойБазыПриИзменении</name>
+        </handlers>
+        <extendedTooltip>
+          <name>ПрофильБезопасностиИнформационнойБазыРасширеннаяПодсказка</name>
+          <id>1632</id>
           <type>Label</type>
           <autoMaxWidth>true</autoMaxWidth>
           <autoMaxHeight>true</autoMaxHeight>
@@ -597,17 +274,23 @@
           </extInfo>
         </extendedTooltip>
         <contextMenu>
-          <name>ПояснениеОЛицензииКОРПКонтекстноеМеню</name>
-          <id>1651</id>
+          <name>ПрофильБезопасностиИнформационнойБазыКонтекстноеМеню</name>
+          <id>1631</id>
           <autoFill>true</autoFill>
         </contextMenu>
-        <type>Label</type>
-        <autoMaxHeight>true</autoMaxHeight>
-        <textColor xsi:type="core:ColorRef">
-          <color>Style.ПоясняющийТекст</color>
-        </textColor>
-        <extInfo xsi:type="form:LabelDecorationExtInfo">
-          <horizontalAlign>Left</horizontalAlign>
+        <type>InputField</type>
+        <editMode>Auto</editMode>
+        <showInHeader>true</showInHeader>
+        <headerHorizontalAlign>Left</headerHorizontalAlign>
+        <showInFooter>true</showInFooter>
+        <extInfo xsi:type="form:InputFieldExtInfo">
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <wrap>true</wrap>
+          <chooseType>true</chooseType>
+          <typeDomainEnabled>true</typeDomainEnabled>
+          <textEdit>true</textEdit>
+          <textSize>Normal</textSize>
         </extInfo>
       </items>
       <visible>true</visible>
@@ -617,11 +300,13 @@
       </userVisible>
       <title>
         <key>ru</key>
-        <value>Пояснение о лицензии КОРП</value>
+        <value>Правая колонка</value>
       </title>
+      <width>43</width>
+      <horizontalStretch>false</horizontalStretch>
       <extendedTooltip>
-        <name>ГруппаПояснениеОЛицензииКОРПРасширеннаяПодсказка</name>
-        <id>1646</id>
+        <name>БезопасностьПраваяКолонкаРасширеннаяПодсказка</name>
+        <id>1620</id>
         <type>Label</type>
         <autoMaxWidth>true</autoMaxWidth>
         <autoMaxHeight>true</autoMaxHeight>
@@ -631,306 +316,10 @@
       </extendedTooltip>
       <type>UsualGroup</type>
       <extInfo xsi:type="form:UsualGroupExtInfo">
-        <group>HorizontalIfPossible</group>
-        <representation>NormalSeparation</representation>
+        <group>Vertical</group>
+        <behavior>Auto</behavior>
         <showLeftMargin>true</showLeftMargin>
         <united>true</united>
-        <throughAlign>Auto</throughAlign>
-        <currentRowUse>Auto</currentRowUse>
-      </extInfo>
-    </items>
-    <items xsi:type="form:FormGroup">
-      <name>ГруппаСервисныеФункции</name>
-      <id>1643</id>
-      <items xsi:type="form:FormGroup">
-        <name>ГруппаСервисныеФункцииКолонкиЛевая</name>
-        <id>1664</id>
-        <items xsi:type="form:FormGroup">
-          <name>ГруппаОткрытьВнешнююОбработку</name>
-          <id>1690</id>
-          <items xsi:type="form:Button">
-            <name>ОткрытьВнешнююОбработку</name>
-            <id>1692</id>
-            <title>
-              <key>ru</key>
-              <value>Открыть внешнюю обработку или отчет</value>
-            </title>
-            <visible>true</visible>
-            <enabled>true</enabled>
-            <userVisible>
-              <common>true</common>
-            </userVisible>
-            <extendedTooltip>
-              <name>ОткрытьВнешнююОбработкуРасширеннаяПодсказка</name>
-              <id>1693</id>
-              <type>Label</type>
-              <autoMaxWidth>true</autoMaxWidth>
-              <autoMaxHeight>true</autoMaxHeight>
-              <extInfo xsi:type="form:LabelDecorationExtInfo">
-                <horizontalAlign>Left</horizontalAlign>
-              </extInfo>
-            </extendedTooltip>
-            <type>Hyperlink</type>
-            <commandName>Form.Command.ОткрытьВнешнююОбработку</commandName>
-            <buttonImportance>Normal</buttonImportance>
-            <representation>Auto</representation>
-            <autoMaxWidth>true</autoMaxWidth>
-            <autoMaxHeight>true</autoMaxHeight>
-            <placementArea>UserCmds</placementArea>
-            <representationInContextMenu>Auto</representationInContextMenu>
-          </items>
-          <items xsi:type="form:Decoration">
-            <name>ПояснениеОткрытьВнешнююОбработку</name>
-            <id>1694</id>
-            <title>
-              <key>ru</key>
-              <value>Открыть внешнюю обработку или отчет (с возможностью указать безопасный режим, в котором будет выполняться подключение внешнего модуля).
-</value>
-            </title>
-            <visible>true</visible>
-            <enabled>true</enabled>
-            <userVisible>
-              <common>true</common>
-            </userVisible>
-            <extendedTooltip>
-              <name>ПояснениеОткрытьВнешнююОбработкуРасширеннаяПодсказка</name>
-              <id>1696</id>
-              <type>Label</type>
-              <autoMaxWidth>true</autoMaxWidth>
-              <autoMaxHeight>true</autoMaxHeight>
-              <extInfo xsi:type="form:LabelDecorationExtInfo">
-                <horizontalAlign>Left</horizontalAlign>
-              </extInfo>
-            </extendedTooltip>
-            <contextMenu>
-              <name>ПояснениеОткрытьВнешнююОбработкуКонтекстноеМеню</name>
-              <id>1695</id>
-              <autoFill>true</autoFill>
-            </contextMenu>
-            <type>Label</type>
-            <autoMaxHeight>true</autoMaxHeight>
-            <textColor xsi:type="core:ColorRef">
-              <color>Style.ПоясняющийТекст</color>
-            </textColor>
-            <extInfo xsi:type="form:LabelDecorationExtInfo">
-              <horizontalAlign>Left</horizontalAlign>
-              <verticalAlign>Top</verticalAlign>
-            </extInfo>
-          </items>
-          <visible>true</visible>
-          <enabled>true</enabled>
-          <userVisible>
-            <common>true</common>
-          </userVisible>
-          <title>
-            <key>ru</key>
-            <value>Открыть внешнюю обработку</value>
-          </title>
-          <extendedTooltip>
-            <name>ГруппаОткрытьВнешнююОбработкуРасширеннаяПодсказка</name>
-            <id>1691</id>
-            <type>Label</type>
-            <autoMaxWidth>true</autoMaxWidth>
-            <autoMaxHeight>true</autoMaxHeight>
-            <extInfo xsi:type="form:LabelDecorationExtInfo">
-              <horizontalAlign>Left</horizontalAlign>
-            </extInfo>
-          </extendedTooltip>
-          <type>UsualGroup</type>
-          <extInfo xsi:type="form:UsualGroupExtInfo">
-            <group>Vertical</group>
-            <showLeftMargin>true</showLeftMargin>
-            <united>true</united>
-            <throughAlign>Auto</throughAlign>
-            <currentRowUse>Auto</currentRowUse>
-          </extInfo>
-        </items>
-        <visible>true</visible>
-        <enabled>true</enabled>
-        <userVisible>
-          <common>true</common>
-        </userVisible>
-        <title>
-          <key>ru</key>
-          <value>Сервисные функции колонки левая</value>
-        </title>
-        <extendedTooltip>
-          <name>ГруппаСервисныеФункцииКолонкиЛеваяРасширеннаяПодсказка</name>
-          <id>1665</id>
-          <type>Label</type>
-          <autoMaxWidth>true</autoMaxWidth>
-          <autoMaxHeight>true</autoMaxHeight>
-          <extInfo xsi:type="form:LabelDecorationExtInfo">
-            <horizontalAlign>Left</horizontalAlign>
-          </extInfo>
-        </extendedTooltip>
-        <type>UsualGroup</type>
-        <extInfo xsi:type="form:UsualGroupExtInfo">
-          <group>Vertical</group>
-          <showLeftMargin>true</showLeftMargin>
-          <united>true</united>
-          <throughAlign>Auto</throughAlign>
-          <currentRowUse>Auto</currentRowUse>
-        </extInfo>
-      </items>
-      <items xsi:type="form:FormGroup">
-        <name>ГруппаСервисныеФункцииКолонкаПравая</name>
-        <id>1666</id>
-        <items xsi:type="form:FormGroup">
-          <name>ГруппаВосстановлениеПрофилейБезопасности</name>
-          <id>1683</id>
-          <items xsi:type="form:Button">
-            <name>ВосстановитьПрофилиБезопасности</name>
-            <id>1685</id>
-            <title>
-              <key>ru</key>
-              <value>Восстановить настройки профилей безопасности</value>
-            </title>
-            <visible>true</visible>
-            <enabled>true</enabled>
-            <userVisible>
-              <common>true</common>
-            </userVisible>
-            <extendedTooltip>
-              <name>ВосстановитьПрофилиБезопасностиРасширеннаяПодсказка</name>
-              <id>1686</id>
-              <type>Label</type>
-              <autoMaxWidth>true</autoMaxWidth>
-              <autoMaxHeight>true</autoMaxHeight>
-              <extInfo xsi:type="form:LabelDecorationExtInfo">
-                <horizontalAlign>Left</horizontalAlign>
-              </extInfo>
-            </extendedTooltip>
-            <type>Hyperlink</type>
-            <commandName>Form.Command.ВосстановитьПрофилиБезопасности</commandName>
-            <buttonImportance>Normal</buttonImportance>
-            <representation>Auto</representation>
-            <autoMaxWidth>true</autoMaxWidth>
-            <autoMaxHeight>true</autoMaxHeight>
-            <placementArea>UserCmds</placementArea>
-            <representationInContextMenu>Auto</representationInContextMenu>
-          </items>
-          <items xsi:type="form:Decoration">
-            <name>ПояснениеВосстановитьПрофилиБезопасности</name>
-            <id>1687</id>
-            <title>
-              <key>ru</key>
-              <value>Автоматическое пересоздание профилей безопасности в кластере серверов (например, после переноса информационной базы на другой кластер).</value>
-            </title>
-            <visible>true</visible>
-            <enabled>true</enabled>
-            <userVisible>
-              <common>true</common>
-            </userVisible>
-            <extendedTooltip>
-              <name>ПояснениеВосстановитьПрофилиБезопасностиРасширеннаяПодсказка</name>
-              <id>1689</id>
-              <type>Label</type>
-              <autoMaxWidth>true</autoMaxWidth>
-              <autoMaxHeight>true</autoMaxHeight>
-              <extInfo xsi:type="form:LabelDecorationExtInfo">
-                <horizontalAlign>Left</horizontalAlign>
-              </extInfo>
-            </extendedTooltip>
-            <contextMenu>
-              <name>ПояснениеВосстановитьПрофилиБезопасностиКонтекстноеМеню</name>
-              <id>1688</id>
-              <autoFill>true</autoFill>
-            </contextMenu>
-            <type>Label</type>
-            <autoMaxHeight>true</autoMaxHeight>
-            <textColor xsi:type="core:ColorRef">
-              <color>Style.ПоясняющийТекст</color>
-            </textColor>
-            <extInfo xsi:type="form:LabelDecorationExtInfo">
-              <horizontalAlign>Left</horizontalAlign>
-              <verticalAlign>Top</verticalAlign>
-            </extInfo>
-          </items>
-          <visible>true</visible>
-          <enabled>true</enabled>
-          <userVisible>
-            <common>true</common>
-          </userVisible>
-          <title>
-            <key>ru</key>
-            <value>Восстановление профилей безопасности</value>
-          </title>
-          <extendedTooltip>
-            <name>ГруппаВосстановлениеПрофилейБезопасностиРасширеннаяПодсказка</name>
-            <id>1684</id>
-            <type>Label</type>
-            <autoMaxWidth>true</autoMaxWidth>
-            <autoMaxHeight>true</autoMaxHeight>
-            <extInfo xsi:type="form:LabelDecorationExtInfo">
-              <horizontalAlign>Left</horizontalAlign>
-            </extInfo>
-          </extendedTooltip>
-          <type>UsualGroup</type>
-          <extInfo xsi:type="form:UsualGroupExtInfo">
-            <group>Vertical</group>
-            <showLeftMargin>true</showLeftMargin>
-            <united>true</united>
-            <throughAlign>Auto</throughAlign>
-            <currentRowUse>Auto</currentRowUse>
-          </extInfo>
-        </items>
-        <visible>true</visible>
-        <enabled>true</enabled>
-        <userVisible>
-          <common>true</common>
-        </userVisible>
-        <title>
-          <key>ru</key>
-          <value>Сервисные функции колонка правая</value>
-        </title>
-        <extendedTooltip>
-          <name>ГруппаСервисныеФункцииКолонкаПраваяРасширеннаяПодсказка</name>
-          <id>1667</id>
-          <type>Label</type>
-          <autoMaxWidth>true</autoMaxWidth>
-          <autoMaxHeight>true</autoMaxHeight>
-          <extInfo xsi:type="form:LabelDecorationExtInfo">
-            <horizontalAlign>Left</horizontalAlign>
-          </extInfo>
-        </extendedTooltip>
-        <type>UsualGroup</type>
-        <extInfo xsi:type="form:UsualGroupExtInfo">
-          <group>Vertical</group>
-          <showLeftMargin>true</showLeftMargin>
-          <united>true</united>
-          <throughAlign>Auto</throughAlign>
-          <currentRowUse>Auto</currentRowUse>
-        </extInfo>
-      </items>
-      <visible>true</visible>
-      <enabled>true</enabled>
-      <userVisible>
-        <common>true</common>
-      </userVisible>
-      <title>
-        <key>ru</key>
-        <value> Сервисные функции</value>
-      </title>
-      <extendedTooltip>
-        <name>ГруппаСервисныеФункцииРасширеннаяПодсказка</name>
-        <id>1644</id>
-        <type>Label</type>
-        <autoMaxWidth>true</autoMaxWidth>
-        <autoMaxHeight>true</autoMaxHeight>
-        <extInfo xsi:type="form:LabelDecorationExtInfo">
-          <horizontalAlign>Left</horizontalAlign>
-        </extInfo>
-      </extendedTooltip>
-      <type>UsualGroup</type>
-      <extInfo xsi:type="form:UsualGroupExtInfo">
-        <group>HorizontalIfPossible</group>
-        <controlRepresentation>Button</controlRepresentation>
-        <representation>WeakSeparation</representation>
-        <showLeftMargin>true</showLeftMargin>
-        <united>true</united>
-        <slaveItemsWidth>Equal</slaveItemsWidth>
-        <showTitle>auto</showTitle>
         <throughAlign>Auto</throughAlign>
         <currentRowUse>Auto</currentRowUse>
       </extInfo>
@@ -942,11 +331,11 @@
     </userVisible>
     <title>
       <key>ru</key>
-      <value>Профили безопасности</value>
+      <value>Безопасность</value>
     </title>
     <extendedTooltip>
-      <name>ГруппаПрофилиБезопасностиРасширеннаяПодсказка</name>
-      <id>1606</id>
+      <name>БезопасностьКолонкиРасширеннаяПодсказка</name>
+      <id>1608</id>
       <type>Label</type>
       <autoMaxWidth>true</autoMaxWidth>
       <autoMaxHeight>true</autoMaxHeight>
@@ -956,9 +345,216 @@
     </extendedTooltip>
     <type>UsualGroup</type>
     <extInfo xsi:type="form:UsualGroupExtInfo">
-      <group>Vertical</group>
+      <group>AutoScreenTypeSensitive</group>
       <showLeftMargin>true</showLeftMargin>
       <united>true</united>
+      <slaveItemsWidth>Equal</slaveItemsWidth>
+      <throughAlign>Auto</throughAlign>
+      <currentRowUse>Auto</currentRowUse>
+    </extInfo>
+  </items>
+  <items xsi:type="form:Decoration">
+    <name>ТребованиеЛицензииКОРП</name>
+    <id>1647</id>
+    <title>
+      <key>ru</key>
+      <value>Требование лицензии КОРП</value>
+    </title>
+    <visible>true</visible>
+    <enabled>true</enabled>
+    <userVisible>
+      <common>true</common>
+    </userVisible>
+    <toolTipRepresentation>ShowRight</toolTipRepresentation>
+    <extendedTooltip>
+      <name>ТребованиеЛицензииКОРПРасширеннаяПодсказка</name>
+      <id>1649</id>
+      <title>
+        <key>ru</key>
+        <value>Использование профилей безопасности предоставляется только при наличии версии КОРП клиентских и серверных лицензий для платформы &quot;1С:Предприятие 8&quot;.</value>
+      </title>
+      <type>Label</type>
+      <maxWidth>60</maxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <extInfo xsi:type="form:LabelDecorationExtInfo">
+        <horizontalAlign>Left</horizontalAlign>
+      </extInfo>
+    </extendedTooltip>
+    <contextMenu>
+      <name>ТребованиеЛицензииКОРПКонтекстноеМеню</name>
+      <id>1648</id>
+      <autoFill>true</autoFill>
+    </contextMenu>
+    <autoMaxWidth>true</autoMaxWidth>
+    <autoMaxHeight>true</autoMaxHeight>
+    <extInfo xsi:type="form:PictureDecorationExtInfo">
+      <picture xsi:type="core:PictureRef">
+        <picture>CommonPicture.ИнформацияПоНедоступнымПолям</picture>
+      </picture>
+    </extInfo>
+  </items>
+  <items xsi:type="form:FormGroup">
+    <name>СервисныеФункцииКолонки</name>
+    <id>1643</id>
+    <items xsi:type="form:FormGroup">
+      <name>СервисныеФункцииЛеваяКолонка</name>
+      <id>1664</id>
+      <items xsi:type="form:Button">
+        <name>ОткрытьВнешнююОбработку</name>
+        <id>1692</id>
+        <title>
+          <key>ru</key>
+          <value>Открыть внешнюю обработку или отчет</value>
+        </title>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <extendedTooltip>
+          <name>ОткрытьВнешнююОбработкуРасширеннаяПодсказка</name>
+          <id>1693</id>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <type>Hyperlink</type>
+        <commandName>Form.Command.ОткрытьВнешнююОбработку</commandName>
+        <buttonImportance>Normal</buttonImportance>
+        <representation>Auto</representation>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <placementArea>UserCmds</placementArea>
+        <toolTipRepresentation>ShowBottom</toolTipRepresentation>
+        <representationInContextMenu>Auto</representationInContextMenu>
+      </items>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <title>
+        <key>ru</key>
+        <value>Левая колонка</value>
+      </title>
+      <width>43</width>
+      <horizontalStretch>false</horizontalStretch>
+      <extendedTooltip>
+        <name>СервисныеФункцииЛеваяКолонкаРасширеннаяПодсказка</name>
+        <id>1665</id>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <type>UsualGroup</type>
+      <extInfo xsi:type="form:UsualGroupExtInfo">
+        <group>Vertical</group>
+        <showLeftMargin>true</showLeftMargin>
+        <united>true</united>
+        <throughAlign>Auto</throughAlign>
+        <currentRowUse>Auto</currentRowUse>
+      </extInfo>
+    </items>
+    <items xsi:type="form:FormGroup">
+      <name>СервисныеФункцииПраваяКолонка</name>
+      <id>1666</id>
+      <items xsi:type="form:Button">
+        <name>ВосстановитьПрофилиБезопасности</name>
+        <id>1685</id>
+        <title>
+          <key>ru</key>
+          <value>Восстановить настройки профилей безопасности</value>
+        </title>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <extendedTooltip>
+          <name>ВосстановитьПрофилиБезопасностиРасширеннаяПодсказка</name>
+          <id>1686</id>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <type>Hyperlink</type>
+        <commandName>Form.Command.ВосстановитьПрофилиБезопасности</commandName>
+        <buttonImportance>Normal</buttonImportance>
+        <representation>Auto</representation>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <placementArea>UserCmds</placementArea>
+        <toolTipRepresentation>ShowBottom</toolTipRepresentation>
+        <representationInContextMenu>Auto</representationInContextMenu>
+      </items>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <title>
+        <key>ru</key>
+        <value>Правая колонка</value>
+      </title>
+      <width>43</width>
+      <horizontalStretch>false</horizontalStretch>
+      <extendedTooltip>
+        <name>СервисныеФункцииПраваяКолонкаРасширеннаяПодсказка</name>
+        <id>1667</id>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <type>UsualGroup</type>
+      <extInfo xsi:type="form:UsualGroupExtInfo">
+        <group>Vertical</group>
+        <showLeftMargin>true</showLeftMargin>
+        <united>true</united>
+        <throughAlign>Auto</throughAlign>
+        <currentRowUse>Auto</currentRowUse>
+      </extInfo>
+    </items>
+    <visible>true</visible>
+    <enabled>true</enabled>
+    <userVisible>
+      <common>true</common>
+    </userVisible>
+    <title>
+      <key>ru</key>
+      <value>Сервисные функции</value>
+    </title>
+    <extendedTooltip>
+      <name>СервисныеФункцииКолонкиРасширеннаяПодсказка</name>
+      <id>1644</id>
+      <type>Label</type>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <extInfo xsi:type="form:LabelDecorationExtInfo">
+        <horizontalAlign>Left</horizontalAlign>
+      </extInfo>
+    </extendedTooltip>
+    <type>UsualGroup</type>
+    <extInfo xsi:type="form:UsualGroupExtInfo">
+      <group>AutoScreenTypeSensitive</group>
+      <behavior>Auto</behavior>
+      <controlRepresentation>Button</controlRepresentation>
+      <representation>WeakSeparation</representation>
+      <showLeftMargin>true</showLeftMargin>
+      <united>true</united>
+      <slaveItemsWidth>Equal</slaveItemsWidth>
+      <showTitle>auto</showTitle>
       <throughAlign>Auto</throughAlign>
       <currentRowUse>Auto</currentRowUse>
     </extInfo>
@@ -966,6 +562,32 @@
   <autoCommandBar>
     <name>ФормаКоманднаяПанель</name>
     <id>-1</id>
+    <items xsi:type="form:Button">
+      <name>Справка</name>
+      <id>1584</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <extendedTooltip>
+        <name>СправкаРасширеннаяПодсказка</name>
+        <id>1604</id>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <commandName>Form.StandardCommand.Help</commandName>
+      <buttonImportance>Normal</buttonImportance>
+      <representation>Auto</representation>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <placementArea>UserCmds</placementArea>
+      <representationInContextMenu>Auto</representationInContextMenu>
+    </items>
     <horizontalAlign>Left</horizontalAlign>
   </autoCommandBar>
   <handlers>
@@ -990,9 +612,10 @@
   <windowOpeningMode>DontBlock</windowOpeningMode>
   <saveWindowSettings>true</saveWindowSettings>
   <autoUrl>true</autoUrl>
-  <group>Vertical</group>
+  <group>Auto</group>
   <autoFillCheck>true</autoFillCheck>
   <enabled>true</enabled>
+  <verticalScroll>UseIfNecessary</verticalScroll>
   <showTitle>auto</showTitle>
   <showCloseButton>true</showCloseButton>
   <attributes>
@@ -1069,7 +692,7 @@
     <id>2</id>
     <toolTip>
       <key>ru</key>
-      <value>Восстановить профили безопасности</value>
+      <value>Переустановка разрешений профилей безопасности в кластере серверов 1С:Предприятия (например, после случайного изменения разрешений вручную).</value>
     </toolTip>
     <use>
       <common>true</common>
@@ -1091,7 +714,7 @@
     <id>3</id>
     <toolTip>
       <key>ru</key>
-      <value>Требуемые разрешения</value>
+      <value>Разрешения на использование внешних ресурсов, которые должны быть указаны в профилях безопасности для корректной работы приложения.</value>
     </toolTip>
     <use>
       <common>true</common>
@@ -1113,7 +736,7 @@
     <id>1</id>
     <toolTip>
       <key>ru</key>
-      <value>Открыть внешнюю обработку</value>
+      <value>Открыть внешнюю обработку или отчет с возможностью указать безопасный режим, в котором будет выполняться подключение внешнего модуля.</value>
     </toolTip>
     <use>
       <common>true</common>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<form:Form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:form="http://g5.1c.ru/v8/dt/form">
+<form:Form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:form="http://g5.1c.ru/v8/dt/form" xmlns:schema="http://g5.1c.ru/v8/dt/data-composition-system/schema">
   <items xsi:type="form:Table">
     <name>Список</name>
     <id>1</id>
@@ -47,7 +47,7 @@
           <autoFill>true</autoFill>
         </contextMenu>
         <type>PictureField</type>
-        <editMode>Enter</editMode>
+        <editMode>Auto</editMode>
         <showInHeader>true</showInHeader>
         <headerHorizontalAlign>Left</headerHorizontalAlign>
         <showInFooter>true</showInFooter>
@@ -93,7 +93,7 @@
           <autoFill>true</autoFill>
         </contextMenu>
         <type>LabelField</type>
-        <editMode>Enter</editMode>
+        <editMode>Auto</editMode>
         <showInHeader>true</showInHeader>
         <headerHorizontalAlign>Left</headerHorizontalAlign>
         <showInFooter>true</showInFooter>
@@ -157,7 +157,7 @@
         <autoFill>true</autoFill>
       </contextMenu>
       <type>InputField</type>
-      <editMode>Enter</editMode>
+      <editMode>Auto</editMode>
       <showInHeader>true</showInHeader>
       <headerHorizontalAlign>Left</headerHorizontalAlign>
       <showInFooter>true</showInFooter>
@@ -171,24 +171,21 @@
         <textSize>Normal</textSize>
       </extInfo>
     </items>
+    <commandBarLocation>Top</commandBarLocation>
+    <showCommandBar>true</showCommandBar>
     <autoCommandBar>
       <name>СписокКоманднаяПанель</name>
       <id>3</id>
-      <items xsi:type="form:FormGroup">
-        <name>КоманднаяПанель</name>
-        <id>29</id>
-        <visible>true</visible>
+      <items xsi:type="form:Button">
+        <name>СписокВыбрать</name>
+        <id>49</id>
         <enabled>true</enabled>
         <userVisible>
           <common>true</common>
         </userVisible>
-        <title>
-          <key>ru</key>
-          <value>Командная панель</value>
-        </title>
         <extendedTooltip>
-          <name>КоманднаяПанельРасширеннаяПодсказка</name>
-          <id>30</id>
+          <name>СписокВыбратьРасширеннаяПодсказка</name>
+          <id>50</id>
           <type>Label</type>
           <autoMaxWidth>true</autoMaxWidth>
           <autoMaxHeight>true</autoMaxHeight>
@@ -196,12 +193,42 @@
             <horizontalAlign>Left</horizontalAlign>
           </extInfo>
         </extendedTooltip>
-        <extInfo xsi:type="form:ButtonGroupExtInfo">
-          <commandSource>Form</commandSource>
-        </extInfo>
+        <commandName>Form.Item.Список.StandardCommand.Choose</commandName>
+        <buttonImportance>Normal</buttonImportance>
+        <representation>Auto</representation>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <placementArea>UserCmds</placementArea>
+        <representationInContextMenu>Auto</representationInContextMenu>
       </items>
       <items xsi:type="form:Button">
-        <name>СписокСоздатьГруппу</name>
+        <name>СписокСкопировать</name>
+        <id>60</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <extendedTooltip>
+          <name>СписокСкопироватьРасширеннаяПодсказка</name>
+          <id>61</id>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <commandName>Form.Item.Список.StandardCommand.Copy</commandName>
+        <buttonImportance>Normal</buttonImportance>
+        <representation>Auto</representation>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <placementArea>UserCmds</placementArea>
+        <representationInContextMenu>Auto</representationInContextMenu>
+      </items>
+      <items xsi:type="form:Button">
+        <name>СписокСоздатьГруппуФайлов</name>
         <id>31</id>
         <title>
           <key>ru</key>
@@ -213,7 +240,7 @@
           <common>true</common>
         </userVisible>
         <extendedTooltip>
-          <name>СписокСоздатьГруппуРасширеннаяПодсказка</name>
+          <name>СписокСоздатьГруппуФайловРасширеннаяПодсказка</name>
           <id>32</id>
           <type>Label</type>
           <autoMaxWidth>true</autoMaxWidth>
@@ -222,7 +249,33 @@
             <horizontalAlign>Left</horizontalAlign>
           </extInfo>
         </extendedTooltip>
-        <commandName>Form.Command.СоздатьГруппу</commandName>
+        <commandName>Form.Command.СоздатьГруппуФайлов</commandName>
+        <buttonImportance>Normal</buttonImportance>
+        <representation>Auto</representation>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <placementArea>UserCmds</placementArea>
+        <representationInContextMenu>Auto</representationInContextMenu>
+      </items>
+      <items xsi:type="form:Button">
+        <name>СписокОбновить</name>
+        <id>51</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <extendedTooltip>
+          <name>СписокОбновитьРасширеннаяПодсказка</name>
+          <id>52</id>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <commandName>Form.Item.Список.StandardCommand.Refresh</commandName>
         <buttonImportance>Normal</buttonImportance>
         <representation>Auto</representation>
         <autoMaxWidth>true</autoMaxWidth>
@@ -353,6 +406,7 @@
     <rowsPicture xsi:type="core:PictureRef">
       <picture>CommonPicture.КоллекцияПиктограммФайлов</picture>
     </rowsPicture>
+    <searchStringLocation>CommandBar</searchStringLocation>
     <autoMaxCardHeight>true</autoMaxCardHeight>
     <extInfo xsi:type="form:DynamicListTableExtInfo">
       <autoRefreshPeriod>60</autoRefreshPeriod>
@@ -370,8 +424,39 @@
   <autoCommandBar>
     <name>ФормаКоманднаяПанель</name>
     <id>-1</id>
+    <items xsi:type="form:Button">
+      <name>ФормаВыбрать</name>
+      <id>46</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <extendedTooltip>
+        <name>ФормаВыбратьРасширеннаяПодсказка</name>
+        <id>47</id>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <commandName>Form.Item.Список.StandardCommand.Choose</commandName>
+      <representation>Auto</representation>
+      <defaultButton>true</defaultButton>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <placementArea>UserCmds</placementArea>
+      <representationInContextMenu>Auto</representationInContextMenu>
+    </items>
     <horizontalAlign>Left</horizontalAlign>
+    <autoFill>true</autoFill>
   </autoCommandBar>
+  <handlers>
+    <event>OnOpen</event>
+    <name>ПриОткрытии</name>
+  </handlers>
   <handlers>
     <event>OnCreateAtServer</event>
     <name>ПриСозданииНаСервере</name>
@@ -389,11 +474,6 @@
   <mobileDeviceCommandBarContent>
     <value xsi:type="core:StringValue">
       <value>СписокКоманднаяПанель</value>
-    </value>
-  </mobileDeviceCommandBarContent>
-  <mobileDeviceCommandBarContent>
-    <value xsi:type="core:StringValue">
-      <value>КоманднаяПанель</value>
     </value>
   </mobileDeviceCommandBarContent>
   <attributes>
@@ -417,20 +497,233 @@
     </notDefaultUseAlwaysAttributes>
     <extInfo xsi:type="form:DynamicListExtInfo">
       <queryText>ВЫБРАТЬ
-	ЗНАЧЕНИЕ(Справочник.Пользователи.ПустаяСсылка) КАК Ссылка,
+	ЗНАЧЕНИЕ(Справочник.Файлы.ПустаяСсылка) КАК Ссылка,
 	ЛОЖЬ КАК ПометкаУдаления,
 	1 КАК ИндексКартинки,
 	ВЫРАЗИТЬ(&quot;&quot; КАК СТРОКА(150)) КАК Наименование,
 	ЛОЖЬ КАК ЭтоГруппа,
 	&amp;ВладелецФайла КАК ВладелецФайла
 ИЗ
-	Справочник.Пользователи КАК ИдентификаторыОбъектовМетаданныхПереопределяемый</queryText>
-      <mainTable>Catalog.Пользователи</mainTable>
+	Справочник.Файлы КАК ИдентификаторыОбъектовМетаданныхПереопределяемый</queryText>
+      <mainTable>Catalog.Файлы</mainTable>
       <dynamicDataRead>true</dynamicDataRead>
       <autoFillAvailableFields>true</autoFillAvailableFields>
       <customQuery>true</customQuery>
       <autoSaveUserSettings>true</autoSaveUserSettings>
       <getInvisibleFieldPresentations>true</getInvisibleFieldPresentations>
+      <fields xsi:type="schema:DataCompositionSchemaDataSetField">
+        <dataPath>ПометкаУдаления1</dataPath>
+        <field>ПометкаУдаления1</field>
+        <title>
+          <localValue>
+            <content>
+              <key>ru</key>
+              <value>Пометка удаления1</value>
+            </content>
+          </localValue>
+        </title>
+      </fields>
+      <fields xsi:type="schema:DataCompositionSchemaDataSetField">
+        <dataPath>Наименование1</dataPath>
+        <field>Наименование1</field>
+        <title>
+          <localValue>
+            <content>
+              <key>ru</key>
+              <value>Наименование1</value>
+            </content>
+          </localValue>
+        </title>
+      </fields>
+      <fields xsi:type="schema:DataCompositionSchemaDataSetField">
+        <dataPath>Ссылка1</dataPath>
+        <field>Ссылка1</field>
+        <title>
+          <localValue>
+            <content>
+              <key>ru</key>
+              <value>Ссылка1</value>
+            </content>
+          </localValue>
+        </title>
+      </fields>
+      <fields xsi:type="schema:DataCompositionSchemaDataSetField">
+        <dataPath>ИндексКартинки</dataPath>
+        <field>ИндексКартинки</field>
+        <title>
+          <localValue>
+            <content>
+              <key>ru</key>
+              <value>Индекс картинки</value>
+            </content>
+          </localValue>
+        </title>
+      </fields>
+      <fields xsi:type="schema:DataCompositionSchemaDataSetField">
+        <dataPath>Предопределенный</dataPath>
+        <field>Предопределенный</field>
+      </fields>
+      <fields xsi:type="schema:DataCompositionSchemaDataSetField">
+        <dataPath>Ссылка</dataPath>
+        <field>Ссылка</field>
+        <title>
+          <localValue>
+            <content>
+              <key>ru</key>
+              <value>Ссылка</value>
+            </content>
+          </localValue>
+        </title>
+      </fields>
+      <fields xsi:type="schema:DataCompositionSchemaDataSetField">
+        <dataPath>ИмяПредопределенныхДанных</dataPath>
+        <field>ИмяПредопределенныхДанных</field>
+      </fields>
+      <fields xsi:type="schema:DataCompositionSchemaDataSetField">
+        <dataPath>ПометкаУдаления</dataPath>
+        <field>ПометкаУдаления</field>
+        <title>
+          <localValue>
+            <content>
+              <key>ru</key>
+              <value>Пометка удаления</value>
+            </content>
+          </localValue>
+        </title>
+      </fields>
+      <fields xsi:type="schema:DataCompositionSchemaDataSetField">
+        <dataPath>Наименование</dataPath>
+        <field>Наименование</field>
+        <title>
+          <localValue>
+            <content>
+              <key>ru</key>
+              <value>Наименование</value>
+            </content>
+          </localValue>
+        </title>
+      </fields>
+      <fields xsi:type="schema:DataCompositionSchemaDataSetField">
+        <dataPath>ЭтоГруппа</dataPath>
+        <field>ЭтоГруппа</field>
+        <title>
+          <localValue>
+            <content>
+              <key>ru</key>
+              <value>Это группа</value>
+            </content>
+          </localValue>
+        </title>
+      </fields>
+      <fields xsi:type="schema:DataCompositionSchemaDataSetField">
+        <dataPath>ВладелецФайла</dataPath>
+        <field>ВладелецФайла</field>
+        <title>
+          <localValue>
+            <content>
+              <key>ru</key>
+              <value>Владелец файла</value>
+            </content>
+          </localValue>
+        </title>
+      </fields>
+      <fields xsi:type="schema:DataCompositionSchemaDataSetField">
+        <dataPath>ДополнительныеРеквизиты</dataPath>
+        <field>ДополнительныеРеквизиты</field>
+      </fields>
+      <fields xsi:type="schema:DataCompositionSchemaDataSetField">
+        <dataPath>ДатаСоздания</dataPath>
+        <field>ДатаСоздания</field>
+      </fields>
+      <fields xsi:type="schema:DataCompositionSchemaDataSetField">
+        <dataPath>Описание</dataPath>
+        <field>Описание</field>
+      </fields>
+      <fields xsi:type="schema:DataCompositionSchemaDataSetField">
+        <dataPath>ДатаЗаема</dataPath>
+        <field>ДатаЗаема</field>
+      </fields>
+      <fields xsi:type="schema:DataCompositionSchemaDataSetField">
+        <dataPath>Автор</dataPath>
+        <field>Автор</field>
+      </fields>
+      <fields xsi:type="schema:DataCompositionSchemaDataSetField">
+        <dataPath>ДатаМодификацииУниверсальная</dataPath>
+        <field>ДатаМодификацииУниверсальная</field>
+      </fields>
+      <fields xsi:type="schema:DataCompositionSchemaDataSetField">
+        <dataPath>Зашифрован</dataPath>
+        <field>Зашифрован</field>
+      </fields>
+      <fields xsi:type="schema:DataCompositionSchemaDataSetField">
+        <dataPath>ПодписанЭП</dataPath>
+        <field>ПодписанЭП</field>
+      </fields>
+      <fields xsi:type="schema:DataCompositionSchemaDataSetField">
+        <dataPath>Редактирует</dataPath>
+        <field>Редактирует</field>
+      </fields>
+      <fields xsi:type="schema:DataCompositionSchemaDataSetField">
+        <dataPath>Расширение</dataPath>
+        <field>Расширение</field>
+      </fields>
+      <fields xsi:type="schema:DataCompositionSchemaDataSetField">
+        <dataPath>Служебный</dataPath>
+        <field>Служебный</field>
+      </fields>
+      <fields xsi:type="schema:DataCompositionSchemaDataSetField">
+        <dataPath>ТекстХранилище</dataPath>
+        <field>ТекстХранилище</field>
+      </fields>
+      <fields xsi:type="schema:DataCompositionSchemaDataSetField">
+        <dataPath>ТекущаяВерсия</dataPath>
+        <field>ТекущаяВерсия</field>
+      </fields>
+      <fields xsi:type="schema:DataCompositionSchemaDataSetField">
+        <dataPath>Изменил</dataPath>
+        <field>Изменил</field>
+      </fields>
+      <fields xsi:type="schema:DataCompositionSchemaDataSetField">
+        <dataPath>ФайлХранилище</dataPath>
+        <field>ФайлХранилище</field>
+      </fields>
+      <fields xsi:type="schema:DataCompositionSchemaDataSetField">
+        <dataPath>ПутьКФайлу</dataPath>
+        <field>ПутьКФайлу</field>
+      </fields>
+      <fields xsi:type="schema:DataCompositionSchemaDataSetField">
+        <dataPath>ТипХраненияФайла</dataPath>
+        <field>ТипХраненияФайла</field>
+      </fields>
+      <fields xsi:type="schema:DataCompositionSchemaDataSetField">
+        <dataPath>Размер</dataPath>
+        <field>Размер</field>
+      </fields>
+      <fields xsi:type="schema:DataCompositionSchemaDataSetField">
+        <dataPath>Том</dataPath>
+        <field>Том</field>
+      </fields>
+      <fields xsi:type="schema:DataCompositionSchemaDataSetField">
+        <dataPath>ХранитьВерсии</dataPath>
+        <field>ХранитьВерсии</field>
+      </fields>
+      <fields xsi:type="schema:DataCompositionSchemaDataSetField">
+        <dataPath>СтатусИзвлеченияТекста</dataPath>
+        <field>СтатусИзвлеченияТекста</field>
+      </fields>
+      <parameters>
+        <name>ВладелецФайла</name>
+        <title>
+          <localValue>
+            <content>
+              <key>ru</key>
+              <value>Владелец файла</value>
+            </content>
+          </localValue>
+        </title>
+        <values xsi:type="core:UndefinedValue"/>
+        <useRestriction>true</useRestriction>
+      </parameters>
     </extInfo>
   </attributes>
   <attributes>
@@ -459,7 +752,7 @@
     </edit>
   </attributes>
   <formCommands>
-    <name>СоздатьГруппу</name>
+    <name>СоздатьГруппуФайлов</name>
     <title>
       <key>ru</key>
       <value>Создать группу</value>
@@ -467,7 +760,7 @@
     <id>1</id>
     <toolTip>
       <key>ru</key>
-      <value>Создать группу</value>
+      <value>Создать группу файлов</value>
     </toolTip>
     <use>
       <common>true</common>

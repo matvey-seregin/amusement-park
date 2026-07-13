@@ -1,8 +1,95 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <form:Form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:form="http://g5.1c.ru/v8/dt/form">
   <items xsi:type="form:FormGroup">
-    <name>ОсновнаяКоманднаяПанель</name>
-    <id>1</id>
+    <name>ГруппаПользовательскихНастроек</name>
+    <id>3</id>
+    <visible>true</visible>
+    <enabled>true</enabled>
+    <userVisible>
+      <common>true</common>
+    </userVisible>
+    <title>
+      <key>ru</key>
+      <value>Группа пользовательских настроек</value>
+    </title>
+    <verticalStretch>false</verticalStretch>
+    <extendedTooltip>
+      <name>ГруппаПользовательскихНастроекРасширеннаяПодсказка</name>
+      <id>4</id>
+      <type>Label</type>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <extInfo xsi:type="form:LabelDecorationExtInfo">
+        <horizontalAlign>Left</horizontalAlign>
+      </extInfo>
+    </extendedTooltip>
+    <type>UsualGroup</type>
+    <extInfo xsi:type="form:UsualGroupExtInfo">
+      <group>Vertical</group>
+      <behavior>Auto</behavior>
+      <showLeftMargin>true</showLeftMargin>
+      <united>true</united>
+      <throughAlign>Auto</throughAlign>
+      <currentRowUse>Auto</currentRowUse>
+    </extInfo>
+  </items>
+  <items xsi:type="form:FormField">
+    <name>Результат</name>
+    <id>5</id>
+    <title>
+      <key>ru</key>
+      <value>Результат</value>
+    </title>
+    <visible>true</visible>
+    <enabled>true</enabled>
+    <userVisible>
+      <common>true</common>
+    </userVisible>
+    <dataPath xsi:type="form:DataPath">
+      <segments>Результат</segments>
+    </dataPath>
+    <defaultItem>true</defaultItem>
+    <titleLocation>None</titleLocation>
+    <extendedTooltip>
+      <name>РезультатРасширеннаяПодсказка</name>
+      <id>7</id>
+      <type>Label</type>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <extInfo xsi:type="form:LabelDecorationExtInfo">
+        <horizontalAlign>Left</horizontalAlign>
+      </extInfo>
+    </extendedTooltip>
+    <contextMenu>
+      <name>РезультатКонтекстноеМеню</name>
+      <id>6</id>
+      <autoFill>true</autoFill>
+    </contextMenu>
+    <type>SpreadsheetDocumentField</type>
+    <editMode>Auto</editMode>
+    <showInHeader>true</showInHeader>
+    <headerHorizontalAlign>Left</headerHorizontalAlign>
+    <showInFooter>true</showInFooter>
+    <extInfo xsi:type="form:SpreadSheetDocFieldExtInfo">
+      <width>40</width>
+      <autoMaxWidth>true</autoMaxWidth>
+      <height>10</height>
+      <autoMaxHeight>true</autoMaxHeight>
+      <horizontalStretch>true</horizontalStretch>
+      <verticalStretch>true</verticalStretch>
+      <pointerType>Special</pointerType>
+      <verticalScrollBar>ScrollAuto</verticalScrollBar>
+      <horizontalScrollBar>ScrollAuto</horizontalScrollBar>
+      <selectionShowMode>Always</selectionShowMode>
+      <drawingSelectionShowMode>Auto</drawingSelectionShowMode>
+      <showGroups>true</showGroups>
+      <enableStartDrag>true</enableStartDrag>
+      <enableDrag>true</enableDrag>
+    </extInfo>
+  </items>
+  <autoCommandBar>
+    <name>ФормаКоманднаяПанель</name>
+    <id>-1</id>
     <items xsi:type="form:FormGroup">
       <name>ВариантыОтчета</name>
       <id>8</id>
@@ -91,123 +178,8 @@
         <importance>Normal</importance>
       </extInfo>
     </items>
-    <visible>true</visible>
-    <enabled>true</enabled>
-    <userVisible>
-      <common>true</common>
-    </userVisible>
-    <title>
-      <key>ru</key>
-      <value>Основная командная панель</value>
-    </title>
-    <extendedTooltip>
-      <name>ОсновнаяКоманднаяПанельРасширеннаяПодсказка</name>
-      <id>2</id>
-      <type>Label</type>
-      <autoMaxWidth>true</autoMaxWidth>
-      <autoMaxHeight>true</autoMaxHeight>
-      <extInfo xsi:type="form:LabelDecorationExtInfo">
-        <horizontalAlign>Left</horizontalAlign>
-      </extInfo>
-    </extendedTooltip>
-    <type>CommandBar</type>
-    <extInfo xsi:type="form:CommandBarExtInfo">
-      <horizontalAlign>Left</horizontalAlign>
-      <commandSource>Form</commandSource>
-    </extInfo>
-  </items>
-  <items xsi:type="form:FormGroup">
-    <name>ГруппаПользовательскихНастроек</name>
-    <id>3</id>
-    <visible>true</visible>
-    <enabled>true</enabled>
-    <userVisible>
-      <common>true</common>
-    </userVisible>
-    <title>
-      <key>ru</key>
-      <value>Группа пользовательских настроек</value>
-    </title>
-    <extendedTooltip>
-      <name>ГруппаПользовательскихНастроекРасширеннаяПодсказка</name>
-      <id>4</id>
-      <type>Label</type>
-      <autoMaxWidth>true</autoMaxWidth>
-      <autoMaxHeight>true</autoMaxHeight>
-      <extInfo xsi:type="form:LabelDecorationExtInfo">
-        <horizontalAlign>Left</horizontalAlign>
-      </extInfo>
-    </extendedTooltip>
-    <type>UsualGroup</type>
-    <extInfo xsi:type="form:UsualGroupExtInfo">
-      <group>Vertical</group>
-      <representation>WeakSeparation</representation>
-      <showLeftMargin>true</showLeftMargin>
-      <united>true</united>
-      <throughAlign>Auto</throughAlign>
-      <currentRowUse>Auto</currentRowUse>
-    </extInfo>
-  </items>
-  <items xsi:type="form:FormField">
-    <name>Результат</name>
-    <id>5</id>
-    <title>
-      <key>ru</key>
-      <value>Результат</value>
-    </title>
-    <visible>true</visible>
-    <enabled>true</enabled>
-    <userVisible>
-      <common>true</common>
-    </userVisible>
-    <dataPath xsi:type="form:DataPath">
-      <segments>Результат</segments>
-    </dataPath>
-    <defaultItem>true</defaultItem>
-    <titleLocation>None</titleLocation>
-    <extendedTooltip>
-      <name>РезультатРасширеннаяПодсказка</name>
-      <id>7</id>
-      <type>Label</type>
-      <autoMaxWidth>true</autoMaxWidth>
-      <autoMaxHeight>true</autoMaxHeight>
-      <extInfo xsi:type="form:LabelDecorationExtInfo">
-        <horizontalAlign>Left</horizontalAlign>
-      </extInfo>
-    </extendedTooltip>
-    <contextMenu>
-      <name>РезультатКонтекстноеМеню</name>
-      <id>6</id>
-      <autoFill>true</autoFill>
-    </contextMenu>
-    <type>SpreadsheetDocumentField</type>
-    <editMode>Enter</editMode>
-    <showInHeader>true</showInHeader>
-    <headerHorizontalAlign>Left</headerHorizontalAlign>
-    <showInFooter>true</showInFooter>
-    <extInfo xsi:type="form:SpreadSheetDocFieldExtInfo">
-      <width>40</width>
-      <autoMaxWidth>true</autoMaxWidth>
-      <height>10</height>
-      <autoMaxHeight>true</autoMaxHeight>
-      <horizontalStretch>true</horizontalStretch>
-      <verticalStretch>true</verticalStretch>
-      <pointerType>Special</pointerType>
-      <verticalScrollBar>ScrollAlways</verticalScrollBar>
-      <horizontalScrollBar>ScrollAlways</horizontalScrollBar>
-      <selectionShowMode>Always</selectionShowMode>
-      <drawingSelectionShowMode>Auto</drawingSelectionShowMode>
-      <showGroups>true</showGroups>
-      <enableStartDrag>true</enableStartDrag>
-      <enableDrag>true</enableDrag>
-    </extInfo>
-  </items>
-  <commandBarLocation>None</commandBarLocation>
-  <showCommandBar>false</showCommandBar>
-  <autoCommandBar>
-    <name>ФормаКоманднаяПанель</name>
-    <id>-1</id>
     <horizontalAlign>Left</horizontalAlign>
+    <autoFill>true</autoFill>
   </autoCommandBar>
   <handlers>
     <event>OnCreateAtServer</event>
@@ -219,7 +191,7 @@
   <windowOpeningMode>DontBlock</windowOpeningMode>
   <saveWindowSettings>true</saveWindowSettings>
   <autoUrl>true</autoUrl>
-  <group>Vertical</group>
+  <group>Auto</group>
   <autoFillCheck>true</autoFillCheck>
   <allowFormCustomize>true</allowFormCustomize>
   <enabled>true</enabled>

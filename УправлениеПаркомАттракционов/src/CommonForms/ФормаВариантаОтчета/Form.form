@@ -121,7 +121,9 @@
     <changeRowSet>true</changeRowSet>
     <changeRowOrder>true</changeRowOrder>
     <autoMaxWidth>true</autoMaxWidth>
+    <height>4</height>
     <autoMaxHeight>true</autoMaxHeight>
+    <heightControlVariant>InFormRows</heightControlVariant>
     <autoMaxRowsCount>true</autoMaxRowsCount>
     <selectionMode>MultiRow</selectionMode>
     <header>true</header>
@@ -260,9 +262,10 @@
         <changeRowSet>true</changeRowSet>
         <changeRowOrder>true</changeRowOrder>
         <autoMaxWidth>true</autoMaxWidth>
+        <height>3</height>
         <autoMaxHeight>true</autoMaxHeight>
+        <heightControlVariant>InFormRows</heightControlVariant>
         <autoMaxRowsCount>true</autoMaxRowsCount>
-        <selectionMode>MultiRow</selectionMode>
         <header>true</header>
         <headerHeight>1</headerHeight>
         <footerHeight>1</footerHeight>
@@ -422,7 +425,9 @@
         <changeRowSet>true</changeRowSet>
         <changeRowOrder>true</changeRowOrder>
         <autoMaxWidth>true</autoMaxWidth>
+        <height>3</height>
         <autoMaxHeight>true</autoMaxHeight>
+        <heightControlVariant>InFormRows</heightControlVariant>
         <autoMaxRowsCount>true</autoMaxRowsCount>
         <selectionMode>MultiRow</selectionMode>
         <header>true</header>
@@ -592,8 +597,9 @@
             <changeRowSet>true</changeRowSet>
             <changeRowOrder>true</changeRowOrder>
             <autoMaxWidth>true</autoMaxWidth>
+            <height>3</height>
             <autoMaxHeight>true</autoMaxHeight>
-            <heightInTableRows>15</heightInTableRows>
+            <heightControlVariant>InFormRows</heightControlVariant>
             <autoMaxRowsCount>true</autoMaxRowsCount>
             <choiceMode>true</choiceMode>
             <selectionMode>MultiRow</selectionMode>
@@ -727,7 +733,9 @@
             <changeRowSet>true</changeRowSet>
             <changeRowOrder>true</changeRowOrder>
             <autoMaxWidth>true</autoMaxWidth>
+            <height>3</height>
             <autoMaxHeight>true</autoMaxHeight>
+            <heightControlVariant>InFormRows</heightControlVariant>
             <autoMaxRowsCount>true</autoMaxRowsCount>
             <selectionMode>MultiRow</selectionMode>
             <header>true</header>
@@ -776,41 +784,6 @@
         <items xsi:type="form:FormGroup">
           <name>НедоступныеНастройкиПолейГруппировки</name>
           <id>22</id>
-          <items xsi:type="form:Decoration">
-            <name>НадписьНедоступныхПолейГруппировки</name>
-            <id>23</id>
-            <title>
-              <key>ru</key>
-              <value>Текущий элемент не может содержать поля группировки.
-Выберите в дереве структуры группировку, для которой требуется просмотреть или изменить состав полей группировки.</value>
-            </title>
-            <visible>true</visible>
-            <enabled>true</enabled>
-            <userVisible>
-              <common>true</common>
-            </userVisible>
-            <extendedTooltip>
-              <name>НадписьНедоступныхПолейГруппировкиРасширеннаяПодсказка</name>
-              <id>142</id>
-              <type>Label</type>
-              <autoMaxWidth>true</autoMaxWidth>
-              <autoMaxHeight>true</autoMaxHeight>
-              <extInfo xsi:type="form:LabelDecorationExtInfo">
-                <horizontalAlign>Left</horizontalAlign>
-              </extInfo>
-            </extendedTooltip>
-            <contextMenu>
-              <name>НадписьНедоступныхПолейГруппировкиКонтекстноеМеню</name>
-              <id>24</id>
-              <autoFill>true</autoFill>
-            </contextMenu>
-            <type>Label</type>
-            <height>2</height>
-            <autoMaxHeight>true</autoMaxHeight>
-            <extInfo xsi:type="form:LabelDecorationExtInfo">
-              <horizontalAlign>Left</horizontalAlign>
-            </extInfo>
-          </items>
           <visible>true</visible>
           <enabled>true</enabled>
           <userVisible>
@@ -929,11 +902,13 @@
           <autoFill>true</autoFill>
         </contextMenu>
         <type>CheckBoxField</type>
-        <editMode>Enter</editMode>
+        <editMode>Auto</editMode>
         <showInHeader>true</showInHeader>
         <headerHorizontalAlign>Left</headerHorizontalAlign>
         <showInFooter>true</showInFooter>
-        <extInfo xsi:type="form:CheckBoxFieldExtInfo"/>
+        <extInfo xsi:type="form:CheckBoxFieldExtInfo">
+          <checkBoxType>Switcher</checkBoxType>
+        </extInfo>
       </items>
       <items xsi:type="form:FormGroup">
         <name>СтраницыПолейВыбора</name>
@@ -1054,7 +1029,9 @@
             <changeRowSet>true</changeRowSet>
             <changeRowOrder>true</changeRowOrder>
             <autoMaxWidth>true</autoMaxWidth>
+            <height>3</height>
             <autoMaxHeight>true</autoMaxHeight>
+            <heightControlVariant>InFormRows</heightControlVariant>
             <autoMaxRowsCount>true</autoMaxRowsCount>
             <choiceMode>true</choiceMode>
             <selectionMode>MultiRow</selectionMode>
@@ -1189,7 +1166,9 @@
             <changeRowSet>true</changeRowSet>
             <changeRowOrder>true</changeRowOrder>
             <autoMaxWidth>true</autoMaxWidth>
+            <height>3</height>
             <autoMaxHeight>true</autoMaxHeight>
+            <heightControlVariant>InFormRows</heightControlVariant>
             <autoMaxRowsCount>true</autoMaxRowsCount>
             <selectionMode>MultiRow</selectionMode>
             <header>true</header>
@@ -1239,79 +1218,6 @@
         <items xsi:type="form:FormGroup">
           <name>ОтключенныеНастройкиВыбранныхПолей</name>
           <id>36</id>
-          <items xsi:type="form:Decoration">
-            <name>НадписьЛокальныхВыбранныхПолей</name>
-            <id>37</id>
-            <title>
-              <key>ru</key>
-              <value>Выбранные поля для текущего элемента будут автоматически формироваться на основании выбранных полей всего отчета.
-Выберите в дереве структуры элемент - отчет для редактирования его выбранных полей.
-Если необходимо, чтобы текущий элемент имел выбранные поля, отличные от выбранных полей отчета, установите флажок, расположенный над этим текстом.</value>
-            </title>
-            <visible>true</visible>
-            <enabled>true</enabled>
-            <userVisible>
-              <common>true</common>
-            </userVisible>
-            <extendedTooltip>
-              <name>НадписьЛокальныхВыбранныхПолейРасширеннаяПодсказка</name>
-              <id>150</id>
-              <type>Label</type>
-              <autoMaxWidth>true</autoMaxWidth>
-              <autoMaxHeight>true</autoMaxHeight>
-              <extInfo xsi:type="form:LabelDecorationExtInfo">
-                <horizontalAlign>Left</horizontalAlign>
-              </extInfo>
-            </extendedTooltip>
-            <contextMenu>
-              <name>НадписьЛокальныхВыбранныхПолейКонтекстноеМеню</name>
-              <id>38</id>
-              <autoFill>true</autoFill>
-            </contextMenu>
-            <type>Label</type>
-            <autoMaxHeight>true</autoMaxHeight>
-            <extInfo xsi:type="form:LabelDecorationExtInfo">
-              <horizontalAlign>Left</horizontalAlign>
-            </extInfo>
-          </items>
-          <items xsi:type="form:Decoration">
-            <name>ПереходКВыбраннымПолямОтчета</name>
-            <id>39</id>
-            <title>
-              <key>ru</key>
-              <value>Нажмите здесь для перехода к выбранным полям отчета.</value>
-            </title>
-            <visible>true</visible>
-            <enabled>true</enabled>
-            <userVisible>
-              <common>true</common>
-            </userVisible>
-            <extendedTooltip>
-              <name>ПереходКВыбраннымПолямОтчетаРасширеннаяПодсказка</name>
-              <id>151</id>
-              <type>Label</type>
-              <autoMaxWidth>true</autoMaxWidth>
-              <autoMaxHeight>true</autoMaxHeight>
-              <extInfo xsi:type="form:LabelDecorationExtInfo">
-                <horizontalAlign>Left</horizontalAlign>
-              </extInfo>
-            </extendedTooltip>
-            <contextMenu>
-              <name>ПереходКВыбраннымПолямОтчетаКонтекстноеМеню</name>
-              <id>40</id>
-              <autoFill>true</autoFill>
-            </contextMenu>
-            <type>Label</type>
-            <autoMaxHeight>true</autoMaxHeight>
-            <extInfo xsi:type="form:LabelDecorationExtInfo">
-              <handlers>
-                <event>Click</event>
-                <name>ПерейтиКОтчету</name>
-              </handlers>
-              <hyperlink>true</hyperlink>
-              <horizontalAlign>Left</horizontalAlign>
-            </extInfo>
-          </items>
           <visible>true</visible>
           <enabled>true</enabled>
           <userVisible>
@@ -1341,78 +1247,6 @@
         <items xsi:type="form:FormGroup">
           <name>НедоступныеНастройкиВыбранныхПолей</name>
           <id>41</id>
-          <items xsi:type="form:Decoration">
-            <name>НадписьНедоступныхВыбранныхПолей</name>
-            <id>42</id>
-            <title>
-              <key>ru</key>
-              <value>У текущего элемента не могут быть установлены выбранные поля.
-Выберите в дереве структуры элемент - отчет для редактирования его выбранных полей.</value>
-            </title>
-            <visible>true</visible>
-            <enabled>true</enabled>
-            <userVisible>
-              <common>true</common>
-            </userVisible>
-            <extendedTooltip>
-              <name>НадписьНедоступныхВыбранныхПолейРасширеннаяПодсказка</name>
-              <id>153</id>
-              <type>Label</type>
-              <autoMaxWidth>true</autoMaxWidth>
-              <autoMaxHeight>true</autoMaxHeight>
-              <extInfo xsi:type="form:LabelDecorationExtInfo">
-                <horizontalAlign>Left</horizontalAlign>
-              </extInfo>
-            </extendedTooltip>
-            <contextMenu>
-              <name>НадписьНедоступныхВыбранныхПолейКонтекстноеМеню</name>
-              <id>43</id>
-              <autoFill>true</autoFill>
-            </contextMenu>
-            <type>Label</type>
-            <autoMaxHeight>true</autoMaxHeight>
-            <extInfo xsi:type="form:LabelDecorationExtInfo">
-              <horizontalAlign>Left</horizontalAlign>
-            </extInfo>
-          </items>
-          <items xsi:type="form:Decoration">
-            <name>ПереходКВыбраннымПолямОтчета1</name>
-            <id>44</id>
-            <title>
-              <key>ru</key>
-              <value>Нажмите здесь для перехода к выбранным полям отчета.</value>
-            </title>
-            <visible>true</visible>
-            <enabled>true</enabled>
-            <userVisible>
-              <common>true</common>
-            </userVisible>
-            <extendedTooltip>
-              <name>ПереходКВыбраннымПолямОтчета1РасширеннаяПодсказка</name>
-              <id>154</id>
-              <type>Label</type>
-              <autoMaxWidth>true</autoMaxWidth>
-              <autoMaxHeight>true</autoMaxHeight>
-              <extInfo xsi:type="form:LabelDecorationExtInfo">
-                <horizontalAlign>Left</horizontalAlign>
-              </extInfo>
-            </extendedTooltip>
-            <contextMenu>
-              <name>ПереходКВыбраннымПолямОтчета1КонтекстноеМеню</name>
-              <id>45</id>
-              <autoFill>true</autoFill>
-            </contextMenu>
-            <type>Label</type>
-            <autoMaxHeight>true</autoMaxHeight>
-            <extInfo xsi:type="form:LabelDecorationExtInfo">
-              <handlers>
-                <event>Click</event>
-                <name>ПерейтиКОтчету</name>
-              </handlers>
-              <hyperlink>true</hyperlink>
-              <horizontalAlign>Left</horizontalAlign>
-            </extInfo>
-          </items>
           <visible>true</visible>
           <enabled>true</enabled>
           <userVisible>
@@ -1531,11 +1365,13 @@
           <autoFill>true</autoFill>
         </contextMenu>
         <type>CheckBoxField</type>
-        <editMode>Enter</editMode>
+        <editMode>Auto</editMode>
         <showInHeader>true</showInHeader>
         <headerHorizontalAlign>Left</headerHorizontalAlign>
         <showInFooter>true</showInFooter>
-        <extInfo xsi:type="form:CheckBoxFieldExtInfo"/>
+        <extInfo xsi:type="form:CheckBoxFieldExtInfo">
+          <checkBoxType>Switcher</checkBoxType>
+        </extInfo>
       </items>
       <items xsi:type="form:FormGroup">
         <name>СтраницыОтбора</name>
@@ -1656,7 +1492,9 @@
             <changeRowSet>true</changeRowSet>
             <changeRowOrder>true</changeRowOrder>
             <autoMaxWidth>true</autoMaxWidth>
+            <height>3</height>
             <autoMaxHeight>true</autoMaxHeight>
+            <heightControlVariant>InFormRows</heightControlVariant>
             <autoMaxRowsCount>true</autoMaxRowsCount>
             <choiceMode>true</choiceMode>
             <selectionMode>MultiRow</selectionMode>
@@ -1791,7 +1629,9 @@
             <changeRowSet>true</changeRowSet>
             <changeRowOrder>true</changeRowOrder>
             <autoMaxWidth>true</autoMaxWidth>
+            <height>3</height>
             <autoMaxHeight>true</autoMaxHeight>
+            <heightControlVariant>InFormRows</heightControlVariant>
             <autoMaxRowsCount>true</autoMaxRowsCount>
             <selectionMode>MultiRow</selectionMode>
             <header>true</header>
@@ -1843,79 +1683,6 @@
         <items xsi:type="form:FormGroup">
           <name>ОтключенныеНастройкиОтбора</name>
           <id>57</id>
-          <items xsi:type="form:Decoration">
-            <name>НадписьЛокальногоОтбора</name>
-            <id>58</id>
-            <title>
-              <key>ru</key>
-              <value>В текущем элементе фильтр не установлен.
-Выберите в дереве структуры отчет для редактирования фильтра отчета в целом.
-Если необходимо, чтобы текущий элемент имел собственный фильтр, установите флажок, расположенный над этим текстом.</value>
-            </title>
-            <visible>true</visible>
-            <enabled>true</enabled>
-            <userVisible>
-              <common>true</common>
-            </userVisible>
-            <extendedTooltip>
-              <name>НадписьЛокальногоОтбораРасширеннаяПодсказка</name>
-              <id>162</id>
-              <type>Label</type>
-              <autoMaxWidth>true</autoMaxWidth>
-              <autoMaxHeight>true</autoMaxHeight>
-              <extInfo xsi:type="form:LabelDecorationExtInfo">
-                <horizontalAlign>Left</horizontalAlign>
-              </extInfo>
-            </extendedTooltip>
-            <contextMenu>
-              <name>НадписьЛокальногоОтбораКонтекстноеМеню</name>
-              <id>59</id>
-              <autoFill>true</autoFill>
-            </contextMenu>
-            <type>Label</type>
-            <autoMaxHeight>true</autoMaxHeight>
-            <extInfo xsi:type="form:LabelDecorationExtInfo">
-              <horizontalAlign>Left</horizontalAlign>
-            </extInfo>
-          </items>
-          <items xsi:type="form:Decoration">
-            <name>ПереходКОтборуОтчета</name>
-            <id>60</id>
-            <title>
-              <key>ru</key>
-              <value>Нажмите здесь для перехода к фильтру отчета.</value>
-            </title>
-            <visible>true</visible>
-            <enabled>true</enabled>
-            <userVisible>
-              <common>true</common>
-            </userVisible>
-            <extendedTooltip>
-              <name>ПереходКОтборуОтчетаРасширеннаяПодсказка</name>
-              <id>163</id>
-              <type>Label</type>
-              <autoMaxWidth>true</autoMaxWidth>
-              <autoMaxHeight>true</autoMaxHeight>
-              <extInfo xsi:type="form:LabelDecorationExtInfo">
-                <horizontalAlign>Left</horizontalAlign>
-              </extInfo>
-            </extendedTooltip>
-            <contextMenu>
-              <name>ПереходКОтборуОтчетаКонтекстноеМеню</name>
-              <id>61</id>
-              <autoFill>true</autoFill>
-            </contextMenu>
-            <type>Label</type>
-            <autoMaxHeight>true</autoMaxHeight>
-            <extInfo xsi:type="form:LabelDecorationExtInfo">
-              <handlers>
-                <event>Click</event>
-                <name>ПерейтиКОтчету</name>
-              </handlers>
-              <hyperlink>true</hyperlink>
-              <horizontalAlign>Left</horizontalAlign>
-            </extInfo>
-          </items>
           <visible>true</visible>
           <enabled>true</enabled>
           <userVisible>
@@ -1945,78 +1712,6 @@
         <items xsi:type="form:FormGroup">
           <name>НедоступныеНастройкиОтбора</name>
           <id>62</id>
-          <items xsi:type="form:Decoration">
-            <name>НадписьНедоступногоОтбора</name>
-            <id>63</id>
-            <title>
-              <key>ru</key>
-              <value>У текущего элемента не может быть установлен фильтр.
-Выберите в дереве структуры отчет для редактирования фильтра отчета в целом.</value>
-            </title>
-            <visible>true</visible>
-            <enabled>true</enabled>
-            <userVisible>
-              <common>true</common>
-            </userVisible>
-            <extendedTooltip>
-              <name>НадписьНедоступногоОтбораРасширеннаяПодсказка</name>
-              <id>165</id>
-              <type>Label</type>
-              <autoMaxWidth>true</autoMaxWidth>
-              <autoMaxHeight>true</autoMaxHeight>
-              <extInfo xsi:type="form:LabelDecorationExtInfo">
-                <horizontalAlign>Left</horizontalAlign>
-              </extInfo>
-            </extendedTooltip>
-            <contextMenu>
-              <name>НадписьНедоступногоОтбораКонтекстноеМеню</name>
-              <id>64</id>
-              <autoFill>true</autoFill>
-            </contextMenu>
-            <type>Label</type>
-            <autoMaxHeight>true</autoMaxHeight>
-            <extInfo xsi:type="form:LabelDecorationExtInfo">
-              <horizontalAlign>Left</horizontalAlign>
-            </extInfo>
-          </items>
-          <items xsi:type="form:Decoration">
-            <name>ПереходКОтборуОтчета1</name>
-            <id>65</id>
-            <title>
-              <key>ru</key>
-              <value>Нажмите здесь для перехода к фильтру отчета.</value>
-            </title>
-            <visible>true</visible>
-            <enabled>true</enabled>
-            <userVisible>
-              <common>true</common>
-            </userVisible>
-            <extendedTooltip>
-              <name>ПереходКОтборуОтчета1РасширеннаяПодсказка</name>
-              <id>166</id>
-              <type>Label</type>
-              <autoMaxWidth>true</autoMaxWidth>
-              <autoMaxHeight>true</autoMaxHeight>
-              <extInfo xsi:type="form:LabelDecorationExtInfo">
-                <horizontalAlign>Left</horizontalAlign>
-              </extInfo>
-            </extendedTooltip>
-            <contextMenu>
-              <name>ПереходКОтборуОтчета1КонтекстноеМеню</name>
-              <id>66</id>
-              <autoFill>true</autoFill>
-            </contextMenu>
-            <type>Label</type>
-            <autoMaxHeight>true</autoMaxHeight>
-            <extInfo xsi:type="form:LabelDecorationExtInfo">
-              <handlers>
-                <event>Click</event>
-                <name>ПерейтиКОтчету</name>
-              </handlers>
-              <hyperlink>true</hyperlink>
-              <horizontalAlign>Left</horizontalAlign>
-            </extInfo>
-          </items>
           <visible>true</visible>
           <enabled>true</enabled>
           <userVisible>
@@ -2135,11 +1830,13 @@
           <autoFill>true</autoFill>
         </contextMenu>
         <type>CheckBoxField</type>
-        <editMode>Enter</editMode>
+        <editMode>Auto</editMode>
         <showInHeader>true</showInHeader>
         <headerHorizontalAlign>Left</headerHorizontalAlign>
         <showInFooter>true</showInFooter>
-        <extInfo xsi:type="form:CheckBoxFieldExtInfo"/>
+        <extInfo xsi:type="form:CheckBoxFieldExtInfo">
+          <checkBoxType>Switcher</checkBoxType>
+        </extInfo>
       </items>
       <items xsi:type="form:FormGroup">
         <name>СтраницыПорядка</name>
@@ -2260,7 +1957,9 @@
             <changeRowSet>true</changeRowSet>
             <changeRowOrder>true</changeRowOrder>
             <autoMaxWidth>true</autoMaxWidth>
+            <height>3</height>
             <autoMaxHeight>true</autoMaxHeight>
+            <heightControlVariant>InFormRows</heightControlVariant>
             <autoMaxRowsCount>true</autoMaxRowsCount>
             <choiceMode>true</choiceMode>
             <selectionMode>MultiRow</selectionMode>
@@ -2394,7 +2093,9 @@
             <changeRowSet>true</changeRowSet>
             <changeRowOrder>true</changeRowOrder>
             <autoMaxWidth>true</autoMaxWidth>
+            <height>3</height>
             <autoMaxHeight>true</autoMaxHeight>
+            <heightControlVariant>InFormRows</heightControlVariant>
             <autoMaxRowsCount>true</autoMaxRowsCount>
             <selectionMode>MultiRow</selectionMode>
             <header>true</header>
@@ -2443,79 +2144,6 @@
         <items xsi:type="form:FormGroup">
           <name>ОтключенныеНастройкиПорядка</name>
           <id>78</id>
-          <items xsi:type="form:Decoration">
-            <name>НадписьЛокальногоПорядка</name>
-            <id>79</id>
-            <title>
-              <key>ru</key>
-              <value>В текущем элементе сортировка не установлена.
-Выберите в дереве структуры отчет для редактирования сортировки отчета в целом.
-Если необходимо, чтобы текущий элемент имел собственную сортировку, установите флажок, расположенный над этим текстом.</value>
-            </title>
-            <visible>true</visible>
-            <enabled>true</enabled>
-            <userVisible>
-              <common>true</common>
-            </userVisible>
-            <extendedTooltip>
-              <name>НадписьЛокальногоПорядкаРасширеннаяПодсказка</name>
-              <id>174</id>
-              <type>Label</type>
-              <autoMaxWidth>true</autoMaxWidth>
-              <autoMaxHeight>true</autoMaxHeight>
-              <extInfo xsi:type="form:LabelDecorationExtInfo">
-                <horizontalAlign>Left</horizontalAlign>
-              </extInfo>
-            </extendedTooltip>
-            <contextMenu>
-              <name>НадписьЛокальногоПорядкаКонтекстноеМеню</name>
-              <id>80</id>
-              <autoFill>true</autoFill>
-            </contextMenu>
-            <type>Label</type>
-            <autoMaxHeight>true</autoMaxHeight>
-            <extInfo xsi:type="form:LabelDecorationExtInfo">
-              <horizontalAlign>Left</horizontalAlign>
-            </extInfo>
-          </items>
-          <items xsi:type="form:Decoration">
-            <name>ПереходКПорядкуОтчета</name>
-            <id>81</id>
-            <title>
-              <key>ru</key>
-              <value>Нажмите здесь для перехода к сортировке отчета.</value>
-            </title>
-            <visible>true</visible>
-            <enabled>true</enabled>
-            <userVisible>
-              <common>true</common>
-            </userVisible>
-            <extendedTooltip>
-              <name>ПереходКПорядкуОтчетаРасширеннаяПодсказка</name>
-              <id>175</id>
-              <type>Label</type>
-              <autoMaxWidth>true</autoMaxWidth>
-              <autoMaxHeight>true</autoMaxHeight>
-              <extInfo xsi:type="form:LabelDecorationExtInfo">
-                <horizontalAlign>Left</horizontalAlign>
-              </extInfo>
-            </extendedTooltip>
-            <contextMenu>
-              <name>ПереходКПорядкуОтчетаКонтекстноеМеню</name>
-              <id>82</id>
-              <autoFill>true</autoFill>
-            </contextMenu>
-            <type>Label</type>
-            <autoMaxHeight>true</autoMaxHeight>
-            <extInfo xsi:type="form:LabelDecorationExtInfo">
-              <handlers>
-                <event>Click</event>
-                <name>ПерейтиКОтчету</name>
-              </handlers>
-              <hyperlink>true</hyperlink>
-              <horizontalAlign>Left</horizontalAlign>
-            </extInfo>
-          </items>
           <visible>true</visible>
           <enabled>true</enabled>
           <userVisible>
@@ -2545,78 +2173,6 @@
         <items xsi:type="form:FormGroup">
           <name>НедоступныеНастройкиПорядка</name>
           <id>83</id>
-          <items xsi:type="form:Decoration">
-            <name>НадписьНедоступногоПорядка</name>
-            <id>84</id>
-            <title>
-              <key>ru</key>
-              <value>У текущего элемента не может быть установлена сортировка.
-Выберите в дереве структуры отчет для редактирования сортировки отчета в целом.</value>
-            </title>
-            <visible>true</visible>
-            <enabled>true</enabled>
-            <userVisible>
-              <common>true</common>
-            </userVisible>
-            <extendedTooltip>
-              <name>НадписьНедоступногоПорядкаРасширеннаяПодсказка</name>
-              <id>177</id>
-              <type>Label</type>
-              <autoMaxWidth>true</autoMaxWidth>
-              <autoMaxHeight>true</autoMaxHeight>
-              <extInfo xsi:type="form:LabelDecorationExtInfo">
-                <horizontalAlign>Left</horizontalAlign>
-              </extInfo>
-            </extendedTooltip>
-            <contextMenu>
-              <name>НадписьНедоступногоПорядкаКонтекстноеМеню</name>
-              <id>85</id>
-              <autoFill>true</autoFill>
-            </contextMenu>
-            <type>Label</type>
-            <autoMaxHeight>true</autoMaxHeight>
-            <extInfo xsi:type="form:LabelDecorationExtInfo">
-              <horizontalAlign>Left</horizontalAlign>
-            </extInfo>
-          </items>
-          <items xsi:type="form:Decoration">
-            <name>ПереходКПорядкуОтчета1</name>
-            <id>86</id>
-            <title>
-              <key>ru</key>
-              <value>Нажмите здесь для перехода к сортировке отчета.</value>
-            </title>
-            <visible>true</visible>
-            <enabled>true</enabled>
-            <userVisible>
-              <common>true</common>
-            </userVisible>
-            <extendedTooltip>
-              <name>ПереходКПорядкуОтчета1РасширеннаяПодсказка</name>
-              <id>178</id>
-              <type>Label</type>
-              <autoMaxWidth>true</autoMaxWidth>
-              <autoMaxHeight>true</autoMaxHeight>
-              <extInfo xsi:type="form:LabelDecorationExtInfo">
-                <horizontalAlign>Left</horizontalAlign>
-              </extInfo>
-            </extendedTooltip>
-            <contextMenu>
-              <name>ПереходКПорядкуОтчета1КонтекстноеМеню</name>
-              <id>87</id>
-              <autoFill>true</autoFill>
-            </contextMenu>
-            <type>Label</type>
-            <autoMaxHeight>true</autoMaxHeight>
-            <extInfo xsi:type="form:LabelDecorationExtInfo">
-              <handlers>
-                <event>Click</event>
-                <name>ПерейтиКОтчету</name>
-              </handlers>
-              <hyperlink>true</hyperlink>
-              <horizontalAlign>Left</horizontalAlign>
-            </extInfo>
-          </items>
           <visible>true</visible>
           <enabled>true</enabled>
           <userVisible>
@@ -2735,11 +2291,13 @@
           <autoFill>true</autoFill>
         </contextMenu>
         <type>CheckBoxField</type>
-        <editMode>Enter</editMode>
+        <editMode>Auto</editMode>
         <showInHeader>true</showInHeader>
         <headerHorizontalAlign>Left</headerHorizontalAlign>
         <showInFooter>true</showInFooter>
-        <extInfo xsi:type="form:CheckBoxFieldExtInfo"/>
+        <extInfo xsi:type="form:CheckBoxFieldExtInfo">
+          <checkBoxType>Switcher</checkBoxType>
+        </extInfo>
       </items>
       <items xsi:type="form:FormGroup">
         <name>СтраницыУсловногоОформления</name>
@@ -2859,7 +2417,9 @@
             <changeRowSet>true</changeRowSet>
             <changeRowOrder>true</changeRowOrder>
             <autoMaxWidth>true</autoMaxWidth>
+            <height>3</height>
             <autoMaxHeight>true</autoMaxHeight>
+            <heightControlVariant>InFormRows</heightControlVariant>
             <autoMaxRowsCount>true</autoMaxRowsCount>
             <selectionMode>MultiRow</selectionMode>
             <header>true</header>
@@ -2908,79 +2468,6 @@
         <items xsi:type="form:FormGroup">
           <name>ОтключенныеНастройкиУсловногоОформления</name>
           <id>96</id>
-          <items xsi:type="form:Decoration">
-            <name>НадписьЛокальногоУсловногоОформления</name>
-            <id>97</id>
-            <title>
-              <key>ru</key>
-              <value>В текущем элементе условное оформление не установлено.
-Выберите в дереве структуры отчет для редактирования условного оформления отчета в целом.
-Если необходимо, чтобы текущий элемент имел собственное условное оформление, установите флажок, расположенный над этим текстом.</value>
-            </title>
-            <visible>true</visible>
-            <enabled>true</enabled>
-            <userVisible>
-              <common>true</common>
-            </userVisible>
-            <extendedTooltip>
-              <name>НадписьЛокальногоУсловногоОформленияРасширеннаяПодсказка</name>
-              <id>185</id>
-              <type>Label</type>
-              <autoMaxWidth>true</autoMaxWidth>
-              <autoMaxHeight>true</autoMaxHeight>
-              <extInfo xsi:type="form:LabelDecorationExtInfo">
-                <horizontalAlign>Left</horizontalAlign>
-              </extInfo>
-            </extendedTooltip>
-            <contextMenu>
-              <name>НадписьЛокальногоУсловногоОформленияКонтекстноеМеню</name>
-              <id>98</id>
-              <autoFill>true</autoFill>
-            </contextMenu>
-            <type>Label</type>
-            <autoMaxHeight>true</autoMaxHeight>
-            <extInfo xsi:type="form:LabelDecorationExtInfo">
-              <horizontalAlign>Left</horizontalAlign>
-            </extInfo>
-          </items>
-          <items xsi:type="form:Decoration">
-            <name>ПереходКУсловномуОформлениюОтчета</name>
-            <id>99</id>
-            <title>
-              <key>ru</key>
-              <value>Нажмите здесь для перехода к условному оформлению отчета.</value>
-            </title>
-            <visible>true</visible>
-            <enabled>true</enabled>
-            <userVisible>
-              <common>true</common>
-            </userVisible>
-            <extendedTooltip>
-              <name>ПереходКУсловномуОформлениюОтчетаРасширеннаяПодсказка</name>
-              <id>186</id>
-              <type>Label</type>
-              <autoMaxWidth>true</autoMaxWidth>
-              <autoMaxHeight>true</autoMaxHeight>
-              <extInfo xsi:type="form:LabelDecorationExtInfo">
-                <horizontalAlign>Left</horizontalAlign>
-              </extInfo>
-            </extendedTooltip>
-            <contextMenu>
-              <name>ПереходКУсловномуОформлениюОтчетаКонтекстноеМеню</name>
-              <id>100</id>
-              <autoFill>true</autoFill>
-            </contextMenu>
-            <type>Label</type>
-            <autoMaxHeight>true</autoMaxHeight>
-            <extInfo xsi:type="form:LabelDecorationExtInfo">
-              <handlers>
-                <event>Click</event>
-                <name>ПерейтиКОтчету</name>
-              </handlers>
-              <hyperlink>true</hyperlink>
-              <horizontalAlign>Left</horizontalAlign>
-            </extInfo>
-          </items>
           <visible>true</visible>
           <enabled>true</enabled>
           <userVisible>
@@ -3010,78 +2497,6 @@
         <items xsi:type="form:FormGroup">
           <name>НедоступныеНастройкиУсловногоОформления</name>
           <id>101</id>
-          <items xsi:type="form:Decoration">
-            <name>НадписьНедоступногоУсловногоОформления</name>
-            <id>102</id>
-            <title>
-              <key>ru</key>
-              <value>У текущего элемента не может быть установлено условное оформление.
-Выберите в дереве структуры отчет для редактирования условного оформления отчета в целом.</value>
-            </title>
-            <visible>true</visible>
-            <enabled>true</enabled>
-            <userVisible>
-              <common>true</common>
-            </userVisible>
-            <extendedTooltip>
-              <name>НадписьНедоступногоУсловногоОформленияРасширеннаяПодсказка</name>
-              <id>188</id>
-              <type>Label</type>
-              <autoMaxWidth>true</autoMaxWidth>
-              <autoMaxHeight>true</autoMaxHeight>
-              <extInfo xsi:type="form:LabelDecorationExtInfo">
-                <horizontalAlign>Left</horizontalAlign>
-              </extInfo>
-            </extendedTooltip>
-            <contextMenu>
-              <name>НадписьНедоступногоУсловногоОформленияКонтекстноеМеню</name>
-              <id>103</id>
-              <autoFill>true</autoFill>
-            </contextMenu>
-            <type>Label</type>
-            <autoMaxHeight>true</autoMaxHeight>
-            <extInfo xsi:type="form:LabelDecorationExtInfo">
-              <horizontalAlign>Left</horizontalAlign>
-            </extInfo>
-          </items>
-          <items xsi:type="form:Decoration">
-            <name>ПереходКУсловномуОформлениюОтчета1</name>
-            <id>104</id>
-            <title>
-              <key>ru</key>
-              <value>Нажмите здесь для перехода к условному оформлению отчета.</value>
-            </title>
-            <visible>true</visible>
-            <enabled>true</enabled>
-            <userVisible>
-              <common>true</common>
-            </userVisible>
-            <extendedTooltip>
-              <name>ПереходКУсловномуОформлениюОтчета1РасширеннаяПодсказка</name>
-              <id>189</id>
-              <type>Label</type>
-              <autoMaxWidth>true</autoMaxWidth>
-              <autoMaxHeight>true</autoMaxHeight>
-              <extInfo xsi:type="form:LabelDecorationExtInfo">
-                <horizontalAlign>Left</horizontalAlign>
-              </extInfo>
-            </extendedTooltip>
-            <contextMenu>
-              <name>ПереходКУсловномуОформлениюОтчета1КонтекстноеМеню</name>
-              <id>105</id>
-              <autoFill>true</autoFill>
-            </contextMenu>
-            <type>Label</type>
-            <autoMaxHeight>true</autoMaxHeight>
-            <extInfo xsi:type="form:LabelDecorationExtInfo">
-              <handlers>
-                <event>Click</event>
-                <name>ПерейтиКОтчету</name>
-              </handlers>
-              <hyperlink>true</hyperlink>
-              <horizontalAlign>Left</horizontalAlign>
-            </extInfo>
-          </items>
           <visible>true</visible>
           <enabled>true</enabled>
           <userVisible>
@@ -3200,11 +2615,13 @@
           <autoFill>true</autoFill>
         </contextMenu>
         <type>CheckBoxField</type>
-        <editMode>Enter</editMode>
+        <editMode>Auto</editMode>
         <showInHeader>true</showInHeader>
         <headerHorizontalAlign>Left</headerHorizontalAlign>
         <showInFooter>true</showInFooter>
-        <extInfo xsi:type="form:CheckBoxFieldExtInfo"/>
+        <extInfo xsi:type="form:CheckBoxFieldExtInfo">
+          <checkBoxType>Switcher</checkBoxType>
+        </extInfo>
       </items>
       <items xsi:type="form:FormGroup">
         <name>СтраницыПараметровВывода</name>
@@ -3329,9 +2746,10 @@
             <changeRowSet>true</changeRowSet>
             <changeRowOrder>true</changeRowOrder>
             <autoMaxWidth>true</autoMaxWidth>
+            <height>3</height>
             <autoMaxHeight>true</autoMaxHeight>
+            <heightControlVariant>InFormRows</heightControlVariant>
             <autoMaxRowsCount>true</autoMaxRowsCount>
-            <selectionMode>MultiRow</selectionMode>
             <header>true</header>
             <headerHeight>1</headerHeight>
             <footerHeight>1</footerHeight>
@@ -3376,79 +2794,6 @@
         <items xsi:type="form:FormGroup">
           <name>ОтключенныеНастройкиПараметровВывода</name>
           <id>114</id>
-          <items xsi:type="form:Decoration">
-            <name>НадписьЛокальныхПараметровВывода</name>
-            <id>115</id>
-            <title>
-              <key>ru</key>
-              <value>В текущем элементе дополнительные настройки не установлены.
-Выберите в дереве структуры отчет для редактирования дополнительных настроек отчета в целом.
-Если необходимо, чтобы текущий элемент имел собственные дополнительные настройки, установите флажок, расположенный над этим текстом.</value>
-            </title>
-            <visible>true</visible>
-            <enabled>true</enabled>
-            <userVisible>
-              <common>true</common>
-            </userVisible>
-            <extendedTooltip>
-              <name>НадписьЛокальныхПараметровВыводаРасширеннаяПодсказка</name>
-              <id>196</id>
-              <type>Label</type>
-              <autoMaxWidth>true</autoMaxWidth>
-              <autoMaxHeight>true</autoMaxHeight>
-              <extInfo xsi:type="form:LabelDecorationExtInfo">
-                <horizontalAlign>Left</horizontalAlign>
-              </extInfo>
-            </extendedTooltip>
-            <contextMenu>
-              <name>НадписьЛокальныхПараметровВыводаКонтекстноеМеню</name>
-              <id>116</id>
-              <autoFill>true</autoFill>
-            </contextMenu>
-            <type>Label</type>
-            <autoMaxHeight>true</autoMaxHeight>
-            <extInfo xsi:type="form:LabelDecorationExtInfo">
-              <horizontalAlign>Left</horizontalAlign>
-            </extInfo>
-          </items>
-          <items xsi:type="form:Decoration">
-            <name>ПереходКПараметрамВыводаОтчета</name>
-            <id>117</id>
-            <title>
-              <key>ru</key>
-              <value>Нажмите здесь для перехода к дополнительным настройкам отчета.</value>
-            </title>
-            <visible>true</visible>
-            <enabled>true</enabled>
-            <userVisible>
-              <common>true</common>
-            </userVisible>
-            <extendedTooltip>
-              <name>ПереходКПараметрамВыводаОтчетаРасширеннаяПодсказка</name>
-              <id>197</id>
-              <type>Label</type>
-              <autoMaxWidth>true</autoMaxWidth>
-              <autoMaxHeight>true</autoMaxHeight>
-              <extInfo xsi:type="form:LabelDecorationExtInfo">
-                <horizontalAlign>Left</horizontalAlign>
-              </extInfo>
-            </extendedTooltip>
-            <contextMenu>
-              <name>ПереходКПараметрамВыводаОтчетаКонтекстноеМеню</name>
-              <id>118</id>
-              <autoFill>true</autoFill>
-            </contextMenu>
-            <type>Label</type>
-            <autoMaxHeight>true</autoMaxHeight>
-            <extInfo xsi:type="form:LabelDecorationExtInfo">
-              <handlers>
-                <event>Click</event>
-                <name>ПерейтиКОтчету</name>
-              </handlers>
-              <hyperlink>true</hyperlink>
-              <horizontalAlign>Left</horizontalAlign>
-            </extInfo>
-          </items>
           <visible>true</visible>
           <enabled>true</enabled>
           <userVisible>
@@ -3458,6 +2803,7 @@
             <key>ru</key>
             <value>Страница отключенных дополнительных настроек</value>
           </title>
+          <verticalStretch>false</verticalStretch>
           <extendedTooltip>
             <name>ОтключенныеНастройкиПараметровВыводаРасширеннаяПодсказка</name>
             <id>195</id>
@@ -3478,78 +2824,6 @@
         <items xsi:type="form:FormGroup">
           <name>НедоступныеНастройкиПараметровВывода</name>
           <id>119</id>
-          <items xsi:type="form:Decoration">
-            <name>НадписьНедоступныхПараметровВывода</name>
-            <id>120</id>
-            <title>
-              <key>ru</key>
-              <value>У текущего элемента не могут быть установлены дополнительные настройки.
-Выберите в дереве структуры отчет для редактирования дополнительных настроек отчета в целом.</value>
-            </title>
-            <visible>true</visible>
-            <enabled>true</enabled>
-            <userVisible>
-              <common>true</common>
-            </userVisible>
-            <extendedTooltip>
-              <name>НадписьНедоступныхПараметровВыводаРасширеннаяПодсказка</name>
-              <id>199</id>
-              <type>Label</type>
-              <autoMaxWidth>true</autoMaxWidth>
-              <autoMaxHeight>true</autoMaxHeight>
-              <extInfo xsi:type="form:LabelDecorationExtInfo">
-                <horizontalAlign>Left</horizontalAlign>
-              </extInfo>
-            </extendedTooltip>
-            <contextMenu>
-              <name>НадписьНедоступныхПараметровВыводаКонтекстноеМеню</name>
-              <id>121</id>
-              <autoFill>true</autoFill>
-            </contextMenu>
-            <type>Label</type>
-            <autoMaxHeight>true</autoMaxHeight>
-            <extInfo xsi:type="form:LabelDecorationExtInfo">
-              <horizontalAlign>Left</horizontalAlign>
-            </extInfo>
-          </items>
-          <items xsi:type="form:Decoration">
-            <name>ПереходКПараметрамВыводаОтчета1</name>
-            <id>122</id>
-            <title>
-              <key>ru</key>
-              <value>Нажмите здесь для перехода к дополнительным настройкам отчета.</value>
-            </title>
-            <visible>true</visible>
-            <enabled>true</enabled>
-            <userVisible>
-              <common>true</common>
-            </userVisible>
-            <extendedTooltip>
-              <name>ПереходКПараметрамВыводаОтчета1РасширеннаяПодсказка</name>
-              <id>200</id>
-              <type>Label</type>
-              <autoMaxWidth>true</autoMaxWidth>
-              <autoMaxHeight>true</autoMaxHeight>
-              <extInfo xsi:type="form:LabelDecorationExtInfo">
-                <horizontalAlign>Left</horizontalAlign>
-              </extInfo>
-            </extendedTooltip>
-            <contextMenu>
-              <name>ПереходКПараметрамВыводаОтчета1КонтекстноеМеню</name>
-              <id>123</id>
-              <autoFill>true</autoFill>
-            </contextMenu>
-            <type>Label</type>
-            <autoMaxHeight>true</autoMaxHeight>
-            <extInfo xsi:type="form:LabelDecorationExtInfo">
-              <handlers>
-                <event>Click</event>
-                <name>ПерейтиКОтчету</name>
-              </handlers>
-              <hyperlink>true</hyperlink>
-              <horizontalAlign>Left</horizontalAlign>
-            </extInfo>
-          </items>
           <visible>true</visible>
           <enabled>true</enabled>
           <userVisible>
@@ -3559,6 +2833,7 @@
             <key>ru</key>
             <value>Страница недоступных дополнительных настроек</value>
           </title>
+          <verticalStretch>false</verticalStretch>
           <extendedTooltip>
             <name>НедоступныеНастройкиПараметровВыводаРасширеннаяПодсказка</name>
             <id>198</id>
@@ -3689,32 +2964,6 @@
       <placementArea>UserCmds</placementArea>
       <representationInContextMenu>Auto</representationInContextMenu>
     </items>
-    <items xsi:type="form:Button">
-      <name>ФормаОтмена</name>
-      <id>126</id>
-      <visible>true</visible>
-      <enabled>true</enabled>
-      <userVisible>
-        <common>true</common>
-      </userVisible>
-      <extendedTooltip>
-        <name>ФормаОтменаРасширеннаяПодсказка</name>
-        <id>129</id>
-        <type>Label</type>
-        <autoMaxWidth>true</autoMaxWidth>
-        <autoMaxHeight>true</autoMaxHeight>
-        <extInfo xsi:type="form:LabelDecorationExtInfo">
-          <horizontalAlign>Left</horizontalAlign>
-        </extInfo>
-      </extendedTooltip>
-      <commandName>Form.StandardCommand.CancelEdit</commandName>
-      <buttonImportance>Normal</buttonImportance>
-      <representation>Auto</representation>
-      <autoMaxWidth>true</autoMaxWidth>
-      <autoMaxHeight>true</autoMaxHeight>
-      <placementArea>UserCmds</placementArea>
-      <representationInContextMenu>Auto</representationInContextMenu>
-    </items>
     <horizontalAlign>Right</horizontalAlign>
     <autoFill>true</autoFill>
   </autoCommandBar>
@@ -3726,6 +2975,7 @@
     <event>OnCreateAtServer</event>
     <name>ПриСозданииНаСервере</name>
   </handlers>
+  <excludedCommands>CancelEdit</excludedCommands>
   <excludedCommands>EndEdit</excludedCommands>
   <windowOpeningMode>LockOwner</windowOpeningMode>
   <saveWindowSettings>true</saveWindowSettings>
@@ -3888,6 +3138,7 @@
         <name>ЗакрытьИСформировать</name>
       </handler>
     </action>
+    <actionPurpose>Finish</actionPurpose>
     <currentRowUse>DontUse</currentRowUse>
     <selectedRowsUse>Auto</selectedRowsUse>
   </formCommands>

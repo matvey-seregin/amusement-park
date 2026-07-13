@@ -32,7 +32,144 @@
     <autoCommandBar>
       <name>ПравилоНастройкиОтборКоманднаяПанель</name>
       <id>12</id>
+      <items xsi:type="form:FormGroup">
+        <name>Добавить</name>
+        <id>44</id>
+        <items xsi:type="form:Button">
+          <name>ДобавитьЭлементОтбора</name>
+          <id>40</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <extendedTooltip>
+            <name>ДобавитьЭлементОтбораРасширеннаяПодсказка</name>
+            <id>41</id>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <commandName>Form.Item.ПравилоНастройкиОтбор.StandardCommand.AddFilterItem</commandName>
+          <buttonImportance>Normal</buttonImportance>
+          <representation>PictureAndText</representation>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <placementArea>UserCmds</placementArea>
+          <representationInContextMenu>Auto</representationInContextMenu>
+        </items>
+        <items xsi:type="form:Button">
+          <name>ДобавитьУсловиеПоДате</name>
+          <id>46</id>
+          <title>
+            <key>ru</key>
+            <value>Добавить условие по дате</value>
+          </title>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <extendedTooltip>
+            <name>ДобавитьУсловиеПоДатеРасширеннаяПодсказка</name>
+            <id>47</id>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <commandName>Form.Command.ДобавитьУсловиеПоДате</commandName>
+          <buttonImportance>Normal</buttonImportance>
+          <representation>Auto</representation>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <placementArea>UserCmds</placementArea>
+          <representationInContextMenu>Auto</representationInContextMenu>
+        </items>
+        <items xsi:type="form:Button">
+          <name>ПравилоНастройкиОтборДобавитьНесколько</name>
+          <id>59</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <extendedTooltip>
+            <name>ПравилоНастройкиОтборДобавитьНесколькоРасширеннаяПодсказка</name>
+            <id>60</id>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <commandName>Form.Item.ПравилоНастройкиОтбор.StandardCommand.AddMultiple</commandName>
+          <buttonImportance>Normal</buttonImportance>
+          <representation>Auto</representation>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <placementArea>UserCmds</placementArea>
+          <representationInContextMenu>Auto</representationInContextMenu>
+        </items>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <title>
+          <key>ru</key>
+          <value>Добавить</value>
+        </title>
+        <extendedTooltip>
+          <name>ДобавитьРасширеннаяПодсказка</name>
+          <id>45</id>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <type>Popup</type>
+        <extInfo xsi:type="form:PopupGroupExtInfo">
+          <representation>Auto</representation>
+          <importance>Normal</importance>
+        </extInfo>
+      </items>
+      <items xsi:type="form:Button">
+        <name>СгруппироватьЭлементыОтбора</name>
+        <id>42</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <extendedTooltip>
+          <name>СгруппироватьЭлементыОтбораРасширеннаяПодсказка</name>
+          <id>43</id>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <commandName>Form.Item.ПравилоНастройкиОтбор.StandardCommand.GroupFilterItems</commandName>
+        <buttonImportance>Normal</buttonImportance>
+        <representation>Auto</representation>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <placementArea>UserCmds</placementArea>
+        <representationInContextMenu>Auto</representationInContextMenu>
+      </items>
       <horizontalAlign>Left</horizontalAlign>
+      <autoFill>true</autoFill>
     </autoCommandBar>
     <searchStringAddition>
       <name>ПравилоНастройкиОтборСтрокаПоиска</name>
@@ -143,6 +280,7 @@
     <verticalStretch>true</verticalStretch>
     <enableStartDrag>true</enableStartDrag>
     <enableDrag>true</enableDrag>
+    <searchStringLocation>CommandBar</searchStringLocation>
     <currentRowUse>SelectionPresentationAndChoice</currentRowUse>
     <autoMaxCardHeight>true</autoMaxCardHeight>
     <viewMode>All</viewMode>
@@ -206,116 +344,6 @@
         <placementArea>UserCmds</placementArea>
         <representationInContextMenu>Auto</representationInContextMenu>
       </items>
-      <items xsi:type="form:FormGroup">
-        <name>Добавить</name>
-        <id>44</id>
-        <items xsi:type="form:Button">
-          <name>ДобавитьЭлементОтбора</name>
-          <id>40</id>
-          <visible>true</visible>
-          <enabled>true</enabled>
-          <userVisible>
-            <common>true</common>
-          </userVisible>
-          <extendedTooltip>
-            <name>ДобавитьЭлементОтбораРасширеннаяПодсказка</name>
-            <id>41</id>
-            <type>Label</type>
-            <autoMaxWidth>true</autoMaxWidth>
-            <autoMaxHeight>true</autoMaxHeight>
-            <extInfo xsi:type="form:LabelDecorationExtInfo">
-              <horizontalAlign>Left</horizontalAlign>
-            </extInfo>
-          </extendedTooltip>
-          <commandName>Form.Item.ПравилоНастройкиОтбор.StandardCommand.AddFilterItem</commandName>
-          <buttonImportance>Normal</buttonImportance>
-          <representation>PictureAndText</representation>
-          <autoMaxWidth>true</autoMaxWidth>
-          <autoMaxHeight>true</autoMaxHeight>
-          <placementArea>UserCmds</placementArea>
-          <representationInContextMenu>Auto</representationInContextMenu>
-        </items>
-        <items xsi:type="form:Button">
-          <name>ДобавитьУсловиеПоДате</name>
-          <id>46</id>
-          <title>
-            <key>ru</key>
-            <value>Добавить условие по дате</value>
-          </title>
-          <visible>true</visible>
-          <enabled>true</enabled>
-          <userVisible>
-            <common>true</common>
-          </userVisible>
-          <extendedTooltip>
-            <name>ДобавитьУсловиеПоДатеРасширеннаяПодсказка</name>
-            <id>47</id>
-            <type>Label</type>
-            <autoMaxWidth>true</autoMaxWidth>
-            <autoMaxHeight>true</autoMaxHeight>
-            <extInfo xsi:type="form:LabelDecorationExtInfo">
-              <horizontalAlign>Left</horizontalAlign>
-            </extInfo>
-          </extendedTooltip>
-          <commandName>Form.Command.ДобавитьУсловиеПоДате</commandName>
-          <buttonImportance>Normal</buttonImportance>
-          <representation>Auto</representation>
-          <autoMaxWidth>true</autoMaxWidth>
-          <autoMaxHeight>true</autoMaxHeight>
-          <placementArea>UserCmds</placementArea>
-          <representationInContextMenu>Auto</representationInContextMenu>
-        </items>
-        <visible>true</visible>
-        <enabled>true</enabled>
-        <userVisible>
-          <common>true</common>
-        </userVisible>
-        <title>
-          <key>ru</key>
-          <value>Добавить</value>
-        </title>
-        <extendedTooltip>
-          <name>ДобавитьРасширеннаяПодсказка</name>
-          <id>45</id>
-          <type>Label</type>
-          <autoMaxWidth>true</autoMaxWidth>
-          <autoMaxHeight>true</autoMaxHeight>
-          <extInfo xsi:type="form:LabelDecorationExtInfo">
-            <horizontalAlign>Left</horizontalAlign>
-          </extInfo>
-        </extendedTooltip>
-        <type>Popup</type>
-        <extInfo xsi:type="form:PopupGroupExtInfo">
-          <representation>Auto</representation>
-          <importance>Normal</importance>
-        </extInfo>
-      </items>
-      <items xsi:type="form:Button">
-        <name>СгруппироватьЭлементыОтбора</name>
-        <id>42</id>
-        <visible>true</visible>
-        <enabled>true</enabled>
-        <userVisible>
-          <common>true</common>
-        </userVisible>
-        <extendedTooltip>
-          <name>СгруппироватьЭлементыОтбораРасширеннаяПодсказка</name>
-          <id>43</id>
-          <type>Label</type>
-          <autoMaxWidth>true</autoMaxWidth>
-          <autoMaxHeight>true</autoMaxHeight>
-          <extInfo xsi:type="form:LabelDecorationExtInfo">
-            <horizontalAlign>Left</horizontalAlign>
-          </extInfo>
-        </extendedTooltip>
-        <commandName>Form.Item.ПравилоНастройкиОтбор.StandardCommand.GroupFilterItems</commandName>
-        <buttonImportance>Normal</buttonImportance>
-        <representation>Auto</representation>
-        <autoMaxWidth>true</autoMaxWidth>
-        <autoMaxHeight>true</autoMaxHeight>
-        <placementArea>UserCmds</placementArea>
-        <representationInContextMenu>Auto</representationInContextMenu>
-      </items>
       <visible>true</visible>
       <enabled>true</enabled>
       <userVisible>
@@ -366,38 +394,6 @@
         </picture>
         <representation>PictureAndText</representation>
         <importance>Normal</importance>
-      </extInfo>
-    </items>
-    <items xsi:type="form:Addition">
-      <title>
-        <key>ru</key>
-        <value>Поиск</value>
-      </title>
-      <visible>true</visible>
-      <enabled>true</enabled>
-      <userVisible>
-        <common>true</common>
-      </userVisible>
-      <name>СтрокаПоиска</name>
-      <id>50</id>
-      <extendedTooltip>
-        <name>СтрокаПоискаРасширеннаяПодсказка</name>
-        <id>52</id>
-        <type>Label</type>
-        <autoMaxWidth>true</autoMaxWidth>
-        <autoMaxHeight>true</autoMaxHeight>
-        <extInfo xsi:type="form:LabelDecorationExtInfo">
-          <horizontalAlign>Left</horizontalAlign>
-        </extInfo>
-      </extendedTooltip>
-      <contextMenu>
-        <name>СтрокаПоискаКонтекстноеМеню</name>
-        <id>51</id>
-        <autoFill>true</autoFill>
-      </contextMenu>
-      <source>ПравилоНастройкиОтбор</source>
-      <extInfo xsi:type="form:SearchStringAdditionExtInfo">
-        <autoMaxWidth>true</autoMaxWidth>
       </extInfo>
     </items>
     <horizontalAlign>Left</horizontalAlign>

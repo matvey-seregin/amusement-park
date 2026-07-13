@@ -2,7 +2,7 @@
 <form:Form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:form="http://g5.1c.ru/v8/dt/form">
   <title>
     <key>ru</key>
-    <value>Как открыть файл?</value>
+    <value>Выберите, как открыть файл</value>
   </title>
   <items xsi:type="form:FormGroup">
     <name>ГруппаРежимОткрытия</name>
@@ -22,7 +22,7 @@
       <dataPath xsi:type="form:DataPath">
         <segments>КакОткрывать</segments>
       </dataPath>
-      <titleLocation>Top</titleLocation>
+      <titleLocation>None</titleLocation>
       <extendedTooltip>
         <name>КакОткрыватьРасширеннаяПодсказка</name>
         <id>20</id>
@@ -39,7 +39,7 @@
         <autoFill>true</autoFill>
       </contextMenu>
       <type>RadioButtonField</type>
-      <editMode>Enter</editMode>
+      <editMode>Auto</editMode>
       <showInHeader>true</showInHeader>
       <headerHorizontalAlign>Left</headerHorizontalAlign>
       <showInFooter>true</showInFooter>
@@ -127,7 +127,7 @@
       <autoFill>true</autoFill>
     </contextMenu>
     <type>CheckBoxField</type>
-    <editMode>Enter</editMode>
+    <editMode>Auto</editMode>
     <showInHeader>true</showInHeader>
     <headerHorizontalAlign>Left</headerHorizontalAlign>
     <showInFooter>true</showInFooter>
@@ -381,6 +381,7 @@
         <name>ОткрытьФайл</name>
       </handler>
     </action>
+    <actionPurpose>Finish</actionPurpose>
     <currentRowUse>DontUse</currentRowUse>
     <selectedRowsUse>Auto</selectedRowsUse>
   </formCommands>
@@ -403,6 +404,7 @@
         <name>Отмена</name>
       </handler>
     </action>
+    <actionPurpose>Finish</actionPurpose>
     <currentRowUse>DontUse</currentRowUse>
     <selectedRowsUse>Auto</selectedRowsUse>
   </formCommands>

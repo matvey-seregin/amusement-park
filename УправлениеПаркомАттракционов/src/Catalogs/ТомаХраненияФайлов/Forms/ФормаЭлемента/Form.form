@@ -121,6 +121,142 @@
       <name>СвойстваГлавное</name>
       <id>44</id>
       <items xsi:type="form:FormGroup">
+        <name>ГруппаСпособХраненияФайлов</name>
+        <id>64</id>
+        <items xsi:type="form:FormField">
+          <name>СпособХраненияФайлов</name>
+          <id>66</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <dataPath xsi:type="form:DataPath">
+            <segments>Объект.СпособХраненияФайлов</segments>
+          </dataPath>
+          <titleLocation>Top</titleLocation>
+          <handlers>
+            <event>OnChange</event>
+            <name>СпособХраненияФайловПриИзменении</name>
+          </handlers>
+          <extendedTooltip>
+            <name>СпособХраненияФайловРасширеннаяПодсказка</name>
+            <id>68</id>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <contextMenu>
+            <name>СпособХраненияФайловКонтекстноеМеню</name>
+            <id>67</id>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <type>InputField</type>
+          <warningOnEditRepresentation>Show</warningOnEditRepresentation>
+          <warningOnEdit>
+            <key>ru</key>
+            <value>Меняя способ хранения файлов тома, вы потеряете возможность доступа к уже созданным на этом томе файлам</value>
+          </warningOnEdit>
+          <markRequiredComplete>true</markRequiredComplete>
+          <editMode>Enter</editMode>
+          <showInHeader>true</showInHeader>
+          <headerHorizontalAlign>Left</headerHorizontalAlign>
+          <showInFooter>true</showInFooter>
+          <extInfo xsi:type="form:InputFieldExtInfo">
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <wrap>true</wrap>
+            <extendedEditMultipleValues>true</extendedEditMultipleValues>
+            <listChoiceMode>true</listChoiceMode>
+            <autoMarkIncomplete>true</autoMarkIncomplete>
+            <typeDomainEnabled>true</typeDomainEnabled>
+            <textSize>Normal</textSize>
+          </extInfo>
+        </items>
+        <items xsi:type="form:FormField">
+          <name>ИмяХранилищаДвоичныхДанных</name>
+          <id>70</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <dataPath xsi:type="form:DataPath">
+            <segments>Объект.ИмяХранилищаДвоичныхДанных</segments>
+          </dataPath>
+          <titleLocation>Top</titleLocation>
+          <extendedTooltip>
+            <name>ИмяХранилищаДвоичныхДанныхРасширеннаяПодсказка</name>
+            <id>72</id>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <contextMenu>
+            <name>ИмяХранилищаДвоичныхДанныхКонтекстноеМеню</name>
+            <id>71</id>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <type>InputField</type>
+          <warningOnEditRepresentation>Show</warningOnEditRepresentation>
+          <warningOnEdit>
+            <key>ru</key>
+            <value>Меняя имя внешного хранилища двоичных данных тома, вы потеряете возможность доступа к уже созданным на этом томе файлам</value>
+          </warningOnEdit>
+          <markRequiredComplete>true</markRequiredComplete>
+          <editMode>Enter</editMode>
+          <showInHeader>true</showInHeader>
+          <headerHorizontalAlign>Left</headerHorizontalAlign>
+          <showInFooter>true</showInFooter>
+          <extInfo xsi:type="form:InputFieldExtInfo">
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <wrap>true</wrap>
+            <extendedEditMultipleValues>true</extendedEditMultipleValues>
+            <choiceButton>false</choiceButton>
+            <listChoiceMode>true</listChoiceMode>
+            <autoMarkIncomplete>true</autoMarkIncomplete>
+            <typeDomainEnabled>true</typeDomainEnabled>
+            <textSize>Normal</textSize>
+          </extInfo>
+        </items>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <title>
+          <key>ru</key>
+          <value>Способ хранения файлов</value>
+        </title>
+        <extendedTooltip>
+          <name>ГруппаСпособХраненияФайловРасширеннаяПодсказка</name>
+          <id>65</id>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <type>UsualGroup</type>
+        <extInfo xsi:type="form:UsualGroupExtInfo">
+          <group>AlwaysHorizontal</group>
+          <behavior>Auto</behavior>
+          <representation>WeakSeparation</representation>
+          <showLeftMargin>true</showLeftMargin>
+          <united>true</united>
+          <throughAlign>Auto</throughAlign>
+          <currentRowUse>Auto</currentRowUse>
+        </extInfo>
+      </items>
+      <items xsi:type="form:FormGroup">
         <name>ГруппаПути</name>
         <id>11</id>
         <items xsi:type="form:FormField">
@@ -128,7 +264,7 @@
           <id>5</id>
           <title>
             <key>ru</key>
-            <value>Полный путь к общей папке на компьютере под управлением Microsoft Windows</value>
+            <value>Полный путь к общей папке на компьютере Windows</value>
           </title>
           <visible>true</visible>
           <enabled>true</enabled>
@@ -168,7 +304,6 @@
           <headerHorizontalAlign>Left</headerHorizontalAlign>
           <showInFooter>true</showInFooter>
           <extInfo xsi:type="form:InputFieldExtInfo">
-            <width>60</width>
             <autoMaxWidth>true</autoMaxWidth>
             <autoMaxHeight>true</autoMaxHeight>
             <wrap>true</wrap>
@@ -187,7 +322,7 @@
           <id>23</id>
           <title>
             <key>ru</key>
-            <value>Полный путь к общей папке на компьютере под управлением Linux</value>
+            <value>Полный путь к общей папке на компьютере Linux</value>
           </title>
           <visible>true</visible>
           <enabled>true</enabled>
@@ -218,12 +353,11 @@
             <autoFill>true</autoFill>
           </contextMenu>
           <type>InputField</type>
-          <editMode>Enter</editMode>
+          <editMode>Auto</editMode>
           <showInHeader>true</showInHeader>
           <headerHorizontalAlign>Left</headerHorizontalAlign>
           <showInFooter>true</showInFooter>
           <extInfo xsi:type="form:InputFieldExtInfo">
-            <width>60</width>
             <autoMaxWidth>true</autoMaxWidth>
             <autoMaxHeight>true</autoMaxHeight>
             <wrap>true</wrap>
@@ -254,61 +388,23 @@
         </extendedTooltip>
         <type>UsualGroup</type>
         <extInfo xsi:type="form:UsualGroupExtInfo">
-          <group>Vertical</group>
+          <group>AutoScreenTypeSensitive</group>
           <showLeftMargin>true</showLeftMargin>
           <united>true</united>
           <throughAlign>Auto</throughAlign>
           <currentRowUse>Auto</currentRowUse>
         </extInfo>
       </items>
-      <items xsi:type="form:FormField">
-        <name>Порядок</name>
-        <id>7</id>
-        <visible>true</visible>
-        <enabled>true</enabled>
-        <userVisible>
-          <common>true</common>
-        </userVisible>
-        <dataPath xsi:type="form:DataPath">
-          <segments>Объект.ПорядокЗаполнения</segments>
-        </dataPath>
-        <extendedTooltip>
-          <name>ПорядокРасширеннаяПодсказка</name>
-          <id>31</id>
-          <type>Label</type>
-          <autoMaxWidth>true</autoMaxWidth>
-          <autoMaxHeight>true</autoMaxHeight>
-          <extInfo xsi:type="form:LabelDecorationExtInfo">
-            <horizontalAlign>Left</horizontalAlign>
-          </extInfo>
-        </extendedTooltip>
-        <contextMenu>
-          <name>ПорядокКонтекстноеМеню</name>
-          <id>8</id>
-          <autoFill>true</autoFill>
-        </contextMenu>
-        <type>InputField</type>
-        <editMode>Auto</editMode>
-        <showInHeader>true</showInHeader>
-        <headerHorizontalAlign>Left</headerHorizontalAlign>
-        <showInFooter>true</showInFooter>
-        <extInfo xsi:type="form:InputFieldExtInfo">
-          <autoMaxWidth>true</autoMaxWidth>
-          <autoMaxHeight>true</autoMaxHeight>
-          <wrap>true</wrap>
-          <spinButton>true</spinButton>
-          <chooseType>true</chooseType>
-          <typeDomainEnabled>true</typeDomainEnabled>
-          <textEdit>true</textEdit>
-          <textSize>Normal</textSize>
-        </extInfo>
-      </items>
       <items xsi:type="form:FormGroup">
-        <name>ГруппаМаксимальныйРазмер</name>
-        <id>19</id>
+        <name>ГруппаРазмерПорядок</name>
+        <id>62</id>
         <items xsi:type="form:FormField">
           <name>МаксимальныйРазмер</name>
           <id>17</id>
+          <title>
+            <key>ru</key>
+            <value>Максимальный размер</value>
+          </title>
           <visible>true</visible>
           <enabled>true</enabled>
           <userVisible>
@@ -333,7 +429,56 @@
             <autoFill>true</autoFill>
           </contextMenu>
           <type>InputField</type>
-          <editMode>Enter</editMode>
+          <editMode>Auto</editMode>
+          <showInHeader>true</showInHeader>
+          <headerHorizontalAlign>Left</headerHorizontalAlign>
+          <showInFooter>true</showInFooter>
+          <extInfo xsi:type="form:InputFieldExtInfo">
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <wrap>true</wrap>
+            <editFormat>
+              <key>ru</key>
+              <value>ЧФ='Ч Мб'</value>
+            </editFormat>
+            <chooseType>true</chooseType>
+            <typeDomainEnabled>true</typeDomainEnabled>
+            <textEdit>true</textEdit>
+            <textSize>Normal</textSize>
+          </extInfo>
+        </items>
+        <items xsi:type="form:FormField">
+          <name>Порядок</name>
+          <id>7</id>
+          <title>
+            <key>ru</key>
+            <value>Порядок заполнения тома</value>
+          </title>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <dataPath xsi:type="form:DataPath">
+            <segments>Объект.ПорядокЗаполнения</segments>
+          </dataPath>
+          <extendedTooltip>
+            <name>ПорядокРасширеннаяПодсказка</name>
+            <id>31</id>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <contextMenu>
+            <name>ПорядокКонтекстноеМеню</name>
+            <id>8</id>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <type>InputField</type>
+          <editMode>Auto</editMode>
           <showInHeader>true</showInHeader>
           <headerHorizontalAlign>Left</headerHorizontalAlign>
           <showInFooter>true</showInFooter>
@@ -348,12 +493,44 @@
             <textSize>Normal</textSize>
           </extInfo>
         </items>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <title>
+          <key>ru</key>
+          <value>Размер порядок</value>
+        </title>
+        <extendedTooltip>
+          <name>ГруппаРазмерПорядокРасширеннаяПодсказка</name>
+          <id>63</id>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <type>UsualGroup</type>
+        <extInfo xsi:type="form:UsualGroupExtInfo">
+          <group>AutoScreenTypeSensitive</group>
+          <behavior>Auto</behavior>
+          <showLeftMargin>true</showLeftMargin>
+          <united>true</united>
+          <throughAlign>Auto</throughAlign>
+          <currentRowUse>Auto</currentRowUse>
+        </extInfo>
+      </items>
+      <items xsi:type="form:FormGroup">
+        <name>ГруппаМаксимальныйРазмер</name>
+        <id>19</id>
         <items xsi:type="form:FormField">
           <name>ТекущийРазмер</name>
           <id>20</id>
           <title>
             <key>ru</key>
-            <value>Текущий размер, МБ</value>
+            <value>Текущий размер</value>
           </title>
           <visible>true</visible>
           <enabled>true</enabled>
@@ -382,20 +559,21 @@
             <id>21</id>
             <autoFill>true</autoFill>
           </contextMenu>
-          <type>InputField</type>
+          <type>LabelField</type>
           <readOnly>true</readOnly>
-          <editMode>Enter</editMode>
+          <horizontalAlign>Left</horizontalAlign>
+          <editMode>Auto</editMode>
           <showInHeader>true</showInHeader>
           <headerHorizontalAlign>Left</headerHorizontalAlign>
           <showInFooter>true</showInFooter>
-          <extInfo xsi:type="form:InputFieldExtInfo">
+          <extInfo xsi:type="form:LabelFieldExtInfo">
             <autoMaxWidth>true</autoMaxWidth>
             <autoMaxHeight>true</autoMaxHeight>
-            <wrap>true</wrap>
-            <chooseType>true</chooseType>
-            <typeDomainEnabled>true</typeDomainEnabled>
-            <textEdit>true</textEdit>
-            <textSize>Normal</textSize>
+            <format>
+              <key>ru</key>
+              <value>ЧН='0 Мб'; ЧФ='Ч Мб'</value>
+            </format>
+            <useCopy>true</useCopy>
           </extInfo>
         </items>
         <visible>true</visible>
@@ -449,7 +627,7 @@
       <extInfo xsi:type="form:PageGroupExtInfo">
         <group>Vertical</group>
         <showTitle>auto</showTitle>
-        <scrollOnCompress>false</scrollOnCompress>
+        <scrollOnCompress>true</scrollOnCompress>
       </extInfo>
     </items>
     <items xsi:type="form:FormGroup">
@@ -483,7 +661,7 @@
           <autoFill>true</autoFill>
         </contextMenu>
         <type>InputField</type>
-        <editMode>Enter</editMode>
+        <editMode>Auto</editMode>
         <showInHeader>true</showInHeader>
         <headerHorizontalAlign>Left</headerHorizontalAlign>
         <showInFooter>true</showInFooter>
@@ -521,7 +699,7 @@
       <extInfo xsi:type="form:PageGroupExtInfo">
         <group>Vertical</group>
         <showTitle>auto</showTitle>
-        <scrollOnCompress>false</scrollOnCompress>
+        <scrollOnCompress>true</scrollOnCompress>
       </extInfo>
     </items>
     <visible>true</visible>
@@ -584,21 +762,17 @@
       </picture>
       <representationInContextMenu>Auto</representationInContextMenu>
     </items>
-    <items xsi:type="form:FormGroup">
-      <name>СтандартныеКоманды</name>
-      <id>38</id>
+    <items xsi:type="form:Button">
+      <name>ФормаЗаписать</name>
+      <id>60</id>
       <visible>true</visible>
       <enabled>true</enabled>
       <userVisible>
         <common>true</common>
       </userVisible>
-      <title>
-        <key>ru</key>
-        <value>Стандартные команды</value>
-      </title>
       <extendedTooltip>
-        <name>СтандартныеКомандыРасширеннаяПодсказка</name>
-        <id>39</id>
+        <name>ФормаЗаписатьРасширеннаяПодсказка</name>
+        <id>61</id>
         <type>Label</type>
         <autoMaxWidth>true</autoMaxWidth>
         <autoMaxHeight>true</autoMaxHeight>
@@ -606,9 +780,13 @@
           <horizontalAlign>Left</horizontalAlign>
         </extInfo>
       </extendedTooltip>
-      <extInfo xsi:type="form:ButtonGroupExtInfo">
-        <commandSource>Form</commandSource>
-      </extInfo>
+      <commandName>Form.StandardCommand.Write</commandName>
+      <buttonImportance>Normal</buttonImportance>
+      <representation>Auto</representation>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <placementArea>UserCmds</placementArea>
+      <representationInContextMenu>Auto</representationInContextMenu>
     </items>
     <items xsi:type="form:Button">
       <name>ФормаПроверитьЦелостностьТома</name>
@@ -670,33 +848,8 @@
       <placementArea>UserCmds</placementArea>
       <representationInContextMenu>Auto</representationInContextMenu>
     </items>
-    <items xsi:type="form:Button">
-      <name>ФормаСправка</name>
-      <id>40</id>
-      <visible>true</visible>
-      <enabled>true</enabled>
-      <userVisible>
-        <common>true</common>
-      </userVisible>
-      <extendedTooltip>
-        <name>ФормаСправкаРасширеннаяПодсказка</name>
-        <id>41</id>
-        <type>Label</type>
-        <autoMaxWidth>true</autoMaxWidth>
-        <autoMaxHeight>true</autoMaxHeight>
-        <extInfo xsi:type="form:LabelDecorationExtInfo">
-          <horizontalAlign>Left</horizontalAlign>
-        </extInfo>
-      </extendedTooltip>
-      <commandName>Form.StandardCommand.Help</commandName>
-      <buttonImportance>Normal</buttonImportance>
-      <representation>Auto</representation>
-      <autoMaxWidth>true</autoMaxWidth>
-      <autoMaxHeight>true</autoMaxHeight>
-      <placementArea>UserCmds</placementArea>
-      <representationInContextMenu>Auto</representationInContextMenu>
-    </items>
     <horizontalAlign>Left</horizontalAlign>
+    <autoFill>true</autoFill>
   </autoCommandBar>
   <handlers>
     <event>OnOpen</event>
@@ -715,7 +868,7 @@
     <name>ОбработкаПроверкиЗаполненияНаСервере</name>
   </handlers>
   <excludedCommands>WriteAndClose</excludedCommands>
-  <windowOpeningMode>DontBlock</windowOpeningMode>
+  <windowOpeningMode>LockOwner</windowOpeningMode>
   <saveWindowSettings>true</saveWindowSettings>
   <autoTitle>true</autoTitle>
   <autoUrl>true</autoUrl>
@@ -805,6 +958,7 @@
         <name>ЗаписатьИЗакрыть</name>
       </handler>
     </action>
+    <actionPurpose>Finish</actionPurpose>
     <currentRowUse>DontUse</currentRowUse>
     <selectedRowsUse>Auto</selectedRowsUse>
   </formCommands>
@@ -861,6 +1015,10 @@
     <handlers>
       <event>AfterWrite</event>
       <name>ПослеЗаписи</name>
+    </handlers>
+    <handlers>
+      <event>AfterWriteAtServer</event>
+      <name>ПослеЗаписиНаСервере</name>
     </handlers>
     <handlers>
       <event>OnReadAtServer</event>

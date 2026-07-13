@@ -2,7 +2,7 @@
 <form:Form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:form="http://g5.1c.ru/v8/dt/form">
   <items xsi:type="form:FormField">
     <name>Наименование</name>
-    <id>1</id>
+    <id>16</id>
     <visible>true</visible>
     <enabled>true</enabled>
     <userVisible>
@@ -13,7 +13,7 @@
     </dataPath>
     <extendedTooltip>
       <name>НаименованиеРасширеннаяПодсказка</name>
-      <id>9</id>
+      <id>18</id>
       <type>Label</type>
       <autoMaxWidth>true</autoMaxWidth>
       <autoMaxHeight>true</autoMaxHeight>
@@ -23,17 +23,19 @@
     </extendedTooltip>
     <contextMenu>
       <name>НаименованиеКонтекстноеМеню</name>
-      <id>2</id>
+      <id>17</id>
       <autoFill>true</autoFill>
     </contextMenu>
     <type>InputField</type>
-    <editMode>Enter</editMode>
+    <editMode>Auto</editMode>
     <showInHeader>true</showInHeader>
     <headerHorizontalAlign>Left</headerHorizontalAlign>
     <showInFooter>true</showInFooter>
     <extInfo xsi:type="form:InputFieldExtInfo">
       <autoMaxWidth>true</autoMaxWidth>
       <autoMaxHeight>true</autoMaxHeight>
+      <wrap>true</wrap>
+      <extendedEditMultipleValues>true</extendedEditMultipleValues>
       <chooseType>true</chooseType>
       <typeDomainEnabled>true</typeDomainEnabled>
       <textEdit>true</textEdit>
@@ -42,7 +44,7 @@
   </items>
   <items xsi:type="form:FormField">
     <name>ПолноеНаименование</name>
-    <id>13</id>
+    <id>20</id>
     <visible>true</visible>
     <enabled>true</enabled>
     <userVisible>
@@ -51,10 +53,9 @@
     <dataPath xsi:type="form:DataPath">
       <segments>Объект.ПолноеНаименование</segments>
     </dataPath>
-    <titleLocation>Left</titleLocation>
     <extendedTooltip>
       <name>ПолноеНаименованиеРасширеннаяПодсказка</name>
-      <id>15</id>
+      <id>22</id>
       <type>Label</type>
       <autoMaxWidth>true</autoMaxWidth>
       <autoMaxHeight>true</autoMaxHeight>
@@ -64,11 +65,11 @@
     </extendedTooltip>
     <contextMenu>
       <name>ПолноеНаименованиеКонтекстноеМеню</name>
-      <id>14</id>
+      <id>21</id>
       <autoFill>true</autoFill>
     </contextMenu>
     <type>InputField</type>
-    <editMode>Enter</editMode>
+    <editMode>Auto</editMode>
     <showInHeader>true</showInHeader>
     <headerHorizontalAlign>Left</headerHorizontalAlign>
     <showInFooter>true</showInFooter>
@@ -76,6 +77,7 @@
       <autoMaxWidth>true</autoMaxWidth>
       <autoMaxHeight>true</autoMaxHeight>
       <wrap>true</wrap>
+      <extendedEditMultipleValues>true</extendedEditMultipleValues>
       <chooseType>true</chooseType>
       <typeDomainEnabled>true</typeDomainEnabled>
       <textEdit>true</textEdit>
@@ -84,7 +86,7 @@
   </items>
   <items xsi:type="form:FormField">
     <name>Родитель</name>
-    <id>5</id>
+    <id>28</id>
     <visible>true</visible>
     <enabled>true</enabled>
     <userVisible>
@@ -95,7 +97,7 @@
     </dataPath>
     <extendedTooltip>
       <name>РодительРасширеннаяПодсказка</name>
-      <id>10</id>
+      <id>30</id>
       <type>Label</type>
       <autoMaxWidth>true</autoMaxWidth>
       <autoMaxHeight>true</autoMaxHeight>
@@ -105,32 +107,28 @@
     </extendedTooltip>
     <contextMenu>
       <name>РодительКонтекстноеМеню</name>
-      <id>6</id>
+      <id>29</id>
       <autoFill>true</autoFill>
     </contextMenu>
     <type>InputField</type>
-    <editMode>Enter</editMode>
+    <editMode>Auto</editMode>
     <showInHeader>true</showInHeader>
     <headerHorizontalAlign>Left</headerHorizontalAlign>
     <showInFooter>true</showInFooter>
     <extInfo xsi:type="form:InputFieldExtInfo">
       <autoMaxWidth>true</autoMaxWidth>
       <autoMaxHeight>true</autoMaxHeight>
+      <wrap>true</wrap>
+      <extendedEditMultipleValues>true</extendedEditMultipleValues>
       <chooseType>true</chooseType>
       <typeDomainEnabled>true</typeDomainEnabled>
       <textEdit>true</textEdit>
-      <choiceParameterLinks>
-        <name>Отбор.Владелец</name>
-        <datapath xsi:type="form:DataPath">
-          <segments>Объект.Owner</segments>
-        </datapath>
-      </choiceParameterLinks>
       <textSize>Normal</textSize>
     </extInfo>
   </items>
   <items xsi:type="form:FormField">
     <name>Вес</name>
-    <id>7</id>
+    <id>24</id>
     <visible>true</visible>
     <enabled>true</enabled>
     <userVisible>
@@ -141,7 +139,7 @@
     </dataPath>
     <extendedTooltip>
       <name>ВесРасширеннаяПодсказка</name>
-      <id>11</id>
+      <id>26</id>
       <type>Label</type>
       <autoMaxWidth>true</autoMaxWidth>
       <autoMaxHeight>true</autoMaxHeight>
@@ -151,11 +149,11 @@
     </extendedTooltip>
     <contextMenu>
       <name>ВесКонтекстноеМеню</name>
-      <id>8</id>
+      <id>25</id>
       <autoFill>true</autoFill>
     </contextMenu>
     <type>InputField</type>
-    <editMode>Enter</editMode>
+    <editMode>Auto</editMode>
     <showInHeader>true</showInHeader>
     <headerHorizontalAlign>Left</headerHorizontalAlign>
     <showInFooter>true</showInFooter>
@@ -163,7 +161,8 @@
       <autoMaxWidth>true</autoMaxWidth>
       <autoMaxHeight>true</autoMaxHeight>
       <wrap>true</wrap>
-      <extendedEdit>true</extendedEdit>
+      <extendedEditMultipleValues>true</extendedEditMultipleValues>
+      <chooseType>true</chooseType>
       <typeDomainEnabled>true</typeDomainEnabled>
       <textEdit>true</textEdit>
       <textSize>Normal</textSize>
@@ -196,7 +195,7 @@
     </contextMenu>
     <type>InputField</type>
     <readOnly>true</readOnly>
-    <editMode>Enter</editMode>
+    <editMode>Auto</editMode>
     <showInHeader>true</showInHeader>
     <headerHorizontalAlign>Left</headerHorizontalAlign>
     <showInFooter>true</showInFooter>
@@ -209,6 +208,8 @@
       <textSize>Normal</textSize>
     </extInfo>
   </items>
+  <commandBarLocation>Top</commandBarLocation>
+  <showCommandBar>true</showCommandBar>
   <autoCommandBar>
     <name>ФормаКоманднаяПанель</name>
     <id>-1</id>

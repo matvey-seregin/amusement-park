@@ -46,7 +46,7 @@
         <autoFill>true</autoFill>
       </contextMenu>
       <type>LabelField</type>
-      <editMode>Enter</editMode>
+      <editMode>Auto</editMode>
       <showInHeader>true</showInHeader>
       <headerHorizontalAlign>Left</headerHorizontalAlign>
       <showInFooter>true</showInFooter>
@@ -80,7 +80,7 @@
         <autoFill>true</autoFill>
       </contextMenu>
       <type>LabelField</type>
-      <editMode>Enter</editMode>
+      <editMode>Auto</editMode>
       <showInHeader>true</showInHeader>
       <headerHorizontalAlign>Left</headerHorizontalAlign>
       <showInFooter>true</showInFooter>
@@ -89,11 +89,11 @@
         <autoMaxHeight>true</autoMaxHeight>
       </extInfo>
     </items>
-    <commandBarLocation>None</commandBarLocation>
     <autoCommandBar>
       <name>СписокКоманднаяПанель</name>
       <id>3</id>
       <horizontalAlign>Left</horizontalAlign>
+      <autoFill>true</autoFill>
     </autoCommandBar>
     <searchStringAddition>
       <name>СписокСтрокаПоиска</name>
@@ -221,6 +221,7 @@
       <allowRootChoice>true</allowRootChoice>
       <allowGettingCurrentRowURL>true</allowGettingCurrentRowURL>
     </extInfo>
+    <showCommandBarNeedDereferenced>true</showCommandBarNeedDereferenced>
   </items>
   <autoCommandBar>
     <name>ФормаКоманднаяПанель</name>
@@ -325,7 +326,20 @@
   </attributes>
   <commandInterface>
     <navigationPanel/>
-    <commandBar/>
+    <commandBar>
+      <cmiFragmentRecord>
+        <command>Catalog.РассылкиОтчетов.Command.ВыполнитьСейчас</command>
+        <userVisible/>
+      </cmiFragmentRecord>
+      <cmiFragmentRecord>
+        <command>0</command>
+        <userVisible/>
+      </cmiFragmentRecord>
+      <cmiFragmentRecord>
+        <command>Catalog.РассылкиОтчетов.Command.СобытияРассылки</command>
+        <userVisible/>
+      </cmiFragmentRecord>
+    </commandBar>
   </commandInterface>
   <extInfo xsi:type="form:DynamicListFormExtInfo"/>
 </form:Form>

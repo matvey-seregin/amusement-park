@@ -101,11 +101,11 @@
     <items xsi:type="form:Button">
       <name>ИзменитьФормулу</name>
       <id>98</id>
+      <displayImportance>VeryHigh</displayImportance>
       <title>
         <key>ru</key>
         <value>Изменить формулу</value>
       </title>
-      <visible>true</visible>
       <enabled>true</enabled>
       <userVisible>
         <common>true</common>
@@ -127,15 +127,16 @@
       <autoMaxHeight>true</autoMaxHeight>
       <placementArea>UserCmds</placementArea>
       <representationInContextMenu>Auto</representationInContextMenu>
+      <locationInCommandBar>InCommandBarAndInAdditionalSubmenu</locationInCommandBar>
     </items>
     <items xsi:type="form:Button">
       <name>УдалитьФормулу</name>
       <id>100</id>
+      <displayImportance>VeryHigh</displayImportance>
       <title>
         <key>ru</key>
         <value>Удалить формулу</value>
       </title>
-      <visible>true</visible>
       <enabled>true</enabled>
       <userVisible>
         <common>true</common>
@@ -157,8 +158,10 @@
       <autoMaxHeight>true</autoMaxHeight>
       <placementArea>UserCmds</placementArea>
       <representationInContextMenu>Auto</representationInContextMenu>
+      <locationInCommandBar>InCommandBarAndInAdditionalSubmenu</locationInCommandBar>
     </items>
     <horizontalAlign>Left</horizontalAlign>
+    <autoFill>true</autoFill>
   </autoCommandBar>
   <handlers>
     <event>OnCreateAtServer</event>
@@ -253,6 +256,7 @@
         <name>Выбрать</name>
       </handler>
     </action>
+    <actionPurpose>Finish</actionPurpose>
     <currentRowUse>DontUse</currentRowUse>
     <selectedRowsUse>Auto</selectedRowsUse>
   </formCommands>
@@ -278,6 +282,7 @@
         <name>ДобавитьФормулу</name>
       </handler>
     </action>
+    <actionPurpose>Create</actionPurpose>
     <representation>Text</representation>
     <currentRowUse>Auto</currentRowUse>
     <selectedRowsUse>Auto</selectedRowsUse>
@@ -305,7 +310,6 @@
       </handler>
     </action>
     <representation>Picture</representation>
-    <currentRowUse>Auto</currentRowUse>
     <selectedRowsUse>Auto</selectedRowsUse>
   </formCommands>
   <formCommands>
@@ -331,7 +335,6 @@
       </handler>
     </action>
     <representation>Picture</representation>
-    <currentRowUse>Auto</currentRowUse>
     <selectedRowsUse>Auto</selectedRowsUse>
   </formCommands>
   <parameters>

@@ -27,7 +27,6 @@
       <excludedCommands>MoveDown</excludedCommands>
       <excludedCommands>MoveUp</excludedCommands>
       <excludedCommands>Pickup</excludedCommands>
-      <excludedCommands>SelectAll</excludedCommands>
       <excludedCommands>SortListAsc</excludedCommands>
       <excludedCommands>SortListDesc</excludedCommands>
       <items xsi:type="form:FormField">
@@ -65,7 +64,9 @@
         <showInHeader>true</showInHeader>
         <headerHorizontalAlign>Left</headerHorizontalAlign>
         <showInFooter>true</showInFooter>
-        <extInfo xsi:type="form:CheckBoxFieldExtInfo"/>
+        <extInfo xsi:type="form:CheckBoxFieldExtInfo">
+          <checkBoxType>CheckBox</checkBoxType>
+        </extInfo>
       </items>
       <items xsi:type="form:FormField">
         <name>ВыбранныеФорматыСохраненияЗначение</name>
@@ -208,7 +209,6 @@
       <height>10</height>
       <autoMaxHeight>true</autoMaxHeight>
       <autoMaxRowsCount>true</autoMaxRowsCount>
-      <selectionMode>MultiRow</selectionMode>
       <headerHeight>1</headerHeight>
       <footerHeight>1</footerHeight>
       <horizontalScrollBar>AutoUse</horizontalScrollBar>
@@ -293,11 +293,13 @@
         <autoFill>true</autoFill>
       </contextMenu>
       <type>CheckBoxField</type>
-      <editMode>Enter</editMode>
+      <editMode>Auto</editMode>
       <showInHeader>true</showInHeader>
       <headerHorizontalAlign>Left</headerHorizontalAlign>
       <showInFooter>true</showInFooter>
-      <extInfo xsi:type="form:CheckBoxFieldExtInfo"/>
+      <extInfo xsi:type="form:CheckBoxFieldExtInfo">
+        <checkBoxType>CheckBox</checkBoxType>
+      </extInfo>
     </items>
     <items xsi:type="form:FormField">
       <name>ПереводитьИменаФайловВТранслит</name>
@@ -336,11 +338,13 @@
         <autoFill>true</autoFill>
       </contextMenu>
       <type>CheckBoxField</type>
-      <editMode>Enter</editMode>
+      <editMode>Auto</editMode>
       <showInHeader>true</showInHeader>
       <headerHorizontalAlign>Left</headerHorizontalAlign>
       <showInFooter>true</showInFooter>
-      <extInfo xsi:type="form:CheckBoxFieldExtInfo"/>
+      <extInfo xsi:type="form:CheckBoxFieldExtInfo">
+        <checkBoxType>CheckBox</checkBoxType>
+      </extInfo>
     </items>
     <items xsi:type="form:FormField">
       <name>Подписать</name>
@@ -374,11 +378,13 @@
         <autoFill>true</autoFill>
       </contextMenu>
       <type>CheckBoxField</type>
-      <editMode>Enter</editMode>
+      <editMode>Auto</editMode>
       <showInHeader>true</showInHeader>
       <headerHorizontalAlign>Left</headerHorizontalAlign>
       <showInFooter>true</showInFooter>
-      <extInfo xsi:type="form:CheckBoxFieldExtInfo"/>
+      <extInfo xsi:type="form:CheckBoxFieldExtInfo">
+        <checkBoxType>CheckBox</checkBoxType>
+      </extInfo>
     </items>
     <visible>true</visible>
     <enabled>true</enabled>
@@ -445,32 +451,6 @@
       <placementArea>UserCmds</placementArea>
       <representationInContextMenu>Auto</representationInContextMenu>
     </items>
-    <items xsi:type="form:Button">
-      <name>КнопкаОтмена</name>
-      <id>30</id>
-      <visible>true</visible>
-      <enabled>true</enabled>
-      <userVisible>
-        <common>true</common>
-      </userVisible>
-      <extendedTooltip>
-        <name>КнопкаОтменаРасширеннаяПодсказка</name>
-        <id>43</id>
-        <type>Label</type>
-        <autoMaxWidth>true</autoMaxWidth>
-        <autoMaxHeight>true</autoMaxHeight>
-        <extInfo xsi:type="form:LabelDecorationExtInfo">
-          <horizontalAlign>Left</horizontalAlign>
-        </extInfo>
-      </extendedTooltip>
-      <commandName>Form.StandardCommand.Cancel</commandName>
-      <buttonImportance>Normal</buttonImportance>
-      <representation>Auto</representation>
-      <autoMaxWidth>true</autoMaxWidth>
-      <autoMaxHeight>true</autoMaxHeight>
-      <placementArea>UserCmds</placementArea>
-      <representationInContextMenu>Auto</representationInContextMenu>
-    </items>
     <horizontalAlign>Right</horizontalAlign>
     <autoFill>true</autoFill>
   </autoCommandBar>
@@ -511,6 +491,7 @@
   <autoFillCheck>true</autoFillCheck>
   <allowFormCustomize>true</allowFormCustomize>
   <enabled>true</enabled>
+  <verticalScroll>UseIfNecessary</verticalScroll>
   <showTitle>auto</showTitle>
   <showCloseButton>true</showCloseButton>
   <attributes>
@@ -615,6 +596,7 @@
         <name>Выбрать</name>
       </handler>
     </action>
+    <actionPurpose>Finish</actionPurpose>
     <currentRowUse>DontUse</currentRowUse>
     <selectedRowsUse>Auto</selectedRowsUse>
   </formCommands>
@@ -630,12 +612,6 @@
     <valueType/>
   </parameters>
   <parameters>
-    <name>УпаковатьВАрхив</name>
-    <valueType>
-      <types>Boolean</types>
-    </valueType>
-  </parameters>
-  <parameters>
     <name>ПереводитьИменаФайловВТранслит</name>
     <valueType>
       <types>Boolean</types>
@@ -643,6 +619,12 @@
   </parameters>
   <parameters>
     <name>Подписать</name>
+    <valueType>
+      <types>Boolean</types>
+    </valueType>
+  </parameters>
+  <parameters>
+    <name>УпаковатьВАрхив</name>
     <valueType>
       <types>Boolean</types>
     </valueType>
