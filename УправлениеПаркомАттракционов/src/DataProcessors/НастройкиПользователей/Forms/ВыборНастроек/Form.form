@@ -59,6 +59,7 @@
           </extInfo>
         </extendedTooltip>
         <commandName>Form.Command.ПометитьВсе</commandName>
+        <buttonImportance>Normal</buttonImportance>
         <representation>Auto</representation>
         <autoMaxWidth>true</autoMaxWidth>
         <autoMaxHeight>true</autoMaxHeight>
@@ -88,6 +89,7 @@
           </extInfo>
         </extendedTooltip>
         <commandName>Form.Command.СнятьПометкуСоВсех</commandName>
+        <buttonImportance>Normal</buttonImportance>
         <representation>Auto</representation>
         <autoMaxWidth>true</autoMaxWidth>
         <autoMaxHeight>true</autoMaxHeight>
@@ -117,6 +119,7 @@
           </extInfo>
         </extendedTooltip>
         <commandName>Form.Command.Открыть</commandName>
+        <buttonImportance>Normal</buttonImportance>
         <representation>Auto</representation>
         <autoMaxWidth>true</autoMaxWidth>
         <autoMaxHeight>true</autoMaxHeight>
@@ -147,6 +150,7 @@
           </extInfo>
         </extendedTooltip>
         <commandName>Form.Command.Обновить</commandName>
+        <buttonImportance>Normal</buttonImportance>
         <representation>Auto</representation>
         <autoMaxWidth>true</autoMaxWidth>
         <autoMaxHeight>true</autoMaxHeight>
@@ -273,6 +277,7 @@
         <type>Page</type>
         <extInfo xsi:type="form:PageGroupExtInfo">
           <group>HorizontalIfPossible</group>
+          <scrollOnCompress>false</scrollOnCompress>
         </extInfo>
       </items>
       <items xsi:type="form:FormGroup">
@@ -351,7 +356,7 @@
                   </contextMenu>
                   <type>CheckBoxField</type>
                   <horizontalAlign>Left</horizontalAlign>
-                  <editMode>EnterOnInput</editMode>
+                  <editMode>Auto</editMode>
                   <showInHeader>true</showInHeader>
                   <headerHorizontalAlign>Left</headerHorizontalAlign>
                   <showInFooter>true</showInFooter>
@@ -393,7 +398,7 @@
                   <type>PictureField</type>
                   <readOnly>true</readOnly>
                   <horizontalAlign>Left</horizontalAlign>
-                  <editMode>EnterOnInput</editMode>
+                  <editMode>Auto</editMode>
                   <showInHeader>true</showInHeader>
                   <headerHorizontalAlign>Left</headerHorizontalAlign>
                   <showInFooter>true</showInFooter>
@@ -441,7 +446,7 @@
                   </contextMenu>
                   <type>LabelField</type>
                   <horizontalAlign>Left</horizontalAlign>
-                  <editMode>EnterOnInput</editMode>
+                  <editMode>Auto</editMode>
                   <showInHeader>true</showInHeader>
                   <headerHorizontalAlign>Left</headerHorizontalAlign>
                   <showInFooter>true</showInFooter>
@@ -472,7 +477,8 @@
                 <type>ColumnGroup</type>
                 <extInfo xsi:type="form:ColumnGroupExtInfo">
                   <group>InCell</group>
-                  <showTitle>true</showTitle>
+                  <showTitle>auto</showTitle>
+                  <showInCard>true</showInCard>
                 </extInfo>
               </items>
               <autoCommandBar>
@@ -591,6 +597,7 @@
                     </extInfo>
                   </extendedTooltip>
                   <commandName>Form.Command.Открыть</commandName>
+                  <buttonImportance>Normal</buttonImportance>
                   <representation>Auto</representation>
                   <autoMaxWidth>true</autoMaxWidth>
                   <autoMaxHeight>true</autoMaxHeight>
@@ -616,6 +623,7 @@
                     </extInfo>
                   </extendedTooltip>
                   <commandName>Form.Item.ВнешнийВид.StandardCommand.CopyToClipboard</commandName>
+                  <buttonImportance>Normal</buttonImportance>
                   <representation>Auto</representation>
                   <autoMaxWidth>true</autoMaxWidth>
                   <autoMaxHeight>true</autoMaxHeight>
@@ -641,6 +649,7 @@
                     </extInfo>
                   </extendedTooltip>
                   <commandName>Form.Item.ВнешнийВид.StandardCommand.SelectAll</commandName>
+                  <buttonImportance>Normal</buttonImportance>
                   <representation>Auto</representation>
                   <autoMaxWidth>true</autoMaxWidth>
                   <autoMaxHeight>true</autoMaxHeight>
@@ -666,6 +675,7 @@
                     </extInfo>
                   </extendedTooltip>
                   <commandName>Form.Item.ВнешнийВид.StandardCommand.OutputList</commandName>
+                  <buttonImportance>Normal</buttonImportance>
                   <representation>Auto</representation>
                   <autoMaxWidth>true</autoMaxWidth>
                   <autoMaxHeight>true</autoMaxHeight>
@@ -683,6 +693,11 @@
               <footerHeight>1</footerHeight>
               <horizontalScrollBar>AutoUse</horizontalScrollBar>
               <verticalScrollBar>AutoUse</verticalScrollBar>
+              <horizontalLines>true</horizontalLines>
+              <verticalLines>true</verticalLines>
+              <horizontalLinesBWA>false</horizontalLinesBWA>
+              <verticalLinesBWA>false</verticalLinesBWA>
+              <useAlternationRowColorBWA>false</useAlternationRowColorBWA>
               <autoInsertNewRow>true</autoInsertNewRow>
               <initialListView>Auto</initialListView>
               <initialTreeView>ExpandAllLevels</initialTreeView>
@@ -691,6 +706,7 @@
               <enableStartDrag>true</enableStartDrag>
               <enableDrag>true</enableDrag>
               <searchStringLocation>Top</searchStringLocation>
+              <autoMaxCardHeight>true</autoMaxCardHeight>
             </items>
             <visible>true</visible>
             <enabled>true</enabled>
@@ -714,7 +730,8 @@
             <type>Page</type>
             <extInfo xsi:type="form:PageGroupExtInfo">
               <group>Vertical</group>
-              <showTitle>true</showTitle>
+              <showTitle>auto</showTitle>
+              <scrollOnCompress>false</scrollOnCompress>
             </extInfo>
           </items>
           <items xsi:type="form:FormGroup">
@@ -787,7 +804,7 @@
                   </contextMenu>
                   <type>CheckBoxField</type>
                   <horizontalAlign>Left</horizontalAlign>
-                  <editMode>EnterOnInput</editMode>
+                  <editMode>Auto</editMode>
                   <showInHeader>true</showInHeader>
                   <headerHorizontalAlign>Left</headerHorizontalAlign>
                   <showInFooter>true</showInFooter>
@@ -876,7 +893,7 @@
                   </contextMenu>
                   <type>LabelField</type>
                   <horizontalAlign>Left</horizontalAlign>
-                  <editMode>EnterOnInput</editMode>
+                  <editMode>Auto</editMode>
                   <showInHeader>true</showInHeader>
                   <headerHorizontalAlign>Left</headerHorizontalAlign>
                   <showInFooter>true</showInFooter>
@@ -907,7 +924,8 @@
                 <type>ColumnGroup</type>
                 <extInfo xsi:type="form:ColumnGroupExtInfo">
                   <group>InCell</group>
-                  <showTitle>true</showTitle>
+                  <showTitle>auto</showTitle>
+                  <showInCard>true</showInCard>
                 </extInfo>
               </items>
               <autoCommandBar>
@@ -1026,6 +1044,7 @@
                     </extInfo>
                   </extendedTooltip>
                   <commandName>Form.Command.Открыть</commandName>
+                  <buttonImportance>Normal</buttonImportance>
                   <representation>Auto</representation>
                   <autoMaxWidth>true</autoMaxWidth>
                   <autoMaxHeight>true</autoMaxHeight>
@@ -1051,6 +1070,7 @@
                     </extInfo>
                   </extendedTooltip>
                   <commandName>Form.Item.НастройкиОтчетовДерево.StandardCommand.SelectAll</commandName>
+                  <buttonImportance>Normal</buttonImportance>
                   <representation>Auto</representation>
                   <autoMaxWidth>true</autoMaxWidth>
                   <autoMaxHeight>true</autoMaxHeight>
@@ -1076,6 +1096,7 @@
                     </extInfo>
                   </extendedTooltip>
                   <commandName>Form.Item.НастройкиОтчетовДерево.StandardCommand.CopyToClipboard</commandName>
+                  <buttonImportance>Normal</buttonImportance>
                   <representation>Auto</representation>
                   <autoMaxWidth>true</autoMaxWidth>
                   <autoMaxHeight>true</autoMaxHeight>
@@ -1101,6 +1122,7 @@
                     </extInfo>
                   </extendedTooltip>
                   <commandName>Form.Item.НастройкиОтчетовДерево.StandardCommand.OutputList</commandName>
+                  <buttonImportance>Normal</buttonImportance>
                   <representation>Auto</representation>
                   <autoMaxWidth>true</autoMaxWidth>
                   <autoMaxHeight>true</autoMaxHeight>
@@ -1118,7 +1140,10 @@
               <footerHeight>1</footerHeight>
               <horizontalScrollBar>AutoUse</horizontalScrollBar>
               <verticalScrollBar>AutoUse</verticalScrollBar>
+              <horizontalLines>true</horizontalLines>
               <verticalLines>true</verticalLines>
+              <horizontalLinesBWA>false</horizontalLinesBWA>
+              <useAlternationRowColorBWA>false</useAlternationRowColorBWA>
               <autoInsertNewRow>true</autoInsertNewRow>
               <initialListView>Auto</initialListView>
               <initialTreeView>ExpandAllLevels</initialTreeView>
@@ -1127,6 +1152,7 @@
               <enableStartDrag>true</enableStartDrag>
               <enableDrag>true</enableDrag>
               <searchStringLocation>Top</searchStringLocation>
+              <autoMaxCardHeight>true</autoMaxCardHeight>
             </items>
             <visible>true</visible>
             <enabled>true</enabled>
@@ -1150,7 +1176,8 @@
             <type>Page</type>
             <extInfo xsi:type="form:PageGroupExtInfo">
               <group>Vertical</group>
-              <showTitle>true</showTitle>
+              <showTitle>auto</showTitle>
+              <scrollOnCompress>false</scrollOnCompress>
             </extInfo>
           </items>
           <items xsi:type="form:FormGroup">
@@ -1224,7 +1251,7 @@
                   </contextMenu>
                   <type>CheckBoxField</type>
                   <horizontalAlign>Left</horizontalAlign>
-                  <editMode>EnterOnInput</editMode>
+                  <editMode>Auto</editMode>
                   <showInHeader>true</showInHeader>
                   <headerHorizontalAlign>Left</headerHorizontalAlign>
                   <showInFooter>true</showInFooter>
@@ -1266,7 +1293,7 @@
                   <type>PictureField</type>
                   <readOnly>true</readOnly>
                   <horizontalAlign>Left</horizontalAlign>
-                  <editMode>EnterOnInput</editMode>
+                  <editMode>Auto</editMode>
                   <showInHeader>true</showInHeader>
                   <headerHorizontalAlign>Left</headerHorizontalAlign>
                   <showInFooter>true</showInFooter>
@@ -1314,7 +1341,7 @@
                   </contextMenu>
                   <type>LabelField</type>
                   <horizontalAlign>Left</horizontalAlign>
-                  <editMode>EnterOnInput</editMode>
+                  <editMode>Auto</editMode>
                   <showInHeader>true</showInHeader>
                   <headerHorizontalAlign>Left</headerHorizontalAlign>
                   <showInFooter>true</showInFooter>
@@ -1345,6 +1372,7 @@
                 <type>ColumnGroup</type>
                 <extInfo xsi:type="form:ColumnGroupExtInfo">
                   <group>InCell</group>
+                  <showInCard>true</showInCard>
                 </extInfo>
               </items>
               <autoCommandBar>
@@ -1463,6 +1491,7 @@
                     </extInfo>
                   </extendedTooltip>
                   <commandName>Form.Command.Открыть</commandName>
+                  <buttonImportance>Normal</buttonImportance>
                   <representation>Auto</representation>
                   <autoMaxWidth>true</autoMaxWidth>
                   <autoMaxHeight>true</autoMaxHeight>
@@ -1488,6 +1517,7 @@
                     </extInfo>
                   </extendedTooltip>
                   <commandName>Form.Item.ПрочиеНастройки.StandardCommand.CopyToClipboard</commandName>
+                  <buttonImportance>Normal</buttonImportance>
                   <representation>Auto</representation>
                   <autoMaxWidth>true</autoMaxWidth>
                   <autoMaxHeight>true</autoMaxHeight>
@@ -1513,6 +1543,7 @@
                     </extInfo>
                   </extendedTooltip>
                   <commandName>Form.Item.ПрочиеНастройки.StandardCommand.SelectAll</commandName>
+                  <buttonImportance>Normal</buttonImportance>
                   <representation>Auto</representation>
                   <autoMaxWidth>true</autoMaxWidth>
                   <autoMaxHeight>true</autoMaxHeight>
@@ -1538,6 +1569,7 @@
                     </extInfo>
                   </extendedTooltip>
                   <commandName>Form.Item.ПрочиеНастройки.StandardCommand.OutputList</commandName>
+                  <buttonImportance>Normal</buttonImportance>
                   <representation>Auto</representation>
                   <autoMaxWidth>true</autoMaxWidth>
                   <autoMaxHeight>true</autoMaxHeight>
@@ -1553,6 +1585,11 @@
               <headerHeight>1</headerHeight>
               <footerHeight>1</footerHeight>
               <verticalScrollBar>AutoUse</verticalScrollBar>
+              <horizontalLines>true</horizontalLines>
+              <verticalLines>true</verticalLines>
+              <horizontalLinesBWA>false</horizontalLinesBWA>
+              <verticalLinesBWA>false</verticalLinesBWA>
+              <useAlternationRowColorBWA>false</useAlternationRowColorBWA>
               <autoInsertNewRow>true</autoInsertNewRow>
               <initialListView>Auto</initialListView>
               <initialTreeView>ExpandAllLevels</initialTreeView>
@@ -1561,6 +1598,7 @@
               <enableStartDrag>true</enableStartDrag>
               <enableDrag>true</enableDrag>
               <searchStringLocation>Top</searchStringLocation>
+              <autoMaxCardHeight>true</autoMaxCardHeight>
             </items>
             <visible>true</visible>
             <enabled>true</enabled>
@@ -1584,7 +1622,8 @@
             <type>Page</type>
             <extInfo xsi:type="form:PageGroupExtInfo">
               <group>Vertical</group>
-              <showTitle>true</showTitle>
+              <showTitle>auto</showTitle>
+              <scrollOnCompress>false</scrollOnCompress>
             </extInfo>
           </items>
           <visible>true</visible>
@@ -1638,6 +1677,7 @@
         <type>Page</type>
         <extInfo xsi:type="form:PageGroupExtInfo">
           <group>Vertical</group>
+          <scrollOnCompress>false</scrollOnCompress>
         </extInfo>
       </items>
       <visible>true</visible>
@@ -1718,6 +1758,7 @@
     <name>ПриЗакрытии</name>
   </handlers>
   <excludedCommands>CustomizeForm</excludedCommands>
+  <windowOpeningMode>DontBlock</windowOpeningMode>
   <autoSaveDataInSettings>Use</autoSaveDataInSettings>
   <saveWindowSettings>true</saveWindowSettings>
   <autoTitle>true</autoTitle>
@@ -1726,7 +1767,7 @@
   <autoFillCheck>true</autoFillCheck>
   <allowFormCustomize>true</allowFormCustomize>
   <enabled>true</enabled>
-  <showTitle>true</showTitle>
+  <showTitle>auto</showTitle>
   <showCloseButton>true</showCloseButton>
   <mobileDeviceCommandBarContent>
     <value xsi:type="core:StringValue">
@@ -2362,6 +2403,7 @@
     </action>
     <representation>TextPicture</representation>
     <currentRowUse>DontUse</currentRowUse>
+    <selectedRowsUse>Auto</selectedRowsUse>
   </formCommands>
   <formCommands>
     <name>Открыть</name>
@@ -2387,6 +2429,7 @@
     </action>
     <representation>TextPicture</representation>
     <currentRowUse>DontUse</currentRowUse>
+    <selectedRowsUse>Auto</selectedRowsUse>
   </formCommands>
   <formCommands>
     <name>Выбрать</name>
@@ -2412,6 +2455,7 @@
     </action>
     <representation>TextPicture</representation>
     <currentRowUse>DontUse</currentRowUse>
+    <selectedRowsUse>Auto</selectedRowsUse>
   </formCommands>
   <formCommands>
     <name>ПометитьВсе</name>
@@ -2436,6 +2480,7 @@
       </handler>
     </action>
     <currentRowUse>DontUse</currentRowUse>
+    <selectedRowsUse>Auto</selectedRowsUse>
   </formCommands>
   <formCommands>
     <name>СнятьПометкуСоВсех</name>
@@ -2460,6 +2505,7 @@
       </handler>
     </action>
     <currentRowUse>DontUse</currentRowUse>
+    <selectedRowsUse>Auto</selectedRowsUse>
   </formCommands>
   <parameters>
     <name>Пользователь</name>
