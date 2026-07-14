@@ -156,6 +156,34 @@
     <placementArea>UserCmds</placementArea>
     <representationInContextMenu>Auto</representationInContextMenu>
   </items>
+  <items xsi:type="form:Button">
+    <name>ПолучитьКоличествоЗаказов</name>
+    <id>12</id>
+    <visible>true</visible>
+    <enabled>true</enabled>
+    <userVisible>
+      <common>true</common>
+    </userVisible>
+    <extendedTooltip>
+      <name>ПолучитьКоличествоЗаказовРасширеннаяПодсказка</name>
+      <id>13</id>
+      <type>Label</type>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <extInfo xsi:type="form:LabelDecorationExtInfo">
+        <horizontalAlign>Left</horizontalAlign>
+      </extInfo>
+    </extendedTooltip>
+    <type>UsualButton</type>
+    <commandName>Form.Command.ПолучитьКоличествоЗаказов</commandName>
+    <buttonImportance>Normal</buttonImportance>
+    <representation>Auto</representation>
+    <autoMaxWidth>true</autoMaxWidth>
+    <autoMaxHeight>true</autoMaxHeight>
+    <groupHorizontalAlign>Center</groupHorizontalAlign>
+    <placementArea>UserCmds</placementArea>
+    <representationInContextMenu>Auto</representationInContextMenu>
+  </items>
   <autoCommandBar>
     <name>ФормаКоманднаяПанель</name>
     <id>-1</id>
@@ -256,6 +284,24 @@
     <action xsi:type="form:FormCommandHandlerContainer">
       <handler>
         <name>ПроверитьДоступность</name>
+      </handler>
+    </action>
+    <currentRowUse>Auto</currentRowUse>
+    <selectedRowsUse>Auto</selectedRowsUse>
+  </formCommands>
+  <formCommands>
+    <name>ПолучитьКоличествоЗаказов</name>
+    <title>
+      <key>ru</key>
+      <value>Получить количество заказов</value>
+    </title>
+    <id>2</id>
+    <use>
+      <common>true</common>
+    </use>
+    <action xsi:type="form:FormCommandHandlerContainer">
+      <handler>
+        <name>ПолучитьКоличествоЗаказов</name>
       </handler>
     </action>
     <currentRowUse>Auto</currentRowUse>
