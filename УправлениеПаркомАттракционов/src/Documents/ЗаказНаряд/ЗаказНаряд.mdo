@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="5c7958a2-7c40-42ee-9735-23e076604d48">
+  <producedTypes>
+    <objectType typeId="10861607-74cb-4833-b8c5-fefec74b2692" valueTypeId="c9415bbd-735e-41fc-a1c2-9b92250a45e6"/>
+    <refType typeId="d9078353-29ac-4afd-87e2-b3eefc02775c" valueTypeId="71e45d29-b0f4-4d6a-bbc5-31ca37f01995"/>
+    <selectionType typeId="c2dbf802-4eec-40fe-b6d2-2804f2f2f513" valueTypeId="2452474e-b3fa-4b89-800a-9631f1fa4404"/>
+    <listType typeId="296e6de4-f1de-4f0f-8083-20747cacfa77" valueTypeId="96397fa5-7985-4fa9-80d3-932d0c24b141"/>
+    <managerType typeId="464e3b41-a3d3-43b7-861c-b1a6cc15b0f0" valueTypeId="28f44017-c27c-44f6-b805-28f5eff4efb3"/>
+  </producedTypes>
+  <name>ЗаказНаряд</name>
+  <synonym>
+    <key>ru</key>
+    <value>Заказ-наряд</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <inputByString>Document.ЗаказНаряд.StandardAttribute.Number</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <createOnInput>Use</createOnInput>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <fullTextSearch>Use</fullTextSearch>
+  <listPresentation>
+    <key>ru</key>
+    <value>Заказ-Наряды</value>
+  </listPresentation>
+  <numberType>String</numberType>
+  <numberLength>9</numberLength>
+  <numberAllowedLength>Variable</numberAllowedLength>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <postInPrivilegedMode>true</postInPrivilegedMode>
+  <unpostInPrivilegedMode>true</unpostInPrivilegedMode>
+  <attributes uuid="c951a7f9-7b4c-4662-8be6-e9b0880a1de4">
+    <name>Исполнитель</name>
+    <synonym>
+      <key>ru</key>
+      <value>Исполнитель</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Пользователи</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+</mdclass:Document>
