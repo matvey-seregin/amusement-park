@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Catalog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="52b0b375-105f-4521-8013-4d132b1374c3">
+  <producedTypes>
+    <objectType typeId="afb0f09b-6620-4059-a2c7-a1b2c1292ca0" valueTypeId="8886be15-9120-4cb1-a343-3cdef46d5d7a"/>
+    <refType typeId="917914ac-3afe-4242-8cab-a53138e93bdb" valueTypeId="fddf55a6-5e85-4af7-9346-f339820fab8f"/>
+    <selectionType typeId="4bdcddd0-529f-42cb-ad0e-fe168690e960" valueTypeId="c3f5d890-9f86-4e53-964b-7cca12102ae1"/>
+    <listType typeId="8309e760-8bd9-463e-86c1-19e158fca684" valueTypeId="bd3bac95-1a7c-47e9-8224-da3164290128"/>
+    <managerType typeId="452874d3-94f9-44a9-b5c3-2f8706b20b6e" valueTypeId="496222bb-fede-4a1c-88f0-2eb817240496"/>
+  </producedTypes>
+  <name>ЭмитентыJWT</name>
+  <synonym>
+    <key>ru</key>
+    <value>Эмитенты JWT</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <inputByString>Catalog.ЭмитентыJWT.StandardAttribute.Code</inputByString>
+  <inputByString>Catalog.ЭмитентыJWT.StandardAttribute.Description</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <createOnInput>Use</createOnInput>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <fullTextSearch>Use</fullTextSearch>
+  <objectPresentation>
+    <key>ru</key>
+    <value>Эмитент JWT</value>
+  </objectPresentation>
+  <levelCount>2</levelCount>
+  <foldersOnTop>true</foldersOnTop>
+  <codeLength>9</codeLength>
+  <descriptionLength>50</descriptionLength>
+  <codeType>String</codeType>
+  <codeAllowedLength>Variable</codeAllowedLength>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <defaultPresentation>AsDescription</defaultPresentation>
+  <predefined>
+    <items id="e9421c25-cf5c-44c3-972c-cfb95f136591">
+      <name>ЭмитентМобильногоПриложения</name>
+      <description>Эмитент мобильного приложения</description>
+      <code xsi:type="core:StringValue">
+        <value>000000001</value>
+      </code>
+    </items>
+  </predefined>
+  <editType>InDialog</editType>
+  <choiceMode>BothWays</choiceMode>
+  <defaultObjectForm>Catalog.ЭмитентыJWT.Form.ФормаЭлемента</defaultObjectForm>
+  <attributes uuid="c2d0995c-0a04-4148-a62f-b6b8a8697c3a">
+    <name>ИмяЭмитента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Имя эмитента</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>50</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fillValue xsi:type="core:StringValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="6d29afba-6789-4007-996b-4c3c38052d77">
+    <name>Используется</name>
+    <synonym>
+      <key>ru</key>
+      <value>Используется</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <tabularSections uuid="12f29879-2895-413a-8ac8-a17bd6c07c9f">
+    <producedTypes>
+      <objectType typeId="86664a6f-702f-4544-b31d-80bc00716e98" valueTypeId="56d08040-da7a-4cd5-b265-9a4f8bbfea21"/>
+      <rowType typeId="1921c698-9b67-42ba-843a-0dcc81b6435c" valueTypeId="4f7399d1-86fb-4e66-8c16-42960679acf5"/>
+    </producedTypes>
+    <name>Получатели</name>
+    <synonym>
+      <key>ru</key>
+      <value>Получатели</value>
+    </synonym>
+    <fillChecking>ShowError</fillChecking>
+    <attributes uuid="3ca03f89-ea91-47df-947b-7cc81065b80f">
+      <name>ИмяПолучателя</name>
+      <synonym>
+        <key>ru</key>
+        <value>Имя получателя</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>50</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillChecking>ShowError</fillChecking>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <lineNumberLength>9</lineNumberLength>
+  </tabularSections>
+  <forms uuid="142d426c-7cd3-401c-894b-acb156227f40">
+    <name>ФормаЭлемента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма элемента</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:Catalog>
