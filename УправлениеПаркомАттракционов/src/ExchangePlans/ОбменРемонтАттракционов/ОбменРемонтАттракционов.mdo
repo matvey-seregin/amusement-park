@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:ExchangePlan xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="d67f3853-03ff-48f8-9bce-0460c9769be4" thisNode="7ae5cd33-6487-4d5a-b7d2-c8c6a53831bf">
+  <producedTypes>
+    <objectType typeId="7e486a44-6e37-4c5a-8f2e-8183c70e8f8f" valueTypeId="05aff743-3cd0-44d4-93f8-70c92007cabc"/>
+    <refType typeId="87b2298b-77d1-40d0-8b8a-92c98fd3a6df" valueTypeId="bd8f2953-99d7-475d-9fed-bae99a603831"/>
+    <selectionType typeId="edd74357-b885-4b42-b821-5731be5c7dfd" valueTypeId="726e9ad9-0f2b-426f-b818-60298a0f8840"/>
+    <listType typeId="0aaf3a6f-92e9-43b3-b58a-c6b4eae2fb54" valueTypeId="c16de324-45fc-4a7b-bb09-427d9e28ba72"/>
+    <managerType typeId="67b611ea-27aa-451f-994e-81b005f1e3b2" valueTypeId="033520f6-3ab0-4fab-b2ae-98df021c3363"/>
+  </producedTypes>
+  <name>ОбменРемонтАттракционов</name>
+  <synonym>
+    <key>ru</key>
+    <value>Обмен ремонт аттракционов</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <inputByString>ExchangePlan.ОбменРемонтАттракционов.StandardAttribute.Code</inputByString>
+  <inputByString>ExchangePlan.ОбменРемонтАттракционов.StandardAttribute.Description</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <createOnInput>DontUse</createOnInput>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <fullTextSearch>Use</fullTextSearch>
+  <listPresentation>
+    <key>ru</key>
+    <value>Мобильные устройства Ремонт аттракционов</value>
+  </listPresentation>
+  <codeLength>36</codeLength>
+  <codeAllowedLength>Variable</codeAllowedLength>
+  <descriptionLength>150</descriptionLength>
+  <content>
+    <mdObject>Catalog.Аттракционы</mdObject>
+    <autoRecord>Allow</autoRecord>
+  </content>
+  <content>
+    <mdObject>Catalog.ВидыРаботОбслуживанияАттакционов</mdObject>
+    <autoRecord>Allow</autoRecord>
+  </content>
+  <content>
+    <mdObject>Document.ЗаказНаряд</mdObject>
+  </content>
+  <content>
+    <mdObject>Catalog.Материалы</mdObject>
+    <autoRecord>Allow</autoRecord>
+  </content>
+  <defaultPresentation>AsDescription</defaultPresentation>
+  <editType>InDialog</editType>
+  <choiceMode>BothWays</choiceMode>
+  <attributes uuid="acf62c6d-131d-4c20-a6f1-0dee69a6a117">
+    <name>Пользователь</name>
+    <synonym>
+      <key>ru</key>
+      <value>Пользователь</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Пользователи</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+</mdclass:ExchangePlan>

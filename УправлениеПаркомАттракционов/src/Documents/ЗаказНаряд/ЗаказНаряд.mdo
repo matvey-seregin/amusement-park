@@ -29,6 +29,21 @@
   <autonumbering>true</autonumbering>
   <postInPrivilegedMode>true</postInPrivilegedMode>
   <unpostInPrivilegedMode>true</unpostInPrivilegedMode>
+  <attributes uuid="a7ded12d-97bc-453f-b622-e420577106e2">
+    <name>Аттракцион</name>
+    <synonym>
+      <key>ru</key>
+      <value>Аттракцион</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Аттракционы</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
   <attributes uuid="c951a7f9-7b4c-4662-8be6-e9b0880a1de4">
     <name>Исполнитель</name>
     <synonym>
@@ -45,4 +60,110 @@
     <fullTextSearch>Use</fullTextSearch>
     <dataHistory>Use</dataHistory>
   </attributes>
+  <attributes uuid="9acf2a81-41cb-4ba9-ad43-39d1e09d0a41">
+    <name>Комментарий</name>
+    <synonym>
+      <key>ru</key>
+      <value>Комментарий</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <multiLine>true</multiLine>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <tabularSections uuid="570ba901-8d65-49e8-8f68-46f5cd905eef">
+    <producedTypes>
+      <objectType typeId="b9d810a0-4a77-4f38-827b-08ed4a18d181" valueTypeId="f4656166-3ba4-41de-834d-31c10217da2c"/>
+      <rowType typeId="eb5df86d-3313-4741-86f8-551fe6cc9e3b" valueTypeId="11e0edc3-b616-4787-830f-b47af419234b"/>
+    </producedTypes>
+    <name>Работы</name>
+    <synonym>
+      <key>ru</key>
+      <value>Работы</value>
+    </synonym>
+    <attributes uuid="76b9a761-2a44-463d-b299-7d9ffa16c552">
+      <name>ВидРаботы</name>
+      <synonym>
+        <key>ru</key>
+        <value>Вид работы</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.ВидыРаботОбслуживанияАттакционов</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="4e970ba1-bc5c-4106-be3c-c4703ebb4d3e">
+      <name>Время</name>
+      <synonym>
+        <key>ru</key>
+        <value>Время (ч)</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>10</precision>
+          <scale>2</scale>
+          <nonNegative>true</nonNegative>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <lineNumberLength>9</lineNumberLength>
+  </tabularSections>
+  <tabularSections uuid="45c3a721-38a8-4084-9d9f-70ccd582c9bf">
+    <producedTypes>
+      <objectType typeId="54fdddd4-fc76-48c6-a147-25345f266bcd" valueTypeId="ac479af8-f9af-4e70-8059-4bb57c39ddfe"/>
+      <rowType typeId="454ea7b9-19b9-4467-a9e5-b2bb50518dc9" valueTypeId="fe778c2a-d93b-4e77-86aa-99b316932ded"/>
+    </producedTypes>
+    <name>Материалы</name>
+    <synonym>
+      <key>ru</key>
+      <value>Материалы</value>
+    </synonym>
+    <attributes uuid="9e4f1586-0d4b-41f4-8ba3-6ad8388ab5a6">
+      <name>Материал</name>
+      <synonym>
+        <key>ru</key>
+        <value>Материал</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.Материалы</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="8a12efb9-4c95-4416-99f7-d9bdabef2343">
+      <name>Количество</name>
+      <synonym>
+        <key>ru</key>
+        <value>Количество</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>10</precision>
+          <nonNegative>true</nonNegative>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <lineNumberLength>9</lineNumberLength>
+  </tabularSections>
 </mdclass:Document>
